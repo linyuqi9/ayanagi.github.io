@@ -26,13 +26,12 @@ flag..." />
     
     <style>
         .markdownIt-TOC {
-            margin-left: 28%;
             padding-left: 2px;
-            width: 80%;
+            width: 100%;
         }
 
         .markdownIt-TOC li {
-            padding-left: 8%;
+            padding-left: 2%;
         }
     </style>
     
@@ -169,100 +168,118 @@ flag..." />
             <div class="row">
                 <div class="side"><body>
     
-    <div id=side>
-        <div class="avatar-border">
-            <img src="http://ayanagi.fun/images/avatar.png?v=1606052385514" class="avatar">
+
+
+
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="http://ayanagi.fun"
+                    style="font-size:21px">ハルカトオク&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+                <a class="navbar-brand" href=""
+                    style="font-size:15px;font-family:kaiti">又岂在朝朝暮暮。</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse">
+                
+                <div class="search nav navbar-nav" style="margin-top:8px">
+                    <!-- <input type="text" class="search-input" placeholder="标题搜索(●'◡'●)" /> -->
+                    <input type="text" class="search-input" placeholder="搜索一下">
+                    <div class="search-results"></div>
+                </div>
+                
+                <div class="search nav navbar-nav searchtop">
+                <a title="text" onclick="document.getElementById('socialMenu').style.display='block'"><i><img class="social"
+                    src="http://ayanagi.fun/media/images/social.png" alt=""></i></a>
+            </div>
+            <ul class="nav navbar-nav" style="float: right;margin-right:5%">
+                
+                
+                <li>
+                    <a href="http://ayanagi.fun" style="color:white">
+                        首页
+                    </a>
+                </li>
+                
+                
+                
+                <li>
+                    <a href="http://ayanagi.fun/archives" style="color:white">
+                        CTF
+                    </a>
+                </li>
+                
+                
+                
+                <li>
+                    <a href="http://ayanagi.fun/archives" style="color:white">
+                        Python学习
+                    </a>
+                </li>
+                
+                
+                
+                <li>
+                    <a href="http://ayanagi.fun/archives" style="color:white">
+                        亚文化
+                    </a>
+                </li>
+                
+                
+                
+                <li><a href="http://ayanagi.fun/talk" style="color:white;">说说</a></li>
+                
+                  
+                <li><a href="http://ayanagi.fun/friends" style="color:white">友链</a></li>
+                
+                  <li><img src="http://ayanagi.fun/images/avatar.png?v=1606052794799" alt=""
+                class="menutopavatar"></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div id="socialMenu">
+        <div class="animate">
+            <div class="socialContainer">
+                
+                <a href="https://github.com/linyuqi9" target="_blank"><i style="font-size: 40px;"><img class="icon "
+                            src="http://ayanagi.fun/media/images/github.png" alt=""></i></a>
+                
+                
+                <a onclick="showqq()" style="cursor:pointer"><i style="font-size: 40px;"><img class="icon" src="http://ayanagi.fun/media/images/QQ.png"
+                            alt=""></i></a>
+                
+                
+                <a href="https://www.zhihu.com/people/lin-yu-qi-17-81" target="_blank"><i style="font-size: 40px;"><img class="icon"
+                            src="http://ayanagi.fun/media/images/zh.png" alt=""></i></a>
+                
+                
+                <a href="https://space.bilibili.com/620585" target="_blank"><i style="font-size: 40px;"><img class="icon"
+                            src="http://ayanagi.fun/media/images/bilibili.png" alt=""></i></a>
+                
+                
+                
+                <a href="https://steamcommunity.com/profiles/76561198145123311/" target="_blank"><i style="font-size: 40px;"><img class="icon"
+                            src="http://ayanagi.fun/media/images/steam.png" alt=""></i></a>
+                
+            </div>
+            <div id="qq" style="display:none">1781606694</div>
         </div>
-        <div class="sitename">ハルカトオク</div>
-        <span class="describtion" data-text='["又岂在朝朝暮暮。"]'>&nbsp;</span>
-        
-        <div class="search">
-            <!-- <input type="text" class="search-input" placeholder="标题搜索(●'◡'●)" /> -->
-            <input type="text" class="search-input" placeholder="搜索一下">
-            <div class="search-results"></div>
-        </div>
-        
-    <div class="share-button">
-        <span>社交按钮</span>
-        
-        <a href="https://github.com/linyuqi9" target="_blank"><i style="font-size: 20px;"><img class="icon"
-                    src="http://ayanagi.fun/media/images/github.png" alt=""></i></a>
-        
-        
-        <a onclick="showqq()"><i style="font-size: 20px;"><img class="icon" src="http://ayanagi.fun/media/images/QQ.png" alt=""></i></a>
-        
-        
-        <a href="https://www.zhihu.com/people/lin-yu-qi-17-81" target="_blank"><i style="font-size: 20px;"><img class="icon"
-                    src="http://ayanagi.fun/media/images/zh.png" alt=""></i></a>
-        
-        
-        <a href="https://space.bilibili.com/620585" target="_blank"><i style="font-size: 20px;"><img class="icon"
-                    src="http://ayanagi.fun/media/images/bilibili.png" alt=""></i></a>
-        
-        
-        
-        <a href="https://steamcommunity.com/profiles/76561198145123311/" target="_blank"><i style="font-size: 20px;"><img class="icon"
-                    src="http://ayanagi.fun/media/images/steam.png" alt=""></i></a>
-        
     </div>
-    <div id="qq" style="display:none">1781606694</div>
-    
-    
-    <div class="mchocie describtion">
-        <a href="http://ayanagi.fun" class="menubutton">
-            首页
-        </a>
-    </div>
-    
-    
-    
-    <div class="mchocie describtion">
-        <a href="http://ayanagi.fun/archives" class="menubutton">
-            CTF
-        </a>
-    </div>
-    
-    
-    
-    <div class="mchocie describtion">
-        <a href="http://ayanagi.fun/archives" class="menubutton">
-            Python学习
-        </a>
-    </div>
-    
-    
-    
-    <div class="mchocie describtion">
-        <a href="http://ayanagi.fun/archives" class="menubutton">
-            亚文化
-        </a>
-    </div>
-    
-    
-    
-    <div class="mchocie describtion">
-        <a href="http://ayanagi.fun/talk" class="menubutton">说说</a>
-    </div>
-    
-    
-    <div class="mchocie describtion">
-        <a href="http://ayanagi.fun/friends" class="menubutton">友人帐</a>
-    </div>
-    
-    <hr>
-    <div id="footinfo">一觉游仙好梦，任他竹冷松寒。 | Theme: <a
-        href="https://github.com/850552586/gridea-theme-fog">Fog</a></div>
-    
-    
-    </div>
-
-
-<script src="http://ayanagi.fun/media/js/wordshow.js"></script>
-    
-
-
-
-
+    <!-- 引入jQuery核心js文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script>
+        var social = document.getElementById('socialMenu');
+        // 鼠标点击模型外区域关闭登录框
+        window.onclick = function (event) {
+            if (event.target == social) {
+                social.style.display = "none";
+            }
+        }
+    </script>
     
 </body>
 <script>
@@ -397,17 +414,9 @@ flag..." />
 </script>
 </div>
                 
-                <div id="tab1" class="tab">
-                    <div class="bars">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="close"></div>
-                </div>
-                <div class="col-md-1 col-lg-3"></div>
-                <div id="main" class="col-xs-12 col-sm-12 col-md-10 col-lg-7">
-                    <link rel="stylesheet" href="http://ayanagi.fun/media/css/font-awesome.css">
+            <div class="col-md-2 col-lg-3"></div>
+            <div id="postmain" class="col-xs-12 col-sm-12 col-md-8  col-lg-6 posttop" >
+                <link rel="stylesheet" href="http://ayanagi.fun/media/css/font-awesome.css">
 
 <body>
     <div class="allcontent" id="postdetail">
@@ -523,7 +532,7 @@ flag：NCTF{Let's_look_forward_to_X1CTF}</p>
     pl = pl.replace(rootaddr, "");
     $("#hotnum").attr('id', pl);
 </script>
-                <div id="comment"  class="comment" style="background: white">
+                <div id="comment" class="comment" style="background: white">
                     <div class="commentcontainer">
                         
                         <style>
@@ -580,12 +589,13 @@ flag：NCTF{Let's_look_forward_to_X1CTF}</p>
                         
                     </div>
                 </div>
-                </div>
-                <div class="col-md-1 col-lg-2"></div>
-                <div id="bg">
-                </div>
             </div>
-            
+            <div class="col-md-2 col-lg-3">
+            </div>
+            <div id="bg">
+            </div>
+        </div>
+        
         
         <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
@@ -756,8 +766,6 @@ flag：NCTF{Let's_look_forward_to_X1CTF}</p>
 </script>
 
 
-<script src="http://ayanagi.fun/media/js/index.js"></script>
-
 
 
 <!-- 动态更改上(下)一篇博客图片框长宽 -->
@@ -774,8 +782,8 @@ flag：NCTF{Let's_look_forward_to_X1CTF}</p>
 <script src="http://ayanagi.fun/media/share/dist/Share.js"></script>
 
 <script>
-    var avatarSrc = $(".avatar").attr("src");
-    var dp = document.getElementsByClassName("describtion")[0].innerHTML;
+    var avatarSrc = $(".menutopavatar").attr("src");
+    var dp = document.getElementsByClassName("navbar-brand")[1].innerHTML;
 </script>
 
 
