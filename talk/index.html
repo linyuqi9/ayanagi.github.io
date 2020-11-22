@@ -21,7 +21,7 @@
     
     <div id=side>
         <div class="avatar-border">
-            <img src="http://ayanagi.fun/images/avatar.png?v=1606046651286" class="avatar">
+            <img src="http://ayanagi.fun/images/avatar.png?v=1606046912786" class="avatar">
         </div>
         <div class="sitename">綺柳</div>
         <span class="describtion" data-text='["又岂在朝朝暮暮。"]'>&nbsp;</span>
@@ -500,7 +500,7 @@
     add();
 
     function get() {
-        var t = JSON.parse('[]');
+        var t = JSON.parse('[{"author":"","img":"","text":"test","time":""},{"author":"","img":"","text":"","time":""}]');
         talkindex = t.length - 1;
         for (var i = t.length - 1; i >= 0; i--) {
             var d = {};
@@ -532,7 +532,7 @@
                 <img src="' + talks[i].img + '" class="talkimg"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1606046651286">\
+                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1606046912786">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -545,7 +545,7 @@
             <div class="talk" v-for="t in talks"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1606046651286">\
+                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1606046912786">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
