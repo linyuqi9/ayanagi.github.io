@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://ayanagi.fun</id>
     <title>綺柳</title>
-    <updated>2020-11-22T11:51:36.477Z</updated>
+    <updated>2020-11-22T12:01:17.277Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://ayanagi.fun"/>
     <link rel="self" href="http://ayanagi.fun/atom.xml"/>
@@ -10,6 +10,33 @@
     <logo>http://ayanagi.fun/images/avatar.png</logo>
     <icon>http://ayanagi.fun/favicon.ico</icon>
     <rights>All rights reserved 2020, 綺柳</rights>
+    <entry>
+        <title type="html"><![CDATA[CTFshow-misc wp]]></title>
+        <id>http://ayanagi.fun/CTFshow/</id>
+        <link href="http://ayanagi.fun/CTFshow/">
+        </link>
+        <updated>2020-11-22T12:00:03.000Z</updated>
+        <content type="html"><![CDATA[<p>Todo</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[XCTF-攻防世界-misc wp]]></title>
+        <id>http://ayanagi.fun/XCTF/</id>
+        <link href="http://ayanagi.fun/XCTF/">
+        </link>
+        <updated>2020-11-22T11:59:24.000Z</updated>
+        <content type="html"><![CDATA[<p>Todo</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[UNCTF2020-misc wp]]></title>
+        <id>http://ayanagi.fun/UNCTF2020/</id>
+        <link href="http://ayanagi.fun/UNCTF2020/">
+        </link>
+        <updated>2020-11-22T11:58:07.000Z</updated>
+        <content type="html"><![CDATA[<p>Todo</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hackergame 2020-misc wp]]></title>
         <id>http://ayanagi.fun/Hackergame2020/</id>
