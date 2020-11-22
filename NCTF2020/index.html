@@ -1,122 +1,105 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+<meta charset="utf-8" >
+
 <title>NCTF2020 WP | ハルカトオク</title>
-<link rel="shortcut icon" href="http://ayanagi.fun/favicon.ico?v=1606055805768">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<meta name="description" content="又岂在朝朝暮暮。">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://ayanagi.fun/favicon.ico?v=1606055858443">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="http://ayanagi.fun/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="NCTF2020 WP | ハルカトオク - Atom Feed" href="http://ayanagi.fun/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="唯一一个没有Todo的wp
-ak了misc，男团非常的强。
-彩蛋
-观察教学楼对出的横幅或者陈励勤发在空间的说说即可得到
-flag:NCTF{We1c0m3_t0_NCTF2020!}提交发现不对，试了好几次
-，发现要将感叹号去掉。
-flag..." />
-    <meta name="keywords" content="CTF" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="http://ayanagi.fun">
-  <img class="avatar" src="http://ayanagi.fun/images/avatar.png?v=1606055805768" alt="">
-  </a>
-  <h1 class="site-title">
-    ハルカトオク
-  </h1>
-  <p class="site-description">
-    又岂在朝朝暮暮。
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="http://ayanagi.fun" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="http://ayanagi.fun/CTF" class="menu">
-          CTF
-        </a>
-      
-    
-      
-        <a href="http://ayanagi.fun/archives" class="menu">
-          Python学习
-        </a>
-      
-    
-      
-        <a href="http://ayanagi.fun/archives" class="menu">
-          亚文化
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-        <a href="https://github.com/linyuqi9" target="_blank">
-          <i class="ri-github-line"></i>
-        </a>
-      
-    
-      
-        <a href="https://twitter.com/statedef12" target="_blank">
-          <i class="ri-twitter-line"></i>
-        </a>
-      
-    
-      
-        <a href="https://weibo.com/7458786450/profile?topnav=1&amp;wvr=6&amp;is_all=1" target="_blank">
-          <i class="ri-weibo-line"></i>
-        </a>
-      
-    
-      
-        <a href="https://www.zhihu.com/people/lin-yu-qi-17-81" target="_blank">
-          <i class="ri-zhihu-line"></i>
-        </a>
-      
-    
-      
-    
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="http://ayanagi.fun">
+        <img class="avatar" src="http://ayanagi.fun/images/avatar.png?v=1606055858443" alt="" width="32px" height="32px">
+      </a>
+      <a href="http://ayanagi.fun">
+        <h1 class="site-title">ハルカトオク</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
 </div>
 
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="http://ayanagi.fun" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="http://ayanagi.fun/CTF" class="menu purple-link">
+            CTF
+          </a>
+        
+      
+        
+          <a href="http://ayanagi.fun/archives" class="menu purple-link">
+            Python学习
+          </a>
+        
+      
+        
+          <a href="http://ayanagi.fun/archives" class="menu purple-link">
+            亚文化
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
         <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              NCTF2020 WP
-            </h2>
-            <div class="post-info">
-              <span>
-                2020-11-22
-              </span>
-              <span>
-                1 min read
-              </span>
-              
-                <a href="http://ayanagi.fun/tag/CTF/" class="post-tag">
-                  # CTF
-                </a>
-              
+          
+            <div class="feature-container" style="background-image: url('http://i1.fuimg.com/730033/a23a275718cf337f.jpg')">
             </div>
+          
+          <h2 class="post-title">NCTF2020 WP</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2020-11-22</span>
             
-              <img class="post-feature-image" src="http://i1.fuimg.com/730033/a23a275718cf337f.jpg" alt="">
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="http://ayanagi.fun/tag/CTF/">
+                    CTF
+                    
+                  </a>
+                
+              </span>
             
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <p>唯一一个没有Todo的wp<br>
+          </div>
+          <div class="post-content">
+            <p>唯一一个没有Todo的wp<br>
 ak了misc，男团非常的强。<br>
 彩蛋<br>
 观察教学楼对出的横幅或者陈励勤发在空间的说说即可得到<br>
@@ -132,76 +115,57 @@ PAC模式，再打开靶机即可查看问卷，在必填的选项框中填写�
 flag：<br>
 <code>NCTF{Let's_look_forward_to_X1CTF}</code></p>
 
-              </div>
-              <div class="toc-container">
-                
-              </div>
-            </div>
-          </article>
+          </div>
         </div>
 
         
           <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="http://ayanagi.fun/0xGame/">
+            <a class="purple-link" href="http://ayanagi.fun/0xGame/">
               <h3 class="post-title">
-                0xGame-misc wp
+                下一篇：0xGame-misc wp
               </h3>
             </a>
           </div>
-        
+          
+      </div>
 
-        
+      
 
-        <div class="site-footer">
-  一觉游仙好梦，任他竹冷松寒。
-  <a class="rss" href="http://ayanagi.fun/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
+      <div class="site-footer">
+  <div class="slogan">又岂在朝朝暮暮。</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  一觉游仙好梦，任他竹冷松寒。 | <a class="rss" href="http://ayanagi.fun/atom.xml" target="_blank">RSS</a>
 </div>
 
-      </div>
+
     </div>
+    <script type="application/javascript">
 
-    <script>
-      hljs.initHighlightingOnLoad()
+hljs.initHighlightingOnLoad()
 
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
+</script>
 
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
 
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
 
-    </script>
+
   </body>
 </html>

@@ -1,108 +1,130 @@
 <html>
   <head>
-  <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+<meta charset="utf-8" >
+
 <title>ハルカトオク</title>
-<link rel="shortcut icon" href="http://ayanagi.fun/favicon.ico?v=1606055805768">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<meta name="description" content="又岂在朝朝暮暮。">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://ayanagi.fun/favicon.ico?v=1606055858443">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="http://ayanagi.fun/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="ハルカトオク - Atom Feed" href="http://ayanagi.fun/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-  <meta name="description" content="又岂在朝朝暮暮。" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="http://ayanagi.fun">
-  <img class="avatar" src="http://ayanagi.fun/images/avatar.png?v=1606055805768" alt="">
-  </a>
-  <h1 class="site-title">
-    ハルカトオク
-  </h1>
-  <p class="site-description">
-    又岂在朝朝暮暮。
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="http://ayanagi.fun" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="http://ayanagi.fun/CTF" class="menu">
-          CTF
-        </a>
-      
-    
-      
-        <a href="http://ayanagi.fun/archives" class="menu">
-          Python学习
-        </a>
-      
-    
-      
-        <a href="http://ayanagi.fun/archives" class="menu">
-          亚文化
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-        <a href="https://github.com/linyuqi9" target="_blank">
-          <i class="ri-github-line"></i>
-        </a>
-      
-    
-      
-        <a href="https://twitter.com/statedef12" target="_blank">
-          <i class="ri-twitter-line"></i>
-        </a>
-      
-    
-      
-        <a href="https://weibo.com/7458786450/profile?topnav=1&amp;wvr=6&amp;is_all=1" target="_blank">
-          <i class="ri-weibo-line"></i>
-        </a>
-      
-    
-      
-        <a href="https://www.zhihu.com/people/lin-yu-qi-17-81" target="_blank">
-          <i class="ri-zhihu-line"></i>
-        </a>
-      
-    
-      
-    
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="http://ayanagi.fun">
+        <img class="avatar" src="http://ayanagi.fun/images/avatar.png?v=1606055858443" alt="" width="32px" height="32px">
+      </a>
+      <a href="http://ayanagi.fun">
+        <h1 class="site-title">ハルカトオク</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
 </div>
 
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="http://ayanagi.fun" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="http://ayanagi.fun/CTF" class="menu purple-link">
+            CTF
+          </a>
+        
+      
+        
+          <a href="http://ayanagi.fun/archives" class="menu purple-link">
+            Python学习
+          </a>
+        
+      
+        
+          <a href="http://ayanagi.fun/archives" class="menu purple-link">
+            亚文化
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
 
-        <div class="tags-container">
+
+        <div class="content-container">
           
-            <a class="tag" href="http://ayanagi.fun/tag/ACG/">亚文化</a>
-          
-            <a class="tag" href="http://ayanagi.fun/tag/Tech/">技术力</a>
-          
-            <a class="tag" href="http://ayanagi.fun/tag/CTF/">CTF</a>
-          
+          <div class="tags-container">
+            
+              <a class="tag" href="http://ayanagi.fun/tag/ACG/">亚文化</a>
+            
+              <a class="tag" href="http://ayanagi.fun/tag/Tech/">技术力</a>
+            
+              <a class="tag" href="http://ayanagi.fun/tag/CTF/">CTF</a>
+            
+          </div>
+
         </div>
 
         <div class="site-footer">
-  一觉游仙好梦，任他竹冷松寒。
-  <a class="rss" href="http://ayanagi.fun/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
+  <div class="slogan">又岂在朝朝暮暮。</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  一觉游仙好梦，任他竹冷松寒。 | <a class="rss" href="http://ayanagi.fun/atom.xml" target="_blank">RSS</a>
 </div>
 
+
       </div>
+      <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
     </div>
   </body>
 </html>
