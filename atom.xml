@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://coding-pages-bucket-3492000-8044683-5706-383497-1304298730.cos-website.ap-hongkong.myqcloud.com</id>
+    <id>http://ayanagi.fun</id>
     <title>綺柳</title>
-    <updated>2020-11-22T10:43:10.622Z</updated>
+    <updated>2020-11-22T10:43:54.594Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://coding-pages-bucket-3492000-8044683-5706-383497-1304298730.cos-website.ap-hongkong.myqcloud.com"/>
-    <link rel="self" href="http://coding-pages-bucket-3492000-8044683-5706-383497-1304298730.cos-website.ap-hongkong.myqcloud.com/atom.xml"/>
+    <link rel="alternate" href="http://ayanagi.fun"/>
+    <link rel="self" href="http://ayanagi.fun/atom.xml"/>
     <subtitle>又岂在朝朝暮暮。</subtitle>
-    <logo>http://coding-pages-bucket-3492000-8044683-5706-383497-1304298730.cos-website.ap-hongkong.myqcloud.com/images/avatar.png</logo>
-    <icon>http://coding-pages-bucket-3492000-8044683-5706-383497-1304298730.cos-website.ap-hongkong.myqcloud.com/favicon.ico</icon>
+    <logo>http://ayanagi.fun/images/avatar.png</logo>
+    <icon>http://ayanagi.fun/favicon.ico</icon>
     <rights>All rights reserved 2020, 綺柳</rights>
     <entry>
         <title type="html"><![CDATA[0xCTF-misc wp]]></title>
-        <id>http://coding-pages-bucket-3492000-8044683-5706-383497-1304298730.cos-website.ap-hongkong.myqcloud.com/XSVJzmva0/</id>
-        <link href="http://coding-pages-bucket-3492000-8044683-5706-383497-1304298730.cos-website.ap-hongkong.myqcloud.com/XSVJzmva0/">
+        <id>http://ayanagi.fun/XSVJzmva0/</id>
+        <link href="http://ayanagi.fun/XSVJzmva0/">
         </link>
         <updated>2020-11-22T09:48:45.000Z</updated>
         <content type="html"><![CDATA[<p>第一次接触的CTF</p>
