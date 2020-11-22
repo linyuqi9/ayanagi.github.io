@@ -166,7 +166,7 @@
     
     <div id=side>
         <div class="avatar-border">
-            <img src="http://ayanagi.fun/images/avatar.png?v=1606049087223" class="avatar">
+            <img src="http://ayanagi.fun/images/avatar.png?v=1606049502979" class="avatar">
         </div>
         <div class="sitename">ハルカトオク</div>
         <span class="describtion" data-text='["又岂在朝朝暮暮。"]'>&nbsp;</span>
@@ -440,6 +440,35 @@
             </div>
             <hr style="width: 80%;">
             
+            <div class="sharebtnContainer">
+                <button type="button" class="sharebtn">转载分享</button>
+            </div>
+            <div class="shareContainer">
+                <div class="share" style="height:30px;background: white;">
+                    <a class="qq" href=""><i><img class="shareicon"
+                                src="http://ayanagi.fun/media/images/QQ.png" alt=""></i></a>
+                    <a class="wechat" href=""><i><img class="shareicon"
+                                src="http://ayanagi.fun/media/images/wechat.png" alt=""></i></a>
+                    <a class="weibo" href=""><i><img class="shareicon"
+                                src="http://ayanagi.fun/media/images/weibo.png" alt=""></i></a>
+                    <a class="qzone" href=""><i><img class="shareicon"
+                                src="http://ayanagi.fun/media/images/qzone.png" alt=""></i></a>
+                    <a class="douban" href=""><i><img class="shareicon"
+                                src="http://ayanagi.fun/media/images/douban.png" alt=""></i></a>
+                    <a class="facebook" href=""><i><img class="shareicon"
+                                src="http://ayanagi.fun/media/images/facebook.png" alt=""></i></a>
+                    <a class="twitter" href=""><i><img class="shareicon"
+                                src="http://ayanagi.fun/media/images/twitter.png" alt=""></i></a>
+                </div>
+            </div>
+            
+            
+            <div class="donateContainer">
+                <img src="http://ayanagi.fun/media/images/donate.png" alt="" class="donateImg">
+            </div>
+            <div class="donateContainer">
+                <img src="" alt="" class="donate">
+            </div>
             
             <div class="postfooter">
                 <ul class="post-copyright">
@@ -492,7 +521,57 @@
                 <div id="comment"  class="comment" style="background: white">
                     <div class="commentcontainer">
                         
-                        <p>请到客户端“主题--自定义配置--valine”中填入ID和KEY</p>
+                        <style>
+
+
+    @media screen and (min-width: 1300px) {
+        .veditor::placeholder {
+            color: #b3b3b3;
+            font-size: 18px;
+            text-align: center;
+            line-height: 3rem;
+            font-family: kaiti;
+        }
+    }
+</style>
+
+<body>
+    <div id="vcomments">
+    </div>
+    <script src="http://ayanagi.fun/media/js/valine.min.js"></script>
+    <!-- <script src="https://unpkg.com/valine/dist/Valine.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: '8AAnks5Jb1qDQBqUJl3pyQJM-gzGzoHsz',
+            appKey: 'UYJEqd6hY9uUJK2O7uLUEXO6',
+            notify: true,
+            verify: false,
+            avatar: 'retro',
+            pageSize: 10,
+            placeholder: '既然来了，何不畅所欲言呢？',
+            visitor: true, // 阅读量统计
+        });
+    </script>
+    <script type="text/javascript">
+        // jinrishici.load(function (result) {
+        //     var jrsc_plac = result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin
+        //         .dynasty + " · " + result.data.origin.author;
+        //     if (jrsc_plac != undefined)
+        //         document.getElementById("veditor").setAttribute("placeholder", jrsc_plac);
+        // 
+        var jrsc = '既然来了，何不畅所欲言呢？';
+        jinrishici.load(function (result) {
+                // 自己的处理逻辑
+                jrsc = result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin
+                 .dynasty + " · " + result.data.origin.author;
+            });
+    </script> 
+    
+</body>
+                        <div class="clear"></div>
                         
                     </div>
                 </div>
@@ -787,8 +866,8 @@
         var rootaddr = $("#rootaddr").html();
         pl = pl.replace(rootaddr, "");
 
-        var appid = '';
-        var appkey = '';
+        var appid = '8AAnks5Jb1qDQBqUJl3pyQJM-gzGzoHsz';
+        var appkey = 'UYJEqd6hY9uUJK2O7uLUEXO6';
         console.log(appid, appkey)
         if(AV==undefined)
             AV.init({
