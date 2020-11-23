@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://ayanagi.fun</id>
     <title>ハルカトオク</title>
-    <updated>2020-11-23T13:24:21.755Z</updated>
+    <updated>2020-11-23T13:26:30.591Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://ayanagi.fun"/>
     <link rel="self" href="http://ayanagi.fun/atom.xml"/>
@@ -22,7 +22,7 @@
 <code>flag:NCTF{We1c0m3_t0_NCTF2020!}</code>提交发现不对，试了好几次<br>
 ，发现要将感叹号去掉。<br>
 flag：</p>
-<pre><code>NCTF{We1c0m3_t0_NCTF2020}
+<pre><code class="language-text">NCTF{We1c0m3_t0_NCTF2020}
 </code></pre>
 <h1 id="nctf2020问卷调查">NCTF2020问卷调查</h1>
 <p>一开始点进靶机无法访问，观察群消息给的hint，知道需要挂<br>
