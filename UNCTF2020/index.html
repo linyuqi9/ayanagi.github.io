@@ -1,8 +1,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
-    <meta name="description" content="Todo
-" />
+    <meta name="description" content="YLB's CAPTCHA
+第一次从这里知道易霖博，毕竟这个比赛是入门CTF两个月就上手打的，全靠题目图一乐，对系统的知识完全没有了解，大概搜了一下这个验证码相关的事儿，大概就是验证码很恶心难以辨认，一开始还以为是啥web题。毕竟输入了很多..." />
     <meta name="keywords" content="CTF" />
     <link rel="stylesheet" href="http://ayanagi.fun/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://ayanagi.fun/styles/main.css">
@@ -198,7 +198,7 @@
     
     <div id=side>
         <div class="avatar-border">
-            <img src="http://ayanagi.fun/images/avatar.png?v=1606138591866" class="avatar">
+            <img src="http://ayanagi.fun/images/avatar.png?v=1606210910979" class="avatar">
         </div>
         <div class="sitename">ハルカトオク</div>
         <span class="describtion" data-text='["又岂在朝朝暮暮。"]'>&nbsp;</span>
@@ -477,7 +477,7 @@
             </div>
             <div class="postinfo-detail">
                 <div class="postdate"><i class="fa fa-calendar"></i>2020-11-22</div>
-                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 1 min read</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 10 min read</div>
                 <div class="posttag">
                     
                     <a href="http://ayanagi.fun/tag/CTF/" class="postlink">
@@ -499,7 +499,283 @@
                 </span>
             </div>
             <div class="text ">
-                <p>Todo</p>
+                <h1 id="ylbs-captcha">YLB's CAPTCHA</h1>
+<p>第一次从这里知道易霖博，毕竟这个比赛是入门CTF两个月就上手打的，全靠题目图一乐，对系统的知识完全没有了解，大概搜了一下这个验证码相关的事儿，大概就是验证码很恶心难以辨认，一开始还以为是啥web题。毕竟输入了很多次都是0分，想着是不是可以绕过之类的，可是又有很多人过了，也不认为是什么高深的技术手段。后来认认真真的输入了一次，加了一分，真就直接输入验证码呢。<br>
+输错了会把分数清零重来，连续输对10次就能得到flag。</p>
+<h1 id="阴阳人编码">阴阳人编码</h1>
+<p>文本是只由 <code>就这. 就这¿ 不会吧!</code> 组成联想到ook，使用Ctrl+H批量替换，ook解密可得flag</p>
+<h1 id="爷的历险记">爷的历险记</h1>
+<p>在data里用记事本打开各种文件，能够直接看到flag</p>
+<pre><code>UNCTF{WelC0me_70_UNCTF2oZ0~}
+</code></pre>
+<h1 id="ylb绝密文件">YLB绝密文件</h1>
+<p>吃了不会python的亏，三个hint文件都拿到了，不会写脚本跑。到处报错。<br>
+各种追踪流可以得到xor.py和secret.python-38.pyc，后者反编译一下得到KEY</p>
+<pre><code class="language-python">key= 'YLBSB?YLBNB!'
+</code></pre>
+<p>binwalk可以得到zip文件，解压出来是一个异或后的文件，必然是需要使用解密脚本去跑的<br>
+对照着加密脚本去写一个解密脚本，报错，不会写。卡在这了<br>
+以下是官方的解密脚本：</p>
+<pre><code class="language-python">##coding:utf-8
+import base64
+key=&quot;YLBSB?YLBNB!&quot;
+file = open(&quot;YLBSB.docx&quot;, &quot;wb&quot;)
+enc = open(&quot;YLBSB.xor&quot;, &quot;rb&quot;)
+count = 0
+cipher = enc.read()
+for c in cipher:
+d = chr(c ^ ord(key[count % len(key)]))
+file.write(d.encode())
+count = count + 1
+enc.close()
+file.close()
+file = open(&quot;YLBSB.docx&quot;, &quot;rb&quot;)
+plain = base64.b64decode(file.read())
+file.close
+file = open(&quot;YLBSB.docx&quot;, &quot;wb&quot;)
+file.write(plain)
+file.close()
+</code></pre>
+<p>解码可得YLBSB.docx<br>
+<img src="http://ayanagi.fun/post-images/1606186961135.png" alt="" loading="lazy"><br>
+最后一行白色的文字即为flag</p>
+<h1 id="ez_image">EZ_IMAGE</h1>
+<p>百度搜misc拼图之类的关键词，照着步骤去做，调整一下参数就行<br>
+<code>montage unctf*.jpg -tile 15x15 -geometry 60x60+0+0 test.jpg</code><br>
+<img src="http://ayanagi.fun/post-images/1606187118768.png" alt="" loading="lazy"><br>
+<code>gaps --image=test.jpg --generation=30 --population=300 --size=60</code><br>
+<img src="http://ayanagi.fun/post-images/1606187148648.png" alt="" loading="lazy"><br>
+因为配环境的时候有些报错，耽误了时间，不然能拿三血</p>
+<h1 id="baba_is_you">baba_is_you</h1>
+<p>之前pi播过这个游戏，还蛮喜欢的，而且目标也是一个flag，就觉得非常亲切。<br>
+图片丢winhex可以找到一个视频链接，进入评论区拿flag。</p>
+<h1 id="你能破解我的密码吗">你能破解我的密码吗</h1>
+<p>shadow文件，搜一下就知道是大概是什么，有一段奇特的字符串<br>
+<code>guguguguji:$1$AH$xtjky.3kppbU27tR0SDJT.:18556:0:99999:7:::</code><br>
+扔进kali里john一下</p>
+<pre><code># john -show shadow
+</code></pre>
+<p>得到</p>
+<pre><code>guguguguji:123456:18556:0:99999:7:::
+
+1 password hash cracked, 0 left
+</code></pre>
+<p>密码就是123456，对其md5加密取32位小写得flag</p>
+<pre><code>unctf{e10adc3949ba59abbe56e057f20f883e}
+</code></pre>
+<h1 id="被删除的flag">被删除的flag</h1>
+<p>扔进kali里</p>
+<pre><code># strings flag
+</code></pre>
+<p>最后一行就能发现flag</p>
+<pre><code>unctf{congratulations!}
+</code></pre>
+<p>应该是一个非预期，strings对付一些题特别好用。<br>
+官方wp：<br>
+file命令看一下发现是ext3文件，题目提示flag被删除了，用extundelete恢复文件</p>
+<h1 id="躲猫猫">躲猫猫</h1>
+<p>excel文件可以改为zip文件，解压之后一个个点开看，就能找到base64加密的flag，解密就是</p>
+<h1 id="零">零</h1>
+<p>一开始还以为是什么小语种，傻傻的去查词典，查了半天也没个结果，和@Hh0 师傅讨论，师傅说可能是零宽。尝试之后成功。<br>
+在线解密地址 <code>http://330k.github.io/misc_tools/unicode_steganography.html</code><br>
+<img src="http://ayanagi.fun/post-images/1606195765687.png" alt="" loading="lazy"></p>
+<h1 id="et-msg">ET-msg</h1>
+<p>看了hint，google了一下Arecibo，发现了阿雷西博信息，但是没有什么思路<br>
+另一个hint是30 80 7 也没思路。<br>
+官方wp：<br>
+将01绘制成30*80图片后，第一部分为七进制0-6 的二进制表示（最下方点仅表示此处存在数字）<br>
+<img src="http://ayanagi.fun/post-images/1606205875972.jpeg" alt="" loading="lazy"><br>
+大括号中为七进制构成的flag，三个七进制一组，对照第一部分解出flag</p>
+<h1 id="网络深处1">网络深处1</h1>
+<p>解压，wav文件去DTMF解密，密码：<code>15975384265</code><br>
+解压得到的第二个wav文件扔进audacity里，查看频谱<br>
+<img src="http://ayanagi.fun/post-images/1606206750860.png" alt="" loading="lazy"><br>
+google搜索Tupper发现Tupper自我指涉公式，有几篇文章附有python脚本，跑了发现报错。<br>
+进而找到对应的wiki，wiki上有在线画图脚本，输入字符串即可得到图片<br>
+<img src="http://ayanagi.fun/post-images/1606207052770.jpg" alt="" loading="lazy"></p>
+<pre><code class="language-python">flag{Y29pbA==}
+</code></pre>
+<p>其实拿到flag后我还拿里面的base64解密了，以为解密后才是flag，解密之后还社工了一下，搜coil，其实没啥东西。</p>
+<h1 id="mouse_click">mouse_click</h1>
+<p>一看就知道是usb流量分析，在kali下直接tshark提取，之后以为要去除空行，其实发现几万行的空行，然后批量替换的话也会把有效的换行也替换掉，也很多，之后就懒得搞了<br>
+然后找了脚本搞了半天没出来，其实流量包里有废流量，tshark也会一并提取<br>
+需要先过滤掉没用的流量，只留下长度为31的流量<br>
+<img src="http://ayanagi.fun/post-images/1606209531762.jpg" alt="" loading="lazy"><br>
+文件→导出特定分组，我保存为mouse.pcapng，之后可以tshark提取了，得到正常的数据<br>
+从网上抄一个把数据转换成坐标的脚本</p>
+<pre><code class="language-python">#sniffer.py
+nums = []
+keys = open('usbdata.txt','r')
+result=open('result.txt','w')
+posx = 0
+posy = 0
+for line in keys:
+    x = int(line[2:4],16)
+    y = int(line[5:7],16)
+    if x &gt; 127 :
+        x -= 256
+    if y &gt;115 :
+        y -=256
+    posx += x
+    posy += y
+    btn_flag = int(line[0:2],16)  # 1 for left , 2 for right , 0 for nothing
+    if btn_flag == 1 :
+        result.write(str(posx)+' '+str(-posy)+'\n')
+keys.close()
+result.close()
+</code></pre>
+<pre><code># gnuplot
+plot &quot;result.txt&quot;
+</code></pre>
+<p><img src="http://ayanagi.fun/post-images/1606210317907.jpg" alt="" loading="lazy"><br>
+走了超多的弯路，但是也学到了很多，很不错的一道题</p>
+<h1 id="撕坏的二维码">撕坏的二维码</h1>
+<p>官方wp居然反应有人说题目太难，一点感觉也没有，虽然它碎了，但是只需要傻瓜式地补上右边的两个角，就能扫出来<br>
+体会到二维码的顽强，这东西真耐操，不错。</p>
+<h1 id="太极八卦">太极八卦</h1>
+<p>不会，请会算法的小同学来处理，也没思路。<br>
+下面是官方wp：<br>
+这一题打开可以看到文本内全是八卦字符，两两一组，中心是=和○，结合hint可以知道○没用，所以根据=可以想到base家族，再根据八卦字符有八种且两两一组，可以联想到八八六十四种情况对应base64，再根据hint可以猜到文本内是双螺旋矩阵，前方高能，眩晕警告：</p>
+<p><img src="http://ayanagi.fun/post-images/1606210784818.png" alt="" loading="lazy"><br>
+按照双螺旋矩阵读取成两个字符串，然后根据可以猜到八卦符号中的&quot;—&quot;为1&quot;- -&quot;为0，一个符号从上至下组成一个三位二进制数字，两个三位二进制数对应到b64编码表组成的矩阵中：<br>
+<img src="http://ayanagi.fun/post-images/1606210805490.png" alt="" loading="lazy"><br>
+图中0是</p>
+<p>第一位，1是指第二位</p>
+<p>下面贴出的是我的渣渣出题脚本，解题脚本师傅们自行写逆过程吧，我懒得写了：</p>
+<pre><code class="language-python">#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
+#unctf2020 出题
+#coil
+ 
+import base64
+import numpy
+numpy.set_printoptions(threshold=numpy.inf)
+ 
+gua = &quot;☷☳☵☱☶☲☴☰&quot;
+base64_alphabet = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&quot;
+ 
+def ToBase64(file):
+    with open(file, 'rb') as fileObj:
+        image_data = fileObj.read()
+        base64_data = base64.b64encode(image_data)
+        return base64_data.decode()
+def ToFile(fileObj, file):
+    base64_data = fileObj.read()
+    ori_image_data = base64.b64decode(base64_data)
+    fout = open(file, 'wb')
+    fout.write(ori_image_data)
+ 
+txt1 = ToBase64(&quot;image0.bmp&quot;)
+print(txt1)
+txt1 = list(txt1)
+txt2 = ToBase64(&quot;image1.bmp&quot;)
+print(txt1)
+txt2 = list(txt2)
+ 
+l = int(pow((max(len(txt1),len(txt2)))*2,0.5))+1
+m = &quot;=&quot;*(pow(l,2))
+m = list(m)
+m = numpy.array(m, dtype=numpy.unicode_)
+m = m.reshape(l, l)
+ 
+pl = []
+pl.append(l)
+for i in range(l-2,1,-2):
+    pl.append(i)
+    pl.append(i)
+pl.append(1)
+ 
+start = [0,-1]
+plsum = 0
+for i in range(len(pl)):
+    if plsum == 1612:
+        break
+    if i%4 == 0:
+        index = 1
+        for j in range(pl[i]):
+            start[index] += 1
+            m[start[0],start[1]] = txt1[plsum]
+            plsum += 1
+    elif i%4 == 1:
+        index = 0
+        for j in range(pl[i]):
+            start[index] += 1
+            m[start[0],start[1]] = txt1[plsum]
+            plsum += 1
+    elif i%4 == 2:
+        index = 1
+        for j in range(pl[i]):
+            start[index] -= 1
+            m[start[0],start[1]] = txt1[plsum]
+            plsum += 1
+    elif i%4 == 3:
+        index = 0
+        for j in range(pl[i]):
+            start[index] -= 1
+            m[start[0],start[1]] = txt1[plsum]
+            plsum += 1
+ 
+start = [l-1,l]
+plsum = 0
+for i in range(len(pl)):
+    if plsum == 1612:
+        break
+    if i%4 == 0:
+        index = 1
+        for j in range(pl[i]):
+            start[index] -= 1
+            m[start[0],start[1]] = txt2[plsum]
+            plsum += 1
+    elif i%4 == 1:
+        index = 0
+        for j in range(pl[i]):
+            start[index] -= 1
+            m[start[0],start[1]] = txt2[plsum]
+            plsum += 1
+    elif i%4 == 2:
+        index = 1
+        for j in range(pl[i]):
+            start[index] += 1
+            m[start[0],start[1]] = txt2[plsum]
+            plsum += 1
+    elif i%4 == 3:
+        index = 0
+        for j in range(pl[i]):
+            start[index] += 1
+            m[start[0],start[1]] = txt2[plsum]
+            plsum += 1
+m[int(l/2),int(l/2)] = '○'
+ 
+decode_s = &quot;&quot;
+for x in range(m.shape[1]):
+    for y in range(m.shape[0]):
+        c = m[x,y]
+        pos = base64_alphabet.find(c)
+        if pos == -1:
+            decode_s += c*2 +&quot; &quot;
+        else:
+            pos = oct(pos)
+            pos = str(pos).lstrip(&quot;0o&quot;)
+            pos = pos.zfill(2)
+            decode_s += gua[int(pos[0])]+gua[int(pos[1])]+&quot; &quot;
+    decode_s += &quot;\n&quot;
+ 
+with open(&quot;out.txt&quot;, &quot;wb&quot;) as outf:
+    outf.write(decode_s.encode(&quot;utf-8&quot;))
+</code></pre>
+<p>得到的b64字符串解码写文件可以得到两个bmp图片：<br>
+<img src="http://ayanagi.fun/post-images/1606210857833.png" alt="" loading="lazy"><br>
+根据hint和文本中的两个○，可以猜到是将两个图片融合，这里我们使用融合卡融合stegsolve.jar打开image0.bmp，再用analyse-image combiner打开image1.bmp，第一个就是异或：<br>
+<img src="http://ayanagi.fun/post-images/1606210881075.png" alt="" loading="lazy"><br>
+可以得到flag是</p>
+<pre><code>flag{t@1Ji_6A-Gu4_b64}
+</code></pre>
+<p>总结：</p>
+<p>hint -&gt; 知识点 -&gt; 工具</p>
+<p>hint1，hint3 -&gt; 双螺旋矩阵 -&gt;</p>
+<p>hint2，&quot;＝&quot; -&gt; b64 -&gt; audacity</p>
+<p>b64解码后BM开头 -&gt; bmp文件头 -&gt;</p>
+<p>hint1，hint3，&quot;○&quot; -&gt; 图片异或 -&gt; stegsolve.jar</p>
 
             </div>
             <hr style="width: 80%;">
@@ -682,7 +958,24 @@
 </script>
         
         <div class="toc-container">
-            
+            <ul class="markdownIt-TOC">
+<li><a href="#ylbs-captcha">YLB's CAPTCHA</a></li>
+<li><a href="#%E9%98%B4%E9%98%B3%E4%BA%BA%E7%BC%96%E7%A0%81">阴阳人编码</a></li>
+<li><a href="#%E7%88%B7%E7%9A%84%E5%8E%86%E9%99%A9%E8%AE%B0">爷的历险记</a></li>
+<li><a href="#ylb%E7%BB%9D%E5%AF%86%E6%96%87%E4%BB%B6">YLB绝密文件</a></li>
+<li><a href="#ez_image">EZ_IMAGE</a></li>
+<li><a href="#baba_is_you">baba_is_you</a></li>
+<li><a href="#%E4%BD%A0%E8%83%BD%E7%A0%B4%E8%A7%A3%E6%88%91%E7%9A%84%E5%AF%86%E7%A0%81%E5%90%97">你能破解我的密码吗</a></li>
+<li><a href="#%E8%A2%AB%E5%88%A0%E9%99%A4%E7%9A%84flag">被删除的flag</a></li>
+<li><a href="#%E8%BA%B2%E7%8C%AB%E7%8C%AB">躲猫猫</a></li>
+<li><a href="#%E9%9B%B6">零</a></li>
+<li><a href="#et-msg">ET-msg</a></li>
+<li><a href="#%E7%BD%91%E7%BB%9C%E6%B7%B1%E5%A4%841">网络深处1</a></li>
+<li><a href="#mouse_click">mouse_click</a></li>
+<li><a href="#%E6%92%95%E5%9D%8F%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81">撕坏的二维码</a></li>
+<li><a href="#%E5%A4%AA%E6%9E%81%E5%85%AB%E5%8D%A6">太极八卦</a></li>
+</ul>
+
     </div>
     </div>
     </div>
