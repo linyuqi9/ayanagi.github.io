@@ -198,7 +198,7 @@
     
     <div id=side>
         <div class="avatar-border">
-            <img src="http://ayanagi.fun/images/avatar.png?v=1606210910979" class="avatar">
+            <img src="http://ayanagi.fun/images/avatar.png?v=1606213291328" class="avatar">
         </div>
         <div class="sitename">ハルカトオク</div>
         <span class="describtion" data-text='["又岂在朝朝暮暮。"]'>&nbsp;</span>
@@ -540,11 +540,12 @@ file.close()
 <img src="http://ayanagi.fun/post-images/1606186961135.png" alt="" loading="lazy"><br>
 最后一行白色的文字即为flag</p>
 <h1 id="ez_image">EZ_IMAGE</h1>
-<p>百度搜misc拼图之类的关键词，照着步骤去做，调整一下参数就行<br>
-<code>montage unctf*.jpg -tile 15x15 -geometry 60x60+0+0 test.jpg</code><br>
-<img src="http://ayanagi.fun/post-images/1606187118768.png" alt="" loading="lazy"><br>
-<code>gaps --image=test.jpg --generation=30 --population=300 --size=60</code><br>
-<img src="http://ayanagi.fun/post-images/1606187148648.png" alt="" loading="lazy"><br>
+<p>百度搜misc拼图之类的关键词，照着步骤去做，调整一下参数就行</p>
+<pre><code>montage unctf*.jpg -tile 15x15 -geometry 60x60+0+0 test.jpg
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="http://ayanagi.fun/post-images/1606187118768.png" alt="" loading="lazy"></figure>
+<pre><code class="language-gaps"></code></pre>
+<p><img src="http://ayanagi.fun/post-images/1606187148648.png" alt="" loading="lazy"><br>
 因为配环境的时候有些报错，耽误了时间，不然能拿三血</p>
 <h1 id="baba_is_you">baba_is_you</h1>
 <p>之前pi播过这个游戏，还蛮喜欢的，而且目标也是一个flag，就觉得非常亲切。<br>
@@ -553,7 +554,7 @@ file.close()
 <p>shadow文件，搜一下就知道是大概是什么，有一段奇特的字符串<br>
 <code>guguguguji:$1$AH$xtjky.3kppbU27tR0SDJT.:18556:0:99999:7:::</code><br>
 扔进kali里john一下</p>
-<pre><code># john -show shadow
+<pre><code> john -show shadow
 </code></pre>
 <p>得到</p>
 <pre><code>guguguguji:123456:18556:0:99999:7:::
@@ -565,7 +566,7 @@ file.close()
 </code></pre>
 <h1 id="被删除的flag">被删除的flag</h1>
 <p>扔进kali里</p>
-<pre><code># strings flag
+<pre><code>strings flag
 </code></pre>
 <p>最后一行就能发现flag</p>
 <pre><code>unctf{congratulations!}
