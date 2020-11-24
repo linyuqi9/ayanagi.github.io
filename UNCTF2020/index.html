@@ -198,7 +198,7 @@
     
     <div id=side>
         <div class="avatar-border">
-            <img src="http://ayanagi.fun/images/avatar.png?v=1606214871099" class="avatar">
+            <img src="http://ayanagi.fun/images/avatar.png?v=1606235936882" class="avatar">
         </div>
         <div class="sitename">ハルカトオク</div>
         <span class="describtion" data-text='["又岂在朝朝暮暮。"]'>&nbsp;</span>
@@ -477,7 +477,7 @@
             </div>
             <div class="postinfo-detail">
                 <div class="postdate"><i class="fa fa-calendar"></i>2020-11-22</div>
-                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 10 min read</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 11 min read</div>
                 <div class="posttag">
                     
                     <a href="http://ayanagi.fun/tag/CTF/" class="postlink">
@@ -633,6 +633,27 @@ plot &quot;result.txt&quot;
 <h1 id="撕坏的二维码">撕坏的二维码</h1>
 <p>官方wp居然反应有人说题目太难，一点感觉也没有，虽然它碎了，但是只需要傻瓜式地补上右边的两个角，就能扫出来<br>
 体会到二维码的顽强，这东西真耐操，不错。</p>
+<h1 id="倒影">倒影</h1>
+<p>拿到了一血。这题特别简单，但是不知道为什么解的人不是特别多<br>
+下载下来解压是个exe文件，丢进winhex里查看头是一张jpg文件，最后有一段base64加密过的东西，解密后是一串字符串</p>
+<pre><code>0000000000B4000000A500100010000000006050B405106D6A9EA24E5767106D7AD58AC22940106D7AD58AC229400081001000000000000200A0478747E27616C666000000000000000200000000000000420080000000910000005297D4535E1555E5C90000801000A000F32010B405B4ECC7E9889EDF1BA30C6FF71836EBCFE9A735EFD6E501CE14109505827764B69DC37C6E2E478747E27616C66600000080000000910000005297D4535E1555E5C90000801000A04030B405
+</code></pre>
+<p>最后的4030B405，倒过来就能发现就是zip文件的文件头504B0304，写两行脚本逆序<br>
+唯一一个会写的脚本哈哈</p>
+<pre><code class="language-python">s = '0000000000B4000000A500100010000000006050B405106D6A9EA24E5767106D7AD58AC22940106D7AD58AC229400081001000000000000200A0478747E27616C666000000000000000200000000000000420080000000910000005297D4535E1555E5C90000801000A000F32010B405B4ECC7E9889EDF1BA30C6FF71836EBCFE9A735EFD6E501CE14109505827764B69DC37C6E2E478747E27616C66600000080000000910000005297D4535E1555E5C90000801000A04030B405'
+print(s[::-1])
+</code></pre>
+<p>得到逆序后的串，粘贴进010editor保存为zip，里面就是<code>flag.txt</code>，发现有密码，搞了好一会不知道密码，还以为要从图片里面得到，对jpg进行了各种detect，无果，后来直接爆破，密码为<code>658745</code><br>
+flag:</p>
+<pre><code>UNCTF{Th13_Is_@_F1@G}
+
+</code></pre>
+<h1 id="bashsecret">bashsecret</h1>
+<p>下下来是一个命名为pwn的文件，丢进kali，file一下发现是个ELF文件，strings、cat、binwalk皆无果，不会了。而且实名制看不懂官方的wp，大概感觉是需要pwn的知识，纯misc的瓶颈就到这了，继续努力。<br>
+官方wp：<br>
+报错使sha值为空</p>
+<p>第二个输入空则可以使得判断相等</p>
+<p>唯一注意报错时候 所带的指令cat可以执行即可。</p>
 <h1 id="太极八卦">太极八卦</h1>
 <p>不会，请会算法的小同学来处理，也没思路。<br>
 下面是官方wp：<br>
@@ -974,6 +995,8 @@ with open(&quot;out.txt&quot;, &quot;wb&quot;) as outf:
 <li><a href="#%E7%BD%91%E7%BB%9C%E6%B7%B1%E5%A4%841">网络深处1</a></li>
 <li><a href="#mouse_click">mouse_click</a></li>
 <li><a href="#%E6%92%95%E5%9D%8F%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81">撕坏的二维码</a></li>
+<li><a href="#%E5%80%92%E5%BD%B1">倒影</a></li>
+<li><a href="#bashsecret">bashsecret</a></li>
 <li><a href="#%E5%A4%AA%E6%9E%81%E5%85%AB%E5%8D%A6">太极八卦</a></li>
 </ul>
 
