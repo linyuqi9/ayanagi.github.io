@@ -21,7 +21,7 @@
     
     <div id=side>
         <div class="avatar-border">
-            <img src="http://ayanagi.fun/images/avatar.png?v=1606270868247" class="avatar">
+            <img src="http://ayanagi.fun/images/avatar.png?v=1606295022408" class="avatar">
         </div>
         <div class="sitename">ハルカトオク</div>
         <span class="describtion" data-text='["又岂在朝朝暮暮。"]'>&nbsp;</span>
@@ -564,7 +564,7 @@
     add();
 
     function get() {
-        var t = JSON.parse('[{"author":"绮柳","img":"","text":"我的批话其实还蛮多的2333","time":"2020-11-22 20:09:09"},{"author":"绮柳","img":"","text":"解决问题的时候成就感真是很舒服的。","time":"2020-11-23 14:50:30"},{"author":"绮柳","img":"","text":"gridea的markdown居然没有自动缩进。。给脚本手动换行我吐了","time":"2020-11-23 16:57:15"}]');
+        var t = JSON.parse('[{"author":"绮柳","img":"","text":"我的批话其实还蛮多的2333","time":"2020-11-22 20:09:09"},{"author":"绮柳","img":"","text":"解决问题的时候成就感真是很舒服的。","time":"2020-11-23 14:50:30"},{"author":"绮柳","img":"","text":"gridea的markdown居然没有自动缩进。。给脚本手动换行我吐了","time":"2020-11-23 16:57:15"},{"author":"qilq","img":"","text":"","time":""}]');
         talkindex = t.length - 1;
         for (var i = t.length - 1; i >= 0; i--) {
             var d = {};
@@ -596,7 +596,7 @@
                 <img src="' + talks[i].img + '" class="talkimg"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1606270868247">\
+                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1606295022408">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -609,7 +609,7 @@
             <div class="talk" v-for="t in talks"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1606270868247">\
+                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1606295022408">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
