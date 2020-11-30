@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://ayanagi.fun</id>
     <title>ハルカトオク</title>
-    <updated>2020-11-30T00:37:56.471Z</updated>
+    <updated>2020-11-30T00:48:32.461Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://ayanagi.fun"/>
     <link rel="self" href="http://ayanagi.fun/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>http://ayanagi.fun/favicon.ico</icon>
     <rights>All rights reserved 2020, ハルカトオク</rights>
     <entry>
-        <title type="html"><![CDATA[2020.11.30各主流家主板粗排(从高到低)]]></title>
+        <title type="html"><![CDATA[2020.11.30主流A家主板粗排(从高到低)]]></title>
         <id>http://ayanagi.fun/Lc-wapJmS/</id>
         <link href="http://ayanagi.fun/Lc-wapJmS/">
         </link>
