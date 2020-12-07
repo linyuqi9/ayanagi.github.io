@@ -1,9 +1,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
-    <meta name="description" content="Todooooo
-" />
-    <meta name="keywords" content="CTF" />
+    <meta name="description" content="难度倒不是很高，只是做不出来罢了。
+看直播
+访问HECTF的直播间，画面中写着flag。
+png
+非常基础的题，winhex打开 b64解码最后面拿到一半flag，png格式别忘了考虑宽高，改宽高得到另一半
+不说人话
+Ook
+溯源溯源
+社工..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="http://ayanagi.fun/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://ayanagi.fun/styles/main.css">
     
@@ -473,25 +480,23 @@
         <div class="postshow" style="padding-bottom: 0;">
             
             <div class="postdetailimg" style="width:100%;overflow: hidden;">
-                <img src="https://pic.downk.cc/item/5fbb5268b18d627113ddccb9.png" class="postimage" style="cursor:auto">
+                
+                <img src="" class="postimage">
+                
             </div>
             <div class="postinfo-detail">
-                <div class="postdate"><i class="fa fa-calendar"></i>2020-11-22</div>
-                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 1 min read</div>
-                <div class="posttag">
-                    
-                    <a href="http://ayanagi.fun/tag/CTF/" class="postlink">
-                        <i class="fa fa-tag"></i> CTF
-                    </a>
-                    
-                </div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-12-07</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
+            <div class="posttag">
+                
             </div>
-            
+        </div>
+        
         <div id="articlecontent">
             <div id="texttitle" style="text-align: center">
-                <h2>BUUCTF-misc wp</h2>
+                <h2>HECTF 2020 MISC WP</h2>
                 <!-- id 将作为查询条件 -->
-                <div id="pl" style="display:none">http://ayanagi.fun/BUUCTF/</div>
+                <div id="pl" style="display:none">http://ayanagi.fun/8y8xFV_lh/</div>
                 <div id="rootaddr" style="display:none">http://ayanagi.fun</div>
                 <span id="hotnum">
                     <h4><i class="fa fa-eye" aria-hidden="true" style="color: #FF8C00;"></i>&nbsp;&nbsp;热度</i>: <i
@@ -499,7 +504,41 @@
                 </span>
             </div>
             <div class="text ">
-                <p>Todooooo</p>
+                <p>难度倒不是很高，只是做不出来罢了。</p>
+<h1 id="看直播">看直播</h1>
+<p>访问HECTF的直播间，画面中写着flag。</p>
+<h1 id="png">png</h1>
+<p>非常基础的题，winhex打开 b64解码最后面拿到一半flag，png格式别忘了考虑宽高，改宽高得到另一半</p>
+<h1 id="不说人话">不说人话</h1>
+<p>Ook</p>
+<h1 id="溯源溯源">溯源溯源</h1>
+<p>社工题。<br>
+以下是官方wp：<br>
+姓名使用支付宝</p>
+<p>域名邮箱使用爱站</p>
+<p>公司名百度手机号即可</p>
+<h1 id="makesteg-great-again">MakeSteg Great Again</h1>
+<p>winhex打开得到一个key：</p>
+<pre><code>P@SsW00000
+</code></pre>
+<p>outguess没用、zsteg没用，stegpy没用，stegdetect没用(可能我这玩意我根本没装好，就没试过成功的)。本来以为自己还是会一些图片隐写的，实际上还欠缺得太多。以下是官方WP:<br>
+有一个key，很容易想到steghide</p>
+<pre><code>steghideextract -sf Steg.jpg -p p0SsW0000
+</code></pre>
+<p>能得到一个压缩包，里面是pyc文件，如果是我的话就拿去反编译了。照着复现的时候尝试反编译，出来的是对我来说非常复杂的python脚本，必然做不出来。眼界又宽阔了，这里其实用的是pyc隐写，使用Stegosaurus，仅支持py3.6以下版本</p>
+<pre><code>pythonstegosaurus.py GitHacker.pyc -x
+</code></pre>
+<p>得到key：</p>
+<p>'PPPPasword'_And_do_you_love_winter<br>
+提示知道是snow隐写</p>
+<pre><code>SNOW.EXE -C -p PPPPasword white.txt
+</code></pre>
+<h1 id="babymisc">babymisc</h1>
+<p>winhex打开，没啥思路，hint是文件hex尾部有编码后的flag后两位是zp，也没啥思路。<br>
+以下是官方wp：<br>
+使用010打开文件，会发现有一串全为0，然后像是base64，解码却出不来，根据提示：文件hex尾部有编码后的flag的后两位，在base后面加上zp，base58解码即可</p>
+<h1 id="总结">总结</h1>
+<p>已经遇到非常严重的瓶颈期了，尤其是环境配不好，每次参加比赛都有新花样。说新也不新，只是我见识少。</p>
 
             </div>
             <hr style="width: 80%;">
@@ -508,36 +547,24 @@
             <div class="postfooter">
                 <ul class="post-copyright">
                     <li><strong>文章作者：</strong>绮柳</li>
-            <li><strong>原文链接：</strong>http://ayanagi.fun/BUUCTF/</li>
+            <li><strong>原文链接：</strong>http://ayanagi.fun/8y8xFV_lh/</li>
             <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用<i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA
                 许可协议。转载请注明出处！</li>
             </ul>
         </div>
         <div id="otherpost">
             
-            <div class="prev-post-pc">
-                <div id="ppcontainer" onclick="window.location.href= 'http://ayanagi.fun/0xGame/';return false">
-                    
-                    <img src="https://pic.downk.cc/item/5fbb5268b18d627113ddccb7.png" style="width: 100%;" class="opimg">
-                    
-                    <h4 class="optitle">0xGame-misc wp</h4>
-                </div>
-            </div>
-            <div class="prev-post">
-                上一篇 <a href="http://ayanagi.fun/0xGame/">0xGame-misc wp</a>
-            </div>
-            
             
             <div class="next-post-pc">
-                <div id="npcontainer" onclick="window.location.href= 'http://ayanagi.fun/CTFshow/';return false">
+                <div id="npcontainer" onclick="window.location.href= 'http://ayanagi.fun/NCTF2020/';return false">
                     
-                    <img src="https://pic.downk.cc/item/5fbb525bb18d627113ddc968.png" style="width: 100%;" class="opimg">
+                    <img src="https://pic.downk.cc/item/5fbb532eb18d627113de1035.png" style="width: 100%;" class="opimg">
                     
-                    <h4 class="optitle">CTFshow-misc wp</h4>
+                    <h4 class="optitle">NCTF2020-misc wp</h4>
                 </div>
             </div>
             <div class="next-post">
-                下一篇 <a href="http://ayanagi.fun/CTFshow/">CTFshow-misc wp</a>
+                下一篇 <a href="http://ayanagi.fun/NCTF2020/">NCTF2020-misc wp</a>
             </div>
             
         </div>
@@ -682,7 +709,16 @@
 </script>
         
         <div class="toc-container">
-            
+            <ul class="markdownIt-TOC">
+<li><a href="#%E7%9C%8B%E7%9B%B4%E6%92%AD">看直播</a></li>
+<li><a href="#png">png</a></li>
+<li><a href="#%E4%B8%8D%E8%AF%B4%E4%BA%BA%E8%AF%9D">不说人话</a></li>
+<li><a href="#%E6%BA%AF%E6%BA%90%E6%BA%AF%E6%BA%90">溯源溯源</a></li>
+<li><a href="#makesteg-great-again">MakeSteg Great Again</a></li>
+<li><a href="#babymisc">babymisc</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+
     </div>
     </div>
     </div>
@@ -920,7 +956,7 @@
                 var nc = new NewCounter();
                 nc.save({
                     time: 1,
-                    title: "BUUCTF-misc wp",
+                    title: "HECTF 2020 MISC WP",
                     url: pl,
                     xid: pl,
                 }).then(function (object) {

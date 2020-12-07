@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://ayanagi.fun</id>
     <title>ハルカトオク</title>
-    <updated>2020-11-30T00:48:32.461Z</updated>
+    <updated>2020-12-07T04:51:20.540Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://ayanagi.fun"/>
     <link rel="self" href="http://ayanagi.fun/atom.xml"/>
@@ -11,128 +11,46 @@
     <icon>http://ayanagi.fun/favicon.ico</icon>
     <rights>All rights reserved 2020, ハルカトオク</rights>
     <entry>
-        <title type="html"><![CDATA[2020.11.30主流A家主板粗排(从高到低)]]></title>
-        <id>http://ayanagi.fun/Lc-wapJmS/</id>
-        <link href="http://ayanagi.fun/Lc-wapJmS/">
+        <title type="html"><![CDATA[HECTF 2020 MISC WP]]></title>
+        <id>http://ayanagi.fun/8y8xFV_lh/</id>
+        <link href="http://ayanagi.fun/8y8xFV_lh/">
         </link>
-        <updated>2020-11-29T23:42:04.000Z</updated>
-        <content type="html"><![CDATA[<p>具体参数有需求就会整理。</p>
-<h1 id="旗舰">旗舰</h1>
-<p>华硕/ASUS<br>
-ROG C8F(ROG Crosshair VIII Formula)<br>
-ROG C8H(ROG Crosshair VIII Hero)<br>
-ROG Strix B550-E Gaming</p>
-<p>技嘉/GIGABYTE<br>
-X570 Aorus Xtreme<br>
-B550 Aorus Master</p>
-<p>微星/MSI<br>
-MEG X570 Godlike<br>
-MEG X570 Creation</p>
-<p>华擎/ASRock<br>
-X570 Aqua</p>
-<h1 id="高端">高端</h1>
-<p>华硕/ASUS<br>
-ROG Strix X570-E Gaming<br>
-Pro WS-X570 ACE<br>
-ROG C7H(ROG Crosshair VII Hero)<br>
-ROG C8I(ROG Crosshai VIII Impact)<br>
-ROG Strix X570-I Gaming<br>
-ROG Strix X570-F Gaming<br>
-ROG Strix B550-F Gaming<br>
-ROG Strix B550-A Gaming<br>
-TUF Gaming X570-Plus<br>
-Prime X570-Pro<br>
-ROG C6E(ROG Crosshair VI Extreme)</p>
-<p>技嘉/GIGABYTE<br>
-X570 Aorus Elite<br>
-B550 Aorus Pro<br>
-B550 Aorus Elite<br>
-B550 Vision D<br>
-B550I Aorus Pro AX<br>
-X570 Aorus Ultra<br>
-X570 Aorus Pro WiFi<br>
-X570 Aorus Gaming 7</p>
-<p>微星/MSI<br>
-MEG X570 ACE<br>
-MEG X570 Unify<br>
-MAG X570 Tomahawk<br>
-B550 UNIFY-X<br>
-B550 UNIFY<br>
-MPG B550 Gaming Pro Carbon<br>
-MPG B550 Gaming<br>
-MAG B550 Tomahawk<br>
-MPG B550I Gaming Edge<br>
-MAG B550M Mortar<br>
-MAG B550M Mortar WiFi</p>
-<p>华擎/ASRock<br>
-X570 Creator<br>
-B550 Taichi<br>
-X570 Phantom Gming X<br>
-X570 Taichi<br>
-B550 Phantom Gming Velocita<br>
-B550 Steel Legend<br>
-B550 Extreme4<br>
-B550 Phantom Gaming-ITX/AX<br>
-X570 Phantom Gming-ITX/TB3</p>
-<p>映泰/BIOSTAR<br>
-Racing X570GT8<br>
-Racing X470GT8<br>
-Racing X370GT7</p>
-<h1 id="性能">性能</h1>
-<p>华硕/ASUS<br>
-ROG Strix X470-F Gaming<br>
-ROG Strix X370-F Gaming<br>
-Prime X570-P<br>
-ROG Strix B550-I Gaming<br>
-TUF Gaming B550-Plus<br>
-TUF Gaming B550M-Plus<br>
-TUF Gaming B450M-Pro 5<br>
-ROG C6H(ROG Crosshair VI Hero)<br>
-Prime X470-Pro<br>
-ROG Strix X470-I Gaming<br>
-ROG Strix B450-I Gaming<br>
-ROG Strix X370-I Gaming<br>
-ROG Strix B350-I Gaming</p>
-<p>技嘉/GIGABYTE<br>
-X570I Aorus Pro WiFi<br>
-Aorus GA-AX370-Gaming K7<br>
-Aorus GA-AX370-Gaming 5</p>
-<p>微星/MSI<br>
-MPG X570 Gaming Pro Carbon<br>
-B450I Gaming Plus<br>
-B350I Pro AC<br>
-X470 Gaming M7<br>
-MPG B550 Gaming Plus<br>
-B550-A Pro<br>
-X470 Gaming Pro Carbon<br>
-X370 Gaming M7 ACK</p>
-<p>华擎/ASRock<br>
-X470 Taichi Ultimate<br>
-X470 Taichi<br>
-Fatalty X370 Professional Gaming<br>
-X370 Taichi<br>
-X570 Steel Legend<br>
-X570 Extreme4<br>
-B550M Steel Legend<br>
-B550M-ITX/AC</p>
-<p>映泰/BIOSTAR<br>
-B550GTA<br>
-B550GTQ</p>
-<h1 id="中端">中端</h1>
-<p>华硕/ASUS<br>
-技嘉/GIGABYTE<br>
-微星/MSI<br>
-映泰/BIOSTAR<br>
-七彩虹/COLORFUL</p>
-<h1 id="低端">低端</h1>
-<p>华硕/ASUS<br>
-技嘉/GIGABYTE<br>
-微星/MSI<br>
-华擎/ASRock<br>
-映泰/BIOSTAR<br>
-七彩虹/COLORFUL<br>
-影驰/GALAXY<br>
-其他/Others</p>
+        <updated>2020-12-07T04:03:34.000Z</updated>
+        <content type="html"><![CDATA[<p>难度倒不是很高，只是做不出来罢了。</p>
+<h1 id="看直播">看直播</h1>
+<p>访问HECTF的直播间，画面中写着flag。</p>
+<h1 id="png">png</h1>
+<p>非常基础的题，winhex打开 b64解码最后面拿到一半flag，png格式别忘了考虑宽高，改宽高得到另一半</p>
+<h1 id="不说人话">不说人话</h1>
+<p>Ook</p>
+<h1 id="溯源溯源">溯源溯源</h1>
+<p>社工题。<br>
+以下是官方wp：<br>
+姓名使用支付宝</p>
+<p>域名邮箱使用爱站</p>
+<p>公司名百度手机号即可</p>
+<h1 id="makesteg-great-again">MakeSteg Great Again</h1>
+<p>winhex打开得到一个key：</p>
+<pre><code>P@SsW00000
+</code></pre>
+<p>outguess没用、zsteg没用，stegpy没用，stegdetect没用(可能我这玩意我根本没装好，就没试过成功的)。本来以为自己还是会一些图片隐写的，实际上还欠缺得太多。以下是官方WP:<br>
+有一个key，很容易想到steghide</p>
+<pre><code>steghideextract -sf Steg.jpg -p p0SsW0000
+</code></pre>
+<p>能得到一个压缩包，里面是pyc文件，如果是我的话就拿去反编译了。照着复现的时候尝试反编译，出来的是对我来说非常复杂的python脚本，必然做不出来。眼界又宽阔了，这里其实用的是pyc隐写，使用Stegosaurus，仅支持py3.6以下版本</p>
+<pre><code>pythonstegosaurus.py GitHacker.pyc -x
+</code></pre>
+<p>得到key：</p>
+<p>'PPPPasword'_And_do_you_love_winter<br>
+提示知道是snow隐写</p>
+<pre><code>SNOW.EXE -C -p PPPPasword white.txt
+</code></pre>
+<h1 id="babymisc">babymisc</h1>
+<p>winhex打开，没啥思路，hint是文件hex尾部有编码后的flag后两位是zp，也没啥思路。<br>
+以下是官方wp：<br>
+使用010打开文件，会发现有一串全为0，然后像是base64，解码却出不来，根据提示：文件hex尾部有编码后的flag的后两位，在base后面加上zp，base58解码即可</p>
+<h1 id="总结">总结</h1>
+<p>已经遇到非常严重的瓶颈期了，尤其是环境配不好，每次参加比赛都有新花样。说新也不新，只是我见识少。</p>
 ]]></content>
     </entry>
     <entry>
