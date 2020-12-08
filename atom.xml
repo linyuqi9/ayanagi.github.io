@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://ayanagi.fun</id>
     <title>ハルカトオク</title>
-    <updated>2020-12-07T05:01:13.619Z</updated>
+    <updated>2020-12-08T03:37:39.504Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://ayanagi.fun"/>
     <link rel="self" href="http://ayanagi.fun/atom.xml"/>
@@ -11,9 +11,137 @@
     <icon>http://ayanagi.fun/favicon.ico</icon>
     <rights>All rights reserved 2020, ハルカトオク</rights>
     <entry>
+        <title type="html"><![CDATA[SWPUCTF 2020-Misc WP]]></title>
+        <id>http://ayanagi.fun/SWPU2020/</id>
+        <link href="http://ayanagi.fun/SWPU2020/">
+        </link>
+        <updated>2020-12-08T03:02:23.000Z</updated>
+        <content type="html"><![CDATA[<p>有一定难度，但不是不能做，其实misc难度还算适中吧，只是都是套娃</p>
+<h1 id="耗子尾汁">耗子尾汁</h1>
+<p>binwalk出一个mp4视频和一个压缩包。扔进vegas逐帧查看，发现一串base64解得压缩包密码<code>sign_in</code><br>
+得到一个txt，文件名是19_20.txt，应该是提示，但是我看不懂，后来才知道是仿射，还是见识过于短浅了。<br>
+里面是一串b64以及<code>The last layer is the single table replacement password</code>的hint<br>
+解b64，转字符串，第一次从单表替换这个概念去了解密码，无脑使用凯撒栅栏这些没有任何结果。去quipquip，没整出来，因为不会用。看flag的格式是带下划线的，但是也不会整。<br>
+就差一点就出了，真的很急很气。<br>
+后来询问@Hh0师傅，最后是给那串东西按照给的格式添上下划线才能解出来。</p>
+<h1 id="套娃">套娃</h1>
+<p>非常简单的excel，都知道excel能改成zip解压，解压出一个txt和另一个excel，看文件名知道是RC4，excel继续改文件名解压，得到一个加了密的key压缩包和又一个excel，这次这个excel解压没啥用，扔winhex看到尾部的密码，解压得到key，RC4解密</p>
+<h1 id="找找吧">找找吧</h1>
+<p>压缩包丢进winhex得到key，解压得一个mp3和一个rar，mp3扔audacity没用，winhex看是zip，改后缀解压出一个mp3和一个png，au打开mp3后面有摩斯电码，解出一串东西，就卡住了。<br>
+后来群里讨论说是md5，找半天md5解码，要么要钱要么失败，头都秃了。没做出来<br>
+后来在各方帮助下载somd5上解出<code>n1ce_try</code><br>
+一个gif和一个png<br>
+stegsolve逐帧播放，看到类似flag的内容，png很明显的改宽高，发现提示 <code>Veni,Vidi,Vici</code>搜了知道是凯撒，凯撒可以得flag。</p>
+<h1 id="来猜谜吧">来猜谜吧</h1>
+<p>png一张，stegsolve LSB隐写了一个压缩包，丢kali zsteg提取</p>
+<pre><code>zsteg extract &quot;b1,rgb,lsb,xy&quot; problem.png &gt; flag.zip
+</code></pre>
+<p>一个流量包一个图片，usb流量分析，tshark没提取成功，然后就做不下去了。报错如下<br>
+<img src="http://ayanagi.fun/post-images/1607398160762.png" alt="" loading="lazy"><br>
+看别人的wp：<br>
+提取得到的是 AG DX AG DX AG DX<br>
+查了半天是解密 AGDFVX 密码的 phqgm 表，得到 gogogo然后就卡了，真的没碰到过有密码的图片隐写<br>
+搜了搜有个 steghide 和 outguess，最后是用 outguess 解出来的</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RoarCTF 2020-Misc wp]]></title>
+        <id>http://ayanagi.fun/Roar2020/</id>
+        <link href="http://ayanagi.fun/Roar2020/">
+        </link>
+        <updated>2020-12-08T02:47:08.000Z</updated>
+        <content type="html"><![CDATA[<p>wp全部转自<code>https://mp.weixin.qq.com/s?__biz=MzU3ODc2NTg1OA==&amp;mid=2247485804&amp;idx=1&amp;sn=15b8b99fc9cdca98d5fa99484b776063&amp;chksm=fd711c21ca0695374a191994b75b563b1a7604b70aa3c0b0251e78721f5a24de8ff85f85284f&amp;mpshare=1&amp;scene=23&amp;srcid=1207vysHlxNfj0iTwS4Fq5Xw&amp;sharer_sharetime=1607348906792&amp;sharer_shareid=8b035134b7fe8a8160582bb9a2551229#rd</code><br>
+华丽丽的爆了零。<br>
+仰慕着夏风师傅对Roar2019的精彩wp，自己做BUU也遇到了相同的题，难度不高，然后小瞧了今年的。<br>
+只对misc有了解，web大概只有F12和GET/POST的水平，然后签到出不来，签到是个披着misc皮的web。</p>
+<h1 id="签到">签到</h1>
+<pre><code class="language-php">&lt;?php
+echo &quot;&lt;!-- /?url= --&gt;&quot;;
+if ($_GET['url']) {
+  if (preg_match(&quot;/flag/i&quot;, $_GET['url'])) {
+    die();
+  }
+  $curl = curl_init();
+
+  curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($curl, CURLOPT_TIMEOUT, 500);
+  curl_setopt($curl, CURLOPT_URL, $_GET['url']);
+
+  $res = curl_exec($curl);
+  curl_close($curl);
+  echo $res;
+}
+//47.104.232.98:39390/?url=file:///%25%36%36%25%36%63%25%36%31%25%36%37
+//flag{c8ff10a5edb8acb9d8ef20f8eeba19a6} 
+</code></pre>
+<h1 id="hi-433mhz">Hi 433MHz</h1>
+<p>无线电流量分析，一看就不是我能做的题。但是看完wp乍一看也不是很难，只是第一次看见，不会分析罢了。<br>
+以下是北极星战队的wp：<br>
+汽车钥匙信号〜433Mhz。车钥匙信号的前导码是稳定的数据流，可以向接收者显示出实际正在被接受的数据。使用/inspectrum波形分析工具，symbols设为8个后，做相应调整，打开add sample plot选项<br>
+<img src="http://ayanagi.fun/post-images/1607395887242.png" alt="" loading="lazy"><br>
+我们要关注的是蓝色的波形，如果波形比较密集就代表1，比较稀疏就代表0<br>
+<img src="http://ayanagi.fun/post-images/1607395903655.png" alt="" loading="lazy"><br>
+然后就是慢慢的记录0、1二进制，转为ascii码就是flag</p>
+<pre><code>flag{25c21b0d-6a11-4312-971b-428d01cdc534}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C1CTF 2020-Misc WP]]></title>
+        <id>http://ayanagi.fun/C1CTF2020/</id>
+        <link href="http://ayanagi.fun/C1CTF2020/">
+        </link>
+        <updated>2020-12-08T02:23:51.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="behindme">BehindMe</h1>
+<p>一看就知道是NTFS数据流隐写，盲猜隐藏的文件就是flag.txt<br>
+直接</p>
+<pre><code>notepad behindme.txt:flag.txt
+</code></pre>
+<h1 id="flag的痛">flag的痛</h1>
+<p>音频文件，直接扔audacity，调高频率就能看到flag</p>
+<h1 id="呜呜呜">呜呜呜</h1>
+<p>winhex打开，尾巴看到7z文件，复制那部分粘贴进010保存或者dd得到一个7zip，ARCHPR无法爆破，搜了一下爆破7z文件的方法，弄了个软件给我爆出来口令是1，但是是错的，之后丢进kali</p>
+<pre><code>rarcrack 1.7z --threads 4 --type 7z
+</code></pre>
+<p>放着爆了半天然后挂起了，心态炸了就没去做，看了hint是弱口令，但是也懒得去试，然后没出。<br>
+一看官方wp其实就是123456，有点遗憾，这么简单的题目都没出来</p>
+<h1 id="forever-c1">forever c1</h1>
+<p>第一次见识，但是也不算第一次。使用curl发送请求在之前hackergame是有过例子的，只是不知道，也没做。<br>
+以下是官方wp：<br>
+指定本地客户端口号访问指定网址即可，比如使用curl</p>
+<pre><code>curl 192.168.31.198:30000 --local-port 193
+</code></pre>
+<p>如果发现不可以，可能是因为 NAT 端口映射的原因，建议使用公网服务器。</p>
+<p>当然，你也可以使用其他方法，比如：<br>
+<code>使用 C/C++/Java/Python 的 Socket 编程，指定本地端口</code><br>
+<code>使用 Scapy 直接构造数据包</code><br>
+<code>使用 IPTables 等工具映射本地端口</code></p>
+<h1 id="科学炼丹">科学炼丹</h1>
+<p>看都没看，机器学习就离谱。<br>
+以下是官方wp：<br>
+考察点：jpg文件头、深度学习框架使用/图片相似度比较<br>
+首先下载下来压缩包，可以看到test和train文件夹，并且train的每个图像文件名就是该图片上的字母，test的图像名称是从0开始编号的，对文件头比较敏感的同学应该能发现0.jpg和1.jpg两张图片结合起来是jpg的文件头FFD8FF</p>
+<p>方法1<br>
+第一种想法就是把这个题归类成一个机器学习的任务，train中给出了图像和它们对应的标签，所以这是一个有监督的机器学习任务，大致思路如下：</p>
+<p>首先将train中的图像（大小200<em>50）分割成小份（4份大小50</em>50），放到对应标签的文件夹下<br>
+通过已分割的图像和标签训练出一个模型，然后识别出test中每张图片上的数字的内容<br>
+将识别出的结果严格按顺序排好，以16进制形式写入文件当中，就可以得到一张jpg图像<br>
+最后得到的jpg图像就是flag：</p>
+<p>方法2<br>
+如果仔细观察一下给出的图像，会发现这里面每个数字或字母对应的图像都是一样的，并且相互之间有明显差别（肉眼就能分辨出来），所以还可以用另一种方式，就是图像相似度的方式来进行识别，通过对比test中每个分割后图片和train中有标签图像的相似度，确定test中图像的标签，然后写成图像</p>
+<p>这道题可能是出题人的脑洞开的太大了，不光有机器学习的部分，还要熟悉jpg文件的这种文件头才能有完整的思路，而且时间也有点紧，最后大家没人做，可能还浪费了一些时间，出题人给大家道个歉qwq</p>
+<p>关于最终的脚本，因为是以jupyter notebook格式写的，我把它们放到了网盘上，这里只提供了第一种思路的解题方法，只要把文件放在train和test同一目录下，按顺序执行就好，中间会多出来一些临时文件夹和一个超大的模型h5文件（因为直接调了包里的模型，参数太多了），最后生成的res_flag.jpg就是结果，如果对深度学习感兴趣可以找一下MNIST手写数字识别，这个题目算是一种改编</p>
+<h1 id="base的千层套路">Base的千层套路</h1>
+<p>这题和下一题都是密码学题目，但是和misc没啥区别。<br>
+已经有肉眼看穿题目给的所有base的能力了，没啥难度看着解就行</p>
+<h1 id="pigissocute">PigIsSoCute</h1>
+<p>hint是猪圈栅栏，没难度，下载下来的txt是一个b64编码的图片，去b64转文件得到猪圈密码的图片，对着识别解密得到字符串，进行栅栏解密得到可读的明文套上<code>c1ctf{}</code>即可</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[HECTF 2020 MISC WP]]></title>
-        <id>http://ayanagi.fun/HECTF/</id>
-        <link href="http://ayanagi.fun/HECTF/">
+        <id>http://ayanagi.fun/HECTF2020/</id>
+        <link href="http://ayanagi.fun/HECTF2020/">
         </link>
         <updated>2020-12-07T04:03:34.000Z</updated>
         <content type="html"><![CDATA[<p>难度倒不是很高，只是做不出来罢了。</p>
@@ -121,33 +249,6 @@ flag：</p>
         </link>
         <updated>2020-11-23T06:44:23.000Z</updated>
         <content type="html"><![CDATA[<p>依然是占坑，但是必然会写</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[主板的探讨]]></title>
-        <id>http://ayanagi.fun/motherboard/</id>
-        <link href="http://ayanagi.fun/motherboard/">
-        </link>
-        <updated>2020-11-23T06:41:46.000Z</updated>
-        <content type="html"><![CDATA[<p>占坑，一直很喜欢各大家的主板，真的非常百花齐放了</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[梧州各粉店品鉴]]></title>
-        <id>http://ayanagi.fun/RwMvqFFRd/</id>
-        <link href="http://ayanagi.fun/RwMvqFFRd/">
-        </link>
-        <updated>2020-11-23T06:40:23.000Z</updated>
-        <content type="html"><![CDATA[<p>还没吃完，为了让tag页面正常先发一个</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[指点江山]]></title>
-        <id>http://ayanagi.fun/YYGQ/</id>
-        <link href="http://ayanagi.fun/YYGQ/">
-        </link>
-        <updated>2020-11-22T13:48:09.000Z</updated>
-        <content type="html"><![CDATA[<p>Todo</p>
 ]]></content>
     </entry>
 </feed>
