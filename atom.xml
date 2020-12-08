@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://ayanagi.fun</id>
     <title>ハルカトオク</title>
-    <updated>2020-12-08T03:37:39.504Z</updated>
+    <updated>2020-12-08T03:42:56.709Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://ayanagi.fun"/>
     <link rel="self" href="http://ayanagi.fun/atom.xml"/>
@@ -38,6 +38,7 @@ stegsolve逐帧播放，看到类似flag的内容，png很明显的改宽高，�
 </code></pre>
 <p>一个流量包一个图片，usb流量分析，tshark没提取成功，然后就做不下去了。报错如下<br>
 <img src="http://ayanagi.fun/post-images/1607398160762.png" alt="" loading="lazy"><br>
+直到刚才有师傅告诉我T需要大写。我真是傻到家了。<br>
 看别人的wp：<br>
 提取得到的是 AG DX AG DX AG DX<br>
 查了半天是解密 AGDFVX 密码的 phqgm 表，得到 gogogo然后就卡了，真的没碰到过有密码的图片隐写<br>
