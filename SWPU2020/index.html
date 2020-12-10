@@ -200,7 +200,7 @@ binwalk出一个mp4视频和一个压缩包。扔进vegas逐帧查看，发现�
     
     <div id=side>
         <div class="avatar-border">
-            <img src="http://ayanagi.fun/images/avatar.png?v=1607469639665" class="avatar">
+            <img src="http://ayanagi.fun/images/avatar.png?v=1607582559452" class="avatar">
         </div>
         <div class="sitename">ハルカトオク</div>
         <span class="describtion" data-text='["又岂在朝朝暮暮。"]'>&nbsp;</span>
@@ -517,7 +517,7 @@ binwalk出一个mp4视频和一个压缩包。扔进vegas逐帧查看，发现�
 后来在各方帮助下在somd5上解出<code>n1ce_try</code><br>
 一个gif和一个png<br>
 stegsolve逐帧播放，看到类似flag的内容，png很明显的改宽高，发现提示 <code>Veni,Vidi,Vici</code>搜了知道是凯撒，凯撒可以得flag。</p>
-<h1 id="来猜谜吧">来猜谜吧</h1>
+<h1 id="来猜谜了">来猜谜了</h1>
 <p>png一张，stegsolve LSB隐写了一个压缩包，丢kali zsteg提取</p>
 <pre><code>zsteg extract &quot;b1,rgb,lsb,xy&quot; problem.png &gt; flag.zip
 </code></pre>
@@ -527,7 +527,9 @@ stegsolve逐帧播放，看到类似flag的内容，png很明显的改宽高，�
 看别人的wp：<br>
 提取得到的是 AG DX AG DX AG DX<br>
 查了半天是解密 AGDFVX 密码的 phqgm 表，得到 gogogo然后就卡了，真的没碰到过有密码的图片隐写<br>
-搜了搜有个 steghide 和 outguess，最后是用 outguess 解出来的</p>
+搜了搜有个 steghide 和 outguess，最后是用 outguess 解出来的<br>
+我结合官方wp的补充：键盘脚本。<br>
+得到字符串 AG DX AG DX AG DX ，是一种用ADFGX编码方式加密的字符串。通过对照表可以得到明文：gogogo，为outguess的密钥。</p>
 
             </div>
             <hr style="width: 80%;">
@@ -702,7 +704,7 @@ stegsolve逐帧播放，看到类似flag的内容，png很明显的改宽高，�
 <li><a href="#%E8%80%97%E5%AD%90%E5%B0%BE%E6%B1%81">耗子尾汁</a></li>
 <li><a href="#%E5%A5%97%E5%A8%83">套娃</a></li>
 <li><a href="#%E6%89%BE%E6%89%BE%E5%90%A7">找找吧</a></li>
-<li><a href="#%E6%9D%A5%E7%8C%9C%E8%B0%9C%E5%90%A7">来猜谜吧</a></li>
+<li><a href="#%E6%9D%A5%E7%8C%9C%E8%B0%9C%E4%BA%86">来猜谜了</a></li>
 </ul>
 
     </div>
