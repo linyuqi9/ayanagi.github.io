@@ -1,16 +1,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
-    <meta name="description" content="BehindMe
-一看就知道是NTFS数据流隐写，盲猜隐藏的文件就是flag.txt
-直接
-notepad behindme.txt:flag.txt
-
-flag的痛
-音频文件，直接扔audacity，调高频率就能看到flag
-呜呜呜
-wi..." />
-    <meta name="keywords" content="CTF" />
+    <meta name="description" content="昨天晚上临睡前和对象做了件傻逼事。我们在QQ的傻屌情侣空间互点100个情侣成就，花了好一番功夫，我饶有兴致的扫了一眼这些事情，浪漫之余还挺消费主义的。虽然当今被耍过猴的年轻人满口消费主义者也，然有此意识也不失为一种进步。以下以贫困家庭条件完..." />
+    <meta name="keywords" content="亚文化" />
     <link rel="stylesheet" href="http://ayanagi.fun/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://ayanagi.fun/styles/main.css">
     
@@ -480,15 +472,15 @@ wi..." />
         <div class="postshow" style="padding-bottom: 0;">
             
             <div class="postdetailimg" style="width:100%;overflow: hidden;">
-                <img src="https://pic.downk.cc/item/5fbb5343b18d627113de161c.png" class="postimage" style="cursor:auto">
+                <img src="https://pic.downk.cc/item/5fbb52d1b18d627113ddebc9.png" class="postimage" style="cursor:auto">
             </div>
             <div class="postinfo-detail">
-                <div class="postdate"><i class="fa fa-calendar"></i>2020-12-08</div>
-                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 5 min read</div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-12-23</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 10 min read</div>
                 <div class="posttag">
                     
-                    <a href="http://ayanagi.fun/tag/CTF/" class="postlink">
-                        <i class="fa fa-tag"></i> CTF
+                    <a href="http://ayanagi.fun/tag/ACG/" class="postlink">
+                        <i class="fa fa-tag"></i> 亚文化
                     </a>
                     
                 </div>
@@ -496,9 +488,9 @@ wi..." />
             
         <div id="articlecontent">
             <div id="texttitle" style="text-align: center">
-                <h2>C1CTF 2020-Misc WP</h2>
+                <h2>通过对恋爱中消费主义的抨击发散我的婚恋观</h2>
                 <!-- id 将作为查询条件 -->
-                <div id="pl" style="display:none">http://ayanagi.fun/C1CTF2020/</div>
+                <div id="pl" style="display:none">http://ayanagi.fun/Sgysjwpl6/</div>
                 <div id="rootaddr" style="display:none">http://ayanagi.fun</div>
                 <span id="hotnum">
                     <h4><i class="fa fa-eye" aria-hidden="true" style="color: #FF8C00;"></i>&nbsp;&nbsp;热度</i>: <i
@@ -506,50 +498,122 @@ wi..." />
                 </span>
             </div>
             <div class="text ">
-                <h1 id="behindme">BehindMe</h1>
-<p>一看就知道是NTFS数据流隐写，盲猜隐藏的文件就是flag.txt<br>
-直接</p>
-<pre><code>notepad behindme.txt:flag.txt
-</code></pre>
-<h1 id="flag的痛">flag的痛</h1>
-<p>音频文件，直接扔audacity，调高频率就能看到flag</p>
-<h1 id="呜呜呜">呜呜呜</h1>
-<p>winhex打开，尾巴看到7z文件，复制那部分粘贴进010保存或者dd得到一个7zip，ARCHPR无法爆破，搜了一下爆破7z文件的方法，弄了个软件给我爆出来口令是1，但是是错的，之后丢进kali</p>
-<pre><code>rarcrack 1.7z --threads 4 --type 7z
-</code></pre>
-<p>放着爆了半天然后挂起了，心态炸了就没去做，看了hint是弱口令，但是也懒得去试，然后没出。<br>
-一看官方wp其实就是123456，有点遗憾，这么简单的题目都没出来</p>
-<h1 id="forever-c1">forever c1</h1>
-<p>第一次见识，但是也不算第一次。使用curl发送请求在之前hackergame是有过例子的，只是不知道，也没做。<br>
-以下是官方wp：<br>
-指定本地客户端口号访问指定网址即可，比如使用curl</p>
-<pre><code>curl 192.168.31.198:30000 --local-port 193
-</code></pre>
-<p>如果发现不可以，可能是因为 NAT 端口映射的原因，建议使用公网服务器。</p>
-<p>当然，你也可以使用其他方法，比如：<br>
-<code>使用 C/C++/Java/Python 的 Socket 编程，指定本地端口</code><br>
-<code>使用 Scapy 直接构造数据包</code><br>
-<code>使用 IPTables 等工具映射本地端口</code></p>
-<h1 id="科学炼丹">科学炼丹</h1>
-<p>看都没看，机器学习就离谱。<br>
-以下是官方wp：<br>
-考察点：jpg文件头、深度学习框架使用/图片相似度比较<br>
-首先下载下来压缩包，可以看到test和train文件夹，并且train的每个图像文件名就是该图片上的字母，test的图像名称是从0开始编号的，对文件头比较敏感的同学应该能发现0.jpg和1.jpg两张图片结合起来是jpg的文件头FFD8FF</p>
-<p>方法1<br>
-第一种想法就是把这个题归类成一个机器学习的任务，train中给出了图像和它们对应的标签，所以这是一个有监督的机器学习任务，大致思路如下：</p>
-<p>首先将train中的图像（大小200<em>50）分割成小份（4份大小50</em>50），放到对应标签的文件夹下<br>
-通过已分割的图像和标签训练出一个模型，然后识别出test中每张图片上的数字的内容<br>
-将识别出的结果严格按顺序排好，以16进制形式写入文件当中，就可以得到一张jpg图像<br>
-最后得到的jpg图像就是flag：</p>
-<p>方法2<br>
-如果仔细观察一下给出的图像，会发现这里面每个数字或字母对应的图像都是一样的，并且相互之间有明显差别（肉眼就能分辨出来），所以还可以用另一种方式，就是图像相似度的方式来进行识别，通过对比test中每个分割后图片和train中有标签图像的相似度，确定test中图像的标签，然后写成图像</p>
-<p>这道题可能是出题人的脑洞开的太大了，不光有机器学习的部分，还要熟悉jpg文件的这种文件头才能有完整的思路，而且时间也有点紧，最后大家没人做，可能还浪费了一些时间，出题人给大家道个歉qwq</p>
-<p>关于最终的脚本，因为是以jupyter notebook格式写的，我把它们放到了网盘上，这里只提供了第一种思路的解题方法，只要把文件放在train和test同一目录下，按顺序执行就好，中间会多出来一些临时文件夹和一个超大的模型h5文件（因为直接调了包里的模型，参数太多了），最后生成的res_flag.jpg就是结果，如果对深度学习感兴趣可以找一下MNIST手写数字识别，这个题目算是一种改编</p>
-<h1 id="base的千层套路">Base的千层套路</h1>
-<p>这题和下一题都是密码学题目，但是和misc没啥区别。<br>
-已经有肉眼看穿题目给的所有base的能力了，没啥难度看着解就行</p>
-<h1 id="pigissocute">PigIsSoCute</h1>
-<p>hint是猪圈栅栏，没难度，下载下来的txt是一个b64编码的图片，去b64转文件得到猪圈密码的图片，对着识别解密得到字符串，进行栅栏解密得到可读的明文套上<code>c1ctf{}</code>即可</p>
+                <p>昨天晚上临睡前和对象做了件傻逼事。我们在QQ的傻屌情侣空间互点100个情侣成就，花了好一番功夫，我饶有兴致的扫了一眼这些事情，浪漫之余还挺消费主义的。虽然当今被耍过猴的年轻人满口消费主义者也，然有此意识也不失为一种进步。以下以贫困家庭条件完成100件事的花费来暴露这玩意是多么可笑，其中能够丐版的情况已经很丐了，只要不过分，那就没问题，电费网费等潜在小型消费忽略。贫穷也不能少了仪式感(说这句话的时候是不是就已经消费主义洗脑了呜呵)<br>
+1.拥有称呼对方的昵称 | 0元<br>
+2.拥有专属情侣头像 | 0元<br>
+3.把对方的照片设置成壁纸 | 0元<br>
+4.开设情侣空间 | 0元<br>
+5.在QQ空间官宣秀恩爱 | 0元<br>
+6.分享喜欢上彼此的理由 | 0元<br>
+7.见证对方的高光一刻 | 0元<br>
+8.一起看完一本书 | 图书馆借，0元<br>
+9.一起去运动 | 0元<br>
+10.一起上分甜蜜双排 | 0元<br>
+11.用对方的照片做表情包 | 0元<br>
+12.给对方写一封告白情书 | 一张看起来还凑合的卡片+信封 10元<br>
+13.把彼此介绍给自己的朋友 | 0元<br>
+14.一起拍情侣合照 | 大头贴，15元。<br>
+15.拥有情侣戒指 | 随便买个便宜的，99元<br>
+16.一起穿情侣装逛街 | 随便买套凑合不烂大街的 199<em>2=398元<br>
+17.抓拍对方糗糗的样子 | 0元<br>
+18.保存与对方的聊天记录 | 0元<br>
+19.煲2小时的电话粥 | 0元<br>
+20.每天和对方甜蜜视频 | 0元<br>
+21.每天和对方分享生活点滴 | 0元<br>
+22.一起坚持早起100天打卡 | 0元<br>
+23.每天和对方互道晚安 | 0元<br>
+24.下一秒就出现在对方面前 | 现在还好，是0元；如果异地了怕是大几千，先算0。<br>
+25.一起重游对方母校 | 彼校，2人来回大概600元。我校，2人来回大概2000元。2600元。<br>
+26.和对方一起搞怪 | 戴个面具吧 39</em>2=78元。<br>
+27.一起完成一个公益项目 | 献血，0元<br>
+28.一起看100场电影 | 每张票算40元 80<em>100=8000元。<br>
+29.玩一次真心话大冒险 | 一副牌5元。<br>
+30.一起去鬼屋尖叫 | 88元一位。176元。<br>
+31.一起完成一件手工品 | 肥皂船，0元。<br>
+32.一起打卡情侣圣地 | 想去秒5那个铁路，日本旅游来回10000元(没去过乱编的)<br>
+33.一起拼一个乐高 | 便宜的99元。<br>
+34.一起喝同一杯奶茶 | 15元。<br>
+35.一起打卡美食餐厅 | 水林间那就149</em>2=298元。<br>
+36.一起吃一碗泡面 | 汤达人，6元。<br>
+37.用一副耳机听音乐 | 想用蓝牙耳机，听个响但是也不至于太寒酸，99元。高贵的Air Pods的话799元<br>
+38.一起在家看恐怖片 | 0元<br>
+39.一起分享喜欢的食物 | 0元<br>
+40.记得对方讨厌的食物 | 0元<br>
+41.说出对方星座的三个特点 | 0元<br>
+42.摸头杀；公主抱 | 0元<br>
+43.讲冷笑话逗对方开心 | 0元<br>
+44.为对方吃过醋 | 0元<br>
+45.合唱一首情歌 | 0元<br>
+46.一起去蹦极 | 游乐园设施之一的话，100<em>2=200元。<br>
+47.一起去看爱豆的演唱会 | 恰巧本地有的话随口构思399元一张票，798元。<br>
+48.一起做充满爱心的美食 | 煎个蛋就挺有爱心的，2元。<br>
+49.一起养宠物 | 猫猫1000元，打算养3年的话各种处理保守估计10000元。<br>
+50.一起窝在沙发上看电视 | 0元<br>
+51.一起逛动物园 | 300元。<br>
+52.一起去旅行 | 想去东北，3000元。<br>
+53.分享彼此的理想 | 0元<br>
+54.在海边沙滩写下爱的誓言 | 去海边 应该要500元。<br>
+55.一起过生日 | 只要一个蛋糕的话188元，生日礼物100到1000元不等。<br>
+56.满足对方一个愿望 | 0元。<br>
+57.一起吃冰淇淋 | 蜜雪冰城，3元。<br>
+58.一起逛超市 | 只逛不买有点捞，恩格尔系数中等，300元。<br>
+59.给对方系鞋带 | 0元。<br>
+60.一起淋一场雨 | 感冒的话需要100元左右看病。<br>
+61.一起打一把伞 | 39元一把。<br>
+62.一起追完一部剧 | 开一个视频VIP 15元。<br>
+63.一起看零点跨年电影 | 40</em>2=80元。<br>
+64.每次过马路都要手牵手 | 0元<br>
+65.冬天共用一副手套 | 暖和点的69元。<br>
+66.一起吃粽子 | 5元一个灰水粽。2个10元。<br>
+67.生病的时候照顾对方 | 发烧感冒的话，100元左右。<br>
+68.沮丧的时候鼓励对方 | 0元。<br>
+69.分享对方最吸引你的优点 | 0元<br>
+70.偷偷观察对方睡觉的样子 | 0元<br>
+71.一起浏览对方的童年相册 | 0元<br>
+72.给对方化妆 | 一套化妆品 保守估计1500元。<br>
+73.角色互换一天 | 0元。<br>
+74.一起去游乐园当大小孩 | 300元。<br>
+75.充满仪式感地度过纪念日 | 买点材料自己收拾，500元。<br>
+76.一起过七夕 | 出去吃饭，300元。<br>
+77.一起过圣诞节 | 出去吃饭，还有礼物，500元。<br>
+78.一起跨年倒数 | 0元。<br>
+79.一起过情人节 | 去个有点氛围的地方吃饭 400元。<br>
+80.一起制定愿望清单 | 0元。<br>
+81.共进一次烛光晚餐 | 蜡烛10元，自己做饭成本40元。<br>
+82.存一笔“恋爱基金”| 每天一杯奶茶钱的话本金10000元。<br>
+83.一起改掉一个缺点 | 0元<br>
+84.一起做一件彼此不擅长的事 | 0元<br>
+85.一起学一门外语 | 自学不报班，学成的证明是考证，2人的报名费1000元。<br>
+86.拍一只情侣vlog | 0元。<br>
+87.一起学会一件乐器 | 自学不报班，学成的证明是考证，2人的报名费400元。<br>
+88.陪对方做10件幼稚的事 | 0元<br>
+89.一起看日出 | 0元<br>
+90.一起看日落 | 0元<br>
+91.一起看星空 | 0元<br>
+92.一起看大海 | 0元<br>
+93.一起登上过山顶 | 0元<br>
+94.一起看春天的花开 | 0元<br>
+95.一起吹夏天的风 | 0元<br>
+96.一起看秋天的落叶 | 0元<br>
+97.一起看冬天的雪 | 0元<br>
+98.一起撮合成一对情侣 | 0元<br>
+99.一起筹划未来 | 0元<br>
+100.告白过99次我爱你 | 0元<br>
+总计：许多东西只考虑丐版需要53,152元，后面十条感觉纯属凑数。<br>
+如果用这个钱，在当下能够买到一台3090+5950X的PC，能够满足许多年的所有的PC使用需求了。<br>
+但是想来其实不应该这样算，为啥啊，自己给消费主义打圆场可真是可笑。<br>
+写到这里其实蛮难过的，对自己的未来感觉挺危险的。大二才半路出家打CTF，从0开始，在这个吃青春饭的行业晚起步了整整一年，舍弃了绩点，舍弃了考研，走的甚至是最不受待见没有前途的misc方向，以后咋个混饭吃呢？<br>
+再者，CTF说实话兴趣没有那么的深厚，如果我没有任何经济负担，我必然会选择小语种文书工作。这是我与生俱来的爱好。听毕了业的成功学姐介绍的路线当下是考研比较香，而我是真的不想考。我对高数的讨厌已经无以复加。所以我又拿什么给她幸福呢？<br>
+我们相识才不到一个月，感情直线上升，我信星座，我是想相信处女遇到了他命中注定的小金牛；妹妹很好，小富婆，黑长直，155 100出头非常娇小，过分恰到好处的丰满纤柔，身上超级香，手手牵起来又软又舒服，像个小恶魔一样黏我，占有欲超级强，有亚文化交集所以说到死也不会没有话题，最差的情况都能是吃圈子瓜，行事潇洒从容大方，过于完美，过于超过100%地完全符合我所有的妄想。<br>
+我从认识她以来一直在思考但是还是实在不知道为什么我配得上这种神仙，对他人有情感的我总容易卑微，她总能给我自尊，我可太需要了，也太爱了。每次受到扶持我真的是感动到心理飙泪。但是还是怀疑。故行事总有这么万分之一的保留，这是我做任何事情都得留出的得以抽身的底线。这段时间甜到齁，情绪冲昏了头脑冷静不下来，现在回想简直顺利得可怕。<br>
+我曾经的保守观点：要么一次谈到婚嫁育，要么绝不伤害彼此。这种看起来的大男子主义在这个学期有了一些改变，但是碰壁碰得粉身碎骨，是不是该怀疑它在我身上的相性。现在其实再次面临这么重大的抉择我决定坚持我原先的想法，好，但不一定开心。很快就是圣诞节和元旦跨年了，不想在一年比较重要的时候给她留下伤害的烙印，我决定就此别过了，有缘的话，我希望是我站稳脚跟的时候再相遇，那个时候我一定会毫不犹豫。我可太不想她跟着我受苦或者尊严地跟她过下去了。<br>
+昨天晚上其实不止是想喝元气森林，为这茬发愁才是主要，整宿没睡着那个难受呢。<br>
+忘了这一切吧，彼此都是生命中的过路人罢了，有缘还会相遇的。她会遇到比我好太多的帅哥哥，而不该是我。我呢？能在这边混下去就已经是最好的安排了。<br>
+提升自己吧。路还长，我已经20岁了，说老也老，说年轻也年轻。<br>
+昨天看到一句话蛮难受的“20岁是女孩子最漂亮的年纪，也是男孩子本事最差的年纪。”<br>
+其实没本事的我就该是万般皆下，真的不配，说到底就是不能感动自己，在臭钱这块我说话一点没有底气，登堂入室庄严之时我的名讳只字未提，说白了我不还是啥也不是。<br>
+我很爱她，但是不敢了。<br>
+忘了这一切吧，时间是绝对可以抚平一切的创口的，别反驳，问就是时间不够长。</p>
 
             </div>
             <hr style="width: 80%;">
@@ -558,36 +622,24 @@ wi..." />
             <div class="postfooter">
                 <ul class="post-copyright">
                     <li><strong>文章作者：</strong>绮柳</li>
-            <li><strong>原文链接：</strong>http://ayanagi.fun/C1CTF2020/</li>
+            <li><strong>原文链接：</strong>http://ayanagi.fun/Sgysjwpl6/</li>
             <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用<i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA
                 许可协议。转载请注明出处！</li>
             </ul>
         </div>
         <div id="otherpost">
             
-            <div class="prev-post-pc">
-                <div id="ppcontainer" onclick="window.location.href= 'http://ayanagi.fun/Roar2020/';return false">
-                    
-                    <img src="https://pic.downk.cc/item/5fbb52f8b18d627113ddf786.png" style="width: 100%;" class="opimg">
-                    
-                    <h4 class="optitle">RoarCTF 2020-Misc wp</h4>
-                </div>
-            </div>
-            <div class="prev-post">
-                上一篇 <a href="http://ayanagi.fun/Roar2020/">RoarCTF 2020-Misc wp</a>
-            </div>
-            
             
             <div class="next-post-pc">
-                <div id="npcontainer" onclick="window.location.href= 'http://ayanagi.fun/HECTF2020/';return false">
+                <div id="npcontainer" onclick="window.location.href= 'http://ayanagi.fun/SWPU2020/';return false">
                     
-                    <img src="https://pic.downk.cc/item/5fbb5343b18d627113de161f.png" style="width: 100%;" class="opimg">
+                    <img src="https://pic.downk.cc/item/5fbb52edb18d627113ddf42b.png" style="width: 100%;" class="opimg">
                     
-                    <h4 class="optitle">HECTF 2020 MISC WP</h4>
+                    <h4 class="optitle">SWPUCTF 2020-Misc WP</h4>
                 </div>
             </div>
             <div class="next-post">
-                下一篇 <a href="http://ayanagi.fun/HECTF2020/">HECTF 2020 MISC WP</a>
+                下一篇 <a href="http://ayanagi.fun/SWPU2020/">SWPUCTF 2020-Misc WP</a>
             </div>
             
         </div>
@@ -732,16 +784,7 @@ wi..." />
 </script>
         
         <div class="toc-container">
-            <ul class="markdownIt-TOC">
-<li><a href="#behindme">BehindMe</a></li>
-<li><a href="#flag%E7%9A%84%E7%97%9B">flag的痛</a></li>
-<li><a href="#%E5%91%9C%E5%91%9C%E5%91%9C">呜呜呜</a></li>
-<li><a href="#forever-c1">forever c1</a></li>
-<li><a href="#%E7%A7%91%E5%AD%A6%E7%82%BC%E4%B8%B9">科学炼丹</a></li>
-<li><a href="#base%E7%9A%84%E5%8D%83%E5%B1%82%E5%A5%97%E8%B7%AF">Base的千层套路</a></li>
-<li><a href="#pigissocute">PigIsSoCute</a></li>
-</ul>
-
+            
     </div>
     </div>
     </div>
@@ -979,7 +1022,7 @@ wi..." />
                 var nc = new NewCounter();
                 nc.save({
                     time: 1,
-                    title: "C1CTF 2020-Misc WP",
+                    title: "通过对恋爱中消费主义的抨击发散我的婚恋观",
                     url: pl,
                     xid: pl,
                 }).then(function (object) {
