@@ -1,10 +1,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
-    <meta name="description" content="有一定难度，但不是不能做，其实misc难度还算适中吧，只是都是套娃
-耗子尾汁
-binwalk出一个mp4视频和一个压缩包。扔进vegas逐帧查看，发现一串base64解得压缩包密码sign_in
-得到一个txt，文件名是19_20.txt，..." />
+    <meta name="description" content="圣诞节前和对象互删，然后圣诞当天一个人孤寡打比赛。打了这么久的CTF，却还是只能出签到。I am a loser.
+马老师的秘籍
+一个靶机，一张几十个二维码的大图，随便骚了一个发现是mbg的语录其中3个字，一开始想弄下来切开一个个扫，以为f..." />
     <meta name="keywords" content="CTF" />
     <link rel="stylesheet" href="http://ayanagi.fun/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://ayanagi.fun/styles/main.css">
@@ -475,10 +474,10 @@ binwalk出一个mp4视频和一个压缩包。扔进vegas逐帧查看，发现�
         <div class="postshow" style="padding-bottom: 0;">
             
             <div class="postdetailimg" style="width:100%;overflow: hidden;">
-                <img src="https://pic.downk.cc/item/5fbb52edb18d627113ddf42b.png" class="postimage" style="cursor:auto">
+                <img src="https://pic.downk.cc/item/5fbb532eb18d627113de103c.png" class="postimage" style="cursor:auto">
             </div>
             <div class="postinfo-detail">
-                <div class="postdate"><i class="fa fa-calendar"></i>2020-12-08</div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-12-25</div>
                 <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 3 min read</div>
                 <div class="posttag">
                     
@@ -491,9 +490,9 @@ binwalk出一个mp4视频和一个压缩包。扔进vegas逐帧查看，发现�
             
         <div id="articlecontent">
             <div id="texttitle" style="text-align: center">
-                <h2>SWPUCTF 2020-Misc WP</h2>
+                <h2>DASCTF x BJD 12月圣诞狂欢赛Misc wp</h2>
                 <!-- id 将作为查询条件 -->
-                <div id="pl" style="display:none">http://ayanagi.fun/SWPU2020/</div>
+                <div id="pl" style="display:none">http://ayanagi.fun/DASxBJD1225/</div>
                 <div id="rootaddr" style="display:none">http://ayanagi.fun</div>
                 <span id="hotnum">
                     <h4><i class="fa fa-eye" aria-hidden="true" style="color: #FF8C00;"></i>&nbsp;&nbsp;热度</i>: <i
@@ -501,35 +500,35 @@ binwalk出一个mp4视频和一个压缩包。扔进vegas逐帧查看，发现�
                 </span>
             </div>
             <div class="text ">
-                <p>有一定难度，但不是不能做，其实misc难度还算适中吧，只是都是套娃</p>
-<h1 id="耗子尾汁">耗子尾汁</h1>
-<p>binwalk出一个mp4视频和一个压缩包。扔进vegas逐帧查看，发现一串base64解得压缩包密码<code>sign_in</code><br>
-得到一个txt，文件名是19_20.txt，应该是提示，但是我看不懂，后来才知道是仿射，还是见识过于短浅了。<br>
-里面是一串b64以及<code>The last layer is the single table replacement password</code>的hint<br>
-解b64，转字符串，第一次从单表替换这个概念去了解密码，无脑使用凯撒栅栏这些没有任何结果。去quipquip，没整出来，因为不会用。看flag的格式是带下划线的，但是也不会整。<br>
-就差一点就出了，真的很急很气。<br>
-后来询问@Hh0师傅，最后是给那串东西按照给的格式添上下划线才能解出来。</p>
-<h1 id="套娃">套娃</h1>
-<p>非常简单的excel，都知道excel能改成zip解压，解压出一个txt和另一个excel，看文件名知道是RC4，excel继续改文件名解压，得到一个加了密的key压缩包和又一个excel，这次这个excel解压没啥用，扔winhex看到尾部的密码，解压得到key，RC4解密</p>
-<h1 id="找找吧">找找吧</h1>
-<p>压缩包丢进winhex得到key，解压得一个mp3和一个rar，mp3扔audacity没用，winhex看是rar，改后缀解压出一个mp3和一个png，au打开mp3后面有摩斯电码，解出一串东西，就卡住了。<br>
-后来群里讨论说是md5，找半天md5解码，要么要钱要么失败，头都秃了。没做出来<br>
-后来在各方帮助下在somd5上解出<code>n1ce_try</code><br>
-一个gif和一个png<br>
-stegsolve逐帧播放，看到类似flag的内容，png很明显的改宽高，发现提示 <code>Veni,Vidi,Vici</code>搜了知道是凯撒，凯撒可以得flag。</p>
-<h1 id="来猜谜了">来猜谜了</h1>
-<p>png一张，stegsolve LSB隐写了一个压缩包，丢kali zsteg提取</p>
-<pre><code>zsteg extract &quot;b1,rgb,lsb,xy&quot; problem.png &gt; flag.zip
+                <p>圣诞节前和对象互删，然后圣诞当天一个人孤寡打比赛。打了这么久的CTF，却还是只能出签到。I am a loser.</p>
+<h1 id="马老师的秘籍">马老师的秘籍</h1>
+<p>一个靶机，一张几十个二维码的大图，随便骚了一个发现是mbg的语录其中3个字，一开始想弄下来切开一个个扫，以为flag就在这里面。但是太蠢了，所以果断把图片保存下来，是个png。丢winhex，好的，有压缩包，那么直接binwalk，在kali里打开压缩包是归档损坏状态，binwalk出来的两个txt文件都是空的，尝试把压缩包拿出windows查看，有三个文件，一个GoodLuck.txt，一个闪电五连鞭.txt，还有一个马老师的磁盘.jpg，压缩包带密码，尝试全部的伪加密，发现jpg是伪加密，图片长得和png几乎一样，然后有明显的需要处理的痕迹，其他俩带密码，jpg解压出来stegsolve和png异或，发现<img src="http://ayanagi.fun/post-images/1608891934024.png" alt="" loading="lazy"><br>
+把NianQingRenBuJiangWuDe丢去md5加密，直觉是取32位小写</p>
+<pre><code>c57988283c92f759585a0c1aebfdd743
 </code></pre>
-<p>一个流量包一个图片，usb流量分析，tshark没提取成功，然后就做不下去了。报错如下<br>
-<img src="http://ayanagi.fun/post-images/1607398160762.png" alt="" loading="lazy"><br>
-直到刚才有师傅告诉我T需要大写。我真是傻到家了。<br>
-看别人的wp：<br>
-提取得到的是 AG DX AG DX AG DX<br>
-查了半天是解密 AGDFVX 密码的 phqgm 表，得到 gogogo然后就卡了，真的没碰到过有密码的图片隐写<br>
-搜了搜有个 steghide 和 outguess，最后是用 outguess 解出来的<br>
-我结合官方wp的补充：键盘脚本。<br>
-得到字符串 AG DX AG DX AG DX ，是一种用ADFGX编码方式加密的字符串。通过对照表可以得到明文：gogogo，为outguess的密钥。</p>
+<p>将两个txt解压出来，一个内容是<img src="http://ayanagi.fun/post-images/1608892038946.jpg" alt="" loading="lazy"><br>
+另一个内容是<img src="http://ayanagi.fun/post-images/1608892053512.jpg" alt="" loading="lazy"><br>
+一看就知道是Ook，批量替换之</p>
+<pre><code>DASCTF{f79f28f30232e26a2f51b6b75355afa9}
+</code></pre>
+<p>交了好几次发现都错了，一看公告发现不需要带上DASCTF{}。</p>
+<h1 id="fakepic">FakePic</h1>
+<p>下载下来是RAR文件，打开发现提升密码是1???，马上想到掩码爆破，但是是高版本加密，archpr无法爆破，rarcrack没爆出来就离谱，明明字典里面没错。随即找了另外的rar暴力软件，而且挺好用的：cRARk。<br>
+password.def的内容如下：</p>
+<pre><code>max=4
+##
+[$a $A $1] *
+</code></pre>
+<p>爆了十几分钟出来了，密码<code>1cpp</code>，解压，一个png，一个txt，hint看不懂。<img src="http://ayanagi.fun/post-images/1608892400404.jpg" alt="" loading="lazy"><br>
+png用zsteg看，有些文件，也看不懂。<img src="http://ayanagi.fun/post-images/1608892514717.jpg" alt="" loading="lazy"><br>
+但是有一行：<code>searchme_in_Alpha</code><br>
+stegsolve打开，alpha7个滤镜，在最左边能看到一些类似摩斯电码的东西，<img src="http://ayanagi.fun/post-images/1608892742481.jpg" alt="" loading="lazy"><br>
+当时我的表情就是这样的<img src="http://ayanagi.fun/post-images/1608892762475.jpg" alt="" loading="lazy">，结合hint:10132430，<br>
+可能是把这些码按照滤镜1 0 1 3 2 4 3 0的顺序抄下来排列，抄完之后解摩斯电码，不对，但是有一些类似url的转码字符。感觉又有希望，但是和@Hh0师傅讨论之后，师傅说不像摩斯码，我也不知道是啥了，最后放弃，等官方wp。</p>
+<h1 id="fakepixel">FakePixel</h1>
+<p>下下来一个超大的压缩包，解压的bmp一张半个G，还有个enc.py的加密脚本，大眼一看，不会做，直接等wp。</p>
+<h1 id="总结">总结</h1>
+<p>真的太失败了。</p>
 
             </div>
             <hr style="width: 80%;">
@@ -538,36 +537,24 @@ stegsolve逐帧播放，看到类似flag的内容，png很明显的改宽高，�
             <div class="postfooter">
                 <ul class="post-copyright">
                     <li><strong>文章作者：</strong>绮柳</li>
-            <li><strong>原文链接：</strong>http://ayanagi.fun/SWPU2020/</li>
+            <li><strong>原文链接：</strong>http://ayanagi.fun/DASxBJD1225/</li>
             <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用<i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA
                 许可协议。转载请注明出处！</li>
             </ul>
         </div>
         <div id="otherpost">
             
-            <div class="prev-post-pc">
-                <div id="ppcontainer" onclick="window.location.href= 'http://ayanagi.fun/Sgysjwpl6/';return false">
+            
+            <div class="next-post-pc">
+                <div id="npcontainer" onclick="window.location.href= 'http://ayanagi.fun/Sgysjwpl6/';return false">
                     
                     <img src="https://pic.downk.cc/item/5fbb52a9b18d627113dde10e.png" style="width: 100%;" class="opimg">
                     
                     <h4 class="optitle">通过对恋爱中消费主义的抨击发散我的婚恋观</h4>
                 </div>
             </div>
-            <div class="prev-post">
-                上一篇 <a href="http://ayanagi.fun/Sgysjwpl6/">通过对恋爱中消费主义的抨击发散我的婚恋观</a>
-            </div>
-            
-            
-            <div class="next-post-pc">
-                <div id="npcontainer" onclick="window.location.href= 'http://ayanagi.fun/Roar2020/';return false">
-                    
-                    <img src="https://pic.downk.cc/item/5fbb52f8b18d627113ddf786.png" style="width: 100%;" class="opimg">
-                    
-                    <h4 class="optitle">RoarCTF 2020-Misc wp</h4>
-                </div>
-            </div>
             <div class="next-post">
-                下一篇 <a href="http://ayanagi.fun/Roar2020/">RoarCTF 2020-Misc wp</a>
+                下一篇 <a href="http://ayanagi.fun/Sgysjwpl6/">通过对恋爱中消费主义的抨击发散我的婚恋观</a>
             </div>
             
         </div>
@@ -713,10 +700,10 @@ stegsolve逐帧播放，看到类似flag的内容，png很明显的改宽高，�
         
         <div class="toc-container">
             <ul class="markdownIt-TOC">
-<li><a href="#%E8%80%97%E5%AD%90%E5%B0%BE%E6%B1%81">耗子尾汁</a></li>
-<li><a href="#%E5%A5%97%E5%A8%83">套娃</a></li>
-<li><a href="#%E6%89%BE%E6%89%BE%E5%90%A7">找找吧</a></li>
-<li><a href="#%E6%9D%A5%E7%8C%9C%E8%B0%9C%E4%BA%86">来猜谜了</a></li>
+<li><a href="#%E9%A9%AC%E8%80%81%E5%B8%88%E7%9A%84%E7%A7%98%E7%B1%8D">马老师的秘籍</a></li>
+<li><a href="#fakepic">FakePic</a></li>
+<li><a href="#fakepixel">FakePixel</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
 </ul>
 
     </div>
@@ -956,7 +943,7 @@ stegsolve逐帧播放，看到类似flag的内容，png很明显的改宽高，�
                 var nc = new NewCounter();
                 nc.save({
                     time: 1,
-                    title: "SWPUCTF 2020-Misc WP",
+                    title: "DASCTF x BJD 12月圣诞狂欢赛Misc wp",
                     url: pl,
                     xid: pl,
                 }).then(function (object) {
