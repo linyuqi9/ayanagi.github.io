@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
     <meta name="description" content="圣诞节前和对象互删，然后圣诞当天一个人孤寡打比赛。打了这么久的CTF，却还是只能出签到。I am a loser.
 马老师的秘籍
-一个靶机，一张几十个二维码的大图，随便骚了一个发现是mbg的语录其中3个字，一开始想弄下来切开一个个扫，以为f..." />
+一个靶机，一张几十个二维码的大图，随便扫了一个发现是mbg的语录其中3个字，一开始想弄下来切开一个个扫，以为f..." />
     <meta name="keywords" content="CTF" />
     <link rel="stylesheet" href="http://ayanagi.fun/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://ayanagi.fun/styles/main.css">
@@ -199,7 +199,7 @@
     
     <div id=side>
         <div class="avatar-border">
-            <img src="http://ayanagi.fun/images/avatar.png?v=1608893167984" class="avatar">
+            <img src="http://ayanagi.fun/images/avatar.png?v=1608897689416" class="avatar">
         </div>
         <div class="sitename">ハルカトオク</div>
         <span class="describtion" data-text='["又岂在朝朝暮暮。"]'>&nbsp;</span>
@@ -502,7 +502,7 @@
             <div class="text ">
                 <p>圣诞节前和对象互删，然后圣诞当天一个人孤寡打比赛。打了这么久的CTF，却还是只能出签到。I am a loser.</p>
 <h1 id="马老师的秘籍">马老师的秘籍</h1>
-<p>一个靶机，一张几十个二维码的大图，随便骚了一个发现是mbg的语录其中3个字，一开始想弄下来切开一个个扫，以为flag就在这里面。但是太蠢了，所以果断把图片保存下来，是个png。丢winhex，好的，有压缩包，那么直接binwalk，在kali里打开压缩包是归档损坏状态，binwalk出来的两个txt文件都是空的，尝试把压缩包拿出windows查看，有三个文件，一个GoodLuck.txt，一个闪电五连鞭.txt，还有一个马老师的磁盘.jpg，压缩包带密码，尝试全部的伪加密，发现jpg是伪加密，图片长得和png几乎一样，然后有明显的需要处理的痕迹，其他俩带密码，jpg解压出来stegsolve和png异或，发现<img src="http://ayanagi.fun/post-images/1608891934024.png" alt="" loading="lazy"><br>
+<p>一个靶机，一张几十个二维码的大图，随便扫了一个发现是mbg的语录其中3个字，一开始想弄下来切开一个个扫，以为flag就在这里面。但是太蠢了，所以果断把图片保存下来，是个png。丢winhex，好的，有压缩包，那么直接binwalk，在kali里打开压缩包是归档损坏状态，binwalk出来的两个txt文件都是空的，尝试把压缩包拿出windows查看，有三个文件，一个GoodLuck.txt，一个闪电五连鞭.txt，还有一个马老师的磁盘.jpg，压缩包带密码，尝试全部的伪加密，发现jpg是伪加密，图片长得和png几乎一样，然后有明显的需要处理的痕迹，其他俩带密码，jpg解压出来stegsolve和png异或，发现<img src="http://ayanagi.fun/post-images/1608891934024.png" alt="" loading="lazy"><br>
 把NianQingRenBuJiangWuDe丢去md5加密，直觉是取32位小写</p>
 <pre><code>c57988283c92f759585a0c1aebfdd743
 </code></pre>
@@ -513,7 +513,7 @@
 </code></pre>
 <p>交了好几次发现都错了，一看公告发现不需要带上DASCTF{}。</p>
 <h1 id="fakepic">FakePic</h1>
-<p>下载下来是RAR文件，打开发现提升密码是1???，马上想到掩码爆破，但是是高版本加密，archpr无法爆破，rarcrack没爆出来就离谱，明明字典里面没错。随即找了另外的rar暴力软件，而且挺好用的：cRARk。<br>
+<p>下载下来是RAR文件，打开发现提示密码是1???，马上想到掩码爆破，但是是高版本加密，archpr无法爆破，rarcrack没爆出来就离谱，明明字典里面没错。随即找了另外的rar暴力软件，而且挺好用的：cRARk。<br>
 password.def的内容如下：</p>
 <pre><code>max=4
 ##
@@ -525,7 +525,7 @@ png用zsteg看，有些文件，也看不懂。<img src="http://ayanagi.fun/post
 stegsolve打开，alpha7个滤镜，在最左边能看到一些类似摩斯电码的东西，<img src="http://ayanagi.fun/post-images/1608892742481.jpg" alt="" loading="lazy"><br>
 当时我的表情就是这样的<img src="http://ayanagi.fun/post-images/1608893119131.jpg" alt="" loading="lazy">，<br>
 图片旋转之后放大五倍，是这样的<img src="http://ayanagi.fun/post-images/1608893157633.jpg" alt="" loading="lazy">结合hint:10132430，<br>
-可能是把这些码按照滤镜1 0 1 3 2 4 3 0的顺序抄下来排列，抄完之后解摩斯电码，不对，但是有一些类似url的转码字符。感觉又有希望，但是和@Hh0师傅讨论之后，师傅说不像摩斯码，我也不知道是啥了，最后放弃，等官方wp。</p>
+可能是把这些码按照滤镜1 0 1 3 2 4 3 0的顺序抄下来排列，抄完之后解摩斯电码，不对，但是有一些类似url的转码字符。感觉又有希望，但是觉得又不像摩斯码，不知道是啥了，最后放弃，等官方wp。</p>
 <h1 id="fakepixel">FakePixel</h1>
 <p>下下来一个超大的压缩包，解压的bmp一张半个G，还有个enc.py的加密脚本，大眼一看，不会做，直接等wp。</p>
 <h1 id="总结">总结</h1>
