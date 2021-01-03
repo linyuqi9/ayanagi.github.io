@@ -1,19 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:4000</id>
+    <id>http://ayanagi.fun</id>
     <title>ハルカトオク</title>
-    <updated>2021-01-02T13:50:18.688Z</updated>
+    <updated>2021-01-03T03:39:38.035Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://localhost:4000"/>
-    <link rel="self" href="http://localhost:4000/atom.xml"/>
+    <link rel="alternate" href="http://ayanagi.fun"/>
+    <link rel="self" href="http://ayanagi.fun/atom.xml"/>
     <subtitle>又岂在朝朝暮暮。</subtitle>
-    <logo>http://localhost:4000/images/avatar.png</logo>
-    <icon>http://localhost:4000/favicon.ico</icon>
+    <logo>http://ayanagi.fun/images/avatar.png</logo>
+    <icon>http://ayanagi.fun/favicon.ico</icon>
     <rights>All rights reserved 2021, ハルカトオク</rights>
     <entry>
+        <title type="html"><![CDATA[测量学考点]]></title>
+        <id>http://ayanagi.fun/zdPtdeIk5/</id>
+        <link href="http://ayanagi.fun/zdPtdeIk5/">
+        </link>
+        <updated>2021-01-03T03:38:24.000Z</updated>
+        <content type="html"><![CDATA[<p>考试题型</p>
+<p>1、判断 10分</p>
+<p>2、单选 45分</p>
+<p>3、问答 15分：概念、原理描述，意思对了就行</p>
+<p>4、计算 30分：</p>
+<p>书本范围</p>
+<p>P1测绘学的分支学科，知道是什么，做什么的即可</p>
+<p>1.3数字测图，了解一下</p>
+<p>P4测绘相关的常识，一些缩写</p>
+<p>比较重要的内容：<strong>地球的形状</strong>、<strong>学科分支</strong></p>
+<p>P5测量学的基本知识：2.1.1 大地体、水准面等、基准面基准线、铅垂线、重力方向</p>
+<p>2.1.2<strong>地球椭球</strong>、参考椭球，掌握概念；扁率</p>
+<p>2.2坐标系，变换计算不考</p>
+<p>P8高斯平面直角坐标系，和数学坐标系的区别；<strong>高斯投影</strong></p>
+<p>地图投影的<strong>三种变形</strong>；</p>
+<p>P9<strong>高斯投影，高斯投影分带的方法、分带编号(3°、6°)，要求会计算</strong>；坐标的转换，500km计算</p>
+<p>P10<strong>高程系统，高程，高程的基准面</strong>，高程又叫海拔；我国高程系统；要求理解掌握；水准原点在青岛；</p>
+<p>2.4确定地面点的位置，了解大地坐标系，了解天文坐标系，坐标正算反算，坐标增量，距离、方位角，使用反三角函数，考虑象限P11</p>
+<p>P12水平面、大地水准面，距离对水平角度、高程的影响，知道<strong>三个结论</strong>，<strong>一定的范围(10km)可以忽略不计；高程不可</strong>；计算公式不考察；</p>
+<p>P13地球表面分为地物、地貌两类；地物内容，地物内容；</p>
+<p>P14测量工作的基本过程；遵循的<strong>三个基本原则</strong>，要求掌握文字描述；测量工作的三个阶段；</p>
+<p>P16水准仪的型号的意思，了解仪器结构；</p>
+<p>P18<strong>视差</strong>：什么是视差，消除视差的方法，问答题；3.2.2理解3种水准器的作用；</p>
+<p>P19了解水准尺；P20掌握水准尺的读数；P21<strong>掌握水准仪的使用流程(仪器操作)</strong></p>
+<p>P25了解三种<strong>水准路线</strong>；P27~29水准测量的<strong>施测，读数，记录，计算</strong></p>
+<p>3.6误差分析，不会考太深，了解仪器误差、i角误差及消除；偶数测站消除水准尺零点误差；</p>
+<p>P31、32了解xx操作消除xx影响；</p>
+<p>P39**测量角度、测量原理、水平角、竖直角(天顶距)的概念定义；**了解经纬仪的结构，代号的意义</p>
+<p>P42<strong>全站仪的操作、掌握使用过程</strong>；</p>
+<p>P45<strong>水平角测量：测回法</strong>；P46、47掌握；掌握计算2C值；</p>
+<p>P48顺时针刻划，逆时针刻划；指标差</p>
+<p>P51竖直角观测计算；指标差计算，中丝法；了解误差；</p>
+<p>P62相对误差的计算；视距测量；</p>
+<p>P72了解测回的概念；</p>
+<p>5.6直线定向，3个标准方向，P75三个方位角；</p>
+<p>误差的原因，条件，来源，分类；</p>
+<p>P89</p>
+<p>P131偶然误差的四种情况、分布特征；标准差、中误差、方差P132</p>
+<p>极限误差一般是2到3倍中误差；相对误差计算时要化成分数；误差传播分析线性及以下；</p>
+<p>P138权的定义性质、<strong>计算方法</strong>；了解权在测量中的使用，<strong>不同精度加权平均计算</strong>；</p>
+<p>P142水准路线的高程加权平均计算；</p>
+<p>P149了解80坐标系54坐标系，新1954坐标系；</p>
+<p>P150了解坐标系的转换；</p>
+<p>P152导线测量，<strong>导线的三种形式</strong>，了解导线的外业观测；<strong>闭合导线的内业计算</strong>；</p>
+<p>P155<strong>表格掌握</strong>，下方有详细文字讲解；</p>
+<p>P156附合导线类似，了解；了解交汇方法、原理；</p>
+<p>高程控制测量，观测方法、计算，P167<strong>掌握表格记录计算方法</strong></p>
+<p>P168内业计算，<strong>闭合差的调整(和水准测量相同)</strong>，调整方法；平差</p>
+<p><strong>三角高程的原理</strong></p>
+<p><strong>地形图的比例尺</strong>；<strong>比例尺的精度、计算</strong>；<strong>地物、地貌</strong>；<strong>等高线</strong>P177</p>
+<p>辨认等高线对应的地形；P180<strong>等高线四个种类</strong>、概念对应的内容；</p>
+<p><strong>等高线的5大特性</strong>；<strong>平面控制、高程控制</strong>；</p>
+<p>P194数字化测图；P196野外数据采集；P197<strong>碎部测量步骤、准备、测量、草图绘制</strong>；</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[测量学(7~9章)]]></title>
-        <id>http://localhost:4000/AlrEZaei9/</id>
-        <link href="http://localhost:4000/AlrEZaei9/">
+        <id>http://ayanagi.fun/AlrEZaei9/</id>
+        <link href="http://ayanagi.fun/AlrEZaei9/">
         </link>
         <updated>2021-01-02T04:30:13.000Z</updated>
         <content type="html"><![CDATA[<h1 id="第七章-控制测量">第七章 控制测量</h1>
@@ -82,19 +143,19 @@
 <td>附合导线</td>
 <td>一个已知控制点A</td>
 <td>另一个已知控制点B</td>
-<td><img src="http://localhost:4000/post-images/1609566047849.png" alt="" loading="lazy"></td>
+<td><img src="http://ayanagi.fun/post-images/1609566047849.png" alt="" loading="lazy"></td>
 </tr>
 <tr>
 <td>闭合导线</td>
 <td>已知控制点A</td>
 <td>已知控制点A</td>
-<td><img src="http://localhost:4000/post-images/1609566056192.png" alt="" loading="lazy"></td>
+<td><img src="http://ayanagi.fun/post-images/1609566056192.png" alt="" loading="lazy"></td>
 </tr>
 <tr>
 <td>支导线</td>
 <td>已知控制点A</td>
 <td></td>
-<td><img src="http://localhost:4000/post-images/1609566062529.png" alt="" loading="lazy"></td>
+<td><img src="http://ayanagi.fun/post-images/1609566062529.png" alt="" loading="lazy"></td>
 </tr>
 </tbody>
 </table>
@@ -110,8 +171,8 @@
 导线点位选定后，要钉一个小钉作为<strong>临时性标志</strong>；在碎石或沥青路面上，可以用顶上凿有十字纹的大铁钉代替木桩；在混凝土场地或路面上，可以用<strong>钢凿凿一十字纹，再涂上红油漆使标志明显</strong>。<br>
 导线点埋设后，为便于观测时寻找，可以在点位附近房角或电线杆等明显地物上用红油漆标明指示导线点的位置。应为每一个导线点绘制一张<strong>点之记</strong>。<br>
 若导线需要长期保存，则可以埋设混凝土导线点标石。导线点在地形图上的表示符号见图，图中的<strong>2.0表示符号正方形的长宽为2mm,1.6表示符号圆的直径为1.6mm</strong><br>
-<img src="http://localhost:4000/post-images/1609566639954.jpg" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609566647149.jpg" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609566639954.jpg" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609566647149.jpg" alt="" loading="lazy"><br>
 (二)测角<br>
 如果观测没有误差，在同一个导线点测得的左角与右角之和应等于360°。<br>
 图根导线的转折角可以用DJ6经纬仪测回法观测一测回，<strong>应统一地观测左角或测右角</strong>，对于闭合导线，一般是<strong>观测闭合多边形的内角</strong>。<br>
@@ -123,9 +184,9 @@
 三、导线测量内业计算的基本公式<br>
 由两个已知点的坐标反算坐标方位角和边长<br>
 <strong>坐标反算问题</strong><br>
-<img src="http://localhost:4000/post-images/1609567407860.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609567407860.png" alt="" loading="lazy"><br>
 支导线的计算<br>
-<img src="http://localhost:4000/post-images/1609567645417.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609567645417.png" alt="" loading="lazy"><br>
 1、由A、M两点的坐标，反算出坐标方位角α<sub>AM</sub><br>
 2、由α<sub>AM</sub>起始，按β<sub>1</sub>、β<sub>2</sub>...角推算AP<sub>2</sub>、P<sub>2</sub>P<sub>3</sub>、……各边的坐标方位角α<sub>AP</sub>、α<sub>P2P3</sub>、……。<br>
 3、由各边的坐标方位角及边长，正算两相邻导线点的坐标增量。<br>
@@ -141,15 +202,16 @@
 这种导线为通常采用的标准形状。B点观测了连接角β<sub>N+1</sub>，故由α<sub>AM</sub>推算坐标方位角时必然可以求得BN的坐标方位角<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>α</mi><mrow><mi>B</mi><mi>N</mi></mrow><msup><mrow></mrow><mo mathvariant="normal">′</mo></msup></msubsup></mrow><annotation encoding="application/x-tex">α_{BN}^{&#x27;}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.217811em;vertical-align:-0.275331em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.94248em;"><span style="top:-2.424669em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8278285714285715em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.275331em;"><span></span></span></span></span></span></span></span></span></span>由于各观测角β<sub>i</sub>中存在误差，所以<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>α</mi><mrow><mi>B</mi><mi>N</mi></mrow><msup><mrow></mrow><mo mathvariant="normal">′</mo></msup></msubsup></mrow><annotation encoding="application/x-tex">α_{BN}^{&#x27;}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.217811em;vertical-align:-0.275331em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.94248em;"><span style="top:-2.424669em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8278285714285715em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.275331em;"><span></span></span></span></span></span></span></span></span></span>将不会与已知的坐标方位角<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>α</mi><mrow><mi>B</mi><mi>N</mi></mrow></msub></mrow><annotation encoding="application/x-tex">α_{BN}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>相等，从而产生方位角闭合差<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mi>β</mi></msub></mrow><annotation encoding="application/x-tex">f_β</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05278em;">β</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span><br>
 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mi>β</mi></msub><mo>=</mo><msubsup><mi>α</mi><mrow><mi>B</mi><mi>N</mi></mrow><msup><mrow></mrow><mo mathvariant="normal">′</mo></msup></msubsup><mo>−</mo><msub><mi>α</mi><mrow><mi>B</mi><mi>N</mi></mrow></msub></mrow><annotation encoding="application/x-tex">f_β=α_{BN}^{&#x27;}-α_{BN}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05278em;">β</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.217811em;vertical-align:-0.275331em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.94248em;"><span style="top:-2.424669em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8278285714285715em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.275331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><br>
 在各观测角精度相同的前提下，闭合差<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mi>β</mi></msub></mrow><annotation encoding="application/x-tex">f_β</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05278em;">β</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span>可平均分配至每个角度上，即每个角度应加上改正数<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>α</mi><mrow><mi>B</mi><mi>N</mi></mrow><msup><mrow></mrow><mo mathvariant="normal">′</mo></msup></msubsup></mrow><annotation encoding="application/x-tex">α_{BN}^{&#x27;}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.217811em;vertical-align:-0.275331em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.94248em;"><span style="top:-2.424669em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8278285714285715em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.275331em;"><span></span></span></span></span></span></span></span></span></span>。推算坐标方位角<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>v</mi><mrow><mi>β</mi><mi>i</mi></mrow></msub></mrow><annotation encoding="application/x-tex">v_{βi}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05278em;">β</span><span class="mord mathdefault mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span>时<br>
-<img src="http://localhost:4000/post-images/1609568372921.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609568388357.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609568372921.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609568388357.png" alt="" loading="lazy"><br>
 <strong>各角的观测值经改正之后的计算，则与仅有一个连接角的附合导线的计算相同。</strong><br>
 (四)未测连接角的附合导线的计算<br>
-<img src="http://localhost:4000/post-images/1609568453467.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609568453467.png" alt="" loading="lazy"><br>
 1、假定起始坐标方位角，推算各导线边的假定坐标方位角及各点的坐标增量。<br>
-2、求导线旋转角<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>δ</mi><mo>=</mo><msub><mi>α</mi><mrow><mi>A</mi><mi>B</mi></mrow></msub><mo>−</mo><msubsup><mi>α</mi><mrow><mi>A</mi><mi>B</mi></mrow><msup><mrow></mrow><mo mathvariant="normal">′</mo></msup></msubsup></mrow><annotation encoding="application/x-tex">δ=α_{AB}-α_{AB}^{&#x27;}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03785em;">δ</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">A</span><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.217811em;vertical-align:-0.275331em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.94248em;"><span style="top:-2.424669em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">A</span><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8278285714285715em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.275331em;"><span></span></span></span></span></span></span></span></span></span><br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>α</mi><mrow><mi>A</mi><mi>B</mi></mrow></msub></mrow><annotation encoding="application/x-tex">α_{AB}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">A</span><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>α</mi><mrow><mi>A</mi><mi>B</mi></mrow><msup><mrow></mrow><mo mathvariant="normal">′</mo></msup></msubsup></mrow><annotation encoding="application/x-tex">α_{AB}^{&#x27;}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.217811em;vertical-align:-0.275331em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.94248em;"><span style="top:-2.424669em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">A</span><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8278285714285715em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.275331em;"><span></span></span></span></span></span></span></span></span></span>可由A、B和A'、B'的坐标反算求得<br>
+2、求导线旋转角</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>δ</mi><mo>=</mo><msub><mi>α</mi><mrow><mi>A</mi><mi>B</mi></mrow></msub><mo>−</mo><msubsup><mi>α</mi><mrow><mi>A</mi><mi>B</mi></mrow><msup><mrow></mrow><mo mathvariant="normal">′</mo></msup></msubsup></mrow><annotation encoding="application/x-tex">δ=α_{AB}-α_{AB}^{&#x27;} 
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03785em;">δ</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">A</span><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.23948em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9924799999999999em;"><span style="top:-2.4530000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">A</span><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span></span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8278285714285715em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+<p>$ α_{AB} <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">和</mi></mrow><annotation encoding="application/x-tex">和</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">和</span></span></span></span> α_{AB}^{'} $可由A、B和A'、B'的坐标反算求得<br>
 3、求 实际坐标增量<br>
 4、求各导线点的坐标<br>
 5、根据闭合差，对各边坐标增量进行改正。<br>
@@ -160,9 +222,9 @@
 闭合差：闭合差的大小能够反映出观测值的误差大小。<br>
 限差：闭合差误差的容许值。<br>
 接下来的东西还是比较难抄。而且做到这里我才发现latex实际同步的时候失效。明明预览文章的时候是有效果的，心态受到影响，还不如直接贴ppt<br>
-<img src="http://localhost:4000/post-images/1609583609648.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609583630545.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609583645672.png" alt="" loading="lazy"></p>
+<img src="http://ayanagi.fun/post-images/1609583609648.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609583630545.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609583645672.png" alt="" loading="lazy"></p>
 <h2 id="导线测量的业内计算">导线测量的业内计算</h2>
 <p>导线测量业内计算的目的就是计算各导线点的平面坐标x、y。<br>
 1.坐标正算<br>
@@ -171,37 +233,37 @@
 坐标增量的计算公式为：<br>
 △x<sub>AB</sub>=x<sub>B</sub>-x<sub>A</sub>=D<sub>AB</sub>cosα<sub>AB</sub><br>
 △y<sub>AB</sub>=y<sub>B</sub>-y<sub>A</sub>=D<sub>AB</sub>sinα<sub>AB</sub><br>
-<img src="http://localhost:4000/post-images/1609583815472.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609583836658.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609583855026.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609583875855.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609583896302.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609583815472.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609583836658.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609583855026.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609583875855.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609583896302.png" alt="" loading="lazy"><br>
 1、准备工作<br>
 将校核过的外业观测数据及起算数据填入“闭合导线坐标计算表”中，起算数据用双线标明。<br>
-<img src="http://localhost:4000/post-images/1609583947907.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609583966877.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609583979192.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609583992873.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609584003380.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609584014818.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609584028726.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609584041816.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609584052416.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609584063053.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609584074780.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609584087233.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609584105639.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609584120530.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609583947907.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609583966877.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609583979192.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609583992873.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609584003380.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609584014818.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609584028726.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609584041816.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609584052416.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609584063053.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609584074780.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609584087233.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609584105639.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609584120530.png" alt="" loading="lazy"><br>
 (2)调整角度闭合差<br>
 如果观测的是左角，则将角度闭合差反号平均分配到各左角上；<br>
 如果观测的是右角，则将角度闭合差同号平均分配到各右角上。<br>
-<img src="http://localhost:4000/post-images/1609584187063.png" alt="" loading="lazy"></p>
+<img src="http://ayanagi.fun/post-images/1609584187063.png" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[测量学(4~6章)]]></title>
-        <id>http://localhost:4000/qOM5ZiPrX/</id>
-        <link href="http://localhost:4000/qOM5ZiPrX/">
+        <id>http://ayanagi.fun/qOM5ZiPrX/</id>
+        <link href="http://ayanagi.fun/qOM5ZiPrX/">
         </link>
         <updated>2020-12-31T02:09:34.000Z</updated>
         <content type="html"><![CDATA[<h1 id="角度测量">角度测量</h1>
@@ -242,7 +304,7 @@
 一、水平角测量原理<br>
 定义：<b>相交的两直线之间的夹角在水平面上的投影</b>。即地面上一点到两目标的方向线投影到水平面上的夹角，也就是过这两方向线所作两竖直面间的二面角。<br>
 <b>水平角的取值范围：0~360°</b><br>
-测量原理：如图，β角就是从地面点O到目标点A、B所形成的<b>水平角</b>，O点也称为<b>测站点</b>。当望远镜瞄准B点的时候，指标就指向水平圆盘上的分划b，当望远镜瞄准C点的时候，指标就指向水平圆盘上的分划a，假如圆盘的分划是顺时针的，则水平角<b>β=a-b</b><img src="http://localhost:4000/post-images/1609382153228.jpg" alt="" loading="lazy"><br>
+测量原理：如图，β角就是从地面点O到目标点A、B所形成的<b>水平角</b>，O点也称为<b>测站点</b>。当望远镜瞄准B点的时候，指标就指向水平圆盘上的分划b，当望远镜瞄准C点的时候，指标就指向水平圆盘上的分划a，假如圆盘的分划是顺时针的，则水平角<b>β=a-b</b><img src="http://ayanagi.fun/post-images/1609382153228.jpg" alt="" loading="lazy"><br>
 二、竖直角测量原理<br>
 定义：在<b>同一竖直平面内，目标方向线与水平方向线之间的夹角成为竖直角(高度角)</b>。当目标方向线高于水平方向线时，称仰角，取正号，反之为俯角，取负号。竖角(高度角)取值范围：<b>0~±90°</b><br>
 测量原理：当望远镜视线水平的时候，指标会指向竖直圆盘上某个固定的分划，人90°，当望远镜瞄准目标时，竖直圆盘随望远镜一起转动，指标指向圆盘上的另一个分划。则这两个分划之间的差值就是我们要测量的竖直角。<br>
@@ -287,13 +349,13 @@ DJ<sub>6</sub>读数方法采用<b>分微尺测微器读数法</b>，分微尺�
 3、记录格式<br>
 若要观测n个测回，为减少度盘分划误差，各测回间应按180°/n的差值来配置水平度盘。<br>
 测回法测水平角方法，可小结如下：<br>
-<img src="http://localhost:4000/post-images/1609394148810.jpg" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609394148810.jpg" alt="" loading="lazy"><br>
 (二)方向观测法<br>
 1、适用：<b>在一个测站上需要观测两个以上方向</b><br>
 2、观测步骤：如下图，有4个观测方向<br>
 (1)上半测回：选择一明显目标A作为起始方向(零方向)，用盘左瞄准A，配置度盘，瞬时针依次观测A、B、C、D、A。<br>
 (2)下半测回：倒镜成盘右，逆时针依次观测A、D、C、B、A。同理各测回间按180°n的差值来配置水平度盘。<br>
-<img src="http://localhost:4000/post-images/1609394302696.jpg" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609394302696.jpg" alt="" loading="lazy"><br>
 3、记录、计算<br>
 (1)2C值(两倍照准误差)：<br>
 <b>2C=盘左读数-盘右读数(±180°)</b><br>
@@ -305,7 +367,7 @@ DJ<sub>6</sub>读数方法采用<b>分微尺测微器读数法</b>，分微尺�
 注意：零方向观测两次，应将平均值再取平均。<br>
 (4)归零方向值：将各方向平均值分别减去零方向平均值即得各方向归零方向值。<br>
 (5)各测回归零方向值的平均值：<b>同一方向值各测回间互差，对J2≤12''；对J6≤24''</b><br>
-<img src="http://localhost:4000/post-images/1609394558800.jpg" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609394558800.jpg" alt="" loading="lazy"><br>
 二、竖直角测量<br>
 (一)竖直度盘的构造<br>
 1、竖直度盘的构造包括：<b><br>
@@ -395,7 +457,7 @@ DJ<sub>6</sub>读数方法采用<b>分微尺测微器读数法</b>，分微尺�
 零尺段用读数法读取</b><br>
 钢尺的检定<br>
 (一) 尺长方程式：<br>
-<img src="http://localhost:4000/post-images/1609398502979.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609398502979.png" alt="" loading="lazy"><br>
 l<sub>t</sub>:钢尺在温度t时的实际长度；<br>
 l:钢尺上所刻注的长度，即名义长度；<br>
 △l:尺长改正数，即钢尺在温度t<sub>0</sub>时的改正数；<br>
@@ -451,7 +513,7 @@ A<sub>真</sub>=α+γ<br>
 测量工作中不是直接测定直线边的坐标方位角，而是测定<strong>各相邻边之间水平夹角和已知边的连测角</strong><br>
 通过已知坐标方位角和观测的水平夹角推算各边的坐标方位角。角有<strong>左角和右角</strong>之分。<br>
 左角(右角)：该角位于<strong>前进方向</strong>左侧(右侧)的<strong>水平夹角</strong><br>
-<img src="http://localhost:4000/post-images/1609402185166.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609402185166.png" alt="" loading="lazy"><br>
 α<sub>23</sub>=α<sub>12</sub>+β<sub>2左</sub>-180°<br>
 α<sub>34</sub>=α<sub>23</sub>+β<sub>3左</sub>-180°<br>
 α<sub>45</sub>=α<sub>34</sub>+β<sub>4左</sub>-180°<br>
@@ -540,12 +602,12 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
 例：不同两组观测对应两条不同误差分布曲线。若σ<sub>a</sub> &lt; sigma<sub>b</sub>，则a和b两组观测值哪组精度高？<br>
 第一组观测，误差分布密集，图形陡峭，精度高。<br>
 第二组观测，误差分布离散，图形平缓，精度低。<br>
-<img src="http://localhost:4000/post-images/1609407006277.jpg" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609407006277.jpg" alt="" loading="lazy"><br>
 所谓精度，是指误差分布的集中与离散程度。如误差分布集中(曲线a)，则观测精度高；若误差分布离散(曲线b)，则观测精度就低。误差分布的集中与离散程度可以用<strong>方差σ²</strong>或<strong>标准差σ</strong>来表示。<br>
 二、中误差(均方根误差)<br>
 (一)定义<br>
 设在<strong>相同的观测条件</strong>下，对未知量进行重复独立观测，观测值为：l<sub>1</sub>，l<sub>2</sub>，...，l<sub>n</sub>，其真误差为△<sub>1</sub>，△<sub>2</sub>，...，△<sub>n</sub>则<br>
-<img src="http://localhost:4000/post-images/1609407893225.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609407893225.png" alt="" loading="lazy"><br>
 式中当n→∞，E(△)=0，根据数学期望的定义E(△²)就是△²的算术平均值，[]为累加符号<br>
 [△△]=△<sub>1</sub>△<sub>1</sub>+△<sub>2</sub>△<sub>2</sub>+...+△<sub>n</sub>△<sub>n</sub><br>
 二、中误差(均方根误差)<br>
@@ -564,7 +626,7 @@ s208,722,208,722c56,-175.3,126.3,-397.3,211,-666c84.7,-268.7,153.8,-488.2,207.5,
 -658.5c53.7,-170.3,84.5,-266.8,92.5,-289.5c4,-6.7,10,-10,18,-10z
 M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.5225em;"><span></span></span></span></span></span></span></span></span><br>
 实际工作中，观测次数有限，故取标准差的估值作为中误差。<br>
-<img src="http://localhost:4000/post-images/1609425342627.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609425342627.png" alt="" loading="lazy"><br>
 二、中误差(均方根误差)<br>
 (一)定义<br>
 应用时应注意<br>
@@ -574,7 +636,7 @@ M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​<
 ④m前要冠以±号，并有计量单位。<br>
 ⑤m为中误差，△为真误差，不要混淆。<br>
 例：<br>
-<img src="http://localhost:4000/post-images/1609426252624.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609426252624.png" alt="" loading="lazy"><br>
 (二)中误差的性质<br>
 1、中误差表示误差分布的离散度。等精度观测中，中误差表示一组观测值的精度，也表示单个观测值的精度。(如上例中甲组中误差为±3.0'',同时甲组单个观测值的中误差均为±3.0'')<br>
 2、概率特性<br>
@@ -667,7 +729,7 @@ M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​<
 改正数<br>
 最或然值与观测值之差称为改正数，用v表示<br>
 v<sub>i</sub>=x-L<sub>i</sub><br>
-<img src="http://localhost:4000/post-images/1609556849229.png" alt="" loading="lazy"></p>
+<img src="http://ayanagi.fun/post-images/1609556849229.png" alt="" loading="lazy"></p>
 <h2 id="第七节-加权平均值及其中误差">第七节 加权平均值及其中误差</h2>
 <p>权的定义：</p>
 <p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mi>i</mi></msub><mo>=</mo><mfrac><mi>C</mi><msubsup><mi>m</mi><mi>i</mi><mn>2</mn></msubsup></mfrac></mrow><annotation encoding="application/x-tex">P_i=\dfrac{C}{m_i^2}
@@ -712,14 +774,14 @@ c3.3,-7.3,9.3,-11,18,-11H400000v40H1017.7s-90.5,478,-276.2,1466c-185.7,988,
 21.3,-21.3,42.7,-32,64s-16,33,-16,33s-26,-26,-26,-26s76,-153,76,-153s77,-151,
 77,-151c0.7,0.7,35.7,202,105,604c67.3,400.7,102,602.7,104,606z
 M1001 80H400000v40H1017z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2094999999999998em;"><span></span></span></span></span></span></span></span></span><br>
-<img src="http://localhost:4000/post-images/1609557710309.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609557734457.png" alt="" loading="lazy"></p>
+<img src="http://ayanagi.fun/post-images/1609557710309.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609557734457.png" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[测量学(1~3章)]]></title>
-        <id>http://localhost:4000/fxckingtest/</id>
-        <link href="http://localhost:4000/fxckingtest/">
+        <id>http://ayanagi.fun/fxckingtest/</id>
+        <link href="http://ayanagi.fun/fxckingtest/">
         </link>
         <updated>2020-12-30T02:41:33.000Z</updated>
         <content type="html"><![CDATA[<p>光看觉得蛮困的。不如用键盘抄抄书。</p>
@@ -941,7 +1003,7 @@ WGS-84坐标系采用的地球椭球体称为WGS-84椭球体(其数值常采用I
 <p><b>水准测量</b>是利用一条<b>水平视线</b>并借助水准尺测定地面两点间的高差，这样就可以由已知点的高程推算出未知点的高程。<br>
 欲测定AB间高差h可在AB两点上分别竖立带有刻划的水准尺，并在AB两点之间安装一台能提供一条水平视线的水准仪，AB间高差<br>
 h<sub>AB</sub>=a-b<br>
-<img src="http://localhost:4000/post-images/1609318539542.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609318539542.png" alt="" loading="lazy"><br>
 转点、测站<br>
 (一)、转点：临时的立尺点，传递高程的过渡点；测站：每安置一次仪器，称为一个测站<br>
 (二)、<b>在实际作业中可先算出各测站的高差，然后取他们的总和而得，用后视读数之和减去前视读数之和来计算高差，检核计算之后是否有错误</b></p>
@@ -1030,15 +1092,15 @@ f<sub>h</sub>=∑h<sub>测</sub>-∑h<sub>理</sub>或f<sub>h</sub>=H<sub>III18<
 3、闭合路线：f<sub>h</sub>=∑h<sub>测</sub><br>
 <b>注：闭合差超过限度则应检查原因，返工重测。</b><br>
 4、高差闭合差的容许值<br>
-<img src="http://localhost:4000/post-images/1609325926266.png" alt="" loading="lazy"></p>
+<img src="http://ayanagi.fun/post-images/1609325926266.png" alt="" loading="lazy"></p>
 <h2 id="二高程误差配赋">(二)高程误差配赋</h2>
 <p>表5-5为一附合的四等水准路线计算示例，该水准路线的闭合差为<br>
 f<sub>h</sub>=-20mm<br>
 路线总长为4km。允许闭合差为<br>
 f<sub>h</sub>=±20根号4=±40mm<br>
 因|-20|小于|±40|，故该观测值符合要求。<br>
-<img src="http://localhost:4000/post-images/1609326076793.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609326138366.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609326076793.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609326138366.png" alt="" loading="lazy"><br>
 (三)检核<br>
 1、高差改正之后检查改正后高差的总和是否与理论值相等<br>
 2、顺序推算各点的高程，求得最后一个已知点的高程，检查与已知值是否相等。<br>
@@ -1046,13 +1108,13 @@ f<sub>h</sub>=±20根号4=±40mm<br>
 <h2 id="一-仪器误差">一、仪器误差</h2>
 <p>1、视准轴与管水准轴不平行误差<br>
 无法做到视准轴与管水准周严格平行，二者在竖直面内投影称为<b>i角</b>，水平面投影称<b>交叉误差iw</b><br>
-<img src="http://localhost:4000/post-images/1609328094650.jpg" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609328120923.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609328173343.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609328180168.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609328196190.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609328205831.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1609328239219.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609328094650.jpg" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609328120923.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609328173343.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609328180168.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609328196190.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609328205831.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1609328239219.png" alt="" loading="lazy"><br>
 若使S<sub>1</sub>=S<sub>2</sub>，可在每一站消除<b>i角</b>误差<br>
 实际上，根据不同精度需求，每一测段前后视距累计差规定一个限值，即可忽略i角误差的影响。<br>
 2、水准标尺误差<br>
@@ -1076,8 +1138,8 @@ f<sub>h</sub>=±20根号4=±40mm<br>
     </entry>
     <entry>
         <title type="html"><![CDATA[2020纵横杯 Misc wp]]></title>
-        <id>http://localhost:4000/ZONGHENGCUP2020/</id>
-        <link href="http://localhost:4000/ZONGHENGCUP2020/">
+        <id>http://ayanagi.fun/ZONGHENGCUP2020/</id>
+        <link href="http://ayanagi.fun/ZONGHENGCUP2020/">
         </link>
         <updated>2020-12-30T02:40:16.000Z</updated>
         <content type="html"><![CDATA[<p>Todo</p>
@@ -1085,18 +1147,18 @@ f<sub>h</sub>=±20根号4=±40mm<br>
     </entry>
     <entry>
         <title type="html"><![CDATA[DASCTF x BJD 12月圣诞狂欢赛Misc wp]]></title>
-        <id>http://localhost:4000/DASxBJD1225/</id>
-        <link href="http://localhost:4000/DASxBJD1225/">
+        <id>http://ayanagi.fun/DASxBJD1225/</id>
+        <link href="http://ayanagi.fun/DASxBJD1225/">
         </link>
         <updated>2020-12-25T10:18:43.000Z</updated>
         <content type="html"><![CDATA[<p>圣诞节前和对象互删，然后圣诞当天一个人孤寡打比赛。打了这么久的CTF，却还是只能出签到。I am a loser.</p>
 <h1 id="马老师的秘籍">马老师的秘籍</h1>
-<p>一个靶机，一张几十个二维码的大图，随便扫了一个发现是mbg的语录其中3个字，一开始想弄下来切开一个个扫，以为flag就在这里面。但是太蠢了，所以果断把图片保存下来，是个png。丢winhex，好的，有压缩包，那么直接binwalk，在kali里打开压缩包是归档损坏状态，binwalk出来的两个txt文件都是空的，尝试把压缩包拿出windows查看，有三个文件，一个GoodLuck.txt，一个闪电五连鞭.txt，还有一个马老师的磁盘.jpg，压缩包带密码，尝试全部的伪加密，发现jpg是伪加密，图片长得和png几乎一样，然后有明显的需要处理的痕迹，其他俩带密码，jpg解压出来stegsolve和png异或，发现<img src="http://localhost:4000/post-images/1608891934024.png" alt="" loading="lazy"><br>
+<p>一个靶机，一张几十个二维码的大图，随便扫了一个发现是mbg的语录其中3个字，一开始想弄下来切开一个个扫，以为flag就在这里面。但是太蠢了，所以果断把图片保存下来，是个png。丢winhex，好的，有压缩包，那么直接binwalk，在kali里打开压缩包是归档损坏状态，binwalk出来的两个txt文件都是空的，尝试把压缩包拿出windows查看，有三个文件，一个GoodLuck.txt，一个闪电五连鞭.txt，还有一个马老师的磁盘.jpg，压缩包带密码，尝试全部的伪加密，发现jpg是伪加密，图片长得和png几乎一样，然后有明显的需要处理的痕迹，其他俩带密码，jpg解压出来stegsolve和png异或，发现<img src="http://ayanagi.fun/post-images/1608891934024.png" alt="" loading="lazy"><br>
 把NianQingRenBuJiangWuDe丢去md5加密，直觉是取32位小写</p>
 <pre><code>c57988283c92f759585a0c1aebfdd743
 </code></pre>
-<p>将两个txt解压出来，一个内容是<img src="http://localhost:4000/post-images/1608892038946.jpg" alt="" loading="lazy"><br>
-另一个内容是<img src="http://localhost:4000/post-images/1608892053512.jpg" alt="" loading="lazy"><br>
+<p>将两个txt解压出来，一个内容是<img src="http://ayanagi.fun/post-images/1608892038946.jpg" alt="" loading="lazy"><br>
+另一个内容是<img src="http://ayanagi.fun/post-images/1608892053512.jpg" alt="" loading="lazy"><br>
 一看就知道是Ook，批量替换之</p>
 <pre><code>DASCTF{f79f28f30232e26a2f51b6b75355afa9}
 </code></pre>
@@ -1108,12 +1170,12 @@ password.def的内容如下：</p>
 ##
 [$a $A $1] *
 </code></pre>
-<p>爆了十几分钟出来了，密码<code>1cpp</code>，解压，一个png，一个txt，hint看不懂。<img src="http://localhost:4000/post-images/1608892400404.jpg" alt="" loading="lazy"><br>
-png用zsteg看，有些文件，也看不懂。<img src="http://localhost:4000/post-images/1608892514717.jpg" alt="" loading="lazy"><br>
+<p>爆了十几分钟出来了，密码<code>1cpp</code>，解压，一个png，一个txt，hint看不懂。<img src="http://ayanagi.fun/post-images/1608892400404.jpg" alt="" loading="lazy"><br>
+png用zsteg看，有些文件，也看不懂。<img src="http://ayanagi.fun/post-images/1608892514717.jpg" alt="" loading="lazy"><br>
 但是有一行：<code>searchme_in_Alpha</code><br>
-stegsolve打开，alpha7个滤镜，在最左边能看到一些类似摩斯电码的东西，<img src="http://localhost:4000/post-images/1608892742481.jpg" alt="" loading="lazy"><br>
-当时我的表情就是这样的<img src="http://localhost:4000/post-images/1608893119131.jpg" alt="" loading="lazy">，<br>
-图片旋转之后放大五倍，是这样的<img src="http://localhost:4000/post-images/1608893157633.jpg" alt="" loading="lazy">结合hint:10132430，<br>
+stegsolve打开，alpha7个滤镜，在最左边能看到一些类似摩斯电码的东西，<img src="http://ayanagi.fun/post-images/1608892742481.jpg" alt="" loading="lazy"><br>
+当时我的表情就是这样的<img src="http://ayanagi.fun/post-images/1608893119131.jpg" alt="" loading="lazy">，<br>
+图片旋转之后放大五倍，是这样的<img src="http://ayanagi.fun/post-images/1608893157633.jpg" alt="" loading="lazy">结合hint:10132430，<br>
 可能是把这些码按照滤镜1 0 1 3 2 4 3 0的顺序抄下来排列，抄完之后解摩斯电码，不对，但是有一些类似url的转码字符。感觉又有希望，但是觉得又不像摩斯码，不知道是啥了，最后放弃，等官方wp。</p>
 <h1 id="fakepixel">FakePixel</h1>
 <p>下下来一个超大的压缩包，解压的bmp一张半个G，还有个enc.py的加密脚本，大眼一看，不会做，直接等wp。</p>
@@ -1123,8 +1185,8 @@ stegsolve打开，alpha7个滤镜，在最左边能看到一些类似摩斯电�
     </entry>
     <entry>
         <title type="html"><![CDATA[通过对恋爱中消费主义的抨击发散我的婚恋观]]></title>
-        <id>http://localhost:4000/Sgysjwpl6/</id>
-        <link href="http://localhost:4000/Sgysjwpl6/">
+        <id>http://ayanagi.fun/Sgysjwpl6/</id>
+        <link href="http://ayanagi.fun/Sgysjwpl6/">
         </link>
         <updated>2020-12-23T00:08:45.000Z</updated>
         <content type="html"><![CDATA[<p>昨天晚上临睡前和对象做了件傻逼事。我们在QQ的傻屌情侣空间互点100个情侣成就，花了好一番功夫，我饶有兴致的扫了一眼这些事情，浪漫之余还挺消费主义的。虽然当今被耍过猴的年轻人满口消费主义者也，然有此意识也不失为一种进步。以下以贫困家庭条件完成100件事的花费来暴露这玩意是多么可笑，其中能够丐版的情况已经很丐了，只要不过分，那就没问题，电费网费等潜在小型消费忽略。贫穷也不能少了仪式感(说这句话的时候是不是就已经消费主义洗脑了呜呵)<br>
@@ -1247,8 +1309,8 @@ stegsolve打开，alpha7个滤镜，在最左边能看到一些类似摩斯电�
     </entry>
     <entry>
         <title type="html"><![CDATA[SWPUCTF 2020-Misc WP]]></title>
-        <id>http://localhost:4000/SWPU2020/</id>
-        <link href="http://localhost:4000/SWPU2020/">
+        <id>http://ayanagi.fun/SWPU2020/</id>
+        <link href="http://ayanagi.fun/SWPU2020/">
         </link>
         <updated>2020-12-08T03:02:23.000Z</updated>
         <content type="html"><![CDATA[<p>有一定难度，但不是不能做，其实misc难度还算适中吧，只是都是套娃</p>
@@ -1272,7 +1334,7 @@ stegsolve逐帧播放，看到类似flag的内容，png很明显的改宽高，�
 <pre><code>zsteg extract &quot;b1,rgb,lsb,xy&quot; problem.png &gt; flag.zip
 </code></pre>
 <p>一个流量包一个图片，usb流量分析，tshark没提取成功，然后就做不下去了。报错如下<br>
-<img src="http://localhost:4000/post-images/1607398160762.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1607398160762.png" alt="" loading="lazy"><br>
 直到刚才有师傅告诉我T需要大写。我真是傻到家了。<br>
 看别人的wp：<br>
 提取得到的是 AG DX AG DX AG DX<br>
@@ -1284,8 +1346,8 @@ stegsolve逐帧播放，看到类似flag的内容，png很明显的改宽高，�
     </entry>
     <entry>
         <title type="html"><![CDATA[RoarCTF 2020-Misc wp]]></title>
-        <id>http://localhost:4000/Roar2020/</id>
-        <link href="http://localhost:4000/Roar2020/">
+        <id>http://ayanagi.fun/Roar2020/</id>
+        <link href="http://ayanagi.fun/Roar2020/">
         </link>
         <updated>2020-12-08T02:47:08.000Z</updated>
         <content type="html"><![CDATA[<p>wp全部转自<code>https://mp.weixin.qq.com/s?__biz=MzU3ODc2NTg1OA==&amp;mid=2247485804&amp;idx=1&amp;sn=15b8b99fc9cdca98d5fa99484b776063&amp;chksm=fd711c21ca0695374a191994b75b563b1a7604b70aa3c0b0251e78721f5a24de8ff85f85284f&amp;mpshare=1&amp;scene=23&amp;srcid=1207vysHlxNfj0iTwS4Fq5Xw&amp;sharer_sharetime=1607348906792&amp;sharer_shareid=8b035134b7fe8a8160582bb9a2551229#rd</code><br>
@@ -1316,9 +1378,9 @@ if ($_GET['url']) {
 <p>无线电流量分析，一看就不是我能做的题。但是看完wp乍一看也不是很难，只是第一次看见，不会分析罢了。<br>
 以下是北极星战队的wp：<br>
 汽车钥匙信号〜433Mhz。车钥匙信号的前导码是稳定的数据流，可以向接收者显示出实际正在被接受的数据。使用/inspectrum波形分析工具，symbols设为8个后，做相应调整，打开add sample plot选项<br>
-<img src="http://localhost:4000/post-images/1607395887242.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1607395887242.png" alt="" loading="lazy"><br>
 我们要关注的是蓝色的波形，如果波形比较密集就代表1，比较稀疏就代表0<br>
-<img src="http://localhost:4000/post-images/1607395903655.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1607395903655.png" alt="" loading="lazy"><br>
 然后就是慢慢的记录0、1二进制，转为ascii码就是flag</p>
 <pre><code>flag{25c21b0d-6a11-4312-971b-428d01cdc534}
 </code></pre>
@@ -1326,8 +1388,8 @@ if ($_GET['url']) {
     </entry>
     <entry>
         <title type="html"><![CDATA[C1CTF 2020-Misc WP]]></title>
-        <id>http://localhost:4000/C1CTF2020/</id>
-        <link href="http://localhost:4000/C1CTF2020/">
+        <id>http://ayanagi.fun/C1CTF2020/</id>
+        <link href="http://ayanagi.fun/C1CTF2020/">
         </link>
         <updated>2020-12-08T02:23:51.000Z</updated>
         <content type="html"><![CDATA[<h1 id="behindme">BehindMe</h1>
@@ -1374,49 +1436,6 @@ if ($_GET['url']) {
 已经有肉眼看穿题目给的所有base的能力了，没啥难度看着解就行</p>
 <h1 id="pigissocute">PigIsSoCute</h1>
 <p>hint是猪圈栅栏，没难度，下载下来的txt是一个b64编码的图片，去b64转文件得到猪圈密码的图片，对着识别解密得到字符串，进行栅栏解密得到可读的明文套上<code>c1ctf{}</code>即可</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[HECTF 2020 MISC WP]]></title>
-        <id>http://localhost:4000/HECTF2020/</id>
-        <link href="http://localhost:4000/HECTF2020/">
-        </link>
-        <updated>2020-12-07T04:03:34.000Z</updated>
-        <content type="html"><![CDATA[<p>难度倒不是很高，只是做不出来罢了。</p>
-<h1 id="看直播">看直播</h1>
-<p>访问HECTF的直播间，画面中写着flag。</p>
-<h1 id="png">png</h1>
-<p>非常基础的题，winhex打开 b64解码最后面拿到一半flag，png格式别忘了考虑宽高，改宽高得到另一半</p>
-<h1 id="不说人话">不说人话</h1>
-<p>Ook</p>
-<h1 id="溯源溯源">溯源溯源</h1>
-<p>社工题。<br>
-以下是官方wp：<br>
-姓名使用支付宝</p>
-<p>域名邮箱使用爱站</p>
-<p>公司名百度手机号即可</p>
-<h1 id="makesteg-great-again">MakeSteg Great Again</h1>
-<p>winhex打开得到一个key：</p>
-<pre><code>P@SsW00000
-</code></pre>
-<p>outguess没用、zsteg没用，stegpy没用，stegdetect没用(可能我这玩意我根本没装好，就没试过成功的)。本来以为自己还是会一些图片隐写的，实际上还欠缺得太多。以下是官方WP:<br>
-有一个key，很容易想到steghide</p>
-<pre><code>steghideextract -sf Steg.jpg -p p0SsW0000
-</code></pre>
-<p>能得到一个压缩包，里面是pyc文件，如果是我的话就拿去反编译了。照着复现的时候尝试反编译，出来的是对我来说非常复杂的python脚本，必然做不出来。眼界又宽阔了，这里其实用的是pyc隐写，使用Stegosaurus，仅支持py3.6以下版本</p>
-<pre><code>pythonstegosaurus.py GitHacker.pyc -x
-</code></pre>
-<p>得到key：</p>
-<p>'PPPPasword'_And_do_you_love_winter<br>
-提示知道是snow隐写</p>
-<pre><code>SNOW.EXE -C -p PPPPasword white.txt
-</code></pre>
-<h1 id="babymisc">babymisc</h1>
-<p>winhex打开，没啥思路，hint是文件hex尾部有编码后的flag后两位是zp，也没啥思路。<br>
-以下是官方wp：<br>
-使用010打开文件，会发现有一串全为0，然后像是base64，解码却出不来，根据提示：文件hex尾部有编码后的flag的后两位，在base后面加上zp，base58解码即可</p>
-<h1 id="总结">总结</h1>
-<p>已经遇到非常严重的瓶颈期了，尤其是环境配不好，每次参加比赛都有新花样。说新也不新，只是我见识少。</p>
 ]]></content>
     </entry>
 </feed>
