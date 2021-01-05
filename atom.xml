@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://ayanagi.fun</id>
     <title>ハルカトオク</title>
-    <updated>2021-01-05T12:16:09.213Z</updated>
+    <updated>2021-01-05T12:23:58.018Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://ayanagi.fun"/>
     <link rel="self" href="http://ayanagi.fun/atom.xml"/>
@@ -255,7 +255,7 @@ be imbued with 充满,浸透</p>
 <li>四季转换被视为五行元素互相作用的结果.<br>
 <em>The progression of the four seasons may be seen as a reflection of the interdependence of the five elements.</em></li>
 <li>每一个元素都有其相对应的颜色,味道和方位.<br>
-<em>Each element has its corresponding color, flavor and carrdinal point.</em></li>
+<em>Each element has its corresponding color, flavor and cardinal point.</em></li>
 </ol>
 ]]></content>
     </entry>
