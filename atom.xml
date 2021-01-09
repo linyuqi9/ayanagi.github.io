@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://ayanagi.fun</id>
     <title>ハルカトオク</title>
-    <updated>2021-01-09T05:28:22.290Z</updated>
+    <updated>2021-01-09T05:30:47.472Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://ayanagi.fun"/>
     <link rel="self" href="http://ayanagi.fun/atom.xml"/>
@@ -16,19 +16,23 @@
         <link href="http://ayanagi.fun/VVOZ-_fvu/">
         </link>
         <updated>2021-01-09T05:23:21.000Z</updated>
-        <content type="html"><![CDATA[<p>名词解释</p>
+        <content type="html"><![CDATA[<h1 id="名词解释">名词解释</h1>
 <ol>
 <li>3NF:</li>
 <li>封锁</li>
 <li>参照完整性规则</li>
 <li>并发操作</li>
-<li>关系模式<br>
-简答</li>
+<li>关系模式</li>
+</ol>
+<h1 id="简答">简答</h1>
+<ol>
 <li>简述数据库设计基本过程.</li>
 <li>简述事务中的提交和回滚.</li>
 <li>简述关系数据库的优点.</li>
-<li>试举出三个实例,要求实体型之间具有一对一,一对多,多对多各种不同的关系.<br>
-分析</li>
+<li>试举出三个实例,要求实体型之间具有一对一,一对多,多对多各种不同的关系.</li>
+</ol>
+<h1 id="分析">分析</h1>
+<ol>
 <li>某医院病房计算机管理中需要如下信息：<br>
 科室：科名，科地址，科电话，医生姓名<br>
 病房：病房号，床位号，所属科室名<br>
