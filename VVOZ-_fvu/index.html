@@ -1,9 +1,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
-    <meta name="description" content="占坑
-" />
-    <meta name="keywords" content="亚文化" />
+    <meta name="description" content="名词解释
+
+3NF:
+封锁
+参照完整性规则
+并发操作
+关系模式
+简答
+简述数据库设计基本过程.
+简述事务中的提交和回滚.
+简述关系数据库的优点.
+试举出三个实例,要求实体型之间具有一对一,一对多,多对多各种不同的关系.
+分析
+某医院病房计算..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="http://ayanagi.fun/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://ayanagi.fun/styles/main.css">
     
@@ -473,25 +485,21 @@
         <div class="postshow" style="padding-bottom: 0;">
             
             <div class="postdetailimg" style="width:100%;overflow: hidden;">
-                <img src="https://pic.downk.cc/item/5fbb52f8b18d627113ddf788.png" class="postimage" style="cursor:auto">
+                <img src="https://pic.imgdb.cn/item/5fbb52dcb18d627113ddef84.png" class="postimage" style="cursor:auto">
             </div>
             <div class="postinfo-detail">
-                <div class="postdate"><i class="fa fa-calendar"></i>2020-11-23</div>
-                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 1 min read</div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2021-01-09</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 3 min read</div>
                 <div class="posttag">
-                    
-                    <a href="http://ayanagi.fun/tag/ACG/" class="postlink">
-                        <i class="fa fa-tag"></i> 亚文化
-                    </a>
                     
                 </div>
             </div>
             
         <div id="articlecontent">
             <div id="texttitle" style="text-align: center">
-                <h2>消费主义，又称“智商税”</h2>
+                <h2>看题吃饭数据库</h2>
                 <!-- id 将作为查询条件 -->
-                <div id="pl" style="display:none">http://ayanagi.fun/ybV501XMF/</div>
+                <div id="pl" style="display:none">http://ayanagi.fun/VVOZ-_fvu/</div>
                 <div id="rootaddr" style="display:none">http://ayanagi.fun</div>
                 <span id="hotnum">
                     <h4><i class="fa fa-eye" aria-hidden="true" style="color: #FF8C00;"></i>&nbsp;&nbsp;热度</i>: <i
@@ -499,7 +507,47 @@
                 </span>
             </div>
             <div class="text ">
-                <p>占坑</p>
+                <p>名词解释</p>
+<ol>
+<li>3NF:</li>
+<li>封锁</li>
+<li>参照完整性规则</li>
+<li>并发操作</li>
+<li>关系模式<br>
+简答</li>
+<li>简述数据库设计基本过程.</li>
+<li>简述事务中的提交和回滚.</li>
+<li>简述关系数据库的优点.</li>
+<li>试举出三个实例,要求实体型之间具有一对一,一对多,多对多各种不同的关系.<br>
+分析</li>
+<li>某医院病房计算机管理中需要如下信息：<br>
+科室：科名，科地址，科电话，医生姓名<br>
+病房：病房号，床位号，所属科室名<br>
+医生：姓名，职称，所属科室名，年龄，工作证号<br>
+病人：病历号，姓名，性别，诊断，主管医生，病房号<br>
+其中，一个科室有多个病房、多个医生，一个病房只能属于一个科室，一个医生只属于一个科室，但可负责多个病人的诊治，一个病人的主管医生只有一个。<br>
+完成如下设计：<br>
+（1）设计该计算机管理系统的E-R图；<br>
+（2）将该E-R图转换为关系模型结构；<br>
+（3）指出转换结果中每个关系模式的候选码。</li>
+<li>设有关系模式：学生修课管理（学号，姓名，所在系，性别，课程号，课程名，学分，成绩）。设一名学生可以选修多门课程号，一门课程号可以被多名学生选修；一名学生有唯一的所在系，每门课程号有唯一的课程名和学分。<br>
+回答以下问题：<br>
+（1）根据上述规定写出关系模式R的基本函数依赖；<br>
+（2）找出关系模式R的候选码；<br>
+（3）试问关系模式R最高已经达到第几范式？为什么？<br>
+（4）将R分解成3NF模式集。</li>
+<li>SELECT语句<br>
+设有一个SPJ数据库，包括S、P、J、SPJ四个关系模式：<br>
+供应商表S（供应商代码SNO，供应商姓名SNAME，供应商状态STATUS，供应商所在城市CITY）；<br>
+零件表P（零件代码PNO，零件名PNAME，颜色COLOR，重量WEIGHT）；<br>
+工程项目表J（项目代码JNO，项目名JNAME，项目所在城市CITY）；<br>
+供应情况表SPJ（供应商代码SNO，零件代码PNO，项目代码JNO，供应数量QTY）；<br>
+用SQL语言完成如下查询：<br>
+（1）找出所有供应商的姓名和所在城市；<br>
+（2）找出所有零件的名称、颜色、重量；<br>
+（3）找出上海厂商供应的所有零件号码；<br>
+（4）找出工程项目J2使用的各种零件的名称及其数量。</li>
+</ol>
 
             </div>
             <hr style="width: 80%;">
@@ -508,36 +556,24 @@
             <div class="postfooter">
                 <ul class="post-copyright">
                     <li><strong>文章作者：</strong>绮柳</li>
-            <li><strong>原文链接：</strong>http://ayanagi.fun/ybV501XMF/</li>
+            <li><strong>原文链接：</strong>http://ayanagi.fun/VVOZ-_fvu/</li>
             <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用<i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA
                 许可协议。转载请注明出处！</li>
             </ul>
         </div>
         <div id="otherpost">
             
-            <div class="prev-post-pc">
-                <div id="ppcontainer" onclick="window.location.href= 'http://ayanagi.fun/k6xrF5XlX/';return false">
-                    
-                    <img src="https://pic.downk.cc/item/5fbb52edb18d627113ddf423.png" style="width: 100%;" class="opimg">
-                    
-                    <h4 class="optitle">填表时需要准备的习惯以及格式的规范</h4>
-                </div>
-            </div>
-            <div class="prev-post">
-                上一篇 <a href="http://ayanagi.fun/k6xrF5XlX/">填表时需要准备的习惯以及格式的规范</a>
-            </div>
-            
             
             <div class="next-post-pc">
-                <div id="npcontainer" onclick="window.location.href= 'http://ayanagi.fun/discmanage/';return false">
+                <div id="npcontainer" onclick="window.location.href= 'http://ayanagi.fun/YU72sIGeY/';return false">
                     
-                    <img src="https://pic.downk.cc/item/5fbb535ab18d627113de1e5a.png" style="width: 100%;" class="opimg">
+                    <img src="https://pic.downk.cc/item/5fbb52dcb18d627113ddef86.png" style="width: 100%;" class="opimg">
                     
-                    <h4 class="optitle">硬盘管理</h4>
+                    <h4 class="optitle">大英</h4>
                 </div>
             </div>
             <div class="next-post">
-                下一篇 <a href="http://ayanagi.fun/discmanage/">硬盘管理</a>
+                下一篇 <a href="http://ayanagi.fun/YU72sIGeY/">大英</a>
             </div>
             
         </div>
@@ -920,7 +956,7 @@
                 var nc = new NewCounter();
                 nc.save({
                     time: 1,
-                    title: "消费主义，又称“智商税”",
+                    title: "看题吃饭数据库",
                     url: pl,
                     xid: pl,
                 }).then(function (object) {
