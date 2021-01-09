@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://ayanagi.fun</id>
     <title>ハルカトオク</title>
-    <updated>2021-01-09T05:30:47.472Z</updated>
+    <updated>2021-01-09T08:53:58.326Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://ayanagi.fun"/>
     <link rel="self" href="http://ayanagi.fun/atom.xml"/>
@@ -41,6 +41,7 @@
 其中，一个科室有多个病房、多个医生，一个病房只能属于一个科室，一个医生只属于一个科室，但可负责多个病人的诊治，一个病人的主管医生只有一个。<br>
 完成如下设计：<br>
 （1）设计该计算机管理系统的E-R图；<br>
+<img src="http://ayanagi.fun/post-images/1610182429238.png" alt="" loading="lazy"><br>
 （2）将该E-R图转换为关系模型结构；<br>
 （3）指出转换结果中每个关系模式的候选码。</li>
 <li>设有关系模式：学生修课管理（学号，姓名，所在系，性别，课程号，课程名，学分，成绩）。设一名学生可以选修多门课程号，一门课程号可以被多名学生选修；一名学生有唯一的所在系，每门课程号有唯一的课程名和学分。<br>
