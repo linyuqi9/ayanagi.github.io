@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://ayanagi.fun</id>
     <title>ハルカトオク</title>
-    <updated>2021-01-22T17:12:52.722Z</updated>
+    <updated>2021-01-24T16:12:24.483Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://ayanagi.fun"/>
     <link rel="self" href="http://ayanagi.fun/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>http://ayanagi.fun/images/avatar.png</logo>
     <icon>http://ayanagi.fun/favicon.ico</icon>
     <rights>All rights reserved 2021, ハルカトオク</rights>
+    <entry>
+        <title type="html"><![CDATA[*CTF misc 复现]]></title>
+        <id>http://ayanagi.fun/zZk4KdzoX/</id>
+        <link href="http://ayanagi.fun/zZk4KdzoX/">
+        </link>
+        <updated>2021-01-24T05:25:17.000Z</updated>
+        <content type="html"><![CDATA[<p>todo</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[杭电0rays 2020招新赛Misc 复现]]></title>
         <id>http://ayanagi.fun/CB2020/</id>
@@ -20,1077 +29,59 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[测量学(7~9章)]]></title>
-        <id>http://ayanagi.fun/AlrEZaei9/</id>
-        <link href="http://ayanagi.fun/AlrEZaei9/">
-        </link>
-        <updated>2021-01-02T04:30:13.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="第七章-控制测量">第七章 控制测量</h1>
-<p>重点<br>
-<b><br>
-1、控制测量概述；<br>
-2、导线的概念、布设形式以及导线点选址的注意事项；<br>
-3、导线测量的外业工作：外业的步骤；<br>
-4、导线测量的内业计算。<br>
-</b><br>
-概念<br>
-<b><br>
-1、控制测量；<br>
-2、相邻坐标方位角的推算；<br>
-3、坐标方位角的连续推算；<br>
-4、导线的定义；<br>
-5、导线测量的目的和意义；<br>
-</b></p>
-<h2 id="第一节-控制测量概述">第一节 控制测量概述</h2>
-<p>测量工作中应遵循<strong>从整体到局部、由高级到低级、先控制后碎部</strong>的基本原则<br>
-一、定义及分类<br>
-1、<strong>控制点</strong>：以一定精度测得几何、重力数据，为进一步测量和其他科学技术工作提供依据、控制精度的固定点。<br>
-<b><br>
-平面控制点<br>
-高程控制点<br>
-图根点<br>
-</b><br>
-2、<strong>测量控制网</strong>：在地面上按一定规范布设并进行测量而得到的一系列相互联系的控制点所构成的网状结构。<br>
-3、<strong>控制测量</strong>：在一定区域内，为地形测图和工程测量建立控制网所进行的测量。<br>
-分类<br>
-1、平面控制测量<br>
-(1)<strong>GPS控制网</strong><br>
-(2)<strong>三角网</strong><br>
-(3)<strong>导线网</strong><br>
-2、高程控制测量<br>
-(1)<strong>水准测量</strong><br>
-(2)<strong>三角高程测量</strong><br>
-二、国家基本控制网<br>
-国家平面控制网<br>
-我国国家平面控制网采用逐级控制、分级布设的原则，分一、二、三、四等方法建立起来的。<br>
-主要由三角测量法布设，西部困难地区采用精密导线测量法。目前我国正采用GPS控制测量逐步取代三角测量。<br>
-三、小区域控制网<br>
-(一)定义：<strong>在10km范围内为地形测图或工程测量所建立的控制网称小区域控制网</strong>。<br>
-在这个范围内，水准面可视为水平面，可采用独立平面直角坐标系计算控制点的坐标，而不需将测量成果归算到高斯平面上。<br>
-(二)施测<br>
-小区域控制网应尽量以国家控制网或城市控制网联测，将国家或城市控制网的高级控制点作为小区域控制网的起算和校核数据。<br>
-<strong>如果测区内或测区附近没有高级控制点，或联测较为困难，也可建立独立平面控制网</strong></p>
-<h2 id="第二节-导线测量">第二节 导线测量</h2>
-<p>一、导线测量的一般知识<br>
-(一)定义<br>
-1、<strong>导线</strong>：由若干条直线连成的折线，每条直线叫做导线边。<br>
-2、<strong>转折角</strong>：相邻两条直线之间的水平角。<br>
-3、<strong>导线测量</strong>：平面控制测量的一种方法，主要用于隐蔽地区、带状地区、城建区、地下工程、公路、铁路和水利等控制点的测量。<br>
-(二)导线的布设形式</p>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>起始</th>
-<th>终止</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>附合导线</td>
-<td>一个已知控制点A</td>
-<td>另一个已知控制点B</td>
-<td><img src="http://ayanagi.fun/post-images/1609566047849.png" alt="" loading="lazy"></td>
-</tr>
-<tr>
-<td>闭合导线</td>
-<td>已知控制点A</td>
-<td>已知控制点A</td>
-<td><img src="http://ayanagi.fun/post-images/1609566056192.png" alt="" loading="lazy"></td>
-</tr>
-<tr>
-<td>支导线</td>
-<td>已知控制点A</td>
-<td></td>
-<td><img src="http://ayanagi.fun/post-images/1609566062529.png" alt="" loading="lazy"></td>
-</tr>
-</tbody>
-</table>
-<p>二、导线测量的外业工作<br>
-(一)踏勘选点及建立标志：<br>
-在踏勘选点之前，应到有关部门<strong>收集测区原有的地形图、高一等级控制点的成果资料</strong>，然后在地形图上初步设计导线<strong>布设路线</strong>，最后按照设计方案到实地<strong>踏勘选点</strong>。<br>
-原则：<br>
-①相邻导线点间要<strong>通视良好</strong>，以便角度测量、距离测量。如采用钢尺量距丈量导线边长，则沿线地势应较平坦，没有丈量的障碍物。<br>
-②点位应选在土质坚实并便于保存之处。<br>
-③在点位上，<strong>应视野开阔，便于测绘周围的地物和地貌</strong>。<br>
-④导线边长最长不超过平均边长的2倍，<strong>相邻边长尽量不使其长短相差悬殊</strong>。<br>
-⑤导线应<strong>均匀分布</strong>在测区，便于控制整个测区。<br>
-导线点位选定后，要钉一个小钉作为<strong>临时性标志</strong>；在碎石或沥青路面上，可以用顶上凿有十字纹的大铁钉代替木桩；在混凝土场地或路面上，可以用<strong>钢凿凿一十字纹，再涂上红油漆使标志明显</strong>。<br>
-导线点埋设后，为便于观测时寻找，可以在点位附近房角或电线杆等明显地物上用红油漆标明指示导线点的位置。应为每一个导线点绘制一张<strong>点之记</strong>。<br>
-若导线需要长期保存，则可以埋设混凝土导线点标石。导线点在地形图上的表示符号见图，图中的<strong>2.0表示符号正方形的长宽为2mm,1.6表示符号圆的直径为1.6mm</strong><br>
-<img src="http://ayanagi.fun/post-images/1609566639954.jpg" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609566647149.jpg" alt="" loading="lazy"><br>
-(二)测角<br>
-如果观测没有误差，在同一个导线点测得的左角与右角之和应等于360°。<br>
-图根导线的转折角可以用DJ6经纬仪测回法观测一测回，<strong>应统一地观测左角或测右角</strong>，对于闭合导线，一般是<strong>观测闭合多边形的内角</strong>。<br>
-(三)量距<br>
-图根导线边长可以使用<strong>检定过的钢尺丈量或检定过的光点测距仪测量。</strong><br>
-钢尺量距宜采用双次丈量方法，其较差的相对误差不应大于1/3000。钢尺的尺长改正数大于1/10000时，应加尺长改正；量距时平均尺温与检定时温度相差大于±10℃时，应进行温度改正；尺面倾斜大于1.5%时，应进行倾斜改正。<br>
-(四)联测<br>
-对于与高级控制点连接的导线，需要测出<strong>连接角和连接边</strong>，用来传递坐标方位角和坐标。<br>
-三、导线测量内业计算的基本公式<br>
-由两个已知点的坐标反算坐标方位角和边长<br>
-<strong>坐标反算问题</strong><br>
-<img src="http://ayanagi.fun/post-images/1609567407860.png" alt="" loading="lazy"><br>
-支导线的计算<br>
-<img src="http://ayanagi.fun/post-images/1609567645417.png" alt="" loading="lazy"><br>
-1、由A、M两点的坐标，反算出坐标方位角α<sub>AM</sub><br>
-2、由α<sub>AM</sub>起始，按β<sub>1</sub>、β<sub>2</sub>...角推算AP<sub>2</sub>、P<sub>2</sub>P<sub>3</sub>、……各边的坐标方位角α<sub>AP</sub>、α<sub>P2P3</sub>、……。<br>
-3、由各边的坐标方位角及边长，正算两相邻导线点的坐标增量。<br>
-(二)仅有一个连接角的附合导线的计算<br>
-计算顺序与支导线相同，但其最后一点位已知点B，故最后求得的坐标<span class='katex-error' title='ParseError: KaTeX parse error: Expected group after &#039;^&#039; at position 4: x_B^̲&#039;'>x_B^&#039;</span>和<span class='katex-error' title='ParseError: KaTeX parse error: Expected group after &#039;^&#039; at position 4: y_B^̲&#039;'>y_B^&#039;</span>的值由于观测值 β和S存在误差，必然与已知的坐标x<sub>B</sub>y<sub>B</sub>不同，它将产生坐标闭合差f<sub>x</sub>、f<sub>y</sub><br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mi>x</mi></msub><mo>=</mo><msubsup><mi>x</mi><mi>B</mi><msup><mrow></mrow><mo mathvariant="normal">′</mo></msup></msubsup><mo>−</mo><msub><mi>x</mi><mi>B</mi></msub></mrow><annotation encoding="application/x-tex">f_x=x_B^{&#x27;}-x_B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.217811em;vertical-align:-0.275331em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.94248em;"><span style="top:-2.424669em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8278285714285715em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.275331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mi>y</mi></msub><mo>=</mo><msubsup><mi>y</mi><mi>B</mi><msup><mrow></mrow><mo mathvariant="normal">′</mo></msup></msubsup><mo>−</mo><msub><mi>y</mi><mi>B</mi></msub></mrow><annotation encoding="application/x-tex">f_y=y_B^{&#x27;}-y_B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.217811em;vertical-align:-0.275331em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.94248em;"><span style="top:-2.424669em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8278285714285715em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.275331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><br>
-按导线边的长度成比例地改正它们的坐标增量<br>
-最后的坐标增量为<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">△</mi><msub><mi>x</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mi mathvariant="normal">△</mi><msubsup><mi>x</mi><mrow><mi>i</mi><mi>j</mi></mrow><msup><mrow></mrow><mo mathvariant="normal">′</mo></msup></msubsup><mo>+</mo><msub><mi>v</mi><mrow><mi mathvariant="normal">△</mi><msub><mi>x</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow></msub></mrow><annotation encoding="application/x-tex">△x_{ij}=△x_{ij}^{&#x27;}+v_{△x_{ij}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="mord">△</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.3372519999999999em;vertical-align:-0.394772em;"></span><span class="mord">△</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.94248em;"><span style="top:-2.441336em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8278285714285715em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.394772em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.7778799999999999em;vertical-align:-0.34731999999999996em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">△</span><span class="mord mtight"><span class="mord mathdefault mtight">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3280857142857143em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2818857142857143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.34731999999999996em;"><span></span></span></span></span></span></span></span></span></span><br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">△</mi><msub><mi>y</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mi mathvariant="normal">△</mi><msubsup><mi>y</mi><mrow><mi>i</mi><mi>j</mi></mrow><msup><mrow></mrow><mo mathvariant="normal">′</mo></msup></msubsup><mo>+</mo><msub><mi>v</mi><mrow><mi mathvariant="normal">△</mi><msub><mi>y</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow></msub></mrow><annotation encoding="application/x-tex">△y_{ij}=△y_{ij}^{&#x27;}+v_{△y_{ij}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="mord">△</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.3372519999999999em;vertical-align:-0.394772em;"></span><span class="mord">△</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.94248em;"><span style="top:-2.441336em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8278285714285715em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.394772em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.7778799999999999em;vertical-align:-0.34731999999999996em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">△</span><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3280857142857143em;"><span style="top:-2.357em;margin-left:-0.03588em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2818857142857143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.34731999999999996em;"><span></span></span></span></span></span></span></span></span></span><br>
-(三)具有两个连接角的附合导线的计算<br>
-这种导线为通常采用的标准形状。B点观测了连接角β<sub>N+1</sub>，故由α<sub>AM</sub>推算坐标方位角时必然可以求得BN的坐标方位角<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>α</mi><mrow><mi>B</mi><mi>N</mi></mrow><msup><mrow></mrow><mo mathvariant="normal">′</mo></msup></msubsup></mrow><annotation encoding="application/x-tex">α_{BN}^{&#x27;}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.217811em;vertical-align:-0.275331em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.94248em;"><span style="top:-2.424669em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8278285714285715em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.275331em;"><span></span></span></span></span></span></span></span></span></span>由于各观测角β<sub>i</sub>中存在误差，所以<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>α</mi><mrow><mi>B</mi><mi>N</mi></mrow><msup><mrow></mrow><mo mathvariant="normal">′</mo></msup></msubsup></mrow><annotation encoding="application/x-tex">α_{BN}^{&#x27;}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.217811em;vertical-align:-0.275331em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.94248em;"><span style="top:-2.424669em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8278285714285715em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.275331em;"><span></span></span></span></span></span></span></span></span></span>将不会与已知的坐标方位角<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>α</mi><mrow><mi>B</mi><mi>N</mi></mrow></msub></mrow><annotation encoding="application/x-tex">α_{BN}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>相等，从而产生方位角闭合差<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mi>β</mi></msub></mrow><annotation encoding="application/x-tex">f_β</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05278em;">β</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span><br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mi>β</mi></msub><mo>=</mo><msubsup><mi>α</mi><mrow><mi>B</mi><mi>N</mi></mrow><msup><mrow></mrow><mo mathvariant="normal">′</mo></msup></msubsup><mo>−</mo><msub><mi>α</mi><mrow><mi>B</mi><mi>N</mi></mrow></msub></mrow><annotation encoding="application/x-tex">f_β=α_{BN}^{&#x27;}-α_{BN}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05278em;">β</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.217811em;vertical-align:-0.275331em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.94248em;"><span style="top:-2.424669em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8278285714285715em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.275331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><br>
-在各观测角精度相同的前提下，闭合差<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mi>β</mi></msub></mrow><annotation encoding="application/x-tex">f_β</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05278em;">β</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span>可平均分配至每个角度上，即每个角度应加上改正数<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>α</mi><mrow><mi>B</mi><mi>N</mi></mrow><msup><mrow></mrow><mo mathvariant="normal">′</mo></msup></msubsup></mrow><annotation encoding="application/x-tex">α_{BN}^{&#x27;}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.217811em;vertical-align:-0.275331em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.94248em;"><span style="top:-2.424669em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8278285714285715em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.275331em;"><span></span></span></span></span></span></span></span></span></span>。推算坐标方位角<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>v</mi><mrow><mi>β</mi><mi>i</mi></mrow></msub></mrow><annotation encoding="application/x-tex">v_{βi}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05278em;">β</span><span class="mord mathdefault mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span>时<br>
-<img src="http://ayanagi.fun/post-images/1609568372921.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609568388357.png" alt="" loading="lazy"><br>
-<strong>各角的观测值经改正之后的计算，则与仅有一个连接角的附合导线的计算相同。</strong><br>
-(四)未测连接角的附合导线的计算<br>
-<img src="http://ayanagi.fun/post-images/1609568453467.png" alt="" loading="lazy"><br>
-1、假定起始坐标方位角，推算各导线边的假定坐标方位角及各点的坐标增量。<br>
-2、求导线旋转角</p>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>δ</mi><mo>=</mo><msub><mi>α</mi><mrow><mi>A</mi><mi>B</mi></mrow></msub><mo>−</mo><msubsup><mi>α</mi><mrow><mi>A</mi><mi>B</mi></mrow><msup><mrow></mrow><mo mathvariant="normal">′</mo></msup></msubsup></mrow><annotation encoding="application/x-tex">δ=α_{AB}-α_{AB}^{&#x27;} 
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03785em;">δ</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">A</span><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.23948em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9924799999999999em;"><span style="top:-2.4530000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">A</span><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span></span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8278285714285715em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span></span></p>
-<p>$ α_{AB} <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">和</mi></mrow><annotation encoding="application/x-tex">和</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">和</span></span></span></span> α_{AB}^{'} $可由A、B和A'、B'的坐标反算求得<br>
-3、求 实际坐标增量<br>
-4、求各导线点的坐标<br>
-5、根据闭合差，对各边坐标增量进行改正。<br>
-(五)闭合导线的计算<br>
-按附合导线的方法进行计算<br>
-注：至少观测一个连接角，否则无法推算导线各边的坐标方位角<br>
-(六)导线计算中闭合差的限差<br>
-闭合差：闭合差的大小能够反映出观测值的误差大小。<br>
-限差：闭合差误差的容许值。<br>
-接下来的东西还是比较难抄。而且做到这里我才发现latex实际同步的时候失效。明明预览文章的时候是有效果的，心态受到影响，还不如直接贴ppt<br>
-<img src="http://ayanagi.fun/post-images/1609583609648.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609583630545.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609583645672.png" alt="" loading="lazy"></p>
-<h2 id="导线测量的业内计算">导线测量的业内计算</h2>
-<p>导线测量业内计算的目的就是计算各导线点的平面坐标x、y。<br>
-1.坐标正算<br>
-根据直线起点的坐标、直线长度及其坐标方位角计算直线终点的坐标，称为坐标正算。<br>
-直线两端点A、B的坐标值之差，称为坐标增量，用△x<sub>AB</sub>、△y<sub>AB</sub>表示。<br>
-坐标增量的计算公式为：<br>
-△x<sub>AB</sub>=x<sub>B</sub>-x<sub>A</sub>=D<sub>AB</sub>cosα<sub>AB</sub><br>
-△y<sub>AB</sub>=y<sub>B</sub>-y<sub>A</sub>=D<sub>AB</sub>sinα<sub>AB</sub><br>
-<img src="http://ayanagi.fun/post-images/1609583815472.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609583836658.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609583855026.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609583875855.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609583896302.png" alt="" loading="lazy"><br>
-1、准备工作<br>
-将校核过的外业观测数据及起算数据填入“闭合导线坐标计算表”中，起算数据用双线标明。<br>
-<img src="http://ayanagi.fun/post-images/1609583947907.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609583966877.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609583979192.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609583992873.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609584003380.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609584014818.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609584028726.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609584041816.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609584052416.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609584063053.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609584074780.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609584087233.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609584105639.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609584120530.png" alt="" loading="lazy"><br>
-(2)调整角度闭合差<br>
-如果观测的是左角，则将角度闭合差反号平均分配到各左角上；<br>
-如果观测的是右角，则将角度闭合差同号平均分配到各右角上。<br>
-<img src="http://ayanagi.fun/post-images/1609584187063.png" alt="" loading="lazy"></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[测量学(4~6章)]]></title>
-        <id>http://ayanagi.fun/qOM5ZiPrX/</id>
-        <link href="http://ayanagi.fun/qOM5ZiPrX/">
-        </link>
-        <updated>2020-12-31T02:09:34.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="角度测量">角度测量</h1>
-<p>重点<br>
-<b></p>
-<blockquote>
-<p>水平角定义及取值范围<br>
-经纬仪的安置</p>
-<blockquote>
-<p>对中<br>
-整平</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>水平角的观测方法</p>
-<blockquote>
-<p>测回法：步骤、记录和计算；<br>
-方向观测法：步骤、记录和计算；</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>竖角定义及取值范围</p>
-<blockquote>
-<p>高度角：与水平方向0~90°<br>
-天顶距：与天顶方向0~180°</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>竖角计算</p>
-<blockquote>
-<p>如何确定竖直角的计算公式：主要是根据上仰望远镜，竖盘读数的增加或减少来确定盘左盘右时竖直角。α<sub>左</sub>、α<sub>右</sub>的计算公式。</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>指标差的计算</b></p>
-</blockquote>
-<p>第一节 角度测量原理<br>
-一、水平角测量原理<br>
-定义：<b>相交的两直线之间的夹角在水平面上的投影</b>。即地面上一点到两目标的方向线投影到水平面上的夹角，也就是过这两方向线所作两竖直面间的二面角。<br>
-<b>水平角的取值范围：0~360°</b><br>
-测量原理：如图，β角就是从地面点O到目标点A、B所形成的<b>水平角</b>，O点也称为<b>测站点</b>。当望远镜瞄准B点的时候，指标就指向水平圆盘上的分划b，当望远镜瞄准C点的时候，指标就指向水平圆盘上的分划a，假如圆盘的分划是顺时针的，则水平角<b>β=a-b</b><img src="http://ayanagi.fun/post-images/1609382153228.jpg" alt="" loading="lazy"><br>
-二、竖直角测量原理<br>
-定义：在<b>同一竖直平面内，目标方向线与水平方向线之间的夹角成为竖直角(高度角)</b>。当目标方向线高于水平方向线时，称仰角，取正号，反之为俯角，取负号。竖角(高度角)取值范围：<b>0~±90°</b><br>
-测量原理：当望远镜视线水平的时候，指标会指向竖直圆盘上某个固定的分划，人90°，当望远镜瞄准目标时，竖直圆盘随望远镜一起转动，指标指向圆盘上的另一个分划。则这两个分划之间的差值就是我们要测量的竖直角。<br>
-根据水平角和竖直角测量原理，要制造一台既能够观测水平角又能观测竖直角的仪器，它必须要满足几个必要条件：<br>
-1.仪器的中心必须位于过测站点的铅垂线上<br>
-2.照准部设备(望远镜)要能上下左右转动，上下转动时所形成的是竖直面。<br>
-3.要具有能安置成水平位置和竖直位置并有刻划的圆盘。<br>
-4.要有能指示度盘上读数的指标。<br>
-<b>经纬仪就是能同时满足以上必要条件的用于角度测量的仪器。</b><br>
-第二节 光学经纬仪<br>
-光学经纬仪在我国的系列为<b>DJ<sub>07</sub>,DJ<sub>1</sub>,DJ<sub>2</sub>,DJ<sub>6</sub></b>。D、J分别取大地测量仪器、经纬仪的汉语拼音字头；<b>数字为一个方向、一测回的方向中误差</b>。<br>
-经纬仪按精度划分型号为<b>T<sub>4</sub>,T<sub>3</sub>,T<sub>2</sub>,T<sub>1</sub>,T<sub>16</sub></b>，T：Theodolite(经纬仪)，以秒为单位的一测回方向观测中误差分别为±.05''、±1''、±2''、±6''、±16''。<br>
-DJ<sub>6</sub>光学经纬仪主要由<b>照准部、水平度盘和基座</b>构成。<br>
-DJ<sub>6</sub>读数方法采用<b>分微尺测微器读数法</b>，分微尺的分划值为1'，估读到0.1'，即6''，H：水平度盘读数，V：竖直度盘读数</p>
-<h2 id="四-经纬仪的安置">四 经纬仪的安置</h2>
-<p>对中±小于3mm、整平小于1格<br>
-(一)架设仪器：<br>
-将经纬仪放置在架头上，使架头大致水平，旋紧连接螺旋<br>
-(二)对中：<br>
-目的是使仪器中心与测站点位于同一铅垂线上。可以移动脚架、旋转脚螺旋使对中标志准确对准测站点的中心。<b>(垂球对中、光学对中)</b><br>
-(三)整平：<br>
-<b>粗平</b>：伸缩脚架腿，使圆水准气泡居中。<br>
-<b>检查并精确对中</b>：检查对中标志是否偏离地面点。如果偏离了，旋松三角架上的连接螺栓，平移仪器基座使对中标志准确对准测站点的中心，拧紧连接螺旋。<br>
-<b>精平</b>：旋转脚螺旋，使管水准气泡居中。<br>
-以光学对中整平法为例，其步骤如下：<br>
-<b><br>
-1、大致水平大致对中：眼睛看着对中器，拖动三脚架2个脚，使仪器大致对中，并保持“架头”大致水平<br>
-2、伸缩脚架粗平：根据气泡位置，伸缩三脚架2个脚，使圆水准气泡居中。<br>
-3、旋转三个脚螺旋精平：按“左手大拇指法则”旋转三个脚螺旋，使水准管气泡居中<br>
-</b></p>
-<h2 id="第三节-水平角测量以及竖直角测量">第三节 水平角测量以及竖直角测量</h2>
-<p>一、水平角测量<br>
-(一)测回法<br>
-1、适用：<b>两个方向的单角</b>(∠AOB)。<br>
-2、观测步骤：<br>
-(1)盘左瞄准左边A，配度盘至<b>0°0X'</b>，读取<b>a1</b>。<br>
-(2)顺时针旋瞄准右边B，读取b1、则上半测回角值：<b>β1=b1-a1</b><br>
-(3)倒镜成盘右，瞄准右边B，读取<b>b2</b><br>
-(4)逆时针旋转瞄准左边A，读取a2。则下半测回角值：<b>β2=b2-a2</b><br>
-(5)计算角值。若β1-β2≤±40''则有<br>
-<b>β=(β1+β2)/2</b><br>
-3、记录格式<br>
-若要观测n个测回，为减少度盘分划误差，各测回间应按180°/n的差值来配置水平度盘。<br>
-测回法测水平角方法，可小结如下：<br>
-<img src="http://ayanagi.fun/post-images/1609394148810.jpg" alt="" loading="lazy"><br>
-(二)方向观测法<br>
-1、适用：<b>在一个测站上需要观测两个以上方向</b><br>
-2、观测步骤：如下图，有4个观测方向<br>
-(1)上半测回：选择一明显目标A作为起始方向(零方向)，用盘左瞄准A，配置度盘，瞬时针依次观测A、B、C、D、A。<br>
-(2)下半测回：倒镜成盘右，逆时针依次观测A、D、C、B、A。同理各测回间按180°n的差值来配置水平度盘。<br>
-<img src="http://ayanagi.fun/post-images/1609394302696.jpg" alt="" loading="lazy"><br>
-3、记录、计算<br>
-(1)2C值(两倍照准误差)：<br>
-<b>2C=盘左读数-盘右读数(±180°)</b><br>
-一测回内2C互差，对J2≤18''，对J6不做要求。<br>
-(2)半测回归零差：<br>
-对J2≤12''，对J6≤18''。<br>
-(3)各方向盘左、盘右读数的平均值：<br>
-<b>平均值=[盘左读数+(盘右读数±180°)]/2</b><br>
-注意：零方向观测两次，应将平均值再取平均。<br>
-(4)归零方向值：将各方向平均值分别减去零方向平均值即得各方向归零方向值。<br>
-(5)各测回归零方向值的平均值：<b>同一方向值各测回间互差，对J2≤12''；对J6≤24''</b><br>
-<img src="http://ayanagi.fun/post-images/1609394558800.jpg" alt="" loading="lazy"><br>
-二、竖直角测量<br>
-(一)竖直度盘的构造<br>
-1、竖直度盘的构造包括：<b><br>
-(1)竖盘<br>
-(2)竖盘指标水准管<br>
-(3)竖盘指标水准管微动螺旋<br>
-</b><br>
-其中，竖盘指标水准管和竖盘指标水准管微动螺旋，可采用<b>竖盘指标自动归零补偿器</b>来替代。<br>
-(二)顺时针注记形式<br>
-α左=90°-L，α右=R-270°<br>
-一测回竖直角α=(α左+α右)/2<br>
-(三)逆时针注记形式<br>
-α左=L-90°，α右=270°-R<br>
-一测回竖直角α=(α左+α右)/2<br>
-(四)中丝法观测<br>
-测站上安好仪器，量取仪高；<br>
-盘左照准目表，气泡居中，读数L；<br>
-同样方法盘右读数R；<br>
-(五)三丝法观测<br>
-盘左依次用上中下三根横丝照准目标进行读数；<br>
-盘右依次用上中下三根横丝照准目标进行读数；<br>
-各按三丝所得L与R分别计算相应竖角；<br>
-取平均值作为该竖角角值<br>
-三、竖盘指标差<br>
-<b>由于指标线偏移，当视线水平时，竖盘读数不是恰好等于90°或270°上，而是与90°或270°相差一个x角，称为竖盘指标差，当偏移方向与竖盘注记增加方向一致时，x为正，反之为负</b>。<br>
-计算公式<br>
-1、指标差<b>x=(L+R-360°)/2</b><br>
-对于顺时针注记的：<br>
-正确的竖直角α=(90°+x)-L=α左+x<br>
-α=R-(270°+x)=α右+x<br>
-2、结论：<b>取盘左盘右的平均值可消除指标差的影响。</b><br>
-四、竖直角的观测及记录<br>
-一般规范规定，指标差变动范围J6≤25''、J2≤15''。</p>
-<h1 id="第五章-直线定向和距离测量">第五章 直线定向和距离测量</h1>
-<p>重点<br>
-<b><br>
-目估定线的三种情况<br>
-直线丈量方法</p>
-<blockquote>
-<p>丈量成果整理：</p>
-<blockquote>
-<p>水平：尺长改正+温度改正<br>
-倾斜：尺长改正+温度改正+倾斜改正</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>直线定向</p>
-<blockquote>
-<p>真子午线、磁北线、坐标纵线<br>
-三北方向之间的关系<br>
-方位角的换算</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>视距测量</p>
-<blockquote>
-<p>概念<br>
-视准轴水平时 <b>D=Kl+C  h=i-v</b><br>
-视线倾斜时计算水平距离和高差的公式：<br>
-<b>D=Klcos²α    h=1/2Klsin2α+i-v</b><br>
-</b></p>
-</blockquote>
-</blockquote>
-<p>第一节 钢尺量距</p>
-<h2 id="直线定线">直线定线</h2>
-<p>在已知两点之间或在它们延长线上定出若干点，以便丈量距离。<strong>目估定线的三种情况</strong>：<br>
-<b><br>
-1、在两端之间定线<br>
-2、在两点延长线上定线<br>
-3、两端点不易到达或两端点间为山丘所阻而不通视的定线<br>
-</b><br>
-<strong>丈量方法</strong><br>
-(一)直线的一般丈量<br>
-<strong>1、地面平坦</strong><br>
-①先在地面定出直线方向；<br>
-②边定线边丈量；<br>
-③相对误差<br>
-<strong>|D<sub>往</sub>-D<sub>返</sub>|/D<sub>中</sub>=1/N</strong><br>
-<strong>2、地面倾斜</strong><br>
-①一端抬高；<br>
-②两端同时抬高。<br>
-(二)直线较精确的丈量<br>
-<b>1、读数法：<br>
-尺子的不同位置对准端点。<br>
-2、刻划法：<br>
-整尺段无需读数；<br>
-零尺段用读数法读取</b><br>
-钢尺的检定<br>
-(一) 尺长方程式：<br>
-<img src="http://ayanagi.fun/post-images/1609398502979.png" alt="" loading="lazy"><br>
-l<sub>t</sub>:钢尺在温度t时的实际长度；<br>
-l:钢尺上所刻注的长度，即名义长度；<br>
-△l:尺长改正数，即钢尺在温度t<sub>0</sub>时的改正数；<br>
-α:钢尺的膨胀系数；<br>
-t<sub>0</sub>:钢尺检定时的温度；<br>
-t:钢尺使用时的温度。<br>
-<strong>1、尺长改正</strong><br>
-△D<sub>长</sub>=D×△l/l<br>
-D:分段丈量的倾斜距离；<br>
-△l:钢尺检定时整尺段的尺长改正；<br>
-l:钢尺名义长度。<br>
-<strong>2、温度改正</strong><br>
-△D<sub>温</sub>=D·α(t-t<sub>0</sub>)<br>
-α:钢尺膨胀系数；<br>
-t:丈量时钢尺的温度；<br>
-t<sub>0</sub>:检定时钢尺的温度。<br>
-<strong>3、倾斜改正</strong><br>
-△D<sub>倾</sub>=-h²/2D<br>
-h:分段丈量时的两端高差；<br>
-D:分段丈量的倾斜距离。</p>
-<h2 id="第三节-直线的定向">第三节 直线的定向</h2>
-<p>一、概念<br>
-<strong>直线定向：<strong>确定一条直线与基本方向的关系称为直线定向。<br>
-<strong>真子午线：<strong>椭球的子午线方向。<br>
-<strong>磁北线(磁子午线)：<strong>磁针北端确定的方向。<br>
-<strong>子午线收敛角(∠γ)<strong>通过地面上某点的真子午线，与该点坐标纵线方向之间的夹角，称为子午线收敛角。<br>
-<strong>磁偏角(δ)</strong>：磁北线与真子午线方向之间的夹角称为磁偏角。<strong>东偏和西偏</strong><br>
-二、标准方向的种类<br>
-<strong>(一)真子午线方向</strong><br>
-通过地球表面上一点的真子午线的切线方向称为</strong>该点的真子午线方向，用N表示</strong>。真子午线方向是通过天文观测方法进行测定，通常用</strong>指向北极星的方向</strong>来表示近似的真子午线方向。<br>
-<strong>(二)磁子午线方向</strong><br>
-通过地球表面上一点的</strong>磁子午线的切线方向</strong>称为该点的磁子午线方向，用N'表示。<strong>磁针自由静止时其N极所指的方向</strong>即为磁子午线方向，磁子午线方向可以用</strong>磁针或罗盘仪</strong>测定。<br>
-<strong>(三)坐标轴方向</strong>我国采用高斯平面直角坐标系，其每一段投影带<strong>中央子午线的投影为坐标纵轴方向</strong>，即<strong>X轴方向</strong><br>
-三、直线定向的几种表示方法<br>
-(一)方位角<br>
-由标准方向的北端顺时针方向量到某直线的夹角，称为该直线的方位角。角值为0°~360°。根据标准方向线的不同，方位角分为<strong>真方位角、磁方位角和坐标方位角</strong>。<br>
-<strong>1、真方位角A<sub>真</sub></strong>：以<strong>真子午线方向</strong>为标准方向的称为真方位角<br>
-<strong>2、磁方位角A<sub>磁</sub></strong>：以<strong>磁子午线方向</strong>为标准方向的称为磁方位角<br>
-<strong>3、坐标方位角α</strong>：以<strong>坐标纵线为标准方向</strong>的称为坐标方位角，简称方位角<br>
-(二)象限角<br>
-直线与标准方向线所夹的锐角称为象限角。象限角的取值范围为0°~90°，用R表示。平面直角坐标系分为四个象限I、II、III、IV表示。由于象限角可以自北端或南端量起，所以表示直线的方向时，不仅要注明其角度大小，而且要注明其所在象限。<br>
-四、三种方位角之间的关系<br>
-(一)真方位角与磁方位角之间的关系<br>
-A<sub>真</sub>=A<sub>磁</sub>+δ<br>
-δ：东偏取正值，西偏取负值<br>
-(二)真方位角与坐标方位角之间的关系<br>
-A<sub>真</sub>=α+γ<br>
-(三)坐标方位角与磁方位角之间的关系<br>
-α=A<sub>磁</sub>+δ-γ<br>
-五、正、反坐标方位角<br>
-在<strong>平面直角坐标系或高斯平面直角坐标系</strong>中，表示直线的方位角通常是用坐标方位角来表示。如直线AB的坐标方位角可用α<sub>AB</sub>或α<sub>BA</sub>来表示，则称α<sub>AB</sub>为坐标正方位角，α<sub>BA</sub>为反坐标方位角。其关系式为α<sub>反</sub>=α<sub>正</sub>±180°<br>
-五、坐标方位角的推算<br>
-测量工作中不是直接测定直线边的坐标方位角，而是测定<strong>各相邻边之间水平夹角和已知边的连测角</strong><br>
-通过已知坐标方位角和观测的水平夹角推算各边的坐标方位角。角有<strong>左角和右角</strong>之分。<br>
-左角(右角)：该角位于<strong>前进方向</strong>左侧(右侧)的<strong>水平夹角</strong><br>
-<img src="http://ayanagi.fun/post-images/1609402185166.png" alt="" loading="lazy"><br>
-α<sub>23</sub>=α<sub>12</sub>+β<sub>2左</sub>-180°<br>
-α<sub>34</sub>=α<sub>23</sub>+β<sub>3左</sub>-180°<br>
-α<sub>45</sub>=α<sub>34</sub>+β<sub>4左</sub>-180°<br>
-通用公式<br>
-α<sub>i,i+1</sub>=α<sub>i-1,i</sub>+β<sub>i左</sub>-180°<br>
-α<sub>i,i+1</sub>：导线前进方向上相邻边中前一边的坐标方位角<br>
-α<sub>i-1,i</sub>：导线前进方向上相邻边中后一边的坐标方位角<br>
-右角通用公式<br>
-α<sub>i,i+1</sub>=α<sub>i-1,i</sub>-β<sub>i右</sub>+180°<br>
-α<sub>前</sub>=α<sub>后</sub>±<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>β</mi><mi mathvariant="normal">右</mi><mi mathvariant="normal">左</mi></msubsup></mrow><annotation encoding="application/x-tex">β^左_右</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9414399999999999em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.363em;"><span style="top:-2.4530000000000003em;margin-left:-0.05278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord cjk_fallback mtight">右</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord cjk_fallback mtight">左</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span>∓180°</p>
-<h2 id="第四节-视距测量">第四节 视距测量</h2>
-<p>一、概念<br>
-视距测量：利用望远镜内十字丝分划板上的视距线在视距尺(或水准尺)上进行读数，根据<strong>几何光学和三角学原理</strong>，同时测定<strong>水平距离和高差</strong>的一种方法。<br>
-优点：操作简便，速度快，不受地形起伏变化限制<br>
-缺点：相对精度较低。<br>
-二、视距测量的原理<br>
-(一)视准轴水平时的视距公式<br>
-<strong>1、水平距离的计算公式</strong> D=Kl+C<br>
-<strong>2、高差的计算公式</strong>  h=i-v<br>
-(二)视线倾斜时计算水平距离和高差的公式<br>
-<strong>1、水平距离的计算公式</strong>  D=Klcos²α<br>
-<strong>2、高差的计算公式</strong>  h=1/2Klsin2α+i-v</p>
-<h1 id="测量误差的基本知识">测量误差的基本知识</h1>
-<p>重点<br>
-<b><br>
-1、观测误差的来源、分类、偶然误差的特性；</p>
-<blockquote>
-<p>2、精度的含义及衡量精度的指标；</p>
-<blockquote>
-<p>(1)各种误差概念；<br>
-(2)中误差、相对中误差、容许误差；</p>
-</blockquote>
-</blockquote>
-<p>3、算术平均值及中误差；<br>
-4、误差传播定律及其中误差；<br>
-5、同精度观测值的中误差：由真误差求中误差、改正数求中误差；<br>
-6、加权均值的中误差。<br>
-</b></p>
-<h2 id="第一节-观测误差">第一节 观测误差</h2>
-<p>一、误差来源<br>
-观测条件(等精度、不等精度观测)：观测仪器、观测者、外界条件<br>
-二、误差分类<br>
-(一)系统误差<br>
-1、定义：误差的符号和大小保持不变或者按一定规律变化，则称其为系统误差。<br>
-如：钢尺的尺长误差。一把钢尺标30m，实际30.005m，也就有-5mm的量距误差，而量取的距离越长，尺长误差就会越大，因此系统误差具有累计性。<br>
-如：水准仪 i角误差，由于水准管轴与视准轴不平行，两者之间形成了夹角i，使得中丝在水准尺上的读数不准确。如果水准仪离水准尺越远，i角误差就会越大，由于i角误差是有规律的，因此它也是系统误差。<br>
-2、消除或减弱系统误差：正是由于系统误差具有一定的规律性，因此只要找到这种规律性就可以通过一定的方法来消除或减弱系统误差的影响。<br>
-具体措施：<br>
-(1)采用观测方法消除：如水准仪置于距前后水准尺等距的地方可以消除i角误差和地球曲率的影响。通过后前前后的观测顺序可以减弱水准仪下沉的影响。通过盘左盘右观测水平角和竖直角可以消除经纬仪的横轴误差、视准轴误差、照准部偏心差和竖盘指标差的影响。<br>
-(2)，加改正数：如精密钢尺量距中的尺长改正：△ld=1/10×△l(l为任意尺段长)<br>
-温度改正和高差改正。<br>
-△D=K+RD<br>
-(3)检校仪器：将仪器的系统误差降低到最小限度或限制在一个允许的范围内。<br>
-(二)偶然误差<br>
-1、定义：偶然误差的负号和大小是无规律的，具有偶然性。<br>
-如度盘分划不均匀引起的误差是偶然误差。<br>
-因为在度盘上有的地方可能分划的密度大一些，有的小。又如，我们读数的时候最后一位要估读，有时可能估读得大一些，有时估读得小一些，这是没有规律的。<br>
-虽然单个的偶然误差没有规律，但大量的偶然误差具有统计规律。</p>
-<h2 id="第二节-偶然误差的特性">第二节 偶然误差的特性</h2>
-<p>一、特性<br>
-在<strong>相同条件</strong>下，重复观测一个量，也就是<strong>等精度观测</strong>，经过重复观测所出现的大量的偶然误差具有规律性。<br>
-如：在相同条件下，对三角形的内角进行了独立的重复观测，由于每次观测中都有误差，所以三角学的三个内角 观测值加起来会不等于真值180°。<br>
-设三个内角观测值和为Li=ai+bi+ci,Li即为观测值，则△<sub>i</sub>=L<sub>i</sub>-180°，△<sub>i</sub>为真误差。<br>
-通过大量实验统计结果表明，总结出偶然误差具有如下的规律性：<br>
-1、在一定的观测条件下，偶然误差的绝对值不会超过一定的界限(<strong>有界性</strong>)；<br>
-2、绝对值较小的误差比绝对值较大的误差出现的概率大(<strong>小误差的密集性</strong>)；<br>
-3、绝对值相等的正误差与负误差，其出现的可能性相等(<strong>对称性</strong>)；<br>
-4、当观测次数无限增多时，偶然误差的算术平均值趋于零(<strong>抵偿性</strong>)。<br>
-二、反映误差分布情况的形式<br>
-(一)表格<br>
-(二)直方图：横坐标为误差大小，纵坐标为误差在每个区间出现的频率<br>
-(三)正态分布曲线<br>
-当n→∞，也就是观测的次数趋近无穷，并且d△→0，即误差区间无穷小时，直方图各个小长条矩形组成的折线就会变成一条曲线，称为<strong>误差分布曲线</strong>。<br>
-误差分布曲线是一条正态分布曲线，可用正态分布概率密度函数表示<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi><mo>=</mo><mi>f</mi><mo>(</mo><mi mathvariant="normal">△</mi><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><msqrt><mrow><mn>2</mn><mi>π</mi></mrow></msqrt><mi>σ</mi></mrow></mfrac><msup><mi>e</mi><mo>−</mo></msup><mfrac><mrow><mi mathvariant="normal">△</mi><mi mathvariant="normal">²</mi></mrow><mrow><mn>2</mn><mi>σ</mi><mi mathvariant="normal">²</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">y=f(△)=\dfrac{1}{\sqrt{2π}σ}e^-{\tfrac{△²}{2σ²}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord">△</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.25144em;vertical-align:-0.93em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.2027799999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.90722em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord">2</span><span class="mord mathdefault" style="margin-right:0.03588em;">π</span></span></span><span style="top:-2.86722em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
--10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
--50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
-35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
--221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
-s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
-s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.13278em;"><span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.93em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mord mathdefault">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.771331em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">−</span></span></span></span></span></span></span></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9322159999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathdefault mtight" style="margin-right:0.03588em;">σ</span><span class="mord mtight">²</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.446108em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">△</span><span class="mord mtight">²</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><br>
-式中，误差△为真误差，△是一个随机变量，因而△是偶然误差。σ为随机变量△的标准差<br>
-方差的数学意义为：反应随机变量△与其均值E(△)，即与数学期望的偏离程度，由于σ²就是△的方差，显然σ²与观测条件有关，如果观测条件越好，则误差△就应该越小(→0)，也就是越接近数学期望，由于△与数学期望的偏离程度越小，从而σ²越小。</p>
-<h1 id="第三节-评定精度的标准">第三节 评定精度的标准</h1>
-<p>一、精度的含义<br>
-例：不同两组观测对应两条不同误差分布曲线。若σ<sub>a</sub> &lt; sigma<sub>b</sub>，则a和b两组观测值哪组精度高？<br>
-第一组观测，误差分布密集，图形陡峭，精度高。<br>
-第二组观测，误差分布离散，图形平缓，精度低。<br>
-<img src="http://ayanagi.fun/post-images/1609407006277.jpg" alt="" loading="lazy"><br>
-所谓精度，是指误差分布的集中与离散程度。如误差分布集中(曲线a)，则观测精度高；若误差分布离散(曲线b)，则观测精度就低。误差分布的集中与离散程度可以用<strong>方差σ²</strong>或<strong>标准差σ</strong>来表示。<br>
-二、中误差(均方根误差)<br>
-(一)定义<br>
-设在<strong>相同的观测条件</strong>下，对未知量进行重复独立观测，观测值为：l<sub>1</sub>，l<sub>2</sub>，...，l<sub>n</sub>，其真误差为△<sub>1</sub>，△<sub>2</sub>，...，△<sub>n</sub>则<br>
-<img src="http://ayanagi.fun/post-images/1609407893225.png" alt="" loading="lazy"><br>
-式中当n→∞，E(△)=0，根据数学期望的定义E(△²)就是△²的算术平均值，[]为累加符号<br>
-[△△]=△<sub>1</sub>△<sub>1</sub>+△<sub>2</sub>△<sub>2</sub>+...+△<sub>n</sub>△<sub>n</sub><br>
-二、中误差(均方根误差)<br>
-(一)定义：<br>
-真误差的标准差±<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msqrt><mrow><mi>D</mi><mo>(</mo><mi mathvariant="normal">△</mi><mo>)</mo></mrow></msqrt><mo>=</mo><mi>σ</mi><mo>=</mo><mo>±</mo><msub><mi>lim</mi><mo>⁡</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><msqrt><mfrac><mrow><mo>[</mo><mi mathvariant="normal">△</mi><mi mathvariant="normal">△</mi><mo>]</mo></mrow><mi>n</mi></mfrac></msqrt></mrow><annotation encoding="application/x-tex">\sqrt{D(△)} = σ = ±\lim\limits_{n\to\infty}\sqrt{\frac{[△△]}{n}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.24em;vertical-align:-0.30499999999999994em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.935em;"><span class="svg-align" style="top:-3.2em;"><span class="pstrut" style="height:3.2em;"></span><span class="mord" style="padding-left:1em;"><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="mopen">(</span><span class="mord">△</span><span class="mclose">)</span></span></span><span style="top:-2.8950000000000005em;"><span class="pstrut" style="height:3.2em;"></span><span class="hide-tail" style="min-width:1.02em;height:1.28em;"><svg width='400em' height='1.28em' viewBox='0 0 400000 1296' preserveAspectRatio='xMinYMin slice'><path d='M263,681c0.7,0,18,39.7,52,119c34,79.3,68.167,
-158.7,102.5,238c34.3,79.3,51.8,119.3,52.5,120c340,-704.7,510.7,-1060.3,512,-1067
-c4.7,-7.3,11,-11,19,-11H40000v40H1012.3s-271.3,567,-271.3,567c-38.7,80.7,-84,
-175,-136,283c-52,108,-89.167,185.3,-111.5,232c-22.3,46.7,-33.8,70.3,-34.5,71
-c-4.7,4.7,-12.3,7,-23,7s-12,-1,-12,-1s-109,-253,-109,-253c-72.7,-168,-109.3,
--252,-110,-252c-10.7,8,-22,16.7,-34,26c-22,17.3,-33.3,26,-34,26s-26,-26,-26,-26
-s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.30499999999999994em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.0175em;vertical-align:-0.7em;"></span><span class="mord">±</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-2.1em;margin-left:0em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mrel mtight">→</span><span class="mord mtight">∞</span></span></span></span><span style="top:-2.7em;"><span class="pstrut" style="height:2.7em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3175000000000001em;"><span class="svg-align" style="top:-3.8em;"><span class="pstrut" style="height:3.8em;"></span><span class="mord" style="padding-left:1em;"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">[</span><span class="mord mtight">△</span><span class="mord mtight">△</span><span class="mclose mtight">]</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.2775em;"><span class="pstrut" style="height:3.8em;"></span><span class="hide-tail" style="min-width:1.02em;height:1.8800000000000001em;"><svg width='400em' height='1.8800000000000001em' viewBox='0 0 400000 1944' preserveAspectRatio='xMinYMin slice'><path d='M1001,80H400000v40H1013.1s-83.4,268,-264.1,840c-180.7,
-572,-277,876.3,-289,913c-4.7,4.7,-12.7,7,-24,7s-12,0,-12,0c-1.3,-3.3,-3.7,-11.7,
--7,-25c-35.3,-125.3,-106.7,-373.3,-214,-744c-10,12,-21,25,-33,39s-32,39,-32,39
-c-6,-5.3,-15,-14,-27,-26s25,-30,25,-30c26.7,-32.7,52,-63,76,-91s52,-60,52,-60
-s208,722,208,722c56,-175.3,126.3,-397.3,211,-666c84.7,-268.7,153.8,-488.2,207.5,
--658.5c53.7,-170.3,84.5,-266.8,92.5,-289.5c4,-6.7,10,-10,18,-10z
-M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.5225em;"><span></span></span></span></span></span></span></span></span><br>
-实际工作中，观测次数有限，故取标准差的估值作为中误差。<br>
-<img src="http://ayanagi.fun/post-images/1609425342627.png" alt="" loading="lazy"><br>
-二、中误差(均方根误差)<br>
-(一)定义<br>
-应用时应注意<br>
-①△<sub>i</sub>可以是一个对量n次同精度观测，亦可以是对n个量各进行一次同精度观测的误差。<br>
-②中误差m是衡量一组观测的精度标准，个别误差的大小并不能反映精度的高低；<br>
-③n较大时，m较可靠；n较小时，m仅做参考；<br>
-④m前要冠以±号，并有计量单位。<br>
-⑤m为中误差，△为真误差，不要混淆。<br>
-例：<br>
-<img src="http://ayanagi.fun/post-images/1609426252624.png" alt="" loading="lazy"><br>
-(二)中误差的性质<br>
-1、中误差表示误差分布的离散度。等精度观测中，中误差表示一组观测值的精度，也表示单个观测值的精度。(如上例中甲组中误差为±3.0'',同时甲组单个观测值的中误差均为±3.0'')<br>
-2、概率特性<br>
-P( μ - σ &lt; △ &lt; μ + σ ) = P( -σ &lt; △ &lt; +σ ) = 0.6826<br>
-μ为误差的数学期望，μ=0，此公式表示真误差在(-σ,+σ)内出现的概率<br>
-我们还可计算得<br>
-P(2σ*)=0.9544<br>
-P(3σ*)=0.9974<br>
-<em>代表意会<br>
-三、平均误差<br>
-平均误差是误差绝对值的平均值<br>
-四、或然误差<br>
-将一组误差按其绝对值的大小顺序排列，取居中的一个误差作为精度指标，称为或然误差ρ<br>
-p( -ρ &lt; △ &lt; +ρ ) = 50%<br>
-五、容许误差<br>
-偶然误差第一特性说明，在一定的观测条件下，偶然误差的绝对值不会超过一定的限值。<br>
-△<sub>容</sub>=2σ或3σ<br>
-p(ρ</em>)=68.3%<br>
-2ρ=95.5%<br>
-3ρ=99.7%<br>
-因此测量中常取两倍或三倍中误差作为误差限值，即容许误差<br>
-六、相对误差<br>
-相对中误差<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi><mo>=</mo><mfrac><mrow><mi mathvariant="normal">∣</mi><mi>M</mi><mi mathvariant="normal">∣</mi></mrow><mi>D</mi></mfrac><mo>=</mo><mfrac><mn>1</mn><mrow><mi>D</mi><mi mathvariant="normal">/</mi><mi mathvariant="normal">∣</mi><mi>M</mi><mi mathvariant="normal">∣</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">K =\frac{|M|}{D}=\frac{1}{D/|M|}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">K</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.355em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.02778em;">D</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∣</span><span class="mord mathdefault mtight" style="margin-right:0.10903em;">M</span><span class="mord mtight">∣</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.365108em;vertical-align:-0.52em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.02778em;">D</span><span class="mord mtight">/</span><span class="mord mtight">∣</span><span class="mord mathdefault mtight" style="margin-right:0.10903em;">M</span><span class="mord mtight">∣</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.52em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><strong>(注意化分子为1的形式)</strong><br>
-相对真误差<br>
-在钢尺量距中我们还接触到了一个相对误差的计算公式<br>
-K = |D<sub>往</sub>-D<sub>返</sub>|/D<sub>平均</sub><br>
-在答题中具体采用哪个公式根据题目给出条件和要求决定。</p>
-<h2 id="第四节-误差传播定律">第四节 误差传播定律</h2>
-<p>一、定义<br>
-在三角高程测量中，粗算高差h<sub>AB</sub>=S<sub>AB</sub>sinα<sub>AB</sub><br>
-假设测角和测距的中误差是已知的，那么m<sub>AB</sub>=？<br>
-水平距离D<sub>AB</sub>=S<sub>AB</sub>cosα<sub>AB</sub>，m<sub>DAB</sub>=？<br>
-在这个例子中，粗算高差和水平距离并不是直接观测到的， 而是通过一定的函数关系间接计算得到的<br>
-这时就要利用误差传播定律求出它们的中误差。<br>
-<strong>误差传播定律就是描述观测值中误差与观测值函数中误差之间关系的定律</strong><br>
-二、线性函数<br>
-z=k<sub>1</sub>x<sub>1</sub>+......<br>
-z为线性函数，k<sub>i</sub>为常数；x<sub>i</sub>为独立观测值<br>
-设x<sub>i</sub>的中误差为m<sub>i</sub>，z的中误差为m<sub>z</sub>，有<br>
-m²<sub>z</sub>=(k<sub>1</sub>m<sub>1</sub>)²+....<br>
-即观测值函数中误差的平方等于常数与相应观测值中误差乘积的平方和。<br>
-倍数的函数<br>
-有函数z=kx   (a)<br>
-z为观测值的函数，k为常数，x为观测值，中误差为m，求z的中误差m<sub>z</sub><br>
-设x和z的真误差分别为△<sub>x</sub>、△<sub>z</sub>，由(a)可知<br>
-△<sub>z</sub>=k△<sub>x</sub><br>
-对x观测了n次，△<sub>zi</sub>=k△<sub>xi</sub>，平方得△<sub>zi</sub>²=k²△<sub>xi</sub>²<br>
-求和除n得<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mo>[</mo><msubsup><mi mathvariant="normal">△</mi><mrow><mi>z</mi><mi>i</mi></mrow><mn>2</mn></msubsup><mo>]</mo></mrow><mi>n</mi></mfrac><mo>=</mo><mfrac><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>[</mo><msubsup><mi mathvariant="normal">△</mi><mrow><mi>x</mi><mi>i</mi></mrow><mn>2</mn></msubsup><mo>]</mo></mrow><mi>n</mi></mfrac></mrow><annotation encoding="application/x-tex">\dfrac{[△_{zi}^2]}{n}=\dfrac{k^2[△_{xi}^2]}{n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.177108em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.491108em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">n</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">[</span><span class="mord"><span class="mord">△</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.441336em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.04398em;">z</span><span class="mord mathdefault mtight">i</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.258664em;"><span></span></span></span></span></span></span><span class="mclose">]</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.177108em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.491108em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">n</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mopen">[</span><span class="mord"><span class="mord">△</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.441336em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">x</span><span class="mord mathdefault mtight">i</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.258664em;"><span></span></span></span></span></span></span><span class="mclose">]</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> (b)<br>
-按中误差定义可知<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>m</mi><mi>z</mi><mn>2</mn></msubsup><mo>=</mo><mfrac><mrow><mo>[</mo><msubsup><mi mathvariant="normal">△</mi><mi>z</mi><mn>2</mn></msubsup><mo>]</mo></mrow><mi>n</mi></mfrac></mrow><annotation encoding="application/x-tex">m_z^2=\dfrac{[△_z^2]}{n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.061108em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathdefault">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.4530000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.04398em;">z</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.177108em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.491108em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">n</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">[</span><span class="mord"><span class="mord">△</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.4530000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.04398em;">z</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mclose">]</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>   <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>m</mi><mi>x</mi><mn>2</mn></msubsup><mo>=</mo><mfrac><mrow><mo>[</mo><msubsup><mi mathvariant="normal">△</mi><mi>x</mi><mn>2</mn></msubsup><mo>]</mo></mrow><mi>n</mi></mfrac></mrow><annotation encoding="application/x-tex">m_x^2=\dfrac{[△_x^2]}{n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.061108em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathdefault">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.4530000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.177108em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.491108em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">n</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">[</span><span class="mord"><span class="mord">△</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.4530000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mclose">]</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><br>
-所以(b)式可写为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>m</mi><mi>z</mi><mn>2</mn></msubsup><mo>=</mo><mi>k</mi><mi mathvariant="normal">²</mi><msubsup><mi>m</mi><mi>x</mi><mn>2</mn></msubsup><mi mathvariant="normal">或</mi><msub><mi>m</mi><mi>z</mi></msub><mo>=</mo><mi>k</mi><msub><mi>m</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">m_z^2=k²m_x^2或m_z=km_x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.061108em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathdefault">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.4530000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.04398em;">z</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.061108em;vertical-align:-0.247em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord">²</span><span class="mord"><span class="mord mathdefault">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.4530000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mord cjk_fallback">或</span><span class="mord"><span class="mord mathdefault">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.04398em;">z</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord"><span class="mord mathdefault">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><br>
-<strong>即观测值与常数乘积的中误差等于观测值中误差乘常数</strong><br>
-和或差的函数<br>
-有函数z=x±y  (c)<br>
-z是xy的和或差的函数，xy是独立观测值，中误差分别为m<sub>x</sub>、m<sub>y</sub><br>
-现在求z的中误差m<sub>z</sub><br>
-设x、y、z的真误差分别为△<sub>x</sub>、△<sub>y</sub>、△<sub>z</sub>，由(c)式可知△<sub>x</sub>、△<sub>y</sub>、△<sub>z</sub>的关系为<br>
-△<sub>z</sub>=△<sub>x</sub>+△<sub>y</sub><br>
-若对xy观测了n次则<br>
-△<sub>zi</sub>=△<sub>xi</sub>+△<sub>yi</sub><br>
-平方得△<sub>zi</sub>²=△<sub>xi</sub>²+△<sub>yi</sub>^2±2△<sub>xi</sub>△<sub>yi</sub><br>
-求和除n<br>
-得~(意会)<br>
-最终，两观测值代数和的中误差平方等于量观测值中误差的平方之和<br>
-误差传播定律的应用步骤<br>
-(一)按问题的要求写出函数式Z=f(x<sub>1</sub>,x<sub>2</sub>...x<sub>n</sub>)<br>
-(二)对函数式求微分，得出函数的真误差与观测值真误差之间的关系式<br>
-(三)写出函数中误差与观测值中误差之间的关系式</p>
-<h2 id="第五节-算术平均值及其中误差">第五节 算术平均值及其中误差</h2>
-<p>算数平均值的中误差为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mtext> </mtext><mi>x</mi><mtext> </mtext><mo>=</mo><mfrac><mi>m</mi><msqrt><mi>n</mi></msqrt></mfrac></mrow><annotation encoding="application/x-tex">m~x~=\dfrac{m}{\sqrt{n}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span><span class="mspace nobreak"> </span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace nobreak"> </span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.03756em;vertical-align:-0.9300000000000002em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.10756em;"><span style="top:-2.30972em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8002800000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathdefault">n</span></span></span><span style="top:-2.76028em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
--10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
--50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
-35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
--221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
-s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
-s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.23972em;"><span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9300000000000002em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><br>
-随着n的增大，值不断减少，即x的精度不断提高，当观测次数增加到某一定的数目以后，再增加观测次数，精度就提高得很少。因此为了提高精度需要考虑采用适当的仪器、改进操作方法、选择良好的外界环境并提高人员的操作素质等措施来改善观测条件。</p>
-<h2 id="第六节-同精度观测值的中误差">第六节 同精度观测值的中误差</h2>
-<p>一、最或然值中误差及其改正数<br>
-使用改正数来计算观测值中误差的公式<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mo>=</mo><mo>±</mo><msqrt><mfrac><mrow><mo>[</mo><mi>v</mi><mi>v</mi><mo>]</mo></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mfrac></msqrt></mrow><annotation encoding="application/x-tex">m=±\sqrt{\frac{[vv]}{n-1}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.84em;vertical-align:-0.5516655000000001em;"></span><span class="mord">±</span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.2883345em;"><span class="svg-align" style="top:-3.8em;"><span class="pstrut" style="height:3.8em;"></span><span class="mord" style="padding-left:1em;"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">[</span><span class="mord mathdefault mtight" style="margin-right:0.03588em;">v</span><span class="mord mathdefault mtight" style="margin-right:0.03588em;">v</span><span class="mclose mtight">]</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.403331em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.2483344999999995em;"><span class="pstrut" style="height:3.8em;"></span><span class="hide-tail" style="min-width:1.02em;height:1.8800000000000001em;"><svg width='400em' height='1.8800000000000001em' viewBox='0 0 400000 1944' preserveAspectRatio='xMinYMin slice'><path d='M1001,80H400000v40H1013.1s-83.4,268,-264.1,840c-180.7,
-572,-277,876.3,-289,913c-4.7,4.7,-12.7,7,-24,7s-12,0,-12,0c-1.3,-3.3,-3.7,-11.7,
--7,-25c-35.3,-125.3,-106.7,-373.3,-214,-744c-10,12,-21,25,-33,39s-32,39,-32,39
-c-6,-5.3,-15,-14,-27,-26s25,-30,25,-30c26.7,-32.7,52,-63,76,-91s52,-60,52,-60
-s208,722,208,722c56,-175.3,126.3,-397.3,211,-666c84.7,-268.7,153.8,-488.2,207.5,
--658.5c53.7,-170.3,84.5,-266.8,92.5,-289.5c4,-6.7,10,-10,18,-10z
-M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.5516655000000001em;"><span></span></span></span></span></span></span></span></span><br>
-改正数<br>
-最或然值与观测值之差称为改正数，用v表示<br>
-v<sub>i</sub>=x-L<sub>i</sub><br>
-<img src="http://ayanagi.fun/post-images/1609556849229.png" alt="" loading="lazy"></p>
-<h2 id="第七节-加权平均值及其中误差">第七节 加权平均值及其中误差</h2>
-<p>权的定义：</p>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mi>i</mi></msub><mo>=</mo><mfrac><mi>C</mi><msubsup><mi>m</mi><mi>i</mi><mn>2</mn></msubsup></mfrac></mrow><annotation encoding="application/x-tex">P_i=\dfrac{C}{m_i^2}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.323194em;vertical-align:-0.9628639999999999em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7959080000000001em;"><span style="top:-2.4231360000000004em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span><span style="top:-3.0448000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.27686399999999994em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9628639999999999em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
-<p>C是任意数，由实际情况决定。<br>
-等于1的权叫单位权，权为1的中误差叫单位权中误差m<sub>0</sub><br>
-所以权的又一表示方法<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mi>i</mi></msub><mo>=</mo><mfrac><msubsup><mi>m</mi><mn>0</mn><mn>2</mn></msubsup><msubsup><mi>m</mi><mi>i</mi><mn>2</mn></msubsup></mfrac></mrow><annotation encoding="application/x-tex">P_i=\dfrac{m_0^2}{m_i^2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.453972em;vertical-align:-0.9628639999999999em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911079999999999em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7959080000000001em;"><span style="top:-2.4231360000000004em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span><span style="top:-3.0448000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.27686399999999994em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.4518920000000004em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.24810799999999997em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9628639999999999em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><br>
-中误差的又一形式<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>m</mi><mi>i</mi></msub><mo>=</mo><msub><mi>m</mi><mn>0</mn></msub><msqrt><mfrac><mn>1</mn><msub><mi>P</mi><mi>i</mi></msub></mfrac></msqrt></mrow><annotation encoding="application/x-tex">m_i=m_0\sqrt{\dfrac{1}{P_i}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.44em;vertical-align:-0.9122799999999998em;"></span><span class="mord"><span class="mord mathdefault">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.5277200000000002em;"><span class="svg-align" style="top:-4.4em;"><span class="pstrut" style="height:4.4em;"></span><span class="mord" style="padding-left:1em;"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.4877200000000004em;"><span class="pstrut" style="height:4.4em;"></span><span class="hide-tail" style="min-width:1.02em;height:2.48em;"><svg width='400em' height='2.48em' viewBox='0 0 400000 2592' preserveAspectRatio='xMinYMin slice'><path d='M424,2478c-1.3,-0.7,-38.5,-172,-111.5,-514c-73,
--342,-109.8,-513.3,-110.5,-514c0,-2,-10.7,14.3,-32,49c-4.7,7.3,-9.8,15.7,-15.5,
-25c-5.7,9.3,-9.8,16,-12.5,20s-5,7,-5,7c-4,-3.3,-8.3,-7.7,-13,-13s-13,-13,-13,
--13s76,-122,76,-122s77,-121,77,-121s209,968,209,968c0,-2,84.7,-361.7,254,-1079
-c169.3,-717.3,254.7,-1077.7,256,-1081c4,-6.7,10,-10,18,-10H400000v40H1014.6
-s-87.3,378.7,-272.6,1166c-185.3,787.3,-279.3,1182.3,-282,1185c-2,6,-10,9,-24,9
-c-8,0,-12,-0.7,-12,-2z M1001 80H400000v40H1014z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9122799999999998em;"><span></span></span></span></span></span></span></span></span><br>
-权和中误差的关系<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>p</mi><mn>1</mn></msub><mo>:</mo><msub><mi>p</mi><mn>2</mn></msub><mo>:</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>:</mo><msub><mi>p</mi><mi>n</mi></msub><mo>=</mo><mfrac><mn>1</mn><msubsup><mi>m</mi><mn>1</mn><mn>2</mn></msubsup></mfrac><mo>:</mo><mfrac><mn>1</mn><msubsup><mi>m</mi><mn>2</mn><mn>2</mn></msubsup></mfrac><mo>:</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>:</mo><mfrac><mn>1</mn><msubsup><mi>m</mi><mi>n</mi><mn>2</mn></msubsup></mfrac></mrow><annotation encoding="application/x-tex">p_1:p_2:...:p_n=\dfrac{1}{m_1^2}:\dfrac{1}{m_2^2}:...:\dfrac{1}{m_n^2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.273748em;vertical-align:-0.9523079999999999em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7959080000000001em;"><span style="top:-2.433692em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span><span style="top:-3.0448000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.26630799999999993em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9523079999999999em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.273748em;vertical-align:-0.9523079999999999em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7959080000000001em;"><span style="top:-2.433692em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span style="top:-3.0448000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.26630799999999993em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9523079999999999em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.2544399999999998em;vertical-align:-0.933em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.740108em;"><span style="top:-2.4530000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.933em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><br>
-可见，用中误差衡量精度是绝对的，而用权衡量精度是相对的，即权是衡量精度的相对标准。<br>
-水准测量的权<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mi>L</mi></msub><mo>=</mo><mfrac><mn>1</mn><mi>L</mi></mfrac></mrow><annotation encoding="application/x-tex">P_L=\dfrac{1}{L}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">L</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.00744em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">L</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>或<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mi mathvariant="normal">站</mi></msub><mo>=</mo><mfrac><mn>1</mn><msub><mi>n</mi><mi mathvariant="normal">站</mi></msub></mfrac></mrow><annotation encoding="application/x-tex">P_站=\dfrac{1}{n_站}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:-0.15em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord cjk_fallback mtight">站</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.1574400000000002em;vertical-align:-0.8360000000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:-0.15em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord cjk_fallback mtight">站</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><br>
-确定权的常用方法<br>
-水准测量中，当每个测站高差中误差相同时，则各条水准路线高差观测值的权与测站成反比<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>p</mi><mi>i</mi></msub><mo>=</mo><mfrac><mi>c</mi><msub><mi>N</mi><mi>i</mi></msub></mfrac></mrow><annotation encoding="application/x-tex">p_i=\dfrac{c}{N_i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.9435600000000002em;vertical-align:-0.8360000000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.10756em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><br>
-每公里高差中误差相同时，则各条水准路线高差观测值的权与路线长度成反比<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>p</mi><mi>i</mi></msub><mo>=</mo><mfrac><mi>c</mi><msub><mi>L</mi><mi>i</mi></msub></mfrac></mrow><annotation encoding="application/x-tex">p_i=\dfrac{c}{L_i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.9435600000000002em;vertical-align:-0.8360000000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.10756em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><br>
-角度测量<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>p</mi><mi>i</mi></msub><mo>=</mo><mi>C</mi><msub><mi>N</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">p_i=CN_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><br>
-距离测量<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>p</mi><mi>i</mi></msub><mo>=</mo><mfrac><mi>c</mi><msub><mi>s</mi><mi>i</mi></msub></mfrac></mrow><annotation encoding="application/x-tex">p_i=\dfrac{c}{s_i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.9435600000000002em;vertical-align:-0.8360000000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.10756em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><br>
-(二)加权平均值及其中误差<br>
-加权平均值<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo>=</mo><mfrac><mrow><mo>[</mo><mi>P</mi><mi>L</mi><mo>]</mo></mrow><mrow><mo>[</mo><mi>P</mi><mo>]</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">x=\dfrac{[PL]}{[P]}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mclose">]</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">L</span><span class="mclose">]</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><br>
-加权平均值中误差<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>M</mi><mi>x</mi></msub><mo>=</mo><mo>±</mo><msub><mi>m</mi><mn>0</mn></msub><msqrt><mfrac><mn>1</mn><mrow><mo>[</mo><mi>P</mi><mo>]</mo></mrow></mfrac></msqrt><mo>=</mo><mo>±</mo><msqrt><mfrac><mrow><mo>[</mo><mi>p</mi><mi>v</mi><mi>v</mi><mo>]</mo></mrow><mrow><mo>[</mo><mi>p</mi><mo>]</mo><mo>(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>)</mo></mrow></mfrac></msqrt></mrow><annotation encoding="application/x-tex">M_x=±m_0\sqrt{\dfrac{1}{[P]}}=±\sqrt{\dfrac{[pvv]}{[p](n-1)}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.44em;vertical-align:-0.9622799999999998em;"></span><span class="mord">±</span><span class="mord"><span class="mord mathdefault">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4777200000000001em;"><span class="svg-align" style="top:-4.4em;"><span class="pstrut" style="height:4.4em;"></span><span class="mord" style="padding-left:1em;"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mclose">]</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.4377200000000006em;"><span class="pstrut" style="height:4.4em;"></span><span class="hide-tail" style="min-width:1.02em;height:2.48em;"><svg width='400em' height='2.48em' viewBox='0 0 400000 2592' preserveAspectRatio='xMinYMin slice'><path d='M424,2478c-1.3,-0.7,-38.5,-172,-111.5,-514c-73,
--342,-109.8,-513.3,-110.5,-514c0,-2,-10.7,14.3,-32,49c-4.7,7.3,-9.8,15.7,-15.5,
-25c-5.7,9.3,-9.8,16,-12.5,20s-5,7,-5,7c-4,-3.3,-8.3,-7.7,-13,-13s-13,-13,-13,
--13s76,-122,76,-122s77,-121,77,-121s209,968,209,968c0,-2,84.7,-361.7,254,-1079
-c169.3,-717.3,254.7,-1077.7,256,-1081c4,-6.7,10,-10,18,-10H400000v40H1014.6
-s-87.3,378.7,-272.6,1166c-185.3,787.3,-279.3,1182.3,-282,1185c-2,6,-10,9,-24,9
-c-8,0,-12,-0.7,-12,-2z M1001 80H400000v40H1014z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9622799999999998em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.04em;vertical-align:-1.2094999999999998em;"></span><span class="mord">±</span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8305000000000002em;"><span class="svg-align" style="top:-5em;"><span class="pstrut" style="height:5em;"></span><span class="mord" style="padding-left:1em;"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">[</span><span class="mord mathdefault">p</span><span class="mclose">]</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">[</span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mclose">]</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.7905em;"><span class="pstrut" style="height:5em;"></span><span class="hide-tail" style="min-width:1.02em;height:3.08em;"><svg width='400em' height='3.08em' viewBox='0 0 400000 3240' preserveAspectRatio='xMinYMin slice'><path d='M473,2793c339.3,-1799.3,509.3,-2700,510,-2702
-c3.3,-7.3,9.3,-11,18,-11H400000v40H1017.7s-90.5,478,-276.2,1466c-185.7,988,
--279.5,1483,-281.5,1485c-2,6,-10,9,-24,9c-8,0,-12,-0.7,-12,-2c0,-1.3,-5.3,-32,
--16,-92c-50.7,-293.3,-119.7,-693.3,-207,-1200c0,-1.3,-5.3,8.7,-16,30c-10.7,
-21.3,-21.3,42.7,-32,64s-16,33,-16,33s-26,-26,-26,-26s76,-153,76,-153s77,-151,
-77,-151c0.7,0.7,35.7,202,105,604c67.3,400.7,102,602.7,104,606z
-M1001 80H400000v40H1017z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2094999999999998em;"><span></span></span></span></span></span></span></span></span><br>
-<img src="http://ayanagi.fun/post-images/1609557710309.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609557734457.png" alt="" loading="lazy"></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[测量学(1~3章)]]></title>
-        <id>http://ayanagi.fun/fxckingtest/</id>
-        <link href="http://ayanagi.fun/fxckingtest/">
-        </link>
-        <updated>2020-12-30T02:41:33.000Z</updated>
-        <content type="html"><![CDATA[<p>光看觉得蛮困的。不如用键盘抄抄书。</p>
-<h1 id="绪论">绪论</h1>
-<p><b>重点：测绘学的<u>基本概念</u>与<u>研究内容</u>；测绘学的<u>学科分支</u></b><br>
-1.测绘学起初的概念<br>
-利用测量仪器测定<b>地球表面自然形态</b>的地理要素和地表人工设施的形状、大小、空间位置及其属性等，然后根据观测到的这些数据通过地图制图的方法将地面的自然形态和人工设施等绘制成地图。</p>
-<h2 id="2比较完整的概念">2.比较完整的概念</h2>
-<p>其中一个前提：地球研究范围由地球表面→地球整体→地球外层空间<br>
-概念：研究对实体(包括<b>地球整体：表面以及外层空间</b>各种自然和人造的物体)中与地理空间分布有关的各种几何、物理、人文及其随时间变化的信息的采集、处理、管理、更新和利用的科学与技术。<br>
-3.建立统一的地球坐标系统<br>
-已知地球形状大小、及其重力场的基础上建立一个统一的地球坐标系统，用以表示地球表及其外部空间任一点在这个地球坐标系中准确的几何位置。</p>
-<h2 id="研究内容">研究内容：</h2>
-<p><b>地球重力场理论</b><br>
-<b>地球椭球参数</b><br>
-<b>测绘基准和坐标系统</b><br>
-<b>测定点的坐标的技术和方法</b><br>
-4.测绘地球表面形态<br>
-小面积的地表形态：<b>普通的测量仪器</b>——平面测量的方法；<br>
-大面积的地表形态：<b>摄影测量理论和方法——模拟的、解析的或数字的方式</b>——地形原图(或形成地理数据库)<br>
-5.地图制作的理论、技术和工艺<br>
-<b>地图投影、综合、编制、整饰和制印，或者增加某些专门要素</b>——形成各种比例尺的普通地图和专题地图。<br>
-6.工程测量<br>
-各种经济建设和国防工程建设的<b>规划、设计、施工和建筑物建成后的运营管理</b>中都需要进行相应的测绘工作，并利用测绘资料引导工程建设的实施，监视建筑物的形变。<br>
-这些测绘工程往往需要根据具体工程的要求，采取专门的测量方法。<br>
-例如：用高精度的仪器进行大坝变形观测。<br>
-7.海洋测绘<br>
-特点：测量<b>内容综合性强</b>，需要<b>多种仪器</b>配合实施，同时完成<b>多种观测项目，测区条件比较复杂</b>，动态作业(海面受潮汐、气象因素等影响起伏不定)，观测者不能用肉眼透视水域底部<b>精确测量难度较大</b>。<br>
-研究内容：研究海洋水域的特殊测量方法和仪器设备，如<b>无线电导航系统，电磁波测距仪器，水声定位系统，卫星组合导航系统，惯性组合导航系统以及天文方法等。</b><br>
-8.测量数据的处理和平差<br>
-误差来源<br>
-(1)<b>测量仪器</b>上不可避免的缺陷<br>
-(2)<b>观测者</b>的技术水平和感觉器官的局限性<br>
-(3)<b>自然环境</b>的各种因素<br>
-平差原因<br>
-这些方法只能<b>减小观测误差</b>，将误差控制在一定范围内，而不能完全消除它们，因此必须研究和处理这些带有误差的观测值，设法<b>消除或削弱其误差</b>，以便<b>提高被观测量的质量</b><br>
-平差依据<br>
-数字准侧，如<b>最小二乘准侧</b><br>
-9.测绘成果的应用<br>
-<b>国民经济建设、国防建设以及科学研究</b><br>
-10.测绘学的发展<br>
-地球认识的发展<br>
-亚里士多德：<b>地圆说</b>；牛顿、惠更斯：<b>地扁说</b><br>
-圆球→椭球→大地水准面→真实地球自然表面<br>
-测绘方法和测绘仪器的变革<br>
-<b>17世纪以前，以量距为主</b>使用简单的工具，如中国的绳尺、步弓、矩尺等<br>
-<b>17世纪末到20世纪中叶</b>，主要是<b>光学测绘仪器</b>的发展，测绘学的传统理论和方法也已经发展成熟。<br>
-<b>20世纪中叶~20世纪50年代</b>，测绘仪器朝着<b>电子化和自动化的方向发展</b>。</p>
-<h2 id="11测绘学的分支学科">11.测绘学的分支学科</h2>
-<ul>
-<li>地形测量学<br>
-以<b>地球表面小区域范围</b>为研究对象，不考虑地球曲率影响，视地面为平面，将地面上的物体及地表高低起伏形状测绘成地形图。</li>
-<li>大地测量学<br>
-研究<b>地球的形状、大小和重力场</b>,测定<b>地面点几何位置</b>和<b>地球整体与局部运动理论和技术</b>的学科。<br>
-<b>地球大小</b>：测定地球椭球的大小。<br>
-<b>地球形状</b>：测定大地水准面的形状(或者地球椭球的扁率)。<br>
-<b>地面点几何位置</b>：测定以地球椭球面为参考面的地面点位置<br>
-<b>大地原点</b><br>
-位于陕西省泾阳县永乐镇，是我国地理坐标的起算点和基准点</li>
-<li>摄影测量学<br>
-概念：研究利用<b>摄影或遥感</b>的手段获取目标物的影像数据，从中<b>提取几何或物理的信息</b>，并利用图形、图像和数字表达测绘成果的学科。<br>
-研究内容：<b>获取目标物的影像、对影像进行处理，将所得的成果用图形图像或数字表示。</b><br>
-研究方法：<br>
-(1)<b>航空摄影测量</b>：在飞机或其他航空飞行器上利用航摄机摄取地面景物影像的技术<br>
-(2)<b>航天摄影测量</b>：在航天飞行器中利用摄像机或其他遥感探测器获取地球的图像资料和有关数据的技术，是航空摄影的扩展和发展。<br>
-(3)<b>地面摄影测量</b>：利用安置在地面上基线两端点处的专用摄影机拍摄的立体像对，对所设目标物进行测绘的技术。</li>
-<li>地图学<br>
-以<b>地图信息传递为中心，研究地图的基本理论、地图制作基础和地图应用</b>的综合科学</li>
-<li>工程测量学<br>
-研究在工程建设和自然资源开发各个阶段进行测量工作的理论和技术的学科。<br>
-研究内容：<br>
-1、<b>规划设计阶段</b>的测量：提供地形资料和配合地址勘探、水文测验所进行测量工作。<br>
-2、<b>施工兴建阶段</b>的测量：按照设计要求，在实地准确地标定出<b>工程结构各部分的平面位置和高程</b>作为施工和安装的依据。<br>
-3、<b>运营管理阶段</b>的测量：指工程竣工后为监测工程的状况和保证安全所进行的周期性重复测量，即<b>变形观测</b></li>
-<li>海洋测量学<br>
-以海洋水体及海底地形为对象，研究<b>海洋定位</b>，测定海洋大地水准面及平均海平面、海面及海底地形、海洋重力及磁力等自然及社会信息的<b>地理分布</b>，并<b>编制成各种海图</b>的理论与技术的学科。<br>
-测绘学的地位和作用</li>
-<li>科学研究的作用<br>
-<b>现代测量技术</b>：已经或将要实现无人工干预自动连续观测和数据处理，可以提供几乎任意时域分辨率的观测系列，可依据<b>检测瞬时地学事件(如地壳运动、重力场的时空变化、地球的潮汐和自转变化等)，用于地球内部物质结构和演化的研究</b></li>
-<li>国民经济建设的作用<br>
-1、城市化进程中，城市规划、乡镇建设、交通管理等都需要<b>城市测绘数据、高分辨率卫星影像、三维景观模型、智能交通系统和城市地理信息系统</b>等测绘高新技术的支持。<br>
-2、在<b>水利、交通、能源和通信设施</b>的大规模、高难度<b>工程建设</b>中，不但需要精确勘测和大量现势性强的测绘资料，而且需要在工程全过程采用地理信息数据进行辅助决策。<br>
-3、发展<b>精细农业</b>，构建”数字中国“和”数字城市“，需要以测绘数据为基础的地理空间信息平台。</li>
-<li>国防建设中的作用<br>
-1、<b>武器的定位、发射和精确制导</b>需要高精度的定位数据，高分辨率的地球重力场参数，数字地面模型和数字正射影像。<br>
-2、以地理空间信息为基础的战场指挥系统，可持续、实时地提供<b>虚拟数字化战场</b>环境信息，为作战方案的优化、战场指挥和战场态势评估实现自动化、系统化和信息化提供测绘数据和基础地理信息保障。</li>
-<li>社会发展中的作用<br>
-各种测绘和地理信息可用于<b>规划、方案的制订，灾害、环境监测系统的建立，风险的分析，资源、环境调查与评估、可视化的显示以及决策指挥</b>等。</li>
-</ul>
-<h1 id="测量学的基本知识">测量学的基本知识</h1>
-<p>重点<br>
-<b>1.基本概念：水准面/大地水准面/大地体/地球椭球体/绝对高程/相对高程<br>
-2.坐标系统及高程系统<br>
-3.用水平面代替水准面的限度<br>
-4.测量工作程序、步骤及测图原理</b></p>
-<h2 id="第一节-地球形状与地球椭球体">第一节  地球形状与地球椭球体</h2>
-<p>一、地球形状及大小</p>
-<table>
-<thead>
-<tr>
-<th>地球形状</th>
-<th>基准面</th>
-<th>基准线</th>
-<th>地球大小的表示方法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>大地体</td>
-<td>大地水准面</td>
-<td>铅垂线</td>
-<td></td>
-</tr>
-<tr>
-<td>参考椭球体</td>
-<td>参考椭球面</td>
-<td>法线</td>
-<td>用长半径a和扁率α表示a=6378140m；α=1:298.257(西安80坐标系)</td>
-</tr>
-<tr>
-<td>圆球体</td>
-<td></td>
-<td></td>
-<td>用半径R表示，R=6371km</td>
-</tr>
-</tbody>
-</table>
-<p>二、地球椭球体<br>
-十分接近大地体的旋转椭球代替大地体<br>
-总地球椭球体：与大地体最接近的地球椭球体<br>
-参考椭球体：局部与大地体密合最好的地球椭球体<br>
-我国采用的参考椭球体：<br>
-海福特椭球体；克拉克索夫斯基椭球体(北京54坐标系)；IAG75地球椭球体(1988年西安大地坐标系-大地原点：陕西省泾阳县永乐镇)</p>
-<h2 id="第二节-确定地面点位的坐标系统">第二节  确定地面点位的坐标系统</h2>
-<p>一、地理坐标系<br>
-以<b>参考椭球面</b>及<b>法线</b>为基准建立起来的坐标系称为大地坐标系<br>
-大地经度(<b>L</b>)、大地纬度(<b>B</b>)、和大地高(<b>H</b>)<br>
-地形图上的经纬度一般都是以大地坐标表示的。<br>
-以<b>大地水准面和铅垂线为基准建立起来的坐标系称为天文坐标系</b><br>
-天文经度(<b>λ</b>)、天文纬度(<b>φ</b>)和正高(<b>H正</b>)<br>
-二、大地坐标系<br>
-1、基准面和基准线<br>
-基准面是参考椭球面，基准线是法线。<br>
-2、经纬度划分<br>
-<b>大地纬度(B)</b>：从大地赤道起算，其值向南北两极递增并存在0~90°的范围变化。<br>
-<b>大地经度(L)</b>：自本初大地子午线起算，向东0到180°为东经，向西0到~180°为西经。<br>
-平面直角坐标系<br>
-<b>测区范围小，采用大地坐标系不方便</b><br>
-测量学中的平面直角坐标系，是顺时针数的象限，数学中为逆时针。且xy轴与数学中的相反。<br>
-高斯平面直角坐标系<br>
-1、高斯投影<br>
-投影变换：将空间坐标(含大地坐标)通过某种数学变换映射到平面上的变换<br>
-投影方法：高斯——克吕格投影属于等角横切圆柱投影<br>
-建立<br>
-①在大区测图时，不能将地球的球面当做平面看待，测图采用高斯平面直角坐标系。<br>
-②以中央子午线(x轴)和赤道(Y轴)投影为互相垂直的直线，交点为坐标原点。<br>
-性质<br>
-中央子午线的投影为<b>一条直线</b>，且投影后<b>长度无变形</b>，其余经线的投影为凹向中央子午线的对称曲线。<br>
-赤道的投影为一条直线，且投影后长度无变形，其余纬线的投影为凹向赤道的对称曲线<br>
-分带投影<br>
-①在中小比例尺测图中，大都采用<b>6°分带法</b>，即从首子午线开始，按经差6°为一带，将地球分成60个投影带，并编号1、2...60。6°带的带号与其中央子午线的经度有下列关系：</p>
-<pre><code>λ6=6°×N-3°
-</code></pre>
-<p>λ<sub>6</sub>:6°带的中央子午线的经度；N：投影带号。<br>
-若给出不是中央子午线的度数，求带号<br>
-N=[L/6°]+1，[]表示商取整，L为某地点的经度<br>
-②在1:10000及大比例尺测图中，采用6°分带法无法满足测图的精度要求，故又采用<b>3°或1.5°分带法</b>。3°投影带的划分，是从经度1.5°的子午线开始，按经差3°为一带，把地球分为120个带。3°带的带号与其中央子午线经度有下列关系：</p>
-<pre><code>λ3=3°×N
-</code></pre>
-<p>λ<sub>3</sub>:3°带的中央子午线的经度；N：投影带号<br>
-<b>我国经度范围西起73°东至135°，可分为6°带11个；我国大比例尺测图多采用3°带，如城建坐标</b><br>
-2、高斯平面直角坐标系<br>
-纵坐标X由赤道向北为正，向南为负；横坐标Y由中央子午线向东为正，向西为负。<br>
-我国位于北半球，x都为正，但每个投影带内的横坐标Y却有正有负，为了使横坐标Y不出现负值，不论3°带还是6°带每带的<b>纵坐标轴都要西移500km</b>，即<b>在每带的横坐标上加500km</b>。<br>
-另外，为了指明该点属于何带，还规定<b>在横坐标Y之前要写上带号</b>，未加500km和带号的横坐标值称为<b>自然值</b>，加上500km和带号的横坐标值称为<b>通用值</b>。<br>
-高程系统<br>
-高程(海拔高)：地面任一点到其高度起算面的距离。<br>
-高程起算面：高程基准面<br>
-相对高程<br>
-高差(比高)<br>
-第三节 WGS-84坐标系<br>
-在全球定位系统中，卫星主要被作为位置已知的空间观测目标<br>
-为了确定地面观测位置，GPS卫星的瞬间位置计算采用了WGS-84坐标系<br>
-WGS-84坐标系采用的地球椭球体称为WGS-84椭球体(其数值常采用IUGG第17届大会大地测量常数的推荐值)<br>
-第四节 确定地面点位置的方法<br>
-地面点相对位置<br>
-直角坐标法：△x<sub>AB</sub>=x<sub>B</sub>-x<sub>A</sub>；△y<sub>AB</sub>=y<sub>B</sub>-y<sub>A</sub><br>
-极坐标法：x<sub>B</sub>=x<sub>A</sub>+D<sub>AB</sub>·cosα<sub>AB</sub>；y<sub>B</sub>=y<sub>A</sub>+D<sub>AB</sub>·sinα<sub>AB</sub><br>
-坐标正算和反算<br>
-正算：△x<sub>AB</sub>=D<sub>AB</sub>·cosα<sub>AB</sub>；△y<sub>AB</sub>=D<sub>AB</sub>·sinα<sub>AB</sub><br>
-反算：水平距离D<sub>AB</sub>=根号下(△x<sub>AB</sub>)²+(△y<sub>AB</sub>)²；坐标方位角α<sub>AB</sub>=arctan(△y<sub>AB</sub>/△x<sub>AB</sub>)</p>
-<h2 id="第五节-用水平面代替水准面的限度">第五节 用水平面代替水准面的限度</h2>
-<p>一、水准面的曲率对水平距离的影响<br>
-<b>在半径10km的范围内进行距离测量，可以用水平面代替水准面，不必考虑地球曲率对距离的影响</b><br>
-二、对水平角度的影响<br>
-<b>当面积P不超过100km²时，进行水平角测量可以用水平面代替水准面而不必考虑地球曲率对距离的影响。</b><br>
-三、对高差的影响<br>
-用水平面代替水准面对高程的影响很大。即使距离很短，也应该顾及地球曲率对高程的影响。</p>
-<h2 id="第六节-测量工作的基本内容及原则">第六节 测量工作的基本内容及原则</h2>
-<p>一、测图原理<br>
-先在测区内部设A、B、C、D、E、F等控制点连成<b>控制网</b>，用较为精密的方法测定这些点的平面位置和高程以控制整个测区，并依一定的比例尺将它们缩绘到图纸上，然后以控制点为依据进行碎部测量。<br>
-二、测量工作概述<br>
-(一)测量控制的概念<br>
-原因：<b>防止误差积累</b>；原则：<b>从整体到局部，先控制后碎部</b><br>
-(二)碎部测量简介<br>
-碎部测量依据<b>从整体到局部、先控制后碎部</b>的程序，根据邻近控制点来确定<b>碎部点(地貌点和地物点)</b>对于控制点的关系。</p>
-<h1 id="水准测量">水准测量</h1>
-<p>重点<b><br>
-1.水准测量原理<br>
-2.地球曲率的影响<br>
-3.水准仪的结构：水准器的分划值，水准尺的分类，望远镜的放大率、视场、分辨率、视差产生原因及消除方法<br>
-4.水准仪的使用<br>
-5.单一水准路线的种类<br>
-6.水准网形式<br>
-7.普通水准测量：水准测量手簿、高程误差配赋表：闭合差、改正数计算<br>
-8.仪器误差：i角误差、水准尺误差<br>
-</b></p>
-<h2 id="第一节-水准测量的原理">第一节 水准测量的原理</h2>
-<p><b>水准测量</b>是利用一条<b>水平视线</b>并借助水准尺测定地面两点间的高差，这样就可以由已知点的高程推算出未知点的高程。<br>
-欲测定AB间高差h可在AB两点上分别竖立带有刻划的水准尺，并在AB两点之间安装一台能提供一条水平视线的水准仪，AB间高差<br>
-h<sub>AB</sub>=a-b<br>
-<img src="http://ayanagi.fun/post-images/1609318539542.png" alt="" loading="lazy"><br>
-转点、测站<br>
-(一)、转点：临时的立尺点，传递高程的过渡点；测站：每安置一次仪器，称为一个测站<br>
-(二)、<b>在实际作业中可先算出各测站的高差，然后取他们的总和而得，用后视读数之和减去前视读数之和来计算高差，检核计算之后是否有错误</b></p>
-<h2 id="地球曲率的影响">地球曲率的影响</h2>
-<p>h<sub>AB</sub>=a-b-△h<sub>AB</sub><br>
-△h<sub>AB</sub>为地球曲率的影响<br>
-<b>当后、前视距的距离相等时，地球曲率对一个测站的高差没有影响</b><br>
-对于一条水准路线而言<br>
-△h<sub>AB</sub>=(1/2R)×∑(S<sub>后</sub>+S<sub>前</sub>)(S<sub>后</sub>-S<sub>前</sub>)<br>
-设每站的S<sub>后</sub>+S<sub>前</sub>相等，有<br>
-△h<sub>AB</sub>=(1/2R)(S<sub>后</sub>+S<sub>前</sub>)∑(S<sub>后</sub>-S<sub>前</sub>)<br>
-##第二节  水准测量的仪器和工具<br>
-<b>水准测量所用的仪器为水准仪，工具为水准尺和尺垫</b><br>
-水准尺：依据构造不同分为<b>折尺、塔尺和直尺</b><br>
-横剖面：<b>丁字型、槽型和工字型</b><br>
-尺垫<b>上方突起的半球形定点作为竖立标尺，作转点用</b></p>
-<blockquote>
-<p>水准仪：<b>提供一条水平视线</b>，并能照准水准尺进行读数</p>
-<blockquote>
-<p>水准器</p>
-<blockquote>
-<p>管水准器：<b>水准管的分划值：水准管上相邻两分划线间弧长所对的圆心角值，常用τ表示。水准管的分划值与圆弧的半径成反比，分划值低代表精度高</b><br>
-圆水准器：圆弧半径0.5~2m；<b>圆水准器的分划值：在圆水准器通过零点的任意一个纵断面方向上气泡中心偏离2mm时，它所对的圆心角的大小就是圆水准器的分划值</b>，与圆球面的半径成反比<br>
-望远镜<br>
-<b>1.物镜；2.目镜；3.调焦透镜；4.十字丝分划板；5.物镜调焦螺旋；6、目镜调焦螺旋；7、十字丝放大像。</b><br>
-放大率：<b>从望远镜内看到的物体的象的视角β与未通过望远镜直接观察物体的视角α之比，即v=β/α</b><br>
-<b>视场：望远镜静止不动时，通过望远镜所能看到的空间称为望远镜的视场。</b><br>
-望远镜的视场与放大率成反比，而与物镜的孔径无关，望远镜的放大率越大，则越能看清远处的目标，但望远镜的视场则越小，因而寻找目标越不容易。<br>
-ε≈2000/v<br>
-分辨率： <b>光线通过圆孔的最小分辨角</b><br>
-θ=1.22λ/D<br>
-λ：光的波长；D：圆孔的直径，单位mm<br>
-<b>望远镜的分辨率是指物镜的分辨率，即光通过物镜后的最小分辨角有多大。</b><br>
-分辨率取人眼最敏感的黄绿光波长，λ=0.00055mm<br>
-代入上式化为秒，得θ=140''/D，此θ角经目镜放大后应与人眼的最小分辨率(60'')相适应</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<h2 id="第三节-水准仪的使用">第三节 水准仪的使用</h2>
-<p>水准仪的使用(安置、粗平、瞄准、精平、读数)<br>
-(一)安置：<br>
-1.打开三脚架并使<b>高度适中</b>，目估使<b>架头大致水平</b>，检查<b>脚架腿是否安置稳固，脚架伸缩螺旋是否拧紧</b><br>
-2.打开仪器箱取出水准仪，置于三脚架头上用<b>连接螺旋将仪器牢固地连在三脚架头上</b>。<br>
-(二)粗平：<b>粗平是借助圆水准器的气泡居中，使仪器竖轴大致铅垂，从而视准轴粗略水平</b>。在整平的过程中，气泡的移动方向与左手大拇指运动的方向一致。<br>
-(三)瞄准：<br>
-1.进行目镜对光，即把望远镜对着明亮的背景，拧紧制动螺旋，转动目镜对光螺旋，使<b>十字丝</b>清晰<br>
-2.松开制动螺旋，转动望远镜，用望远镜筒上的<b>粗瞄准器瞄准水准尺</b>，拧紧制动螺旋。<br>
-3.然后从望远镜中观察；转动物镜对光螺旋进行对光，使目标清晰，再转动微动螺旋，使<b>竖丝对准水准尺的中间稍偏一点以便读数</b>。<br>
-注：观测者的眼睛移动时若发觉目标像与十字丝之间有相对移动，这种现象称为<b>视差</b><br>
-视差产生的原因：<b>目标成像的平面和十字丝平面不重合。由于视差的存在会影响到读数的正确性，必须加以消除。</b><br>
-消除方法：<b>重新仔细地进行物镜对光直到眼睛上下移动，读数不变为止。此时，从目镜端见到十字丝与目标的像都十分清晰</b>。<br>
-(四)精平：眼睛通过位于目镜左方的符合气泡观察窗看水准管气泡，右手转动微倾螺旋，使气泡两端的像吻合，即表示水准仪的视准轴已精确水平。<br>
-(五)读数<br>
-1.用十字丝的中丝在尺上读数。<br>
-2.先估读毫米数，然后报出全部读数。<br>
-<b>例如1.608m只需读1608四个字，其中8是估读部分</b><br>
-3.测量记录习惯。<br>
-<u>更正错误，均应将错误数字、文字整齐划去，在上放另记正确数字和文字</u>。<br>
-第四节 水准测量的方法与成果整理<br>
-一、水准点与水准路线<br>
-(一)水准点<br>
-测绘部门在全国各地埋设并测定了很多高程点，这些点称为<b>水准点，简记为BM</b><br>
-埋设水准点后，应绘出水准点与附近固定建筑物或其他地物的关系图，<b>在图上还要写明水准点的编号和高程，称为点之记</b>，以便于日后寻找水准点位置之用，水准点编号前通常加<b>BM字样，作为水准点的代号</b>。<br>
-1.分类：<br>
-①<b>永久性水准点</b>：<b>水准测量通常是从水准点引测其他点的高程</b>。水准点有永久性和临时性两种，国家等级水准点一般用石料或钢筋混凝土制成，深埋到地面冻结线以下。在标石的顶面设有用不锈钢或其他不易锈蚀材料制成的半球状标志。有些水准点也可设置在稳定的墙脚上，称为<b>墙上水准点</b>。<br>
-②<b>临时性水准点</b>：建筑工地上的永久性水准点一般用<b>混凝土或钢筋混凝土制成，临时性水准点可用地面上突出的坚硬岩石或用大木桩打入地下，校顶钉以半球形铁钉</b>。<br>
-(二)水准路线</p>
-<h2 id="1-单一水准路线">1、单一水准路线：</h2>
-<p>①附合水准路线：<b>连测已知高程的水准点</b><br>
-②支水准路线：<b>没有连测已知高程的水准点</b><br>
-③闭合水准路线：<b>环形路线</b></p>
-<h2 id="2水准网的形式">2.水准网的形式：</h2>
-<p>独立水准网、附合水准网。<br>
-二、外业施测<br>
-(一)施测程序<br>
-1、将水准尺立于已知高程的水准点上作为后视，水准仪置于施测路线附近合适的位置。<br>
-<b>在施测路线的前进方向上取仪器至后视大致相等的距离放置尺垫，在尺垫上竖立水准尺作为前视。</b><br>
-2、<b>观测员将仪器用圆水准器粗平后瞄准后视标尺，用微倾螺旋将水准管气泡居中，用中丝读后视读书至毫米</b>。<br>
-3、掉转望远镜瞄准前视标尺，此时水准管气泡一般会偏离少许，将气泡居中，用中丝读前视读数。<br>
-4、记录员根据观测员的读数在手簿中记下相应的数字，并立即计算高差。<br>
-三、业内计算<br>
-(一)闭合差<br>
-1、支水准路线：f<sub>h</sub>=∑h<sub>往</sub>+∑h<sub>返</sub><br>
-2、附合水准路线：<br>
-f<sub>h</sub>=∑h<sub>测</sub>-∑h<sub>理</sub>或f<sub>h</sub>=H<sub>III18</sub>+∑h<sub>测</sub>-H<sub>III19</sub><br>
-3、闭合路线：f<sub>h</sub>=∑h<sub>测</sub><br>
-<b>注：闭合差超过限度则应检查原因，返工重测。</b><br>
-4、高差闭合差的容许值<br>
-<img src="http://ayanagi.fun/post-images/1609325926266.png" alt="" loading="lazy"></p>
-<h2 id="二高程误差配赋">(二)高程误差配赋</h2>
-<p>表5-5为一附合的四等水准路线计算示例，该水准路线的闭合差为<br>
-f<sub>h</sub>=-20mm<br>
-路线总长为4km。允许闭合差为<br>
-f<sub>h</sub>=±20根号4=±40mm<br>
-因|-20|小于|±40|，故该观测值符合要求。<br>
-<img src="http://ayanagi.fun/post-images/1609326076793.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609326138366.png" alt="" loading="lazy"><br>
-(三)检核<br>
-1、高差改正之后检查改正后高差的总和是否与理论值相等<br>
-2、顺序推算各点的高程，求得最后一个已知点的高程，检查与已知值是否相等。<br>
-第五节 水准测量的误差分析</p>
-<h2 id="一-仪器误差">一、仪器误差</h2>
-<p>1、视准轴与管水准轴不平行误差<br>
-无法做到视准轴与管水准周严格平行，二者在竖直面内投影称为<b>i角</b>，水平面投影称<b>交叉误差iw</b><br>
-<img src="http://ayanagi.fun/post-images/1609328094650.jpg" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609328120923.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609328173343.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609328180168.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609328196190.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609328205831.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1609328239219.png" alt="" loading="lazy"><br>
-若使S<sub>1</sub>=S<sub>2</sub>，可在每一站消除<b>i角</b>误差<br>
-实际上，根据不同精度需求，每一测段前后视距累计差规定一个限值，即可忽略i角误差的影响。<br>
-2、水准标尺误差<br>
-水准尺的零点误差，可以采用<b>偶数段方法</b>来消除<br>
-二、观测误差<br>
-1、管水准气泡居中误差</p>
-<ul>
-<li>眼睛无法精确辨别居中位置</li>
-<li>气泡受惯性力及摩擦力作用<br>
-2、水准尺数字估读误差</li>
-<li>用十字丝在厘米间隔估读毫米数，受到<b>成像放大倍率、视线长度及十字丝粗细</b>影响。<br>
-3、调焦误差</li>
-<li><b>前后视距不等</b>时，需要二次调焦，引起前后i角不一致，产生读数误差。</li>
-<li><b>前后视距尽量相等</b>，避免二次调焦。<br>
-4、水准尺倾斜误差</li>
-<li>水准尺<b>竖立不直</b>，读数增大，影响精度。</li>
-<li>读数越大误差越大，很难消除</li>
-<li><b>水准尺安装圆水准器</b>，保证竖直。</li>
-</ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2020纵横杯 Misc wp]]></title>
+        <title type="html"><![CDATA[2020纵横杯 Misc wp+复现]]></title>
         <id>http://ayanagi.fun/ZONGHENGCUP2020/</id>
         <link href="http://ayanagi.fun/ZONGHENGCUP2020/">
         </link>
         <updated>2020-12-30T02:40:16.000Z</updated>
-        <content type="html"><![CDATA[<p>Todo</p>
+        <content type="html"><![CDATA[<p>自己只出了签到题。</p>
+<h1 id="签到">签到</h1>
+<p>自己写的脚本，感觉蛮不错的。<br>
+写了有一会儿。大概半小时(老菜了</p>
+<pre><code class="language-python">s1 = [0o146, 0o154, 0o141, 0o147, 0o173, 0o167, 0o63, 0o154, 0o143, 0o157, 0o155, 0o145, 0o137, 0o164, 0o157, 0o137, 0o62, 0o157, 0o156, 0o147, 0o137, 0o150, 0o63, 0o156, 0o147, 0o137, 0o142, 0o145, 0o61, 0o175]
+s2 = []
+for i in range(len(s1)):
+    s2 += [chr((s1[i]))]
+for i in range(len(s2)):
+    print(s2[i],end = '')
+
+</code></pre>
+<h1 id="my_secret">My_Secret</h1>
+<p>当时拿到附件一通操作啥也没出来，放弃。<br>
+通过强队wp复现：<br>
+首先是lsb隐写，有专门的脚本，叫cloacked-pixel，由于寒假我回了家用台式机重新配的ctf环境，配这个配了好久</p>
+<pre><code>python2 lsb.py extract stego.png out 123456
+cat out
+</code></pre>
+<p>得到密码<code>38d668578a3686ab</code><br>
+wav音频隐写的话常用的工具是deepsound，得到第二个密码<code>carrier</code>。学习了。<br>
+接下来图片的加密，看天璇队的wp他们走了不少的弯路，其实无非就是拼积累一个个试呗。希望我能加快积累的速度。<br>
+使用的是oursecret，一般人根本想不到。</p>
+<h1 id="babymaze2_beta">babymaze2_beta</h1>
+<p>该稍微学习一下如何使用nc了，直接下载附件操作会遇到各种各样的问题。nc的话就很方便。</p>
+<pre><code>nc 182.92.203.154 10001
+</code></pre>
+<p>maze的界面要求的操作应该给的是input()函数，看wp学到一个input()的非预期输入，</p>
+<pre><code class="language-python">__import__('os').system('ls /')
+</code></pre>
+<p>等价于</p>
+<pre><code class="language-python">import os
+os.system(&quot;ls /&quot;)
+</code></pre>
+<p>会ls出一系列文件，其中有flag，那么payload必然是</p>
+<pre><code class="language-python">__import__('os').system('cat /flag')
+</code></pre>
+<h1 id="马赛克">马赛克</h1>
+<p><code>https://github.com/beurtschipper/Depix</code><br>
+将附件图片放进Depix文件夹下，在Depix文件夹里的images/searchimages里把debruinseq_notepad_Windows10_closeAndSpaced.png复制到Depix文件夹里，打开终端输入如下命令</p>
+<pre><code>python3 depix.py -p mosaic.png -s debruinseq_notepad_Windows10_closeAndSpaced.png
+</code></pre>
+<p>跑了一会儿得到output.png，其实这个时候我读了好久没读出来那个关键的地方是什么字母，遍历试了可能性交上去也是wa，就很难受，最后还是没出。看wp的时候拍断大腿。<br>
+<img src="http://ayanagi.fun/post-images/1611502957560.png" alt="" loading="lazy"></p>
+<h1 id="magic_download">magic_download</h1>
+<p>看不懂。</p>
+<h1 id="问卷调查">问卷调查</h1>
+<p>有手就行</p>
 ]]></content>
     </entry>
     <entry>
@@ -1384,6 +375,73 @@ if ($_GET['url']) {
 已经有肉眼看穿题目给的所有base的能力了，没啥难度看着解就行</p>
 <h1 id="pigissocute">PigIsSoCute</h1>
 <p>hint是猪圈栅栏，没难度，下载下来的txt是一个b64编码的图片，去b64转文件得到猪圈密码的图片，对着识别解密得到字符串，进行栅栏解密得到可读的明文套上<code>c1ctf{}</code>即可</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HECTF 2020 MISC WP]]></title>
+        <id>http://ayanagi.fun/HECTF2020/</id>
+        <link href="http://ayanagi.fun/HECTF2020/">
+        </link>
+        <updated>2020-12-07T04:03:34.000Z</updated>
+        <content type="html"><![CDATA[<p>难度倒不是很高，只是做不出来罢了。</p>
+<h1 id="看直播">看直播</h1>
+<p>访问HECTF的直播间，画面中写着flag。</p>
+<h1 id="png">png</h1>
+<p>非常基础的题，winhex打开 b64解码最后面拿到一半flag，png格式别忘了考虑宽高，改宽高得到另一半</p>
+<h1 id="不说人话">不说人话</h1>
+<p>Ook</p>
+<h1 id="溯源溯源">溯源溯源</h1>
+<p>社工题。<br>
+以下是官方wp：<br>
+姓名使用支付宝</p>
+<p>域名邮箱使用爱站</p>
+<p>公司名百度手机号即可</p>
+<h1 id="makesteg-great-again">MakeSteg Great Again</h1>
+<p>winhex打开得到一个key：</p>
+<pre><code>P@SsW00000
+</code></pre>
+<p>outguess没用、zsteg没用，stegpy没用，stegdetect没用(可能我这玩意我根本没装好，就没试过成功的)。本来以为自己还是会一些图片隐写的，实际上还欠缺得太多。以下是官方WP:<br>
+有一个key，很容易想到steghide</p>
+<pre><code>steghideextract -sf Steg.jpg -p p0SsW0000
+</code></pre>
+<p>能得到一个压缩包，里面是pyc文件，如果是我的话就拿去反编译了。照着复现的时候尝试反编译，出来的是对我来说非常复杂的python脚本，必然做不出来。眼界又宽阔了，这里其实用的是pyc隐写，使用Stegosaurus，仅支持py3.6以下版本</p>
+<pre><code>pythonstegosaurus.py GitHacker.pyc -x
+</code></pre>
+<p>得到key：</p>
+<p>'PPPPasword'_And_do_you_love_winter<br>
+提示知道是snow隐写</p>
+<pre><code>SNOW.EXE -C -p PPPPasword white.txt
+</code></pre>
+<h1 id="babymisc">babymisc</h1>
+<p>winhex打开，没啥思路，hint是文件hex尾部有编码后的flag后两位是zp，也没啥思路。<br>
+以下是官方wp：<br>
+使用010打开文件，会发现有一串全为0，然后像是base64，解码却出不来，根据提示：文件hex尾部有编码后的flag的后两位，在base后面加上zp，base58解码即可</p>
+<h1 id="总结">总结</h1>
+<p>已经遇到非常严重的瓶颈期了，尤其是环境配不好，每次参加比赛都有新花样。说新也不新，只是我见识少。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[NCTF2020-misc wp]]></title>
+        <id>http://ayanagi.fun/NCTF2020/</id>
+        <link href="http://ayanagi.fun/NCTF2020/">
+        </link>
+        <updated>2020-11-23T13:07:08.000Z</updated>
+        <content type="html"><![CDATA[<p>ak了misc，男团非常的强。</p>
+<h1 id="彩蛋">彩蛋</h1>
+<p>观察教学楼对出的横幅或者Leon发在空间的说说即可得到<br>
+<code>flag:NCTF{We1c0m3_t0_NCTF2020!}</code>提交发现不对，试了好几次<br>
+，发现要将感叹号去掉。<br>
+flag：</p>
+<pre><code>NCTF{We1c0m3_t0_NCTF2020}
+</code></pre>
+<h1 id="nctf2020问卷调查">NCTF2020问卷调查</h1>
+<p>一开始点进靶机无法访问，观察群消息给的hint，知道需要挂<br>
+梯子才能看到问卷，打开ShadowSocksR，右键右下角图标选择<br>
+PAC模式，再打开靶机即可查看问卷，在必填的选项框中填写相<br>
+应的内容，最后提交，即可得到。<br>
+flag：</p>
+<pre><code>NCTF{Let's_look_forward_to_X1CTF}
+</code></pre>
 ]]></content>
     </entry>
 </feed>

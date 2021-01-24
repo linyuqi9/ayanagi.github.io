@@ -2,8 +2,11 @@
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
-    <meta name="description" content="Todo
-" />
+    <meta name="description" content="自己只出了签到题。
+签到
+自己写的脚本，感觉蛮不错的。
+写了有一会儿。大概半小时(老菜了
+s1 = [0o146, 0o154, 0o141, 0o147, 0o173, 0o167, 0o63, 0o154, 0o143, 0o157, ..." />
     <meta name="keywords" content="CTF" />
     <link rel="stylesheet" href="http://ayanagi.fun/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://ayanagi.fun/styles/main.css">
@@ -259,27 +262,17 @@
     <div id="side-posttitle" style="display: none;">
         
     
+    *CTF misc 复现
+    <script>postsnum += 1</script>
+    
+    
+    
     杭电0rays 2020招新赛Misc 复现
     <script>postsnum += 1</script>
     
     
     
-    测量学(7~9章)
-    <script>postsnum += 1</script>
-    
-    
-    
-    测量学(4~6章)
-    <script>postsnum += 1</script>
-    
-    
-    
-    测量学(1~3章)
-    <script>postsnum += 1</script>
-    
-    
-    
-    2020纵横杯 Misc wp
+    2020纵横杯 Misc wp+复现
     <script>postsnum += 1</script>
     
     
@@ -413,7 +406,7 @@
         <a onclick="showAaplayer()"><i style="font-size: 20px;"><img
                     src='http://ayanagi.fun/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         <div class="avatar-border">
-            <img src="http://ayanagi.fun/images/avatar.png?v=1611335562486" class="avatar">
+            <img src="http://ayanagi.fun/images/avatar.png?v=1611504734346" class="avatar">
         </div>
         <div class="sitename">ハルカトオク</div>
         <span class="describtion" data-text='["又岂在朝朝暮暮。"]'>&nbsp;</span>
@@ -769,7 +762,7 @@
                 <img src="' + talks[i].img + '" class="talkimg"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1611335562486">\
+                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1611504734346">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -782,7 +775,7 @@
             <div class="talk" v-for="t in talks"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1611335562486">\
+                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1611504734346">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -1152,7 +1145,7 @@
             </div>
             <div class="postinfo-detail">
                 <div class="postdate"><i class="fa fa-calendar"></i>2020-12-30</div>
-                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 1 min read</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 3 min read</div>
                 <div class="posttag">
                     
                     <a data-pjax href="http://ayanagi.fun/tag/CTF/" class="postlink">
@@ -1164,7 +1157,7 @@
             
         <div id="articlecontent">
             <div id="texttitle" style="text-align: center">
-                <h2 id="ptitle">2020纵横杯 Misc wp</h2>
+                <h2 id="ptitle">2020纵横杯 Misc wp+复现</h2>
                 <!-- id 将作为查询条件 -->
                 <div id="pl" style="display:none">http://ayanagi.fun/ZONGHENGCUP2020/</div>
                 <div id="rootaddr" style="display:none">http://ayanagi.fun</div>
@@ -1174,7 +1167,54 @@
                 </span>
             </div>
             <div class="text ">
-                <p>Todo</p>
+                <p>自己只出了签到题。</p>
+<h1 id="签到">签到</h1>
+<p>自己写的脚本，感觉蛮不错的。<br>
+写了有一会儿。大概半小时(老菜了</p>
+<pre><code class="language-python">s1 = [0o146, 0o154, 0o141, 0o147, 0o173, 0o167, 0o63, 0o154, 0o143, 0o157, 0o155, 0o145, 0o137, 0o164, 0o157, 0o137, 0o62, 0o157, 0o156, 0o147, 0o137, 0o150, 0o63, 0o156, 0o147, 0o137, 0o142, 0o145, 0o61, 0o175]
+s2 = []
+for i in range(len(s1)):
+    s2 += [chr((s1[i]))]
+for i in range(len(s2)):
+    print(s2[i],end = '')
+
+</code></pre>
+<h1 id="my_secret">My_Secret</h1>
+<p>当时拿到附件一通操作啥也没出来，放弃。<br>
+通过强队wp复现：<br>
+首先是lsb隐写，有专门的脚本，叫cloacked-pixel，由于寒假我回了家用台式机重新配的ctf环境，配这个配了好久</p>
+<pre><code>python2 lsb.py extract stego.png out 123456
+cat out
+</code></pre>
+<p>得到密码<code>38d668578a3686ab</code><br>
+wav音频隐写的话常用的工具是deepsound，得到第二个密码<code>carrier</code>。学习了。<br>
+接下来图片的加密，看天璇队的wp他们走了不少的弯路，其实无非就是拼积累一个个试呗。希望我能加快积累的速度。<br>
+使用的是oursecret，一般人根本想不到。</p>
+<h1 id="babymaze2_beta">babymaze2_beta</h1>
+<p>该稍微学习一下如何使用nc了，直接下载附件操作会遇到各种各样的问题。nc的话就很方便。</p>
+<pre><code>nc 182.92.203.154 10001
+</code></pre>
+<p>maze的界面要求的操作应该给的是input()函数，看wp学到一个input()的非预期输入，</p>
+<pre><code class="language-python">__import__('os').system('ls /')
+</code></pre>
+<p>等价于</p>
+<pre><code class="language-python">import os
+os.system(&quot;ls /&quot;)
+</code></pre>
+<p>会ls出一系列文件，其中有flag，那么payload必然是</p>
+<pre><code class="language-python">__import__('os').system('cat /flag')
+</code></pre>
+<h1 id="马赛克">马赛克</h1>
+<p><code>https://github.com/beurtschipper/Depix</code><br>
+将附件图片放进Depix文件夹下，在Depix文件夹里的images/searchimages里把debruinseq_notepad_Windows10_closeAndSpaced.png复制到Depix文件夹里，打开终端输入如下命令</p>
+<pre><code>python3 depix.py -p mosaic.png -s debruinseq_notepad_Windows10_closeAndSpaced.png
+</code></pre>
+<p>跑了一会儿得到output.png，其实这个时候我读了好久没读出来那个关键的地方是什么字母，遍历试了可能性交上去也是wa，就很难受，最后还是没出。看wp的时候拍断大腿。<br>
+<img src="http://ayanagi.fun/post-images/1611502957560.png" alt="" loading="lazy"></p>
+<h1 id="magic_download">magic_download</h1>
+<p>看不懂。</p>
+<h1 id="问卷调查">问卷调查</h1>
+<p>有手就行</p>
 
             </div>
             <hr style="width: 80%;">
@@ -1212,16 +1252,16 @@
         </div>
         <div id="otherpost">
             
-            <a  data-pjax class="prev-post-pc" href="http://ayanagi.fun/fxckingtest/"  style="color: black;">
+            <a  data-pjax class="prev-post-pc" href="http://ayanagi.fun/CB2020/"  style="color: black;">
                 <div id="ppcontainer">
                     
-                    <img src="https://pic.downk.cc/item/5fbb52b6b18d627113dde43f.png" style="width: 100%;" class="opimg">
+                    <img src="https://img.imgdb.cn/item/5fbb530bb18d627113ddfde6.png" style="width: 100%;" class="opimg">
                     
-                    <h4 class="optitle">测量学(1~3章)</h4>
+                    <h4 class="optitle">杭电0rays 2020招新赛Misc 复现</h4>
                 </div>
             </a>
             <div class="prev-post">
-                上一篇 <a  data-pjax href="http://ayanagi.fun/fxckingtest/">测量学(1~3章)</a>
+                上一篇 <a  data-pjax href="http://ayanagi.fun/CB2020/">杭电0rays 2020招新赛Misc 复现</a>
             </div>
             
             
@@ -1254,7 +1294,15 @@
     $("#hotnum").attr('id', pl);
 </script>
                     <div class="toc-container">
-                        
+                        <ul class="markdownIt-TOC">
+<li><a href="#%E7%AD%BE%E5%88%B0">签到</a></li>
+<li><a href="#my_secret">My_Secret</a></li>
+<li><a href="#babymaze2_beta">babymaze2_beta</a></li>
+<li><a href="#%E9%A9%AC%E8%B5%9B%E5%85%8B">马赛克</a></li>
+<li><a href="#magic_download">magic_download</a></li>
+<li><a href="#%E9%97%AE%E5%8D%B7%E8%B0%83%E6%9F%A5">问卷调查</a></li>
+</ul>
+
                     </div>
                     <div class="tog">
                         <div class="toggleContainer">
