@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://ayanagi.fun</id>
     <title>ハルカトオク</title>
-    <updated>2021-01-25T10:08:10.685Z</updated>
+    <updated>2021-01-25T10:23:14.418Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://ayanagi.fun"/>
     <link rel="self" href="http://ayanagi.fun/atom.xml"/>
@@ -57,13 +57,17 @@ for s in $(&lt;flag); do echo $s; done
 <p>下完附件丢winhex看，看不出什么。binwalk发现图里藏了一张图。分不出来，使用foremost分出来，一张密文图片，原图改宽高得到hint：z-340，google查询，得知是黄道十二宫杀手的密码，各种报道吹的玄乎得很，恰逢当时没什么想法做题，就没往下做了。<br>
 通过wp学习到340是一个矩形信息，将密码分为3个部分，第一部分和第二部分为9行，最后一部分为2行。<br>
 <img src="http://ayanagi.fun/post-images/1611565739291.png" alt="" loading="lazy"><br>
-走法是：从第一个字符开始，图中为h，向下一格，向右两格，得到e，以此类推，走到最右下角的话就继续反复，又从左上角开始，最后一行的下一行是第一行，回到第一行；最右边一列的再右边两列是第二列，那么o的下一个字符是y，以此类推。<br>
+<img src="http://ayanagi.fun/post-images/1611569685804.png" alt="" loading="lazy"><br>
+只要按照第一部分去做就行了。走法是：从第一个字符开始，图中为h，向下一格，向右两格，得到e，以此类推，走到最右下角的话就继续反复，又从左上角开始，最后一行的下一行是第一行，回到第一行；最右边一列的再右边两列是第二列，那么o的下一个字符是y，以此类推。<br>
 <code>helloboysandgirlsiamzodicakillercongratulationonfindmethisisyourflagzpggisthefinallybigboss</code><br>
 其实有个非预期也不用读这么多，直接找f以及下三个字母能组成flag的，以此为基础继续往下读就能减少很多工作量(不会写脚本是这样的了)</p>
 <pre><code>flag{zpggisthefinallybigboss}
 </code></pre>
 <h1 id="verylow">verylow</h1>
-<p>显然的b64转文件，解码后是504B开头，转成zip，解压出来一个woshishui文件，然后就不会了。wp说是将全文件反转后看到bmp的头，但是并没有说如何反转，难道就是16进制逆序？但其实不然，因为在winhex里看它的尾巴并不是逆序的bmp文件头，只好搁置。</p>
+<p>显然的b64转文件，解码后是504B开头，转成zip，解压出来一个woshishui文件，然后就不会了。wp说是将全文件反转后看到bmp的头，但是并没有说如何反转，难道就是16进制逆序？但其实不然，因为在winhex里看它的尾巴并不是逆序的bmp文件头，只好搁置。<br>
+询问得知，反转意为让文件与FF异或，丢cyberchef处理。大厨yyds！得到一张bmp。首先要知道silenteye里有verylow解密，才能由题目名的verylow知道使用silenteye解出来</p>
+<pre><code>flag{s1lent3ye_1s_s0_c00l}
+</code></pre>
 <h1 id="ic">IC</h1>
 <p>两个dump文件，无从下手。<br>
 前置知识：最普通的ic卡有16个扇区（0-15），每个扇区⼜分为4个区域块（0-63）， 每个扇区都有独<br>
@@ -75,11 +79,11 @@ for s in $(&lt;flag); do echo $s; done
 根据题目描述，变动的东西肯定就是金额，分析后发现第⼀个⿊⾊块和第三个数值是相同的，实际上就是存的⾦额，这⾥需要稍微查阅些<br>
 资料或者经验，⾦额再ic卡中⼀般是以分为单位，⼩端序存储，图示2.dump数据为8c6e，转<br>
 换成0x6e8c，28300，也就是283元<br>
-第⼆个⿊⾊块数值其实是第⼀个⿊⾊块数据的取反，8c6e取反为7391，这⾥⼀般是为了校验<br>
-⽤<br>
+第⼆个⿊⾊块数值其实是第⼀个⿊⾊块数据的取反，8c6e取反为7391，这⾥⼀般是为了校验⽤<br>
 同理按照上⾯的⾦额的校验⽅法，将第⼆个框内数据取反试试<br>
-其实题目有些误导性，但也是没办法，芙头芙脑去做的话会把第一个块去取反，就拼不出来了，按wp描述就是将第二个块取反，最后拼出flag<br>
-<code>flag{Y0u_hAcK@d_H6Us_Sy5tEm}</code></p>
+其实题目有些误导性，但也是没办法，芙头芙脑去做的话会把第一个块去取反，就拼不出来了，按wp描述就是将第二个块取反，最后拼出flag</p>
+<pre><code>flag{Y0u_hAcK@d_H6Us_Sy5tEm}
+</code></pre>
 ]]></content>
     </entry>
     <entry>
