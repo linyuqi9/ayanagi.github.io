@@ -265,7 +265,7 @@
     
     
     
-    *CTF misc 复现
+    *CTF misc 部分复现
     <script>postsnum += 1</script>
     
     
@@ -402,7 +402,7 @@
         <a onclick="showAaplayer()"><i style="font-size: 20px;"><img
                     src='http://ayanagi.fun/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         <div class="avatar-border">
-            <img src="http://ayanagi.fun/images/avatar.png?v=1611589823655" class="avatar">
+            <img src="http://ayanagi.fun/images/avatar.png?v=1611655854906" class="avatar">
         </div>
         <div class="sitename">ハルカトオク</div>
         <span class="describtion" data-text='["又岂在朝朝暮暮。"]'>&nbsp;</span>
@@ -758,7 +758,7 @@
                 <img src="' + talks[i].img + '" class="talkimg"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1611589823655">\
+                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1611655854906">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -771,7 +771,7 @@
             <div class="talk" v-for="t in talks"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1611589823655">\
+                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1611655854906">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -1211,6 +1211,14 @@ gem install zsteg
 <h2 id="f5隐写">F5隐写</h2>
 <pre><code>git clone https://github.com/matthewgao/F5-steganography
 </code></pre>
+<h2 id="gaps拼图">gaps拼图</h2>
+<pre><code>git clone https://github.com/nemanja-m/gaps.git
+cd gaps
+pip install -r requirements.txt
+apt-get install python-tk
+pip install -e .
+</code></pre>
+<p>这里说一下，python-tk如果你有使用过cloacked-pixel脚本的话是已经装好了的，不过再输一次安装指令也无所谓。</p>
 <h1 id="压缩包篇">压缩包篇</h1>
 <h2 id="archpr">archpr</h2>
 <p>https://www.52pojie.cn/thread-467392-1-1.html</p>
@@ -1359,6 +1367,7 @@ trusted-host = pypi.douban.com
 <li><a href="#zsteg">zsteg</a></li>
 <li><a href="#lsb">lsb</a></li>
 <li><a href="#f5%E9%9A%90%E5%86%99">F5隐写</a></li>
+<li><a href="#gaps%E6%8B%BC%E5%9B%BE">gaps拼图</a></li>
 </ul>
 </li>
 <li><a href="#%E5%8E%8B%E7%BC%A9%E5%8C%85%E7%AF%87">压缩包篇</a>

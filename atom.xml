@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://ayanagi.fun</id>
     <title>ハルカトオク</title>
-    <updated>2021-01-25T15:51:17.910Z</updated>
+    <updated>2021-01-26T10:11:03.112Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://ayanagi.fun"/>
     <link rel="self" href="http://ayanagi.fun/atom.xml"/>
@@ -20,12 +20,28 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[*CTF misc 复现]]></title>
+        <title type="html"><![CDATA[*CTF misc 部分复现]]></title>
         <id>http://ayanagi.fun/starctf/</id>
         <link href="http://ayanagi.fun/starctf/">
         </link>
         <updated>2021-01-24T05:25:17.000Z</updated>
-        <content type="html"><![CDATA[<p>todo</p>
+        <content type="html"><![CDATA[<h1 id="signin">signin</h1>
+<p>签到题，加入他们的telegram群组就能看到公告上的flag了，记得挂代理</p>
+<h1 id="minegame">MineGame</h1>
+<p>扫雷，需要有matlab环境才能打开，非预期解是CE的advance options暂停游戏，之后慢慢在内存里搜索*CTF的unicode编码，跟踪搜索到的地址就能找到flag。<br>
+官方wp的预期解是写一个14秒内自动完成扫雷的脚本，对我而言一听就挺难的。</p>
+<h1 id="puzzle">puzzle</h1>
+<p><img src="http://ayanagi.fun/post-images/1611653792463.png" alt="" loading="lazy"><br>
+图像是竖着25小格，用高度除以25，就得到每一小块是43像素，用宽度除以43就能得到44格，43*25=1100个小碎片。<br>
+<img src="http://ayanagi.fun/post-images/1611653813577.png" alt="" loading="lazy"></p>
+<pre><code>gaps --image puzzle.png --generations 30 --population 1100 --size 43 --verbose
+</code></pre>
+<p>generations是迭代的次数，一般是30，不过这题到了10代之后就不会再有变化了，verbose是让它保留每一代的结果让我们查看对比用的。<br>
+(悄悄说一下这么跑是跑不出来的，得用ps改下对比度让图片上flag的墨渍更加凸显便于gaps认图，就不折腾了)</p>
+<h1 id="littletricks">littletricks</h1>
+<p>官方wp里没找到附件，只有文档<br>
+看强队wp，这个是windows磁盘镜像，使用磁盘管理加载，解密bitlocker，使用bitcracker爆破或者弱口令社工，密码是12345678，打开后只找到一个password.txt<br>
+用磁盘恢复软件例如DiskGenius或者R-Studio恢复，在$RECYCLE.BIN下能找到两个pdf文件，一个是假flag，另一个是真的。</p>
 ]]></content>
     </entry>
     <entry>
