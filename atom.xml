@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://ayanagi.fun</id>
     <title>ハルカトオク</title>
-    <updated>2021-01-26T10:11:03.112Z</updated>
+    <updated>2021-01-26T14:48:42.989Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://ayanagi.fun"/>
     <link rel="self" href="http://ayanagi.fun/atom.xml"/>
@@ -11,12 +11,96 @@
     <icon>http://ayanagi.fun/favicon.ico</icon>
     <rights>All rights reserved 2021, ハルカトオク</rights>
     <entry>
-        <title type="html"><![CDATA[CTFWshow DJBCTF大吉杯 misc 复现]]></title>
+        <title type="html"><![CDATA[CTFWshow DJBCTF大吉杯 部分misc 复现]]></title>
         <id>http://ayanagi.fun/CTFshowDJB/</id>
         <link href="http://ayanagi.fun/CTFshowDJB/">
         </link>
         <updated>2021-01-25T06:47:29.000Z</updated>
-        <content type="html"><![CDATA[<p>todoo</p>
+        <content type="html"><![CDATA[<h1 id="十八般兵器">十八般兵器</h1>
+<p>hint1: JPHS<br>
+hint2:用notepad++打开试试？<br>
+hint3:前十种兵器对应10进制，后八种兵器对应8进制<br>
+附件是一个rar，解压密码在里面的描述<br>
+解压之后里面是18张兵器的图片<br>
+一开始复现的时候芙头芙脑的，按照了文件的顺序去排武器数字，这是第一个坎<br>
+在题目描述中有正确的顺序：刀、枪、剑、戟、斧、钺、钩、叉、鞭、锏、锤、戈、镋、棍、槊、棒、矛、耙<br>
+使用JPHS对18张图片解密，密文为空，解密后的18个文件分别丢进winhex，尾部都有一串数字，分两组全部写到记事本里，10进制转16进制，8进制转16进制，转换的过程中找了一些垃圾在线转换网站不支持大数，把我搞迷糊了，最后找到了个很好的在线进制转换，能解决js的大数精度问题，丢连接https://tool.lu/hexconvert/<br>
+把两组16进制组合起来转换字符串</p>
+<pre><code>flag{CTFshow_10_bA_Ban_b1ng_Q1}
+</code></pre>
+<h1 id="请问大吉杯的签到是在这里签吗">请问大吉杯的签到是在这里签吗</h1>
+<p>附件1.png，一个二维码，扫了没什么信息，binwalk，得到2.png，扫，得知是岔路。继续binwalk，到了4.png没了，扫，走到了死胡同。回到2.png，stegsolve滤镜，又得到2幅不同的二维码，扫，都是一样的结果，当时没往下想，果断放弃。(其实是被签到题的200多个解和这道题的个位数个解认为它确实很难而劝退)<br>
+把这两张二维码保存，使用imagecombine模式 第一个就是XOR就能发现猪圈密码<br>
+直接出来了<img src="http://ayanagi.fun/post-images/1611664016810.png" alt="" loading="lazy"></p>
+<h1 id="牛年大吉">牛年大吉</h1>
+<p>hint1:不要格式化哟，看看引导扇区是不是丢东西了<br>
+hint2:压缩包密码在图片文件头里<br>
+一个vhd文件，使用R-Studio装载，恢复出一个7z和一个png<br>
+png的文件头是<code>89504E47</code>直接得flag</p>
+<h1 id="童话镇">童话镇</h1>
+<p>hint1:离别<br>
+hint2:思念<br>
+hint3:爱<br>
+hint4:印象<br>
+先binwalk出一个zip，爆破得到2个txt，看不懂。看wp，第二个我遇到的机器学习题目，看来做misc的不会点机器学习还做不下去了。<br>
+脚本是抄7月师傅的</p>
+<pre><code class="language-python">import numpy as np
+from sklearn.neighbors import KNeighborsClassifier
+from ast import literal_eval
+from PIL import Image
+x_train = []
+y_train = []
+x_test = []
+f1 = open(&quot;t.txt&quot;,&quot;r&quot;)
+f2 = open(&quot;flag.txt&quot;,&quot;r&quot;)
+while 1:
+	s = f1.readline()
+	if not s:
+		break
+	s = s.strip('\n')
+	p1 = literal_eval(s.split(&quot;\t&quot;)[1])
+	p2 = literal_eval(s.split(&quot;\t&quot;)[0])
+	x_train.append(p1)
+	x_test.append(p2)
+	#print(x_train)
+	#print(x_test)
+while 1:
+	s = f2.readline()
+	if not s:
+		break
+	s = s.strip('\n')
+	s = literal_eval(s)
+	y_train.append(s)
+	#print(y_train)
+x_train = np.array(x_train)
+y_train = np.array(y_train)
+x_test = np.array(x_test)
+ 
+clf = KNeighborsClassifier(n_neighbors = 1)
+clf.fit(x_train, x_test)
+y_test = clf.predict(y_train)
+ 
+f3 = open(&quot;3.txt&quot;,&quot;w&quot;)
+for i in y_test:
+	f3.write(str(y_test[i]))
+f3.close()
+</code></pre>
+<p>得到全是1和0的文本，继续抄脚本</p>
+<pre><code class="language-python">from PIL import Image #import必要的库
+fp = open(&quot;3.txt&quot;,&quot;r&quot;).read() #读取文本
+pic = Image.new(&quot;L&quot;, (len(fp)//79, 79)) #创建一张图片叫做pic，mode是L，L代表8位像素，是黑白的，size属性是len(fp)//79,79，意思是宽度是len(fp)//79，也就是文本的长度整除79的结果，高度是79
+i = 0 #定义一个计数的变量i
+for y in range(79): #纵坐标从0到79进行循环,也就是从底部开始画起，绘制79单位的内容
+	for x in range(len(fp)//79):#横坐标从0到len(fp)//79进行循环，也就是从左边开始画起，绘制len(fp)//79单位的内容
+		if fp[i] == '0':#文本第i个字符如果是0
+			pic.putpixel([x,y], 255)#那么pic这张图片就调用putpixel这个方法，在[x,y]这个坐标放置一个255颜色的像素，也就是白色
+		else:#文本第i个字符如果不是0(其实非0即1)
+			pic.putpixel([x,y], 0)#那么pic这张图片就调用putpixel这个方法，在[x,y]这个坐标放置一个0颜色的像素，也就是黑色
+		i += 1#对这个字符的安置操作已经完成了，i增大1来准备对下一个字符进行操作。
+pic.show()#完成上述循环后，图片已经画好，pic这张图片调用show这个方法，也就是显示在显示器上让用户看到。
+</code></pre>
+<p>机器学习可以留后再学，但是画图脚本还是得掌握一下，仔细解释了一下脚本。把python学成文科。只有我这么蠢的人才会这么学习吧。(PS:其中直接偷脚本在kali里跑最后图片show不出来，但是kali里又装好了库，我只能在windows下装库，用的pycharm装库就很难受，这题复现出来问题不大，但是装库的时候可让人抓狂了。)<br>
+<code>flag{67373永生_举报狗必须死}</code></p>
 ]]></content>
     </entry>
     <entry>
