@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://ayanagi.fun</id>
     <title>ハルカトオク</title>
-    <updated>2021-01-26T14:48:42.989Z</updated>
+    <updated>2021-02-04T06:03:23.928Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://ayanagi.fun"/>
     <link rel="self" href="http://ayanagi.fun/atom.xml"/>
@@ -455,8 +455,10 @@ stegsolve逐帧播放，看到类似flag的内容，png很明显的改宽高，�
         <link href="http://ayanagi.fun/Roar2020/">
         </link>
         <updated>2020-12-08T02:47:08.000Z</updated>
-        <content type="html"><![CDATA[<p>wp全部转自<code>https://mp.weixin.qq.com/s?__biz=MzU3ODc2NTg1OA==&amp;mid=2247485804&amp;idx=1&amp;sn=15b8b99fc9cdca98d5fa99484b776063&amp;chksm=fd711c21ca0695374a191994b75b563b1a7604b70aa3c0b0251e78721f5a24de8ff85f85284f&amp;mpshare=1&amp;scene=23&amp;srcid=1207vysHlxNfj0iTwS4Fq5Xw&amp;sharer_sharetime=1607348906792&amp;sharer_shareid=8b035134b7fe8a8160582bb9a2551229#rd</code><br>
-华丽丽的爆了零。<br>
+        <content type="html"><![CDATA[<p>wp部分转自</p>
+<pre><code>https://mp.weixin.qq.com/s?__biz=MzU3ODc2NTg1OA==&amp;mid=2247485804&amp;idx=1&amp;sn=15b8b99fc9cdca98d5fa99484b776063&amp;chksm=fd711c21ca0695374a191994b75b563b1a7604b70aa3c0b0251e78721f5a24de8ff85f85284f&amp;mpshare=1&amp;scene=23&amp;srcid=1207vysHlxNfj0iTwS4Fq5Xw&amp;sharer_sharetime=1607348906792&amp;sharer_shareid=8b035134b7fe8a8160582bb9a2551229#rd
+</code></pre>
+<p>华丽丽的爆了零。<br>
 仰慕着夏风师傅对Roar2019的精彩wp，自己做BUU也遇到了相同的题，难度不高，然后小瞧了今年的。<br>
 只对misc有了解，web大概只有F12和GET/POST的水平，然后签到出不来，签到是个披着misc皮的web。</p>
 <h1 id="签到">签到</h1>
@@ -488,6 +490,14 @@ if ($_GET['url']) {
 <img src="http://ayanagi.fun/post-images/1607395903655.png" alt="" loading="lazy"><br>
 然后就是慢慢的记录0、1二进制，转为ascii码就是flag</p>
 <pre><code>flag{25c21b0d-6a11-4312-971b-428d01cdc534}
+</code></pre>
+<p>后记：其实上面的是小题大做了。<br>
+刚刚看了别人的wp，直接扔进audacity里像数摩斯电码一样数就行，只不过并不是转成字符串，而是短为0长为1的二进制转ascii</p>
+<h1 id="fm">FM</h1>
+<p>抄别人的wp：<br>
+题目给的附件是一个iq格式的文件，然后通过题目附件名称给的提示是rate=2MHZ，<br>
+87-108MHZ有点东西，于是就找了很久资料，发现有一个工具gqrx-sdr是专门分析FM调频的，先安装这个软件在kali，然后打开软件设置这些参数，写入文件路径，和Bandwidth设置2MHZ，接着在里面的右边mode模式设置WFM(mono)，然后就可以听到出题人在读flag，这时只要慢慢听就能听出来flag</p>
+<pre><code>flag{82c83416-dadc-4947-80df-b84852b8f35d}
 </code></pre>
 ]]></content>
     </entry>
