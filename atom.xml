@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://ayanagi.fun</id>
-    <title>ハルカトオク</title>
-    <updated>2021-02-04T06:03:23.928Z</updated>
+    <title>雨霖铃</title>
+    <updated>2021-02-04T18:07:10.703Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://ayanagi.fun"/>
     <link rel="self" href="http://ayanagi.fun/atom.xml"/>
     <subtitle>又岂在朝朝暮暮。</subtitle>
     <logo>http://ayanagi.fun/images/avatar.png</logo>
     <icon>http://ayanagi.fun/favicon.ico</icon>
-    <rights>All rights reserved 2021, ハルカトオク</rights>
+    <rights>All rights reserved 2021, 雨霖铃</rights>
+    <entry>
+        <title type="html"><![CDATA[2021春秋杯 新年欢乐赛 部分复现]]></title>
+        <id>http://ayanagi.fun/2021chunqiuNew/</id>
+        <link href="http://ayanagi.fun/2021chunqiuNew/">
+        </link>
+        <updated>2021-02-04T18:04:43.000Z</updated>
+        <content type="html"><![CDATA[<p>todo</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[CTFWshow DJBCTF大吉杯 部分misc 复现]]></title>
         <id>http://ayanagi.fun/CTFshowDJB/</id>
@@ -551,49 +560,6 @@ if ($_GET['url']) {
 已经有肉眼看穿题目给的所有base的能力了，没啥难度看着解就行</p>
 <h1 id="pigissocute">PigIsSoCute</h1>
 <p>hint是猪圈栅栏，没难度，下载下来的txt是一个b64编码的图片，去b64转文件得到猪圈密码的图片，对着识别解密得到字符串，进行栅栏解密得到可读的明文套上<code>c1ctf{}</code>即可</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[HECTF 2020 MISC WP]]></title>
-        <id>http://ayanagi.fun/HECTF2020/</id>
-        <link href="http://ayanagi.fun/HECTF2020/">
-        </link>
-        <updated>2020-12-07T04:03:34.000Z</updated>
-        <content type="html"><![CDATA[<p>难度倒不是很高，只是做不出来罢了。</p>
-<h1 id="看直播">看直播</h1>
-<p>访问HECTF的直播间，画面中写着flag。</p>
-<h1 id="png">png</h1>
-<p>非常基础的题，winhex打开 b64解码最后面拿到一半flag，png格式别忘了考虑宽高，改宽高得到另一半</p>
-<h1 id="不说人话">不说人话</h1>
-<p>Ook</p>
-<h1 id="溯源溯源">溯源溯源</h1>
-<p>社工题。<br>
-以下是官方wp：<br>
-姓名使用支付宝</p>
-<p>域名邮箱使用爱站</p>
-<p>公司名百度手机号即可</p>
-<h1 id="makesteg-great-again">MakeSteg Great Again</h1>
-<p>winhex打开得到一个key：</p>
-<pre><code>P@SsW00000
-</code></pre>
-<p>outguess没用、zsteg没用，stegpy没用，stegdetect没用(可能我这玩意我根本没装好，就没试过成功的)。本来以为自己还是会一些图片隐写的，实际上还欠缺得太多。以下是官方WP:<br>
-有一个key，很容易想到steghide</p>
-<pre><code>steghideextract -sf Steg.jpg -p p0SsW0000
-</code></pre>
-<p>能得到一个压缩包，里面是pyc文件，如果是我的话就拿去反编译了。照着复现的时候尝试反编译，出来的是对我来说非常复杂的python脚本，必然做不出来。眼界又宽阔了，这里其实用的是pyc隐写，使用Stegosaurus，仅支持py3.6以下版本</p>
-<pre><code>pythonstegosaurus.py GitHacker.pyc -x
-</code></pre>
-<p>得到key：</p>
-<p>'PPPPasword'_And_do_you_love_winter<br>
-提示知道是snow隐写</p>
-<pre><code>SNOW.EXE -C -p PPPPasword white.txt
-</code></pre>
-<h1 id="babymisc">babymisc</h1>
-<p>winhex打开，没啥思路，hint是文件hex尾部有编码后的flag后两位是zp，也没啥思路。<br>
-以下是官方wp：<br>
-使用010打开文件，会发现有一串全为0，然后像是base64，解码却出不来，根据提示：文件hex尾部有编码后的flag的后两位，在base后面加上zp，base58解码即可</p>
-<h1 id="总结">总结</h1>
-<p>已经遇到非常严重的瓶颈期了，尤其是环境配不好，每次参加比赛都有新花样。说新也不新，只是我见识少。</p>
 ]]></content>
     </entry>
 </feed>

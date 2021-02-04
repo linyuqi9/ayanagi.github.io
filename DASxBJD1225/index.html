@@ -19,7 +19,31 @@
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
     <!-- 数学公式 -->
     
-    <title>ハルカトオク</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css"
+        integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"
+        integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"
+        integrity="sha384-aGfk5kvhIq5x1x5YdvCp4upKZYnA8ckafviDpmWEKp4afOZEqOli7gqSnh8I6enH" crossorigin="anonymous">
+        </script>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            },
+            {
+                left: "$",
+                right: "$",
+                display: false
+            }
+            ]
+        });
+    </script>
+    
+    <title>雨霖铃</title>
     
     <style>
         .markdownIt-TOC {
@@ -96,7 +120,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a data-pjax class="navbar-brand" href="http://ayanagi.fun">ハルカトオク&nbsp;&nbsp;|</a>
+      <a data-pjax class="navbar-brand" href="http://ayanagi.fun">雨霖铃&nbsp;&nbsp;|</a>
       <span class="navbar-brand mbapspan"><i id="mbaplayer" class="fa fa-play-circle-o" aria-hidden="true"
           style="font-size: 28px;top: 12px;position: absolute;" onclick="aplayerPlay();"></i></span>
     </div>
@@ -227,6 +251,15 @@
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
     <!-- 数学公式 -->
     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css"
+        integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"
+        integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"
+        integrity="sha384-aGfk5kvhIq5x1x5YdvCp4upKZYnA8ckafviDpmWEKp4afOZEqOli7gqSnh8I6enH" crossorigin="anonymous">
+        </script>
+    
     
 </head>
 <style>
@@ -243,7 +276,7 @@
     
     
     <script>
-        let shareChoice = true
+        let shareChoice = false
     </script>
     
     
@@ -259,6 +292,11 @@
     <script>let postsnum = 0;</script>
     <div id="side-posttitle" style="display: none;">
         
+    
+    2021春秋杯 新年欢乐赛 部分复现
+    <script>postsnum += 1</script>
+    
+    
     
     CTFWshow DJBCTF大吉杯 部分misc 复现
     <script>postsnum += 1</script>
@@ -402,9 +440,9 @@
         <a onclick="showAaplayer()"><i style="font-size: 20px;"><img
                     src='http://ayanagi.fun/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         <div class="avatar-border">
-            <img src="http://ayanagi.fun/images/avatar.png?v=1612418595886" class="avatar">
+            <img src="http://ayanagi.fun/images/avatar.png?v=1612462014015" class="avatar">
         </div>
-        <div class="sitename">ハルカトオク</div>
+        <div class="sitename">雨霖铃</div>
         <span class="describtion" data-text='["又岂在朝朝暮暮。"]'>&nbsp;</span>
         
         <div class="search">
@@ -544,8 +582,18 @@
             </div>
             <div>
                 
+                <script async
+                    src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/busuanzi.pure.mini.js"></script>
+                <div id="vistornum" style="margin:0">
+                    <span id="busuanzi_container_site_uv">
+                        <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i> 总访问量:<span
+                            id="busuanzi_value_site_pv"></span>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <i class="fa fa-user-o" aria-hidden="true"></i> 访问人数:<span id="busuanzi_value_site_uv"></span>
+                    </span>
+                </div>
+                
             </div>
-            <div class="copyright" style="color:white;text-align: center;">Copyright © 2020  备案号: 鄂ICP备...号
+            <div class="copyright" style="color:white;text-align: center;">
             </div>
         </div>
 
@@ -758,7 +806,7 @@
                 <img src="' + talks[i].img + '" class="talkimg"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1612418595886">\
+                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1612462014015">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -771,7 +819,7 @@
             <div class="talk" v-for="t in talks"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1612418595886">\
+                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1612462014015">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -1199,28 +1247,6 @@ http://www.7yue.top/2020-dasctfbjd-miscwp/<br>
 
             </div>
             <hr style="width: 80%;">
-            
-            <div class="sharebtnContainer">
-                <button type="button" class="sharebtn">转载分享</button>
-            </div>
-            <div class="shareContainer">
-                <div class="share" style="height:30px;background: white;">
-                    <a class="qq" href=""><i><img class="shareicon"
-                                src="http://ayanagi.fun/media/images/QQ.png" alt=""></i></a>
-                    <a class="wechat" href=""><i><img class="shareicon"
-                                src="http://ayanagi.fun/media/images/wechat.png" alt=""></i></a>
-                    <a class="weibo" href=""><i><img class="shareicon"
-                                src="http://ayanagi.fun/media/images/weibo.png" alt=""></i></a>
-                    <a class="qzone" href=""><i><img class="shareicon"
-                                src="http://ayanagi.fun/media/images/qzone.png" alt=""></i></a>
-                    <a class="douban" href=""><i><img class="shareicon"
-                                src="http://ayanagi.fun/media/images/douban.png" alt=""></i></a>
-                    <a class="facebook" href=""><i><img class="shareicon"
-                                src="http://ayanagi.fun/media/images/facebook.png" alt=""></i></a>
-                    <a class="twitter" href=""><i><img class="shareicon"
-                                src="http://ayanagi.fun/media/images/twitter.png" alt=""></i></a>
-                </div>
-            </div>
             
             
             <div class="postfooter">
