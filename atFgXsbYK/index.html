@@ -440,7 +440,7 @@
         <a onclick="showAaplayer()"><i style="font-size: 20px;"><img
                     src='http://ayanagi.fun/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         <div class="avatar-border">
-            <img src="http://ayanagi.fun/images/avatar.png?v=1612462014015" class="avatar">
+            <img src="http://ayanagi.fun/images/avatar.png?v=1613932299793" class="avatar">
         </div>
         <div class="sitename">雨霖铃</div>
         <span class="describtion" data-text='["又岂在朝朝暮暮。"]'>&nbsp;</span>
@@ -806,7 +806,7 @@
                 <img src="' + talks[i].img + '" class="talkimg"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1612462014015">\
+                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1613932299793">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -819,7 +819,7 @@
             <div class="talk" v-for="t in talks"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1612462014015">\
+                        <img class="intro1" src="http://ayanagi.fun/images/avatar.png?v=1613932299793">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -1189,7 +1189,7 @@
             </div>
             <div class="postinfo-detail">
                 <div class="postdate"><i class="fa fa-calendar"></i>2020-11-23</div>
-                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 4 min read</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 5 min read</div>
                 <div class="posttag">
                     
                     <a data-pjax href="http://ayanagi.fun/tag/CTF/" class="postlink">
@@ -1236,37 +1236,43 @@
 <p>ctfshow群文件自行下载(超不负责任的)</p>
 <h2 id="outguess">outguess</h2>
 <p>kali下</p>
-<pre><code>apt-get install outguess
+<pre><code class="language-shell">git clone https://github.com.cnpmjs.org/crorvick/outguess
+</code></pre>
+<p>然后在outguess文件夹下打开终端</p>
+<pre><code class="language-shell">./configure &amp;&amp; make &amp;&amp; make install
 </code></pre>
 <h2 id="stegpy">stegpy</h2>
 <p>kali下</p>
-<pre><code>pip3 install stegpy
+<pre><code class="language-shell">pip3 install stegpy
 </code></pre>
 <h2 id="zsteg">zsteg</h2>
 <p>安装zsteg需要使用gem命令，所以首先更换rubygems源。</p>
-<pre><code>gem sources --remove https://rubygems.org/
+<pre><code class="language-shell">gem sources --remove https://rubygems.org/
 gem sources --add https://gems.ruby-china.com/
 gem sources -l
 </code></pre>
 <p>安装</p>
-<pre><code>git clone https://github.com/zed-0xff/zsteg
+<pre><code class="language-shell">git clone https://github.com/zed-0xff/zsteg
 cd zsteg/
 gem install zsteg
 </code></pre>
 <h2 id="lsb">lsb</h2>
-<pre><code>git clone https://github.com/livz/cloacked-pixel
+<pre><code class="language-shell">git clone https://github.com/livz/cloacked-pixel
 </code></pre>
 <h2 id="f5隐写">F5隐写</h2>
-<pre><code>git clone https://github.com/matthewgao/F5-steganography
+<pre><code class="language-shell">git clone https://github.com/matthewgao/F5-steganography
 </code></pre>
 <h2 id="gaps拼图">gaps拼图</h2>
-<pre><code>git clone https://github.com/nemanja-m/gaps.git
+<pre><code class="language-shell">git clone https://github.com/nemanja-m/gaps.git
 cd gaps
 pip install -r requirements.txt
 apt-get install python-tk
 pip install -e .
 </code></pre>
 <p>这里说一下，python-tk如果你有使用过cloacked-pixel脚本的话是已经装好了的，不过再输一次安装指令也无所谓。</p>
+<h1 id="盲水印blindwater-mark">盲水印BlindWater-Mark</h1>
+<pre><code class="language-shell">git clone https://github.com.cnpmjs.org/chishaxie/BlindWaterMark
+</code></pre>
 <h1 id="压缩包篇">压缩包篇</h1>
 <h2 id="archpr">archpr</h2>
 <p>https://www.52pojie.cn/thread-467392-1-1.html</p>
@@ -1298,13 +1304,13 @@ https://www.kali.org/downloads/<br>
 <h2 id="将pip永久更换成国内源">将pip永久更换成国内源</h2>
 <p>由于kali里使用代理比较麻烦，pip的原始来源是非常慢的，故采用国内源来获取python的包。<br>
 操作如下</p>
-<pre><code>cd
+<pre><code class="language-shell">cd
 mkdir .pip
 cd .pip
 vim pip.conf
 </code></pre>
 <p>终端界面会变得稍微有些不一样，然后复制如下内容</p>
-<pre><code>[global]
+<pre><code class="language-shell">[global]
 index-url=http://pypi.douban.com/simple
 trusted-host = pypi.douban.com 
 </code></pre>
@@ -1312,11 +1318,19 @@ trusted-host = pypi.douban.com
 <h2 id="git-clone源使用国内镜像站">git clone源使用国内镜像站</h2>
 <p>在clone某个项目的时候的github.com更换成github.com.cnpmjs.org<br>
 例如</p>
-<pre><code>git clone https://github.com/beurtschipper/Depix
+<pre><code class="language-shell">git clone https://github.com/beurtschipper/Depix
 </code></pre>
 <p>我们改用</p>
 <pre><code>git clone https://github.com.cnpmjs.org/beurtschipper/Depix
 </code></pre>
+<h2 id="volatility">Volatility</h2>
+<p>windows下载<br>
+http://downloads.volatilityfoundation.org/releases/2.6/volatility_2.6_lin64_standalone.zip<br>
+然后解压，之后的文件夹扔进kali，修改一下文件名为volatility更方便运行<br>
+以后要运行的时候在文件夹下打开终端</p>
+<pre><code class="language-shell">./volatility ~
+</code></pre>
+<p>~为各种参数</p>
 
             </div>
             <hr style="width: 80%;">
@@ -1396,6 +1410,7 @@ trusted-host = pypi.douban.com
 <li><a href="#gaps%E6%8B%BC%E5%9B%BE">gaps拼图</a></li>
 </ul>
 </li>
+<li><a href="#%E7%9B%B2%E6%B0%B4%E5%8D%B0blindwater-mark">盲水印BlindWater-Mark</a></li>
 <li><a href="#%E5%8E%8B%E7%BC%A9%E5%8C%85%E7%AF%87">压缩包篇</a>
 <ul>
 <li><a href="#archpr">archpr</a></li>
@@ -1422,6 +1437,7 @@ trusted-host = pypi.douban.com
 <ul>
 <li><a href="#%E5%B0%86pip%E6%B0%B8%E4%B9%85%E6%9B%B4%E6%8D%A2%E6%88%90%E5%9B%BD%E5%86%85%E6%BA%90">将pip永久更换成国内源</a></li>
 <li><a href="#git-clone%E6%BA%90%E4%BD%BF%E7%94%A8%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E7%AB%99">git clone源使用国内镜像站</a></li>
+<li><a href="#volatility">Volatility</a></li>
 </ul>
 </li>
 </ul>
