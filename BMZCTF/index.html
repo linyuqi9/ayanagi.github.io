@@ -1,0 +1,535 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BMZCTF misc 随手部分wp | 雨霖铃</title>
+<meta name="description" content="又岂在朝朝暮暮。" />
+<link rel="shortcut icon" href="http://ayanagi.fun/favicon.ico">
+<link rel="stylesheet" href="http://ayanagi.fun/styles/main.css">
+
+<script src="http://ayanagi.fun/media/js/jquery.min.js"></script>
+<script src="http://ayanagi.fun/media/js/masonry.pkgd.min.js"></script>
+<script src="http://ayanagi.fun/media/js/aos.js"></script>
+<script src="http://ayanagi.fun/media/js/pace.min.js"></script>
+<script src="http://ayanagi.fun/media/js/view-image.min.js"></script>
+<script src="http://ayanagi.fun/media/js/jquery.magnific-popup.min.js"></script>
+<script src="http://ayanagi.fun/media/js/functions.js"></script>
+    <meta name="referrer" content="never">
+    <meta name="description" content="刷的时候随手就写了，但是刷着刷着又懒得写了。于是就这样吧
+2018 hackergame Word 文档
+直接把文档binwalk了，直接看到flag.txt
+memory
+内存镜像文件，题目的描述是：分析内存镜像,破解管理员的登录密码,f..." />
+    <meta name="keywords" content="CTF" />
+    <script src="http://ayanagi.fun/media/js/waterfall.min.js"></script>
+    <script src="http://ayanagi.fun/media/js/prism.min.js"></script>
+  </head>
+  <body>
+            <header id="header" class="grid-container">
+        <!-- start: .menu-wrapper -->
+        <div class="menu-mobile"> 
+          <i class="fa fa-reorder"></i>
+        </div>
+        <div class="menu-wrapper">
+          <div class="">
+            <div class="logo">
+              <a href="http://ayanagi.fun"><img src="\media\images\custom-headerLogo.png" alt=""></a>
+            </div>
+            <!-- start: .main-nav -->
+
+            <nav class="main-nav grid-container grid-parent">
+              <ul id="menu-header" class="menu gradient-effect">
+                <li class=""><a href="http://ayanagi.fun" class="menu">首页</a></li>
+                
+                  <li class="" >
+                    <a href="http://ayanagi.fun/tag/CTF" class="menu">
+                      CTF
+                    </a>
+                  </li>
+                
+                  <li class="" >
+                    <a href="http://ayanagi.fun/tag/Python" class="menu">
+                      Python学习
+                    </a>
+                  </li>
+                
+                  <li class="" >
+                    <a href="http://ayanagi.fun/tag/ACG" class="menu">
+                      亚文化
+                    </a>
+                  </li>
+                
+                  <li class="" >
+                    <a href="http://ayanagi.fun/tag/PCB" class="menu">
+                      硬件
+                    </a>
+                  </li>
+                
+                  <li class="" >
+                    <a href="http://ayanagi.fun/tag/Cooking" class="menu">
+                      厨艺
+                    </a>
+                  </li>
+                
+                  <li class="" >
+                    <a href="http://ayanagi.fun/tag/Win" class="menu">
+                      Windows的折腾
+                    </a>
+                  </li>
+                
+                <li class="search-menu-item hide-on-mobile hide-on-tablet"><a href="#search-lightbox" class="lightbox mfp-inline"><i class="fa fa-search-line"></i></a></li>
+              </ul>
+            </nav>
+            <a href="#search-lightbox" class="lightbox epcl-search-button mfp-inline hide-on-tablet hide-on-desktop"><i class="fa fa-search-line"></i></a>
+            <!-- end: .main-nav -->
+            <div class="clear"></div>
+            <div class="border hide-on-tablet hide-on-mobile"></div>
+          </div>    
+          <div class="clear"></div>
+        </div>
+        <!-- end: .menu-wrapper -->
+        <div class="clear"></div>
+      </header>
+      <div class="hide-on-mobile hide-on-tablet hide-on-desktop">
+        <div id="search-lightbox" class="grid-container grid-small grid-parent mfp-hide">
+          <div class="search-wrapper section">
+            <form id="gridea-search-form" data-update="1614055230295" action="/search/index.html" class="search-form" _lpchecked="1">
+              <input type="text" name="q" id="s" value="" class="search-field" placeholder="搜点啥..." aria-label="搜点啥..." required="">
+              <button type="submit" class="submit" aria-label="Submit">
+                <i class="fa fa-search-line"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
+
+        <div class="center content">
+          <div class="featured-image cover" style="background-image: url('https://img.imgdb.cn/item/5fbb52dcb18d627113ddef86.png');">
+            <div class="meta top"> 
+              <time class="meta-info" style="float:left;" datetime="2021-02-23"><i class="fa fa-calendar"></i><span class="lately">6 分钟前</span></time>
+              
+              <a href="http://ayanagi.fun/BMZCTF/#comments" class="comments meta-info" title="">
+                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/BMZCTF/"> </span>
+              </a>
+              <span id="/BMZCTF/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
+              
+            </div>
+            <div class="info">
+              <div class="tags ">
+                
+                      <a href="http://ayanagi.fun/tag/CTF/" class="ctag ctag-0 ctag-CTF" aria-label="">CTF</a>
+                    
+              </div>
+              <h1 class="title ularge white bold">BMZCTF misc 随手部分wp</h1>
+            </div>
+          </div>
+        </div>  
+
+        <div class="epcl-page-wrapper">
+          <div class="left-content grid-70 np-mobile">
+            <article class="main-article post">
+              <section class="post-content">
+                <div class="text">
+                  <p>刷的时候随手就写了，但是刷着刷着又懒得写了。于是就这样吧</p>
+<h1 id="2018-hackergame-word-文档">2018 hackergame Word 文档</h1>
+<p>直接把文档binwalk了，直接看到<code>flag.txt</code></p>
+<h1 id="memory">memory</h1>
+<p>内存镜像文件，题目的描述是：分析内存镜像,破解管理员的登录密码,flag为明文密码的MD5值</p>
+<p>使用volatility</p>
+<pre><code class="language-shell">volatility -f memory imageinfo
+</code></pre>
+<p>先查看镜像的大概信息，发现<code>suggested profile</code>是<code>WinXPSP2x86,WinXPSP3x86 (Instantiated with WinXPSP2x86)</code>使用hashdump命令把内存中所有用户的hash全部dump出来</p>
+<pre><code class="language-shell">volatility -f memory --profile=WinXPSP2x86 hashdump
+</code></pre>
+<p>得到三行类似于shadow一样的密码串，都复制下来保存成1.txt，使用john爆破</p>
+<pre><code class="language-shell">john --wordlist=/usr/share/john/password.lst --rules --format=NT 1.txt
+</code></pre>
+<p><code>--wordlist</code>是字典模式，<code>--rules</code> 是稍微变化的规则，其实不填也行，默认就是。<code>--format</code>是预定义密码破解的类型，有很多，可以通过<code>john --list=formats</code>查看，这里使用了NT类型</p>
+<p>得到administrator的密码是<code>123456789</code>，md5加密包上flag{}</p>
+<h1 id="misc_snake">misc_snake</h1>
+<p>附件的解压密码使用ook解密</p>
+<p>解压后3个文件：<code>process</code>、<code>data</code>、<code>data.jpg</code></p>
+<p>全丢进winhex查看，process是明文的python代码，后缀改成py打开就能发现加密的原理</p>
+<p>对照着写一个解密脚本</p>
+<pre><code class="language-python">with open ('snake.jpg','wb') as flag:
+    with open('data.jpg','rb') as f:
+        for i in f.read():
+            if (i % 2 == 0):
+                i = (i+1) ^ 128
+            else:
+                i = (i-1) ^128
+            i = bytes([i])
+            flag.write(i)
+</code></pre>
+<p>得到snake.jpg，使用stegsolve切滤镜可以看到加密方式是serpent，google一个serpent在线解密发现需要密钥，密钥应该就从图片里找，steghide查看到有隐写一个key.txt，</p>
+<pre><code class="language-shell">steghide extract -sf snake.jpg
+</code></pre>
+<p>得到key:<code>VivaLaVida</code>，去http://serpent.online-domain-tools.com/解密，下载解密后的文件，内容是只有w和b组成的文本，能想到w是white，b是black，批量替换，w为1，b为0，而且有40000个字符，那就是200*200的正方形，编写脚本绘制图片</p>
+<pre><code class="language-python">from PIL import Image
+with open (&quot;1.txt&quot;,'r') as d:
+	flag = Image.new('L',(200,200))
+	plain = d.read()
+	i = 0
+	for x in range(200):
+		for y in range(200):
+			if (plain[i] == '0'):
+				flag.putpixel([x,y],0)
+			else:
+				flag.putpixel([x,y],255)
+			i += 1
+	flag.show()
+</code></pre>
+<p>得到一个二维码，扫码得flag</p>
+<h1 id="misc_tiga">MISC_tiga</h1>
+<p>解压，一个加密的压缩包和一段文本，应该是零宽，但是原来的零宽网站解出来的text是乱码，找了个好点的零宽解密站点https://yuanfux.github.io/zero-width-web/</p>
+<p>得到解压密码，解出第二个压缩包和一张图片，压缩包里有一个加密的压缩包和一个装着好些password.txt的文件夹，CRC32爆破，抄来的脚本</p>
+<pre><code class="language-python">import binascii
+import string
+def crack_crc():
+    print('-------------Start Crack CRC-------------')
+    crc_list = [0x14433530, 0xaf251007, 0xd554e7b6, 0xebb3156, 0xbb474d49, 0x2cb8a39b, 0x75fe76f0]
+    comment = ''
+    chars = string.printable
+    for crc_value in crc_list:
+        for char1 in chars:
+            for char2 in chars:
+                for char3 in chars:
+                    res_char = char1 + char2 + char3
+                    char_crc = binascii.crc32(res_char.encode())
+                    calc_crc = char_crc &amp; 0xffffffff
+                    if calc_crc == crc_value:
+                        print('[+] {}: {}'.format(hex(crc_value),res_char))
+                        comment += res_char
+    print('-----------CRC Crack Completed-----------')
+    print('Result: {}'.format(comment))
+if __name__ == '__main__':
+    crack_crc()
+</code></pre>
+<p>密码<code>T&amp;hg%WL0^rm@c!VK$xEt~</code>，图片丢winhex在尾巴看到hint:加密压缩包的密码是10位数字，使用掩码爆破，<code>2001701725</code></p>
+<p>得到<code>youcanalso.jpg</code>和<code>flag.zip</code>，压缩包里有<code>youcanalso.jpg</code>，那么就是明文攻击了，把<code>youcanalso.jpg</code>添加成压缩包，CRC32值和压缩包里的相同，开始攻击，这里要注意一下，winrar压缩是无法明文攻击的，需要使用bandzip来压缩才可以。</p>
+<p>出来密码<code>1amT1G@</code>，得到<code>flag.txt</code>内容是504B开头的串，粘贴进010editor保存为zip，一看是word类型的文件，改后缀为docx，打开发现好几页base加密，估计是全家桶，使用basecrack的m模式全解出来</p>
+<pre><code class="language-shell">python basecrack.py --magic
+</code></pre>
+<p>然后粘贴word的内容</p>
+<p><code>flag{8fa3e8c4-0121-4f2a-a7f0-0a60032e3763}</code></p>
+<h1 id="pcap">pcap</h1>
+<p>题目要求分析dno3.0协议的流量，wireshark打开，先筛出来，查看</p>
+<p><code>Distributed Network Protocol 3.0&gt; Application Layer&gt;RESPONSE Data OBjects&gt; Object(s): 32-Bit Counter Change Event...&gt; Point Number 0(Quality: Online), Count:102....&gt;Counter(32 bit):102</code></p>
+<p>这个102转换成字符 就是f，对应的数据包长度是91，按照数据包长度排序，按顺序查看每个数据包能找到对应位置有相应的字符，一个个找f、l、a、g....拼起来就得到了flag。</p>
+<h1 id="pcap_analysis">pcap_analysis</h1>
+<p>要求分析modbus流量，筛选之后右键追踪流，竖着读flag拼起来就行</p>
+<h1 id="sdnisc2020_简单数据包">SDNISC2020_简单数据包</h1>
+<p>一个pcapng文件，wireshark打不开，直接binwalk得到一个zip和一个txt，txt内容解b64得flag(binwalk对付流量包老非预期了)</p>
+<h1 id="多啦a梦">多啦A梦</h1>
+<p>解压得到<code>多啦A梦.jpg</code>和<code>提示.txt</code>，提示：图片是不是少了点什么？</p>
+<p>直接foremost得到一个二维码png，改宽高扫码解b64得flag</p>
+<h1 id="海量的txt文件">海量的txt文件</h1>
+<p>几百个txt文件，打开都是没意义的串，放在一个文件夹里，扔kali</p>
+<pre><code class="language-shell">strings * | grep flag
+</code></pre>
+<p>发现没东西，修改关键词，改成password、pass、key之类的，试到key后找到</p>
+<p><code>key{fe9ff627da72364a}</code></p>
+<h1 id="技协杯-我的密码呢对付高版本加密">技协杯-我的密码呢(对付高版本加密)</h1>
+<p>如果在archpr里压缩包版本不支持，在010editor中把版本改成0就行了</p>
+<h1 id="句末大佬的lsb">句末大佬的LSB</h1>
+<p>一张png，复现的时候题目没描述，应该是用cloacked-pixel的lsb脚本，但是没出来。查wp 密码需要社工到句末师傅的姓氏，chen</p>
+<pre><code class="language-shell">python lsb.py extract jumo.png flag.txt chen
+</code></pre>
+<p><code>HEBTUCTF{wuinoknadsflmladflnef}</code></p>
+<h1 id="日志审计">日志审计</h1>
+<p>下载附件logcheck.log打开找到盲注的记录如下</p>
+<pre><code>192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C1%2C1%29%29%3D102--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C2%2C1%29%29%3D108--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C3%2C1%29%29%3D97--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C4%2C1%29%29%3D103--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C5%2C1%29%29%3D123--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C6%2C1%29%29%3D109--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C7%2C1%29%29%3D97--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C8%2C1%29%29%3D121--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C9%2C1%29%29%3D105--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C10%2C1%29%29%3D121--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C11%2C1%29%29%3D97--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C12%2C1%29%29%3D104--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C13%2C1%29%29%3D101--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C14%2C1%29%29%3D105--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C15%2C1%29%29%3D49--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C16%2C1%29%29%3D57--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C17%2C1%29%29%3D54--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C18%2C1%29%29%3D53--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C19%2C1%29%29%3D97--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C20%2C1%29%29%3D101--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C21%2C1%29%29%3D55--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C22%2C1%29%29%3D53--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C23%2C1%29%29%3D54--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C24%2C1%29%29%3D57--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+192.168.0.1 - - [13/Oct/2018:12:38:14 +0000] &quot;GET /flag.php?user=hence%27%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28secret%20AS%20CHAR%29%2C0x20%29%20FROM%20haozi.secrets%20ORDER%20BY%20secret%20LIMIT%200%2C1%29%2C38%2C1%29%29%3D125--%20pZaF HTTP/1.1&quot; 200 327 &quot;-&quot; &quot;sqlmap/1.2#pip (http://sqlmap.org)&quot;
+</code></pre>
+<p>提取出来保存为data.txt，脚本解码处理</p>
+<pre><code class="language-python">from urllib.parse import unquote
+
+with open('./data.txt') as f:
+    lines = f.readlines()
+    for line in lines:
+        line = unquote(line)
+        line = line[line.find('))=')+3:line.find('--')]
+        print(chr(int(line)),end=&quot;&quot;)
+</code></pre>
+<p>脚本的功能是读取每一条盲注的记录，并且url解码处理，使用find方法去掉无关的字符把flag输出出来</p>
+<p><code>flag{mayiyahei1965ae7569}</code></p>
+<h1 id="神秘压缩包">神秘压缩包</h1>
+<p>解压，得到一个压缩包和一个txt，txt内容是base64转图片，得到解压密码：<code>asdfghjkl</code></p>
+<p>解压得到160张二维码图片，使用<code>微微二维码</code>批量扫描生成一个excel，提取其中内容，都是0和1，二进制转字符串得到flag</p>
+<h1 id="赢战2019">赢战2019</h1>
+<p>下载附件，一个jpg，丢winhex看，正常尾巴，binwalk看有些图片，foremost出一张二维码，扫出:眉头一皱，发现这张图片没这么简单，stegsolve改滤镜看到flag</p>
+
+                </div>
+                <div class="clear"></div>
+              </section>
+            </article>
+            <div class="clear"></div>
+
+            <section class="related section">
+              
+              
+              <article class="next grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://img.imgdb.cn/item/5fbb532eb18d627113de103a.png');"></div>
+                 <a href="http://ayanagi.fun/2021chunqiuNew/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2021-02-05">2021-02-05</time>
+                  <h4 class="title white no-margin">2021春秋杯 新年欢乐赛 部分复现</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="http://ayanagi.fun/media/images/right-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+
+                <div class="clear"></div>
+            </section>
+
+              <div class="clear"></div>
+              
+            
+              <div id="comments" class="bg-white hosted ">
+                <div class="clear"></div>
+<script>
+jQuery(document).ready(function($){
+    $('.vemoji-btn').text('😀');
+    $("#comments").on('click', 'span.vat',function(){
+        $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
+        $('textarea#veditor').focus();
+    })
+    if(window.location.hash){
+        var checkExist = setInterval(function() {
+            if ($(window.location.hash).length) {
+                $('html, body').animate({scrollTop: $(window.location.hash).offset().top-200}, 600);
+                clearInterval(checkExist);
+            }
+        }, 100);
+    }
+})
+</script>
+
+              </div>
+            
+
+            </div>
+          </div>
+      </main>
+
+          <footer id="footer" class="grid-container">
+        <div class="widgets row gradient-effect">
+            <div class="default-sidebar border-effect">
+              <div class="grid-33 tablet-grid-50 mobile-grid-100">
+                <section id="tag_cloud-2" class="widget widget_epcl_posts_thumbs underline-effect">
+                  <h4 class="widget-title title white bordered">最新文章</h4>
+                  
+                  
+                  <article class="item post-0 post type-post status-publish format-standard has-post-thumbnail hentry">
+                    <a href="http://ayanagi.fun/BMZCTF/" class="thumb hover-effect">
+                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://img.imgdb.cn/item/5fbb52dcb18d627113ddef86.png');"></span>
+                    </a>
+                    <div class="info gradient-effect">
+                      <time datetime="2021-02-23">2021-02-23</time>
+                      <h4 class="title usmall">
+                        <a href="http://ayanagi.fun/BMZCTF/">BMZCTF misc 随手部分wp</a>
+                      </h4>
+                    </div>
+                    <div class="clear"></div>
+                  </article>
+                  
+                  
+                  
+                  <article class="item post-1 post type-post status-publish format-standard has-post-thumbnail hentry">
+                    <a href="http://ayanagi.fun/2021chunqiuNew/" class="thumb hover-effect">
+                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://img.imgdb.cn/item/5fbb532eb18d627113de103a.png');"></span>
+                    </a>
+                    <div class="info gradient-effect">
+                      <time datetime="2021-02-05">2021-02-05</time>
+                      <h4 class="title usmall">
+                        <a href="http://ayanagi.fun/2021chunqiuNew/">2021春秋杯 新年欢乐赛 部分复现</a>
+                      </h4>
+                    </div>
+                    <div class="clear"></div>
+                  </article>
+                  
+                  
+                  
+                  <article class="item post-2 post type-post status-publish format-standard has-post-thumbnail hentry">
+                    <a href="http://ayanagi.fun/CTFshowDJB/" class="thumb hover-effect">
+                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://img.imgdb.cn/item/5fbb52b6b18d627113dde43b.png');"></span>
+                    </a>
+                    <div class="info gradient-effect">
+                      <time datetime="2021-01-25">2021-01-25</time>
+                      <h4 class="title usmall">
+                        <a href="http://ayanagi.fun/CTFshowDJB/">CTFWshow DJBCTF大吉杯 部分misc 复现</a>
+                      </h4>
+                    </div>
+                    <div class="clear"></div>
+                  </article>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  <div class="clear"></div>
+                </section>
+              </div>
+
+              <div class="grid-33 tablet-grid-50 mobile-grid-100">
+                <section id="tag_cloud-2" class="widget widget_tag_cloud underline-effect">
+                  <h4 class="widget-title title white bordered">标签云</h4>
+                  <div class="tagcloud">
+                    
+                      <a href="http://ayanagi.fun/tag/CTF/" class="ctag ctag-0 ctag-CTF" aria-label="">CTF</a>
+                    
+                      <a href="http://ayanagi.fun/tag/ACG/" class="ctag ctag-1 ctag-ACG" aria-label="">亚文化</a>
+                    
+                      <a href="http://ayanagi.fun/tag/Win/" class="ctag ctag-2 ctag-Win" aria-label="">Windows</a>
+                    
+                      <a href="http://ayanagi.fun/tag/Tech/" class="ctag ctag-3 ctag-Tech" aria-label="">技术力</a>
+                    
+                      <a href="http://ayanagi.fun/tag/PCB/" class="ctag ctag-4 ctag-PCB" aria-label="">硬件</a>
+                    
+                      <a href="http://ayanagi.fun/tag/Python/" class="ctag ctag-5 ctag-Python" aria-label="">Python学习</a>
+                    
+                  </div>
+                  <div class="clear"></div>
+                </section>
+              </div>
+
+              <div class="grid-33 tablet-grid-50 mobile-grid-100">
+                <section id="epcl_about-2" class="widget widget_epcl_about underline-effect">
+                  <h4 class="widget-title title white bordered">关于我</h4>
+                  <div class="avatar">
+                    <a href="" class="translate-effect thumb"><span class="fullimage cover" style="background-image: url(http://ayanagi.fun/images/avatar.png);"></span></a>
+                  </div>
+                  <div class="info">
+                    <h4 class="title small author-name gradient-effect no-margin"><a href="">雨霖铃</a></h4>
+                    <p class="founder">又岂在朝朝暮暮。</p>
+                    <div class="social">
+                      
+                          
+                            <a href="https://github.com/linyuqi9" class="translate-effect" target="_blank"><i class="fa fa-github"></i></a>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </div> 
+                  </div>
+                  <div class="clear"></div>
+                  </section>
+              </div>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="logo">
+          <a href="http://ayanagi.fun"><img src="\media\images\custom-footerLogo.ico" alt=""></a>
+        </div>
+        <p class="published border-effect">
+          ©2019 共 25 篇文章
+          <br/>
+          Theme <a href="https://gridea.dev/" target="_blank">「breek」</a> Powered by <a href="https://gridea.dev/" target="_blank">「Gridea」</a>
+        </p>
+        
+        <a href="javascript:void(0)" id="back-to-top" class="epcl-button dark" style="display:none">
+          <i class="fa fa-arrow"></i>
+        </a>
+    </footer>
+    
+    <div class="clear"></div>
+
+        
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/valine/1.3.10/Valine.Pure.min.js"></script>
+<script>
+    new Valine({
+        el: '#comments',
+        appId: '8AAnks5Jb1qDQBqUJl3pyQJM-gzGzoHsz' ,
+        appKey: 'UYJEqd6hY9uUJK2O7uLUEXO6',
+        pageSize: 30,
+        placeholder: '既然来了，那就留个痕迹吧~',
+        visitor: true // 阅读量统计
+    })
+</script>
+    
+
+      
+    <script src="http://ayanagi.fun/media/js/functions-post.js"></script>
+
+    </div>
+    <!-- end: #wrapper -->
+  </body>
+</html>
