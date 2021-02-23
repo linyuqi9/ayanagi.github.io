@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://ayanagi.fun</id>
     <title>雨霖铃</title>
-    <updated>2021-02-23T07:16:35.981Z</updated>
+    <updated>2021-02-23T07:19:11.484Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://ayanagi.fun"/>
     <link rel="self" href="http://ayanagi.fun/atom.xml"/>
@@ -167,15 +167,6 @@ with open('./data.txt') as f:
 <p>解压得到160张二维码图片，使用<code>微微二维码</code>批量扫描生成一个excel，提取其中内容，都是0和1，二进制转字符串得到flag</p>
 <h1 id="赢战2019">赢战2019</h1>
 <p>下载附件，一个jpg，丢winhex看，正常尾巴，binwalk看有些图片，foremost出一张二维码，扫出:眉头一皱，发现这张图片没这么简单，stegsolve改滤镜看到flag</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2021春秋杯 新年欢乐赛 部分复现]]></title>
-        <id>http://ayanagi.fun/2021chunqiuNew/</id>
-        <link href="http://ayanagi.fun/2021chunqiuNew/">
-        </link>
-        <updated>2021-02-04T18:04:43.000Z</updated>
-        <content type="html"><![CDATA[<p>todo</p>
 ]]></content>
     </entry>
     <entry>
@@ -923,6 +914,15 @@ http://downloads.volatilityfoundation.org/releases/2.6/volatility_2.6_lin64_stan
         </link>
         <updated>2020-11-23T06:44:23.000Z</updated>
         <content type="html"><![CDATA[<p>依然是占坑，但是必然会写</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[主板的探讨]]></title>
+        <id>http://ayanagi.fun/motherboard/</id>
+        <link href="http://ayanagi.fun/motherboard/">
+        </link>
+        <updated>2020-11-23T06:41:46.000Z</updated>
+        <content type="html"><![CDATA[<p>占坑，一直很喜欢各大家的主板，真的非常百花齐放了</p>
 ]]></content>
     </entry>
 </feed>
