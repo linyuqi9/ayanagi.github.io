@@ -9625,3 +9625,8 @@ photos .photo:last-child {
   border-top: 1px solid #aaa;
   padding-top: 8px;
 }
+
+      body {
+        background-image: url("https://img.imgdb.cn/item/5fbb525bb18d627113ddc966.png");;
+      }
+    
