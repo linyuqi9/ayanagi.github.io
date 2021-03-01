@@ -1,8 +1,8 @@
 <html>
   <head>
-  <meta charset="utf-8" />
+    <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>标签列表 | 雨霖铃</title>
+<title>特效轴入门 | 雨霖铃</title>
 <meta name="description" content="又岂在朝朝暮暮。" />
 <link rel="shortcut icon" href="http://ayanagi.fun/favicon.ico">
 <link rel="stylesheet" href="http://ayanagi.fun/styles/main.css">
@@ -14,11 +14,15 @@
 <script src="http://ayanagi.fun/media/js/view-image.min.js"></script>
 <script src="http://ayanagi.fun/media/js/jquery.magnific-popup.min.js"></script>
 <script src="http://ayanagi.fun/media/js/functions.js"></script>
+    <meta name="referrer" content="never">
+    <meta name="description" content="aegisub文件结构
+进入到aeg的目录，关注的是automation、catalog、locale和csri文件夹，config.json、hotkey.json
+automation : 文件夹下存放一些关于自动化的插件(autolo..." />
+    <meta name="keywords" content="亚文化,技术力" />
+    <script src="http://ayanagi.fun/media/js/waterfall.min.js"></script>
+    <script src="http://ayanagi.fun/media/js/prism.min.js"></script>
   </head>
   <body>
-    <!-- start: #wrapper -->
-    <div class="wrapper">
-      
             <header id="header" class="grid-container">
         <!-- start: .menu-wrapper -->
         <div class="menu-mobile"> 
@@ -97,34 +101,131 @@
         </div>
       </div>
 
-      <main id="tags" class="main fullcover no-sidebar content">
-        <div class="grid-container module-wrapper enable-masonry aos-init aos-animate" data-aos="fade-up">
+      <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
+
+        <div class="center content">
+          <div class="featured-image cover" style="background-image: url('https://img.imgdb.cn/item/5fbb534fb18d627113de1a83.png');">
+            <div class="meta top"> 
+              <time class="meta-info" style="float:left;" datetime="2021-02-24"><i class="fa fa-calendar"></i><span class="lately">5 天前</span></time>
+              
+              <a href="http://ayanagi.fun/ROASTMEAT/#comments" class="comments meta-info" title="">
+                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/ROASTMEAT/"> </span>
+              </a>
+              <span id="/ROASTMEAT/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
+              
+            </div>
+            <div class="info">
+              <div class="tags ">
+                
+                      <a href="http://ayanagi.fun/tag/ACG/" class="ctag ctag-0 ctag-ACG" aria-label="">亚文化</a>
+                    
+                      <a href="http://ayanagi.fun/tag/Tech/" class="ctag ctag-1 ctag-Tech" aria-label="">技术力</a>
+                    
+              </div>
+              <h1 class="title ularge white bold">特效轴入门</h1>
+            </div>
+          </div>
+        </div>  
+
         <div class="epcl-page-wrapper">
-          <div class="left-content grid-70 np-mobile widget_epcl_related_articles">
+          <div class="left-content grid-70 np-mobile">
+            <article class="main-article post">
+              <section class="post-content">
+                <div class="text">
+                  <h1 id="aegisub文件结构">aegisub文件结构</h1>
+<p>进入到aeg的目录，关注的是<code>automation</code>、<code>catalog</code>、<code>locale</code>和<code>csri</code>文件夹，<code>config.json</code>、<code>hotkey.json</code><br>
+<strong>automation</strong> : 文件夹下存放一些关于自动化的插件(<code>autoload</code>下)，一些函数库(<code>include</code>下)<br>
+<strong>csri</strong> : 存放字幕滤镜，例如<code>vsfiltermod</code><br>
+<strong>config.json</strong>: 基础设置<br>
+<strong>hotkey.json</strong> : 热键设置文件<br>
+<strong>catalog</strong> : 样式库，存放以.sty结尾的字幕样式文件<br>
+字幕的样式以一条这样的语句构成</p>
+<pre><code>Style: Default,Arial,20,&amp;H00FFFFFFF,&amp;H00FFFFFF,&amp;H000000FF,&amp;H00000000,&amp;H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+</code></pre>
+<p>一些字体字号等不赘述。其中，带<code>&amp;H</code>的是颜色标签，由两部分组成 : 1字节的透明标签和3字节的颜色代码，H代表的是16进制的表头，表示后面的数据是16进制，颜色顺序是B G R。<br>
+颜色标签之后的参数代表的是边距、边框、杂项等内容，在样式编辑器里有对应。</p>
+<p><strong>locale</strong> ： 语言库</p>
+<h1 id="打k插件">打k插件</h1>
+<p>自行安装，后面会用到<br>
+https://blog.csdn.net/Seekladoom/article/details/104235193</p>
+<h1 id="karaoke">Karaoke</h1>
+<p><strong>作用</strong> ： 划分音节和时间<br>
+<strong>规范</strong> ： 标识符 | 标点<code>{\k1}</code><br>
+<strong>k标签</strong> ：<code>{\k$}</code><br>
+<code>{}</code> : aeg标记<code>{}</code>内的内容为特效区，<code>$</code> : 时间划分 单位是1<strong>cs</strong> = 10ms;<br>
+<code>ko</code> : 与k类似，但取消了字幕的边框<br>
+<strong>特殊音节</strong>  : <code>|</code> : 注音</p>
 
-          <div class="widget_tag_cloud tagcloud">
-            
-              <a href="http://ayanagi.fun/tag/CTF/" class="ctag ctag-0 ctag-CTF" aria-label="">CTF</a>
-            
-              <a href="http://ayanagi.fun/tag/ACG/" class="ctag ctag-1 ctag-ACG" aria-label="">亚文化</a>
-            
-              <a href="http://ayanagi.fun/tag/Tech/" class="ctag ctag-2 ctag-Tech" aria-label="">技术力</a>
-            
-              <a href="http://ayanagi.fun/tag/Win/" class="ctag ctag-3 ctag-Win" aria-label="">Windows</a>
-            
-              <a href="http://ayanagi.fun/tag/PCB/" class="ctag ctag-4 ctag-PCB" aria-label="">硬件</a>
-            
-              <a href="http://ayanagi.fun/tag/Python/" class="ctag ctag-5 ctag-Python" aria-label="">Python学习</a>
-            
-          </div>
-        </div>
+                </div>
+                <div class="clear"></div>
+              </section>
+            </article>
+            <div class="clear"></div>
 
-        </div>
+            <section class="related section">
+              
+              <article class="prev grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://img.imgdb.cn/item/5fbb534fb18d627113de1a80.png');"></div>
+                 <a href="http://ayanagi.fun/Hgame2021/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2021-03-01">2021-03-01</time>
+                  <h4 class="title white no-margin">Hgame2021 misc WP+复现</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="http://ayanagi.fun/media/images/left-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+              
+              <article class="next grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://img.imgdb.cn/item/5fbb52dcb18d627113ddef86.png');"></div>
+                 <a href="http://ayanagi.fun/BMZCTF/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2021-02-23">2021-02-23</time>
+                  <h4 class="title white no-margin">BMZCTF misc 随手部分wp</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="http://ayanagi.fun/media/images/right-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+
+                <div class="clear"></div>
+            </section>
+
+              <div class="clear"></div>
+              
+            
+              <div id="comments" class="bg-white hosted ">
+                <div class="clear"></div>
+<script>
+jQuery(document).ready(function($){
+    $('.vemoji-btn').text('😀');
+    $("#comments").on('click', 'span.vat',function(){
+        $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
+        $('textarea#veditor').focus();
+    })
+    if(window.location.hash){
+        var checkExist = setInterval(function() {
+            if ($(window.location.hash).length) {
+                $('html, body').animate({scrollTop: $(window.location.hash).offset().top-200}, 600);
+                clearInterval(checkExist);
+            }
+        }, 100);
+    }
+})
+</script>
+
+              </div>
+            
+
+            </div>
           </div>
-        </div>
       </main>
 
-        <footer id="footer" class="grid-container">
+          <footer id="footer" class="grid-container">
         <div class="widgets row gradient-effect">
             <div class="default-sidebar border-effect">
               <div class="grid-33 tablet-grid-50 mobile-grid-100">
@@ -311,6 +412,9 @@
     })
 </script>
     
+
+      
+    <script src="http://ayanagi.fun/media/js/functions-post.js"></script>
 
     </div>
     <!-- end: #wrapper -->
