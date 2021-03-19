@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>搜索结果 | 雨霖铃</title>
+<title>V&amp;N CTF2021 misc 简要复现 | 雨霖铃</title>
 <meta name="description" content="又岂在朝朝暮暮。" />
 <link rel="shortcut icon" href="http://ayanagi.fun/favicon.ico">
 <link rel="stylesheet" href="http://ayanagi.fun/styles/main.css">
@@ -14,16 +14,16 @@
 <script src="http://ayanagi.fun/media/js/view-image.min.js"></script>
 <script src="http://ayanagi.fun/media/js/jquery.magnific-popup.min.js"></script>
 <script src="http://ayanagi.fun/media/js/functions.js"></script>
-    <script src="/media/gridea-search/fuse.js"></script>
-    <script src="/media/gridea-search/ejs.min.js"></script>
-    <script src="/media/gridea-search/gridea-search.js"></script>
-    <script src="/media/gridea-search/result-template.ejs" type="text/ejs"></script>
-</head>
-
+    <meta name="referrer" content="never">
+    <meta name="description" content="当时懒得折腾。主要是口腔溃疡加上下雨，基金暴跌，心情不是很好。加上各种压力感觉有点力不从心了，也少了以前学习的那份冲劲。
+颓废。
+冰冰好像藏着秘密
+损坏的压缩包一枚，修复解压得FFT.png看图片名应该就是要傅里叶变换取得盲水印了吧，不过一..." />
+    <meta name="keywords" content="CTF" />
+    <script src="http://ayanagi.fun/media/js/waterfall.min.js"></script>
+    <script src="http://ayanagi.fun/media/js/prism.min.js"></script>
+  </head>
   <body>
-    <!-- start: #wrapper -->
-    <div class="wrapper">
-      
             <header id="header" class="grid-container">
         <!-- start: .menu-wrapper -->
         <div class="menu-mobile"> 
@@ -102,22 +102,133 @@
         </div>
       </div>
 
-      <main id="home" class="main fullcover no-sidebar content">
-        <div class="grid-container module-wrapper enable-masonry aos-init aos-animate" data-aos="fade-up">
-        <div class="epcl-page-wrapper">
-          <div class="left-content grid-70 np-mobile widget_epcl_related_articles">
-          <div class="main-article post">
-            <div id="gridea-search-result">
-              <h2 class="searching">搜索中......</h2>
-              <h2 class="no-result" style="display:none">未搜索到相关文章</h2>
+      <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
+
+        <div class="center content">
+          <div class="featured-image cover" style="background-image: url('https://img.imgdb.cn/item/5fbb531bb18d627113de0746.png');">
+            <div class="meta top"> 
+              <time class="meta-info" style="float:left;" datetime="2021-03-17"><i class="fa fa-calendar"></i><span class="lately">2 天前</span></time>
+              
+              <a href="http://ayanagi.fun/VNCTF2021/#comments" class="comments meta-info" title="">
+                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/VNCTF2021/"> </span>
+              </a>
+              <span id="/VNCTF2021/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
+              
+            </div>
+            <div class="info">
+              <div class="tags ">
+                
+                      <a href="http://ayanagi.fun/tag/CTF/" class="ctag ctag-0 ctag-CTF" aria-label="">CTF</a>
+                    
+              </div>
+              <h1 class="title ularge white bold">V&amp;N CTF2021 misc 简要复现</h1>
             </div>
           </div>
+        </div>  
+
+        <div class="epcl-page-wrapper">
+          <div class="left-content grid-70 np-mobile">
+            <article class="main-article post">
+              <section class="post-content">
+                <div class="text">
+                  <p>当时懒得折腾。主要是口腔溃疡加上下雨，基金暴跌，心情不是很好。加上各种压力感觉有点力不从心了，也少了以前学习的那份冲劲。<br>
+颓废。</p>
+<h1 id="冰冰好像藏着秘密">冰冰好像藏着秘密</h1>
+<p>损坏的压缩包一枚，修复解压得<code>FFT.png</code>看图片名应该就是要傅里叶变换取得盲水印了吧，不过一开始没注意就扔进自动机里爆了，出来了个假flag，交上去wa了就没管了。<br>
+理解并抄下FFT脚本</p>
+<pre><code class="language-python">import cv2 as cv #opencv库，对图像处理必备
+import numpy as np #numpy库，同样
+import matplotlib.pyplot as plt #matplotlib库，作图必备
+img = cv.imread('FFT.png', 0) #右键查看图片的时候可以发现只有8位深，直接读为灰度图像
+f = np.fft.fft2(img) #做频率变换
+fshift = np.fft.fftshift(f) #转移像素做幅度谱
+s1 = np.log(np.abs(fshift))#取绝对值：将复数变化成实数取对数的⽬的为了将数据变化到0-255
+plt.subplot(121)
+plt.imshow(img, 'gray')
+plt.title('original')
+plt.subplot(122)
+plt.imshow(s1,'gray')
+plt.title('center')
+plt.show()
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="http://ayanagi.fun/post-images/1616130338869.png" alt="" loading="lazy"></figure>
+<h1 id="do_you_like_rhythm_doctor">Do_you_like_Rhythm_Doctor</h1>
+<p>使用节奏医生编辑器打开文件，节拍分为矩形波形，猜测01组合，一行一行进行，抄下节拍内容二进制转字符<br>
+<code>flag{W31come_V&amp;N_CTF}</code></p>
+<h1 id="interesting_fishing">interesting_fishing</h1>
+<p>套娃蛮多的，主要学习到的知识是eml文件相关、RTF下的unicode编码。<br>
+把bin改为eml，用的是foxemil打开得到图片和压缩包。取得两个文件，图片扔oursecret得到第二部分flag，<br>
+压缩包解压，查看工程文件，发现假flag，生成文件后报错发现powershell命令执行，去找Browse.VC.db，文件夹选项里把隐藏文件显示打开，在<code>\giveyourflag\giveyourflag\x64\Debug</code>目录下可以看到<code>Browse.VC.db</code>文件，记事本打开，将里面的b64串解密，得到</p>
+<pre><code>\u-65432?\u-65420?\u-65420?\u-65424?\u-65421?\u-65478?\u-65489?\u-65489?\u-65418?\u-65426?\u-65437?\u-65420?\u-65434?\u-65491?\u-65486?\u-65487?\u-65485?\u-65491?\u-65487?\u-65486?\u-65483?\u-65481?\u-65488?\u-65482?\u-65487?\u-65487?\u-65486?\u-65485?\u-65490?\u-65437?\u-65425?\u-65421?\u-65490?\u-65439?\u-65424?\u-65491?\u-65426?\u-65439?\u-65426?\u-65430?\u-65431?\u-65426?\u-65433?\u-65490?\u-65427?\u-65415?\u-65423?\u-65437?\u-65428?\u-65425?\u-65419?\u-65436?\u-65490?\u-65437?\u-65425?\u-65427?\u-65489?\u-65456?\u-65415?\u-65425?\u-65426?\u-65433?\u-65415?\u-65439?\u-65426?\u-65433?\u-65499?\u-65486?\u-65488?\u-65421?\u-65420?\u-65425?\u-65422?\u-65435?\u-65421?\u-65499?\u-65486?\u-65488?\u-65428?\u-65425?\u-65417?\u-65499?\u-65486?\u-65488?\u-65425?\u-65426?\u-65499?\u-65486?\u-65488?\u-65434?\u-65425?\u-65422?\u-65435?\u-65431?\u-65433?\u-65426?\u-65499?\u-65486?\u-65488?\u-65433?\u-65425?\u-65425?\u-65436?\u-65421?\u-65499?\u-65486?\u-65488?\u-65439?\u-65427?\u-65431?\u-65436?\u-65499?\u-65486?\u-65488?\u-65458?\u-65425?\u-65422?\u-65420?\u-65432?\u-65499?\u-65486?\u-65488?\u-65461?\u-65425?\u-65422?\u-65435?\u-65439?\u-65426?\u-65499?\u-65486?\u-65488?\u-65469?\u-65457?\u-65450?\u-65463?\u-65468?\u-65491?\u-65487?\u-65479?\u-65499?\u-65486?\u-65488?\u-65424?\u-65439?\u-65422?\u-65439?\u-65426?\u-65425?\u-65431?\u-65439?\u-65490?\u-65422?\u-65439?\u-65422?
+</code></pre>
+<p>这是RTF格式下的unicode编码，原理是RTF格式中使⽤\uN?表示⼀个unciode字符。\u后跟⼀个带符号的16位⼗进制整数值接⼀个占位符，⽤？表示。N⼤于32767的话，则表示为负数。解混淆示例如下：<br>
+<code>L&quot;h&quot; == 0x0068 == -(-0x0068) == -(0xFFFF+1-0x68) == -65432=\u-65432?</code><br>
+按照规则转换数据得到一个rar的URL，下载打开右边提示4位数字，rar5压缩方式，使用hashcat或者Accent RAR Password Recovery都可以。<br>
+解压出一个docx，直接改后缀解压，敏感文件hideinfo.xml，winhex看到0宽，记事本复制出来解。<br>
+<code>vnctf{APT_1S_c0M1nG_fr0m_l@z@RuS}</code></p>
+<h1 id="happynewyear">HAPPYNEWYEAR</h1>
+<p>chinese code和谢赫语言密码的编码，使用在线编码全家桶https://www.dcode.fr/zh-CN<br>
+解压得到happynewyear.png，stegpy爆破一把梭，用的是L1师傅做的脚本<br>
+https://github.com/L1near/CTFpics-1/blob/master/webpsteg.py<br>
+<code>VNCTF{HappyNewY3a5}</code></p>
+
+                </div>
+                <div class="clear"></div>
+              </section>
+            </article>
+            <div class="clear"></div>
+
+            <section class="related section">
+              
+              
+              <article class="next grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://img.imgdb.cn/item/5fbb52d1b18d627113ddebd5.png');"></div>
+                 <a href="http://ayanagi.fun/ACTF2021/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2021-03-14">2021-03-14</time>
+                  <h4 class="title white no-margin">ACTF2021Misc 复现&amp;wp</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="http://ayanagi.fun/media/images/right-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+
+                <div class="clear"></div>
+            </section>
+
+              <div class="clear"></div>
+              
+            
+              <div id="comments" class="bg-white hosted ">
+                <div class="clear"></div>
+<script>
+jQuery(document).ready(function($){
+    $('.vemoji-btn').text('😀');
+    $("#comments").on('click', 'span.vat',function(){
+        $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
+        $('textarea#veditor').focus();
+    })
+    if(window.location.hash){
+        var checkExist = setInterval(function() {
+            if ($(window.location.hash).length) {
+                $('html, body').animate({scrollTop: $(window.location.hash).offset().top-200}, 600);
+                clearInterval(checkExist);
+            }
+        }, 100);
+    }
+})
+</script>
+
+              </div>
+            
+
+            </div>
           </div>
-        </div>
-        </div>
       </main>
 
-        <footer id="footer" class="grid-container">
+          <footer id="footer" class="grid-container">
         <div class="widgets row gradient-effect">
             <div class="default-sidebar border-effect">
               <div class="grid-33 tablet-grid-50 mobile-grid-100">
@@ -310,6 +421,9 @@
     })
 </script>
     
+
+      
+    <script src="http://ayanagi.fun/media/js/functions-post.js"></script>
 
     </div>
     <!-- end: #wrapper -->

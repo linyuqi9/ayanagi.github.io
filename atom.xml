@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://ayanagi.fun</id>
     <title>雨霖铃</title>
-    <updated>2021-03-01T13:33:06.144Z</updated>
+    <updated>2021-03-19T07:07:49.096Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://ayanagi.fun"/>
     <link rel="self" href="http://ayanagi.fun/atom.xml"/>
@@ -10,6 +10,157 @@
     <logo>http://ayanagi.fun/images/avatar.png</logo>
     <icon>http://ayanagi.fun/favicon.ico</icon>
     <rights>All rights reserved 2021, 雨霖铃</rights>
+    <entry>
+        <title type="html"><![CDATA[V&N CTF2021 misc 简要复现]]></title>
+        <id>http://ayanagi.fun/VNCTF2021/</id>
+        <link href="http://ayanagi.fun/VNCTF2021/">
+        </link>
+        <updated>2021-03-17T06:19:41.000Z</updated>
+        <content type="html"><![CDATA[<p>当时懒得折腾。主要是口腔溃疡加上下雨，基金暴跌，心情不是很好。加上各种压力感觉有点力不从心了，也少了以前学习的那份冲劲。<br>
+颓废。</p>
+<h1 id="冰冰好像藏着秘密">冰冰好像藏着秘密</h1>
+<p>损坏的压缩包一枚，修复解压得<code>FFT.png</code>看图片名应该就是要傅里叶变换取得盲水印了吧，不过一开始没注意就扔进自动机里爆了，出来了个假flag，交上去wa了就没管了。<br>
+理解并抄下FFT脚本</p>
+<pre><code class="language-python">import cv2 as cv #opencv库，对图像处理必备
+import numpy as np #numpy库，同样
+import matplotlib.pyplot as plt #matplotlib库，作图必备
+img = cv.imread('FFT.png', 0) #右键查看图片的时候可以发现只有8位深，直接读为灰度图像
+f = np.fft.fft2(img) #做频率变换
+fshift = np.fft.fftshift(f) #转移像素做幅度谱
+s1 = np.log(np.abs(fshift))#取绝对值：将复数变化成实数取对数的⽬的为了将数据变化到0-255
+plt.subplot(121)
+plt.imshow(img, 'gray')
+plt.title('original')
+plt.subplot(122)
+plt.imshow(s1,'gray')
+plt.title('center')
+plt.show()
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="http://ayanagi.fun/post-images/1616130338869.png" alt="" loading="lazy"></figure>
+<h1 id="do_you_like_rhythm_doctor">Do_you_like_Rhythm_Doctor</h1>
+<p>使用节奏医生编辑器打开文件，节拍分为矩形波形，猜测01组合，一行一行进行，抄下节拍内容二进制转字符<br>
+<code>flag{W31come_V&amp;N_CTF}</code></p>
+<h1 id="interesting_fishing">interesting_fishing</h1>
+<p>套娃蛮多的，主要学习到的知识是eml文件相关、RTF下的unicode编码。<br>
+把bin改为eml，用的是foxemil打开得到图片和压缩包。取得两个文件，图片扔oursecret得到第二部分flag，<br>
+压缩包解压，查看工程文件，发现假flag，生成文件后报错发现powershell命令执行，去找Browse.VC.db，文件夹选项里把隐藏文件显示打开，在<code>\giveyourflag\giveyourflag\x64\Debug</code>目录下可以看到<code>Browse.VC.db</code>文件，记事本打开，将里面的b64串解密，得到</p>
+<pre><code>\u-65432?\u-65420?\u-65420?\u-65424?\u-65421?\u-65478?\u-65489?\u-65489?\u-65418?\u-65426?\u-65437?\u-65420?\u-65434?\u-65491?\u-65486?\u-65487?\u-65485?\u-65491?\u-65487?\u-65486?\u-65483?\u-65481?\u-65488?\u-65482?\u-65487?\u-65487?\u-65486?\u-65485?\u-65490?\u-65437?\u-65425?\u-65421?\u-65490?\u-65439?\u-65424?\u-65491?\u-65426?\u-65439?\u-65426?\u-65430?\u-65431?\u-65426?\u-65433?\u-65490?\u-65427?\u-65415?\u-65423?\u-65437?\u-65428?\u-65425?\u-65419?\u-65436?\u-65490?\u-65437?\u-65425?\u-65427?\u-65489?\u-65456?\u-65415?\u-65425?\u-65426?\u-65433?\u-65415?\u-65439?\u-65426?\u-65433?\u-65499?\u-65486?\u-65488?\u-65421?\u-65420?\u-65425?\u-65422?\u-65435?\u-65421?\u-65499?\u-65486?\u-65488?\u-65428?\u-65425?\u-65417?\u-65499?\u-65486?\u-65488?\u-65425?\u-65426?\u-65499?\u-65486?\u-65488?\u-65434?\u-65425?\u-65422?\u-65435?\u-65431?\u-65433?\u-65426?\u-65499?\u-65486?\u-65488?\u-65433?\u-65425?\u-65425?\u-65436?\u-65421?\u-65499?\u-65486?\u-65488?\u-65439?\u-65427?\u-65431?\u-65436?\u-65499?\u-65486?\u-65488?\u-65458?\u-65425?\u-65422?\u-65420?\u-65432?\u-65499?\u-65486?\u-65488?\u-65461?\u-65425?\u-65422?\u-65435?\u-65439?\u-65426?\u-65499?\u-65486?\u-65488?\u-65469?\u-65457?\u-65450?\u-65463?\u-65468?\u-65491?\u-65487?\u-65479?\u-65499?\u-65486?\u-65488?\u-65424?\u-65439?\u-65422?\u-65439?\u-65426?\u-65425?\u-65431?\u-65439?\u-65490?\u-65422?\u-65439?\u-65422?
+</code></pre>
+<p>这是RTF格式下的unicode编码，原理是RTF格式中使⽤\uN?表示⼀个unciode字符。\u后跟⼀个带符号的16位⼗进制整数值接⼀个占位符，⽤？表示。N⼤于32767的话，则表示为负数。解混淆示例如下：<br>
+<code>L&quot;h&quot; == 0x0068 == -(-0x0068) == -(0xFFFF+1-0x68) == -65432=\u-65432?</code><br>
+按照规则转换数据得到一个rar的URL，下载打开右边提示4位数字，rar5压缩方式，使用hashcat或者Accent RAR Password Recovery都可以。<br>
+解压出一个docx，直接改后缀解压，敏感文件hideinfo.xml，winhex看到0宽，记事本复制出来解。<br>
+<code>vnctf{APT_1S_c0M1nG_fr0m_l@z@RuS}</code></p>
+<h1 id="happynewyear">HAPPYNEWYEAR</h1>
+<p>chinese code和谢赫语言密码的编码，使用在线编码全家桶https://www.dcode.fr/zh-CN<br>
+解压得到happynewyear.png，stegpy爆破一把梭，用的是L1师傅做的脚本<br>
+https://github.com/L1near/CTFpics-1/blob/master/webpsteg.py<br>
+<code>VNCTF{HappyNewY3a5}</code></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ACTF2021Misc 复现&wp]]></title>
+        <id>http://ayanagi.fun/ACTF2021/</id>
+        <link href="http://ayanagi.fun/ACTF2021/">
+        </link>
+        <updated>2021-03-14T07:09:49.000Z</updated>
+        <content type="html"><![CDATA[<p>面向新生的一个比赛，但是还是没法都做出来，没有以前笨笨的那股冲劲了，其实还是遇到了瓶颈。</p>
+<h1 id="real_way">Real_way</h1>
+<p>思路应该是找到和路径文件夹名顺序相同的flag。懒得做了，直接看wp:<br>
+五层目录，每层目录中有7个文件夹，且每个叶子节点上都有一个 flag.txt 文件，所以总共是16,807 个flag.txt文件夹</p>
+<p>仔细一看就能看出来文件夹的命名都很简单，flag中的密文也很简单，也很有对应关系</p>
+<p>这些个flag文件中只有一个是正确的，何谓正确的呢，就是它密文和它文件所在的路径相同<br>
+编写脚本如下</p>
+<pre><code class="language-python">import os
+import random
+
+m=[]
+for i in range(7):
+    m.append(chr(ord('a')+i))
+
+print(&quot;Êý¾ÝÁ¿£º&quot;+str(m))
+strmap=[]
+flag_map=[]
+for i1 in m:
+    for i2 in m:
+        for i3 in m:
+            for i4 in m:
+                for i5 in m:
+                    temp=i1+'\\'+i2+'\\'+i3+'\\'+i4+'\\'+i5
+                    strmap.append(temp)
+                    temp=i1+i2+i3+i4+i5
+                    flag_map.append(temp)
+#print(strmap)
+
+def makemap(level,list_map):
+    if level&gt;0:
+        level-=1
+        makemap
+
+
+def makedir():
+    for p in strmap:
+        this='D:\\CTF\\QuestsAndWriteUps\\ACTF\\Real_way'
+        #path=os.path.abspath('.')+'\\misc_test\\'+p
+        path=this+'\\ACTF\\'+p
+        os.makedirs(path)
+        temp=open(path+'\\flag.txt','w')
+        temp.write('actf{'+flag_map[random.randint(0, len(strmap)-1)]+'}')
+    
+def checkflag():
+    basepath='D:\\CTF\\QuestsAndWriteUps\\ACTF\\Real_way'
+    #basepath=os.path.abspath('.')
+    ans=[]
+    for i in range(len(strmap)):
+        path=basepath+'\\ACTF\\'+strmap[i]+'\\flag.txt'
+        file=open(path,'r')
+        flag=file.readline()
+        if flag_map[i]==flag[5:flag.find('}')]:
+            #print(flag)
+            ans.append(flag)
+        #else:
+            
+            #print('error ' +flag_map[i]+' : '+flag[5:flag.find('}')])
+            #print(flag[5:flag.find('}')])
+        file.close()
+    return ans
+        
+        
+    
+
+if __name__=='__main__':
+    #makedir()
+    print('Ä¿Â¼É¨Ãèing')
+    ans=checkflag()
+    print(ans)
+</code></pre>
+<h1 id="与熊论道">与熊论道</h1>
+<p>解与熊论道，解社会主义核心价值观，得<code>pwd:123456</code>，附件里有bmp，wbs43open解，一分钟就出来的题。ps:和上一题难度差距居然如此之大。<br>
+<code>ACTF{PXY_wants_@_bOyfri3nd}</code></p>
+<h1 id="禁止摸鱼">禁止摸鱼</h1>
+<p>扔winhex，尾巴zip，暴力得flag.txt，密码是3位的，而且还是弱口令:<code>123</code>，我从第1位开始爆破的，一瞬间就出了，有师傅从4位密码开始爆，爆了很久都没出。ps:和第一题难度差距竟如此之大。</p>
+<h1 id="纳什均衡">纳什均衡</h1>
+<p>nc上去玩了一下，意思就是给若干个石头，你每次可以去除一些，对方也可以去除一些，双方去除的最大数量相同。你先行动，谁先去除到最后一个石头谁就赢了。要连胜5局才能得到flag。蕴含高深知识的看起来简单但是其实很难的游戏。思路挺有趣的，也有深度，奈何自己脑子笨，且不会写代码，最多玩到过第三局就没了，搜了下题目，博弈论。各种文章写得天花乱坠的，看不懂，也浮躁不想钻研。<br>
+看wp，写的居然是巴什博奕，巴什就巴什为啥题目要叫纳什(强大的ACTF主办方应该不会犯这种错误吧，肯定是我水平太低无法理解此中深意)，而且如果我要是搜的是巴什就直接做出来了()<br>
+以下是百度百科的规范描述思路，只要知道是这么一回事很快就能做出来。也算一些课外知识吧。</p>
+<p>巴什博弈：只有一堆n个物品，两个人轮流从这堆物品中取物，规定每次至少取一个，最多取m个。最后取光者得胜。<br>
+显然，如果n=m+1，那么由于一次最多只能取m个，所以，无论先取者拿走多少个，后取者都能够一次拿走剩余的物品，后者取胜。因此我们发现了如何取胜的法则：如果n=（m+1）r+s，（r为任意自然数，s≤m),那么先取者要拿走s个物品，如果后取者拿走k（≤m)个，那么先取者再拿走m+1-k个，结果剩下（m+1）（r-1）个，以后保持这样的取法，那么先取者肯定获胜。总之，要保持给对手留下（m+1）的倍数，就能最后获胜。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[0基础的Re基操]]></title>
+        <id>http://ayanagi.fun/Reverse/</id>
+        <link href="http://ayanagi.fun/Reverse/">
+        </link>
+        <updated>2021-03-12T14:00:30.000Z</updated>
+        <content type="html"><![CDATA[<p>先占坑。不包含基础/前置理论知识(算法，汇编之类的，个人喜欢先摸题目，有一定积累之后再切入到理论的理解反而会有柳暗花明与茅塞顿开之感。)<br>
+学到多少写多少。以题目为例</p>
+<h1 id="1ida打开shiftf12查看字符串">1.IDA打开SHIFT+F12查看字符串</h1>
+<p>例题：<strong>BUUCTF easyre</strong><br>
+下载附件拖进IDA，SHIFT+F12呼出Strings Window可以看到flag<br>
+<img src="http://ayanagi.fun/post-images/1615557899074.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hgame2021 misc WP+复现]]></title>
         <id>http://ayanagi.fun/Hgame2021/</id>
@@ -1269,201 +1420,6 @@ if ($_GET['url']) {
 已经有肉眼看穿题目给的所有base的能力了，没啥难度看着解就行</p>
 <h1 id="pigissocute">PigIsSoCute</h1>
 <p>hint是猪圈栅栏，没难度，下载下来的txt是一个b64编码的图片，去b64转文件得到猪圈密码的图片，对着识别解密得到字符串，进行栅栏解密得到可读的明文套上<code>c1ctf{}</code>即可</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[HECTF 2020 MISC WP]]></title>
-        <id>http://ayanagi.fun/HECTF2020/</id>
-        <link href="http://ayanagi.fun/HECTF2020/">
-        </link>
-        <updated>2020-12-07T04:03:34.000Z</updated>
-        <content type="html"><![CDATA[<p>难度倒不是很高，只是做不出来罢了。</p>
-<h1 id="看直播">看直播</h1>
-<p>访问HECTF的直播间，画面中写着flag。</p>
-<h1 id="png">png</h1>
-<p>非常基础的题，winhex打开 b64解码最后面拿到一半flag，png格式别忘了考虑宽高，改宽高得到另一半</p>
-<h1 id="不说人话">不说人话</h1>
-<p>Ook</p>
-<h1 id="溯源溯源">溯源溯源</h1>
-<p>社工题。<br>
-以下是官方wp：<br>
-姓名使用支付宝</p>
-<p>域名邮箱使用爱站</p>
-<p>公司名百度手机号即可</p>
-<h1 id="makesteg-great-again">MakeSteg Great Again</h1>
-<p>winhex打开得到一个key：</p>
-<pre><code>P@SsW00000
-</code></pre>
-<p>outguess没用、zsteg没用，stegpy没用，stegdetect没用(可能我这玩意我根本没装好，就没试过成功的)。本来以为自己还是会一些图片隐写的，实际上还欠缺得太多。以下是官方WP:<br>
-有一个key，很容易想到steghide</p>
-<pre><code>steghideextract -sf Steg.jpg -p p0SsW0000
-</code></pre>
-<p>能得到一个压缩包，里面是pyc文件，如果是我的话就拿去反编译了。照着复现的时候尝试反编译，出来的是对我来说非常复杂的python脚本，必然做不出来。眼界又宽阔了，这里其实用的是pyc隐写，使用Stegosaurus，仅支持py3.6以下版本</p>
-<pre><code>pythonstegosaurus.py GitHacker.pyc -x
-</code></pre>
-<p>得到key：</p>
-<p>'PPPPasword'_And_do_you_love_winter<br>
-提示知道是snow隐写</p>
-<pre><code>SNOW.EXE -C -p PPPPasword white.txt
-</code></pre>
-<h1 id="babymisc">babymisc</h1>
-<p>winhex打开，没啥思路，hint是文件hex尾部有编码后的flag后两位是zp，也没啥思路。<br>
-以下是官方wp：<br>
-使用010打开文件，会发现有一串全为0，然后像是base64，解码却出不来，根据提示：文件hex尾部有编码后的flag的后两位，在base后面加上zp，base58解码即可</p>
-<h1 id="总结">总结</h1>
-<p>已经遇到非常严重的瓶颈期了，尤其是环境配不好，每次参加比赛都有新花样。说新也不新，只是我见识少。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[NCTF2020-misc wp]]></title>
-        <id>http://ayanagi.fun/NCTF2020/</id>
-        <link href="http://ayanagi.fun/NCTF2020/">
-        </link>
-        <updated>2020-11-23T13:07:08.000Z</updated>
-        <content type="html"><![CDATA[<p>ak了misc，男团非常的强。</p>
-<h1 id="彩蛋">彩蛋</h1>
-<p>观察教学楼对出的横幅或者Leon发在空间的说说即可得到<br>
-<code>flag:NCTF{We1c0m3_t0_NCTF2020!}</code>提交发现不对，试了好几次<br>
-，发现要将感叹号去掉。<br>
-flag：</p>
-<pre><code>NCTF{We1c0m3_t0_NCTF2020}
-</code></pre>
-<h1 id="nctf2020问卷调查">NCTF2020问卷调查</h1>
-<p>一开始点进靶机无法访问，观察群消息给的hint，知道需要挂<br>
-梯子才能看到问卷，打开ShadowSocksR，右键右下角图标选择<br>
-PAC模式，再打开靶机即可查看问卷，在必填的选项框中填写相<br>
-应的内容，最后提交，即可得到。<br>
-flag：</p>
-<pre><code>NCTF{Let's_look_forward_to_X1CTF}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[misc一些环境的配置问题]]></title>
-        <id>http://ayanagi.fun/atFgXsbYK/</id>
-        <link href="http://ayanagi.fun/atFgXsbYK/">
-        </link>
-        <updated>2020-11-23T06:54:06.000Z</updated>
-        <content type="html"><![CDATA[<p>等我misc再强一点就去学逆向，占坑。龟速更新中.<br>
-配环境其实没啥好说的,遇到啥题目照着配就是了,或者复现的时候跟着补齐,以后还会有cmake方式配一些比较刁钻的工具,比如之前roar的无线电流量分析工具,等我学会就写上来.<br>
-其实很多工具一些ctf群里也会提供.并没有那么多的必要特地去配.</p>
-<h1 id="文件篇">文件篇</h1>
-<h2 id="winhex">winhex</h2>
-<p>https://www.52pojie.cn/thread-1252078-1-1.html</p>
-<h2 id="010editor">010editor</h2>
-<p>http://www.pc6.com/softview/SoftView_55129.html<br>
-记得点普通下载地址避免捆绑安装垃圾</p>
-<h2 id="oursecret">oursecret</h2>
-<p>http://www.uzzf.com/soft/68820.html<br>
-记得点普通下载地址避免捆绑安装垃圾</p>
-<h2 id="alternatestreamview">AlternateStreamView</h2>
-<p>ctfshow群文件自行下载</p>
-<h2 id="silent-eye">silent eye</h2>
-<p>http://www.opdown.com/soft/88597.html<br>
-普通下载</p>
-<h1 id="图片篇">图片篇</h1>
-<h2 id="stegsolve">stegsolve</h2>
-<p>http://www.ddooo.com/softdown/122537.htm<br>
-记得点普通下载地址避免捆绑安装垃圾</p>
-<h2 id="stegdetect">stegdetect</h2>
-<p>ctfshow群文件自行下载(超不负责任的)</p>
-<h2 id="outguess">outguess</h2>
-<p>kali下</p>
-<pre><code class="language-shell">git clone https://github.com.cnpmjs.org/crorvick/outguess
-</code></pre>
-<p>然后在outguess文件夹下打开终端</p>
-<pre><code class="language-shell">./configure &amp;&amp; make &amp;&amp; make install
-</code></pre>
-<h2 id="stegpy">stegpy</h2>
-<p>kali下</p>
-<pre><code class="language-shell">pip3 install stegpy
-</code></pre>
-<h2 id="zsteg">zsteg</h2>
-<p>安装zsteg需要使用gem命令，所以首先更换rubygems源。</p>
-<pre><code class="language-shell">gem sources --remove https://rubygems.org/
-gem sources --add https://gems.ruby-china.com/
-gem sources -l
-</code></pre>
-<p>安装</p>
-<pre><code class="language-shell">git clone https://github.com/zed-0xff/zsteg
-cd zsteg/
-gem install zsteg
-</code></pre>
-<h2 id="lsb">lsb</h2>
-<pre><code class="language-shell">git clone https://github.com/livz/cloacked-pixel
-</code></pre>
-<h2 id="f5隐写">F5隐写</h2>
-<pre><code class="language-shell">git clone https://github.com/matthewgao/F5-steganography
-</code></pre>
-<h2 id="gaps拼图">gaps拼图</h2>
-<pre><code class="language-shell">git clone https://github.com/nemanja-m/gaps.git
-cd gaps
-pip install -r requirements.txt
-apt-get install python-tk
-pip install -e .
-</code></pre>
-<p>这里说一下，python-tk如果你有使用过cloacked-pixel脚本的话是已经装好了的，不过再输一次安装指令也无所谓。</p>
-<h1 id="盲水印blindwater-mark">盲水印BlindWater-Mark</h1>
-<pre><code class="language-shell">git clone https://github.com.cnpmjs.org/chishaxie/BlindWaterMark
-</code></pre>
-<h1 id="压缩包篇">压缩包篇</h1>
-<h2 id="archpr">archpr</h2>
-<p>https://www.52pojie.cn/thread-467392-1-1.html</p>
-<h1 id="字符串-编码篇">字符串、编码篇</h1>
-<h2 id="jpk">jpk</h2>
-<p>https://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=555950</p>
-<h2 id="cyberchef">cyberchef</h2>
-<p>涵盖太多的神器。<br>
-https://gchq.github.io/CyberChef/</p>
-<h1 id="流量分析篇">流量分析篇</h1>
-<h2 id="wireshark">wireshark</h2>
-<p>应该是收费的,故下盗版<br>
-http://www.pc6.com/softview/SoftView_38486.html<br>
-记得点普通下载地址避免捆绑安装垃圾</p>
-<h1 id="音频篇">音频篇</h1>
-<h2 id="audacity">audacity</h2>
-<p>https://www.audacityteam.org/</p>
-<h2 id="deepsound">deepsound</h2>
-<p>https://maddownload.com/audio-video/audio-editors/deepsound/download/</p>
-<h1 id="kali篇">kali篇</h1>
-<p>主要介绍基础的kali大环境配置，比如python及各种包的安装。<br>
-首先是vmware.<br>
-https://www.vmware.com/cn/products/workstation-player/workstation-player-evaluation.html<br>
-照着流程走就行,下好kali的镜像之后创建虚拟机我使用的是Debian10.x 64bit.<br>
-amd用户记得开启虚拟化.<br>
-其次是kali的镜像<br>
-https://www.kali.org/downloads/<br>
-下载Kali Linux 64-bit (Installer) 即可,鉴于速度实在太慢,也懒得找国内的镜像,直接下载旁边的Torrent使用迅雷云盘上传+取回的方式满速下载.需要开通迅雷VIP,或者使用其他BT下载软件(我反正是没用过,反正环境这玩意一次性安装折腾一下也没什么大不了)</p>
-<h2 id="将pip永久更换成国内源">将pip永久更换成国内源</h2>
-<p>由于kali里使用代理比较麻烦，pip的原始来源是非常慢的，故采用国内源来获取python的包。<br>
-操作如下</p>
-<pre><code class="language-shell">cd
-mkdir .pip
-cd .pip
-vim pip.conf
-</code></pre>
-<p>终端界面会变得稍微有些不一样，然后复制如下内容</p>
-<pre><code class="language-shell">[global]
-index-url=http://pypi.douban.com/simple
-trusted-host = pypi.douban.com 
-</code></pre>
-<p>使用ctrl+shift+v原地粘贴，之后按下大写锁定，输入<code>ZZ</code>，完成。</p>
-<h2 id="git-clone源使用国内镜像站">git clone源使用国内镜像站</h2>
-<p>在clone某个项目的时候的github.com更换成github.com.cnpmjs.org<br>
-例如</p>
-<pre><code class="language-shell">git clone https://github.com/beurtschipper/Depix
-</code></pre>
-<p>我们改用</p>
-<pre><code>git clone https://github.com.cnpmjs.org/beurtschipper/Depix
-</code></pre>
-<h2 id="volatility">Volatility</h2>
-<p>windows下载<br>
-http://downloads.volatilityfoundation.org/releases/2.6/volatility_2.6_lin64_standalone.zip<br>
-然后解压，之后的文件夹扔进kali，修改一下文件名为volatility更方便运行<br>
-以后要运行的时候在文件夹下打开终端</p>
-<pre><code class="language-shell">./volatility ~
-</code></pre>
-<p>~为各种参数</p>
 ]]></content>
     </entry>
 </feed>

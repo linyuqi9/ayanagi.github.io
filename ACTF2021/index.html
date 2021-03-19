@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>搜索结果 | 雨霖铃</title>
+<title>ACTF2021Misc 复现&amp;wp | 雨霖铃</title>
 <meta name="description" content="又岂在朝朝暮暮。" />
 <link rel="shortcut icon" href="http://ayanagi.fun/favicon.ico">
 <link rel="stylesheet" href="http://ayanagi.fun/styles/main.css">
@@ -14,16 +14,16 @@
 <script src="http://ayanagi.fun/media/js/view-image.min.js"></script>
 <script src="http://ayanagi.fun/media/js/jquery.magnific-popup.min.js"></script>
 <script src="http://ayanagi.fun/media/js/functions.js"></script>
-    <script src="/media/gridea-search/fuse.js"></script>
-    <script src="/media/gridea-search/ejs.min.js"></script>
-    <script src="/media/gridea-search/gridea-search.js"></script>
-    <script src="/media/gridea-search/result-template.ejs" type="text/ejs"></script>
-</head>
-
+    <meta name="referrer" content="never">
+    <meta name="description" content="面向新生的一个比赛，但是还是没法都做出来，没有以前笨笨的那股冲劲了，其实还是遇到了瓶颈。
+Real_way
+思路应该是找到和路径文件夹名顺序相同的flag。懒得做了，直接看wp:
+五层目录，每层目录中有7个文件夹，且每个叶子节点上都有一个 ..." />
+    <meta name="keywords" content="CTF" />
+    <script src="http://ayanagi.fun/media/js/waterfall.min.js"></script>
+    <script src="http://ayanagi.fun/media/js/prism.min.js"></script>
+  </head>
   <body>
-    <!-- start: #wrapper -->
-    <div class="wrapper">
-      
             <header id="header" class="grid-container">
         <!-- start: .menu-wrapper -->
         <div class="menu-mobile"> 
@@ -102,22 +102,187 @@
         </div>
       </div>
 
-      <main id="home" class="main fullcover no-sidebar content">
-        <div class="grid-container module-wrapper enable-masonry aos-init aos-animate" data-aos="fade-up">
-        <div class="epcl-page-wrapper">
-          <div class="left-content grid-70 np-mobile widget_epcl_related_articles">
-          <div class="main-article post">
-            <div id="gridea-search-result">
-              <h2 class="searching">搜索中......</h2>
-              <h2 class="no-result" style="display:none">未搜索到相关文章</h2>
+      <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
+
+        <div class="center content">
+          <div class="featured-image cover" style="background-image: url('https://img.imgdb.cn/item/5fbb52d1b18d627113ddebd5.png');">
+            <div class="meta top"> 
+              <time class="meta-info" style="float:left;" datetime="2021-03-14"><i class="fa fa-calendar"></i><span class="lately">5 天前</span></time>
+              
+              <a href="http://ayanagi.fun/ACTF2021/#comments" class="comments meta-info" title="">
+                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/ACTF2021/"> </span>
+              </a>
+              <span id="/ACTF2021/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
+              
+            </div>
+            <div class="info">
+              <div class="tags ">
+                
+                      <a href="http://ayanagi.fun/tag/CTF/" class="ctag ctag-0 ctag-CTF" aria-label="">CTF</a>
+                    
+              </div>
+              <h1 class="title ularge white bold">ACTF2021Misc 复现&amp;wp</h1>
             </div>
           </div>
+        </div>  
+
+        <div class="epcl-page-wrapper">
+          <div class="left-content grid-70 np-mobile">
+            <article class="main-article post">
+              <section class="post-content">
+                <div class="text">
+                  <p>面向新生的一个比赛，但是还是没法都做出来，没有以前笨笨的那股冲劲了，其实还是遇到了瓶颈。</p>
+<h1 id="real_way">Real_way</h1>
+<p>思路应该是找到和路径文件夹名顺序相同的flag。懒得做了，直接看wp:<br>
+五层目录，每层目录中有7个文件夹，且每个叶子节点上都有一个 flag.txt 文件，所以总共是16,807 个flag.txt文件夹</p>
+<p>仔细一看就能看出来文件夹的命名都很简单，flag中的密文也很简单，也很有对应关系</p>
+<p>这些个flag文件中只有一个是正确的，何谓正确的呢，就是它密文和它文件所在的路径相同<br>
+编写脚本如下</p>
+<pre><code class="language-python">import os
+import random
+
+m=[]
+for i in range(7):
+    m.append(chr(ord('a')+i))
+
+print(&quot;Êý¾ÝÁ¿£º&quot;+str(m))
+strmap=[]
+flag_map=[]
+for i1 in m:
+    for i2 in m:
+        for i3 in m:
+            for i4 in m:
+                for i5 in m:
+                    temp=i1+'\\'+i2+'\\'+i3+'\\'+i4+'\\'+i5
+                    strmap.append(temp)
+                    temp=i1+i2+i3+i4+i5
+                    flag_map.append(temp)
+#print(strmap)
+
+def makemap(level,list_map):
+    if level&gt;0:
+        level-=1
+        makemap
+
+
+def makedir():
+    for p in strmap:
+        this='D:\\CTF\\QuestsAndWriteUps\\ACTF\\Real_way'
+        #path=os.path.abspath('.')+'\\misc_test\\'+p
+        path=this+'\\ACTF\\'+p
+        os.makedirs(path)
+        temp=open(path+'\\flag.txt','w')
+        temp.write('actf{'+flag_map[random.randint(0, len(strmap)-1)]+'}')
+    
+def checkflag():
+    basepath='D:\\CTF\\QuestsAndWriteUps\\ACTF\\Real_way'
+    #basepath=os.path.abspath('.')
+    ans=[]
+    for i in range(len(strmap)):
+        path=basepath+'\\ACTF\\'+strmap[i]+'\\flag.txt'
+        file=open(path,'r')
+        flag=file.readline()
+        if flag_map[i]==flag[5:flag.find('}')]:
+            #print(flag)
+            ans.append(flag)
+        #else:
+            
+            #print('error ' +flag_map[i]+' : '+flag[5:flag.find('}')])
+            #print(flag[5:flag.find('}')])
+        file.close()
+    return ans
+        
+        
+    
+
+if __name__=='__main__':
+    #makedir()
+    print('Ä¿Â¼É¨Ãèing')
+    ans=checkflag()
+    print(ans)
+</code></pre>
+<h1 id="与熊论道">与熊论道</h1>
+<p>解与熊论道，解社会主义核心价值观，得<code>pwd:123456</code>，附件里有bmp，wbs43open解，一分钟就出来的题。ps:和上一题难度差距居然如此之大。<br>
+<code>ACTF{PXY_wants_@_bOyfri3nd}</code></p>
+<h1 id="禁止摸鱼">禁止摸鱼</h1>
+<p>扔winhex，尾巴zip，暴力得flag.txt，密码是3位的，而且还是弱口令:<code>123</code>，我从第1位开始爆破的，一瞬间就出了，有师傅从4位密码开始爆，爆了很久都没出。ps:和第一题难度差距竟如此之大。</p>
+<h1 id="纳什均衡">纳什均衡</h1>
+<p>nc上去玩了一下，意思就是给若干个石头，你每次可以去除一些，对方也可以去除一些，双方去除的最大数量相同。你先行动，谁先去除到最后一个石头谁就赢了。要连胜5局才能得到flag。蕴含高深知识的看起来简单但是其实很难的游戏。思路挺有趣的，也有深度，奈何自己脑子笨，且不会写代码，最多玩到过第三局就没了，搜了下题目，博弈论。各种文章写得天花乱坠的，看不懂，也浮躁不想钻研。<br>
+看wp，写的居然是巴什博奕，巴什就巴什为啥题目要叫纳什(强大的ACTF主办方应该不会犯这种错误吧，肯定是我水平太低无法理解此中深意)，而且如果我要是搜的是巴什就直接做出来了()<br>
+以下是百度百科的规范描述思路，只要知道是这么一回事很快就能做出来。也算一些课外知识吧。</p>
+<p>巴什博弈：只有一堆n个物品，两个人轮流从这堆物品中取物，规定每次至少取一个，最多取m个。最后取光者得胜。<br>
+显然，如果n=m+1，那么由于一次最多只能取m个，所以，无论先取者拿走多少个，后取者都能够一次拿走剩余的物品，后者取胜。因此我们发现了如何取胜的法则：如果n=（m+1）r+s，（r为任意自然数，s≤m),那么先取者要拿走s个物品，如果后取者拿走k（≤m)个，那么先取者再拿走m+1-k个，结果剩下（m+1）（r-1）个，以后保持这样的取法，那么先取者肯定获胜。总之，要保持给对手留下（m+1）的倍数，就能最后获胜。</p>
+
+                </div>
+                <div class="clear"></div>
+              </section>
+            </article>
+            <div class="clear"></div>
+
+            <section class="related section">
+              
+              <article class="prev grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://img.imgdb.cn/item/5fbb531bb18d627113de0746.png');"></div>
+                 <a href="http://ayanagi.fun/VNCTF2021/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2021-03-17">2021-03-17</time>
+                  <h4 class="title white no-margin">V&amp;N CTF2021 misc 简要复现</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="http://ayanagi.fun/media/images/left-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+              
+              <article class="next grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://img.imgdb.cn/item/5fbb52d1b18d627113ddebc9.png');"></div>
+                 <a href="http://ayanagi.fun/Reverse/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2021-03-12">2021-03-12</time>
+                  <h4 class="title white no-margin">0基础的Re基操</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="http://ayanagi.fun/media/images/right-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+
+                <div class="clear"></div>
+            </section>
+
+              <div class="clear"></div>
+              
+            
+              <div id="comments" class="bg-white hosted ">
+                <div class="clear"></div>
+<script>
+jQuery(document).ready(function($){
+    $('.vemoji-btn').text('😀');
+    $("#comments").on('click', 'span.vat',function(){
+        $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
+        $('textarea#veditor').focus();
+    })
+    if(window.location.hash){
+        var checkExist = setInterval(function() {
+            if ($(window.location.hash).length) {
+                $('html, body').animate({scrollTop: $(window.location.hash).offset().top-200}, 600);
+                clearInterval(checkExist);
+            }
+        }, 100);
+    }
+})
+</script>
+
+              </div>
+            
+
+            </div>
           </div>
-        </div>
-        </div>
       </main>
 
-        <footer id="footer" class="grid-container">
+          <footer id="footer" class="grid-container">
         <div class="widgets row gradient-effect">
             <div class="default-sidebar border-effect">
               <div class="grid-33 tablet-grid-50 mobile-grid-100">
@@ -310,6 +475,9 @@
     })
 </script>
     
+
+      
+    <script src="http://ayanagi.fun/media/js/functions-post.js"></script>
 
     </div>
     <!-- end: #wrapper -->
