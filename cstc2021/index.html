@@ -1,8 +1,8 @@
 <html>
   <head>
-  <meta charset="utf-8" />
+    <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>标签列表 | 雨霖铃</title>
+<title>2021第六届全国网络空间安全大赛 misc wp | 雨霖铃</title>
 <meta name="description" content="又岂在朝朝暮暮。" />
 <link rel="shortcut icon" href="http://ayanagi.fun/favicon.ico">
 <link rel="stylesheet" href="http://ayanagi.fun/styles/main.css">
@@ -14,11 +14,15 @@
 <script src="http://ayanagi.fun/media/js/view-image.min.js"></script>
 <script src="http://ayanagi.fun/media/js/jquery.magnific-popup.min.js"></script>
 <script src="http://ayanagi.fun/media/js/functions.js"></script>
+    <meta name="referrer" content="never">
+    <meta name="description" content="流量分析是一血，感觉还不错，有些题目有些比较抖机灵的部分吧。
+RGB
+附件code.txt，打开是图片的RGB值，稍微修改一下数据令其为R,G,B形式的格式，看了一下有28864行，分解一下，第一次试的是164*176，出来一个乱图，那么换..." />
+    <meta name="keywords" content="CTF" />
+    <script src="http://ayanagi.fun/media/js/waterfall.min.js"></script>
+    <script src="http://ayanagi.fun/media/js/prism.min.js"></script>
   </head>
   <body>
-    <!-- start: #wrapper -->
-    <div class="wrapper">
-      
             <header id="header" class="grid-container">
         <!-- start: .menu-wrapper -->
         <div class="menu-mobile"> 
@@ -97,34 +101,135 @@
         </div>
       </div>
 
-      <main id="tags" class="main fullcover no-sidebar content">
-        <div class="grid-container module-wrapper enable-masonry aos-init aos-animate" data-aos="fade-up">
+      <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
+
+        <div class="center content">
+          <div class="featured-image cover" style="background-image: url('https://img.imgdb.cn/item/5fbb52f8b18d627113ddf783.png');">
+            <div class="meta top"> 
+              <time class="meta-info" style="float:left;" datetime="2021-05-06"><i class="fa fa-calendar"></i><span class="lately">2 分钟前</span></time>
+              
+              <a href="http://ayanagi.fun/cstc2021/#comments" class="comments meta-info" title="">
+                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/cstc2021/"> </span>
+              </a>
+              <span id="/cstc2021/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
+              
+            </div>
+            <div class="info">
+              <div class="tags ">
+                
+                      <a href="http://ayanagi.fun/tag/CTF/" class="ctag ctag-0 ctag-CTF" aria-label="">CTF</a>
+                    
+              </div>
+              <h1 class="title ularge white bold">2021第六届全国网络空间安全大赛 misc wp</h1>
+            </div>
+          </div>
+        </div>  
+
         <div class="epcl-page-wrapper">
-          <div class="left-content grid-70 np-mobile widget_epcl_related_articles">
+          <div class="left-content grid-70 np-mobile">
+            <article class="main-article post">
+              <section class="post-content">
+                <div class="text">
+                  <p>流量分析是一血，感觉还不错，有些题目有些比较抖机灵的部分吧。</p>
+<h2 id="rgb">RGB</h2>
+<p>附件<code>code.txt</code>，打开是图片的RGB值，稍微修改一下数据令其为<code>R,G,B</code>形式的格式，看了一下有28864行，分解一下，第一次试的是164*176，出来一个乱图，那么换一下xy，脚本如下</p>
+<pre><code class="language-pythn">from PIL import Image
 
-          <div class="widget_tag_cloud tagcloud">
-            
-              <a href="http://ayanagi.fun/tag/CTF/" class="ctag ctag-0 ctag-CTF" aria-label="">CTF</a>
-            
-              <a href="http://ayanagi.fun/tag/ACG/" class="ctag ctag-1 ctag-ACG" aria-label="">亚文化</a>
-            
-              <a href="http://ayanagi.fun/tag/Tech/" class="ctag ctag-2 ctag-Tech" aria-label="">技术力</a>
-            
-              <a href="http://ayanagi.fun/tag/Win/" class="ctag ctag-3 ctag-Win" aria-label="">Windows</a>
-            
-              <a href="http://ayanagi.fun/tag/PCB/" class="ctag ctag-4 ctag-PCB" aria-label="">硬件</a>
-            
-              <a href="http://ayanagi.fun/tag/Python/" class="ctag ctag-5 ctag-Python" aria-label="">Python学习</a>
-            
-          </div>
-        </div>
+x = 176    
+y = 164    
 
-        </div>
+im = Image.new(&quot;RGB&quot;, (x, y))   
+file = open('code.txt')    
+
+
+
+for i in range(0, x):
+    for j in range(0, y):
+        line = file.readline()  
+        rgb = line.split(&quot;,&quot;)  
+        im.putpixel((i, j), (int(rgb[0]), int(rgb[1]), int(rgb[2])))  
+
+im.show()
+</code></pre>
+<p>得到的flag保存为图片，扔进imagemagick里flop一下</p>
+<p><code>flag{c1d836d1db9d42dd}</code></p>
+<h2 id="zip">zip</h2>
+<p>爆破，一开始没做出来，先后采用了1-8位纯数字和1-8位大写字母和数字组合，没有尝试小写字母数字组合，后来再试得到密码<code>ff123</code>，解压得到txt文件和加密的文档，txt文件内容得知考点应该是0宽和培根，培根解得文档密码<code>xyj</code>，打开文档复制全部内容解密，发现并不是0宽，在文档里全选修改字体颜色为红色发现flag。<code>flag{cbfacb9df0c7caf9a2b8a8ffbd72d1a0}</code></p>
+<h2 id="memory_1">Memory_1</h2>
+<p>附件<code>val.vmem</code>，在<code>volatility</code>里查看信息</p>
+<pre><code class="language-shell">vol.py -f val.vmem imageinfo
+</code></pre>
+<p>Win7SP1x64系统，先看一下pslist，发现一个cscript.exe比较可疑，猜测是文件名，拿去md5提交错误，那么查看cmdline，发现<code>Command line : cscript &quot;C:\Windows\TEMP\UEAOGWBdwyydm.vbs&quot;</code></p>
+<p>那么病毒文件应该就是<code>UEAOGWBdwyydm.vbs</code>了</p>
+<p><code>flag{24060da3d327991115a96e7099da25c3}</code></p>
+<h2 id="memory_2">Memory_2</h2>
+<p>hashdump查看用户列表，有一个<code>test$</code>，带$的就是隐藏用户，作为flag的md5的前半段，另一个是来源进程，那么就需要知道什么进程使其添加账号。使用psscan查看隐藏起来的进程，多了比较可疑的<code>net1.exe</code>、</p>
+<p><code>KiiKCuSco.exe</code>，分别尝试，发现前者正确。</p>
+<p><code>flag{45321c07f425d915c55424957353dd07}</code></p>
+<h2 id="slowloris">Slowloris</h2>
+<p>流量分析，wireshark打开，搜索http和POST字符串，寻找POST请求包追踪HTTP，导出对象为HTTP，没发现什么，搜索题目Slowloris得知为slowloris拒绝服务攻击，看到许多GET包头只有一个CLRF，证实了这一点,并且GET包的destination都是<code>195.8.178.227</code>。那么攻击方式就是slowloris了，这里运气比较不错，s取了小写，<code>slowloris/195.8.178.227</code>的md5值就是flag</p>
+<p><code>flag{3fc9d4a929cb690728d2b76c76483abe}</code></p>
+<h2 id="packpackpack">pack!pack!pack!</h2>
+<p>exe文件，双击打开提示缺少dll，到网上下了一个dll，打开没什么东西。扔进<code>exeinfope</code>发现有upx壳，在kali下脱壳报错，搜索错误信息，获得upxf工具修复文件后再次脱壳，成功，在kali下直接打开脱壳后的exe归档文件，结合题目的resource描述，进入.rsrc文件夹发现<code>string.txt</code>，拖出来得到flag的前半部分<code>flag{0bed66d154ccbdd0</code>，其他文件夹再浏览一下发现一个比较可疑的<code>138.bmp</code>，扔进winhex发现最后面有base64串<code>N2E2MzQyYWJmOTdhNWNmY30=</code>，解得<code>7a6342abf97a5cfc}</code>组合起来得到完整的flag</p>
+<p><code>flag{0bed66d154ccbdd07a6342abf97a5cfc}</code></p>
+
+                </div>
+                <div class="clear"></div>
+              </section>
+            </article>
+            <div class="clear"></div>
+
+            <section class="related section">
+              
+              
+              <article class="next grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://img.imgdb.cn/item/5fbb531bb18d627113de0746.png');"></div>
+                 <a href="http://ayanagi.fun/VNCTF2021/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2021-03-17">2021-03-17</time>
+                  <h4 class="title white no-margin">V&amp;N CTF2021 misc 简要复现</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="http://ayanagi.fun/media/images/right-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+
+                <div class="clear"></div>
+            </section>
+
+              <div class="clear"></div>
+              
+            
+              <div id="comments" class="bg-white hosted ">
+                <div class="clear"></div>
+<script>
+jQuery(document).ready(function($){
+    $('.vemoji-btn').text('😀');
+    $("#comments").on('click', 'span.vat',function(){
+        $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
+        $('textarea#veditor').focus();
+    })
+    if(window.location.hash){
+        var checkExist = setInterval(function() {
+            if ($(window.location.hash).length) {
+                $('html, body').animate({scrollTop: $(window.location.hash).offset().top-200}, 600);
+                clearInterval(checkExist);
+            }
+        }, 100);
+    }
+})
+</script>
+
+              </div>
+            
+
+            </div>
           </div>
-        </div>
       </main>
 
-        <footer id="footer" class="grid-container">
+          <footer id="footer" class="grid-container">
         <div class="widgets row gradient-effect">
             <div class="default-sidebar border-effect">
               <div class="grid-33 tablet-grid-50 mobile-grid-100">
@@ -319,6 +424,9 @@
     })
 </script>
     
+
+      
+    <script src="http://ayanagi.fun/media/js/functions-post.js"></script>
 
     </div>
     <!-- end: #wrapper -->
