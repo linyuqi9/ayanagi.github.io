@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://ayanagi.fun</id>
     <title>雨霖铃</title>
-    <updated>2021-05-06T04:40:45.474Z</updated>
+    <updated>2021-05-06T04:42:18.585Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://ayanagi.fun"/>
     <link rel="self" href="http://ayanagi.fun/atom.xml"/>
@@ -19,7 +19,7 @@
         <content type="html"><![CDATA[<p>流量分析是一血，感觉还不错，有些题目有些比较抖机灵的部分吧。</p>
 <h2 id="rgb">RGB</h2>
 <p>附件<code>code.txt</code>，打开是图片的RGB值，稍微修改一下数据令其为<code>R,G,B</code>形式的格式，看了一下有28864行，分解一下，第一次试的是164*176，出来一个乱图，那么换一下xy，脚本如下</p>
-<pre><code class="language-pythn">from PIL import Image
+<pre><code class="language-python">from PIL import Image
 
 x = 176    
 y = 164    
