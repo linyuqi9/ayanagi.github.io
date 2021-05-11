@@ -15,9 +15,8 @@
 <script src="http://ayanagi.fun/media/js/jquery.magnific-popup.min.js"></script>
 <script src="http://ayanagi.fun/media/js/functions.js"></script>
     <meta name="referrer" content="never">
-    <meta name="description" content="圣诞节前和对象互删，然后圣诞当天一个人孤寡打比赛。打了这么久的CTF，却还是只能出签到。I am a loser.
-马老师的秘籍
-一个靶机，一张几十个二维码的大图，随便扫了一个发现是mbg的语录其中3个字，一开始想弄下来切开一个个扫，以为f..." />
+    <meta name="description" content="马老师的秘籍
+一个靶机，一张几十个二维码的大图，随便扫了一个发现是mbg的语录其中3个字，一开始想弄下来切开一个个扫，以为flag就在这里面。但是太蠢了，所以果断把图片保存下来，是个png。丢winhex，好的，有压缩包，那么直接binwa..." />
     <meta name="keywords" content="CTF" />
     <script src="http://ayanagi.fun/media/js/waterfall.min.js"></script>
     <script src="http://ayanagi.fun/media/js/prism.min.js"></script>
@@ -91,7 +90,7 @@
       <div class="hide-on-mobile hide-on-tablet hide-on-desktop">
         <div id="search-lightbox" class="grid-container grid-small grid-parent mfp-hide">
           <div class="search-wrapper section">
-            <form id="gridea-search-form" data-update="1620277630359" action="/search/index.html" class="search-form" _lpchecked="1">
+            <form id="gridea-search-form" data-update="1620704836636" action="/search/index.html" class="search-form" _lpchecked="1">
               <input type="text" name="q" id="s" value="" class="search-field" placeholder="搜点啥..." aria-label="搜点啥..." required="">
               <button type="submit" class="submit" aria-label="Submit">
                 <i class="fa fa-search-line"></i>
@@ -106,7 +105,7 @@
         <div class="center content">
           <div class="featured-image cover" style="background-image: url('https://pic.downk.cc/item/5fbb532eb18d627113de103c.png');">
             <div class="meta top"> 
-              <time class="meta-info" style="float:left;" datetime="2020-12-25"><i class="fa fa-calendar"></i><span class="lately">4 个月前</span></time>
+              <time class="meta-info" style="float:left;" datetime="2020-12-25"><i class="fa fa-calendar"></i><span class="lately">5 个月前</span></time>
               
               <a href="http://ayanagi.fun/DASxBJD1225/#comments" class="comments meta-info" title="">
                 <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/DASxBJD1225/"> </span>
@@ -130,8 +129,7 @@
             <article class="main-article post">
               <section class="post-content">
                 <div class="text">
-                  <p>圣诞节前和对象互删，然后圣诞当天一个人孤寡打比赛。打了这么久的CTF，却还是只能出签到。I am a loser.</p>
-<h1 id="马老师的秘籍">马老师的秘籍</h1>
+                  <h1 id="马老师的秘籍">马老师的秘籍</h1>
 <p>一个靶机，一张几十个二维码的大图，随便扫了一个发现是mbg的语录其中3个字，一开始想弄下来切开一个个扫，以为flag就在这里面。但是太蠢了，所以果断把图片保存下来，是个png。丢winhex，好的，有压缩包，那么直接binwalk，在kali里打开压缩包是归档损坏状态，binwalk出来的两个txt文件都是空的，尝试把压缩包拿出windows查看，有三个文件，一个GoodLuck.txt，一个闪电五连鞭.txt，还有一个马老师的磁盘.jpg，压缩包带密码，尝试全部的伪加密，发现jpg是伪加密，图片长得和png几乎一样，然后有明显的需要处理的痕迹，其他俩带密码，jpg解压出来stegsolve和png异或，发现<img src="http://ayanagi.fun/post-images/1608891934024.png" alt="" loading="lazy"><br>
 把NianQingRenBuJiangWuDe丢去md5加密，直觉是取32位小写</p>
 <pre><code>c57988283c92f759585a0c1aebfdd743
@@ -162,7 +160,7 @@ http://www.7yue.top/2020-dasctfbjd-miscwp/<br>
 <p>下下来一个超大的压缩包，解压的bmp一张半个G，还有个enc.py的加密脚本，大眼一看，不会做，直接等wp。<br>
 不过从大佬wp里学到了VBS的解密、maxicode、CitrixCTX1加密，以及相见恨晚的cyberchef工具，还有针对mp3的private_bit加密，都是没见过的新东西，在知识的海洋里乱游。</p>
 <h1 id="总结">总结</h1>
-<p>真的太失败了。</p>
+<p>还要继续努力。</p>
 
                 </div>
                 <div class="clear"></div>
