@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://ayanagi.fun</id>
     <title>雨霖铃</title>
-    <updated>2021-06-24T08:58:41.239Z</updated>
+    <updated>2021-06-26T08:30:15.097Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://ayanagi.fun"/>
     <link rel="self" href="http://ayanagi.fun/atom.xml"/>
@@ -38,13 +38,107 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[概率论]]></title>
+        <title type="html"><![CDATA[概率论与数理统计]]></title>
         <id>http://ayanagi.fun/gailvlun/</id>
         <link href="http://ayanagi.fun/gailvlun/">
         </link>
         <updated>2021-06-23T02:43:20.000Z</updated>
         <content type="html"><![CDATA[<p><img src="http://ayanagi.fun/post-images/1624519079837.png" alt="" loading="lazy"><br>
-<img src="http://ayanagi.fun/post-images/1624519084161.jpg" alt="" loading="lazy"></p>
+<img src="http://ayanagi.fun/post-images/1624588123804.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1624588275952.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1624588435096.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1624588693214.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1624588727724.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1624588775973.png" alt="" loading="lazy"><br>
+分布函数是F(x)，密度函数是f(x)，已知F使用求导求f，反之使用积分<br>
+<img src="http://ayanagi.fun/post-images/1624589043026.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1624589066766.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1624589433692.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1624589462504.png" alt="" loading="lazy"><br>
+Fx就从定义域出发，分界直接代入得到参数的方程，解方程即可<br>
+F(-∞)=0，F(+∞)=1,F(上分段)=F(下分段)<br>
+fx先清楚它在R内的积分=1，那么以定义域区分上下限算积分即可</p>
+<p>求分布律，有手就行</p>
+<p>已知X分布列，求Y分布列<br>
+根据X的取值代入Y的取值，将X换成Y，能合并简化的概率就合并</p>
+<p>已知Fx求Fy<br>
+先把Y=λX写成X=?Y<br>
+然后直接代入Fx里<br>
+如果Y中有负号，Fy(Y)=1-Fx(?y)，没有则直接Fy(Y)=Fx(?y)</p>
+<p>已知fx求fy<br>
+写出X=?Y<br>
+直接代入fx<br>
+令fy=(?y)'·fx(?y)<br>
+判断?y是否有负号，有则fy=-fY，无则fy=fY</p>
+<p>均匀分布，求P<br>
+P=满足要求长度/总长度<br>
+<img src="http://ayanagi.fun/post-images/1624590596140.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1624590634709.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1624593900564.png" alt="" loading="lazy"><br>
+正态分布图像，σ越小图像越陡峭<br>
+均匀分布U[a,b]<br>
+二项分布B[n ,p]<br>
+指数分布E(λ)<br>
+<img src="http://ayanagi.fun/post-images/1624594622968.png" alt="" loading="lazy"><br>
+已知F(x,y)求f(x,y)<br>
+每个区间对其求x偏导再求y偏导<br>
+得到的函数根据再区间合并</p>
+<p><img src="http://ayanagi.fun/post-images/1624595070221.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1624595085222.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1624595095253.png" alt="" loading="lazy"><br>
+已知F(x,y)求P<br>
+将X,Y的范围化成(x&lt;=a,y&lt;=b)，P=F(a,b)</p>
+<p>已知f(x,y)求P<br>
+1.找x和y不等于0时的范围<br>
+2.找出要求概率的范围，添加到上步范围，保证至少一个未知数的上下限都是纯数字<br>
+x范围的上下限记为a,b<br>
+y范围的上下限记为c,d<br>
+x的上下限都是纯数字则先对y积分再对x积分，积分上下限就是对应变量范围的上下限。</p>
+<p>F(x,y)或f(x,y)中含有的未知数<br>
+F就代入四个点：F(+∞,+∞)=1，F(-∞,-∞)=0，F(x,-∞)=0，F(-∞,y)=0可以列出方程</p>
+<p>f(x,y)的话对其进行上下限都是无穷大的二重积分，并且结果一定为1<br>
+根据x,y的范围替换上下限计算积分即可得到关于未知数的方程进而求解</p>
+<p>求均匀分布的f(x,y)与P<br>
+区域D服从均匀分布，f(x,y)=1/A，x∈D(A是D的面积)，0，其他<br>
+P(x,y∈D1)=A1/A，A1是D1与D重合的面积</p>
+<p>求边缘分布函数Fx(X),Fy(Y)<br>
+Fx(X)=F(x,+∞)<br>
+Fy(Y)=F(+∞,y)</p>
+<p>求边缘密度函数fx(X),fy(Y)<br>
+1.将f(x,y)非零区域画出<br>
+表示出左右边界上下边界x=g1(y),x=g2(y),y=h1(x),y=h2(x)<br>
+fx(X)就是f(x,y)对y的积分，上下限就是h1和h2,fy(Y)同理</p>
+<p>判断连续型二维变量的独立性<br>
+F(x,y)=Fx(X)·Fy(Y)<br>
+f(x,y)=fx(X)·Fy(Y)<br>
+则X、Y相互独立，不相等，则不相互独立</p>
+<p>已知f(x,y),Z=X+Y，求fz(Z)<br>
+fz(Z)=f(x,z-x)在-∞，+∞对x的积分<br>
+分类讨论z的范围，最后求积</p>
+<p>已知f(x,y) Z=X/Y，求fz(Z)<br>
+fz(Z)=f(yz,y)·|y|在-∞，+∞对y的积分<br>
+分类讨论z的范围，最后求积</p>
+<p>给出F，求Z=max(X,Y)的分布函数，XY独立同分布<br>
+Fz(Z)=Fx(Z)·Fy(Z)<br>
+独立同分布的意思就是XY相互独立，Fx(X)在形式上与Fy(Y)相同</p>
+<p>给出F，求Z=min(X,Y)的分布函数，XY独立同分布<br>
+Fz(Z)=1-[1-Fx(Z)]·[1-Fy(Z)]</p>
+<p>求离散型的期望E(X)<br>
+E(X)=∑xipi</p>
+<p>求连续型的期望E(X)<br>
+给出密度函数，E(X)=xf(x)在-∞,+∞对x的积分</p>
+<p>Y=g(X)求E(Y)<br>
+离散型E(Y)=∑g(xi)pi<br>
+连续型E(Y)=g(x)·f(x)在-∞,+∞对x的积分</p>
+<p>求方差D(X)<br>
+<img src="http://ayanagi.fun/post-images/1624603093160.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1624603111385.png" alt="" loading="lazy"></p>
+<p><img src="http://ayanagi.fun/post-images/1624603578456.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1624603968101.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1624604968306.png" alt="" loading="lazy"><br>
+切比雪夫不等式<br>
+<img src="http://ayanagi.fun/post-images/1624607568470.png" alt="" loading="lazy"><br>
+<img src="http://ayanagi.fun/post-images/1624687072100.png" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
     <entry>
